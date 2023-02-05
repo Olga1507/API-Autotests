@@ -220,7 +220,6 @@ public class ValueGenerator {
         possibleContentTypes.add("application/vnd.spring-boot.actuator.v2+json");
     }
 
-
     /**
      * Функция getMediaTypeFromContent проверяет содержимое мапы Content и если оно валидно (см. ReadMe), то получает его MediaType.
      * Пример - все, что входит в application/json и есть MediaType:
@@ -249,31 +248,6 @@ public class ValueGenerator {
             if (mediaType == null){
                 throw new IllegalArgumentException(String.format("В мапе Content нет элементов/ни один из элементов в мапе Content не соответствует possibleContentTypes. Количество элементов в мапе Content: %s", content.size()));
             }
-
-
-            // Обход мапы с помощью цикла
-//            int cnt = 0;
-//            String contentType = "";
-//
-//            // проверка валидности Content type - см ридми
-//            for (String key : content.keySet()) {
-//                if (!possibleContentTypes.contains(key)) {
-//                    throw new IllegalArgumentException(String.format("В мапе Content есть элементы НЕ из possibleContentTypes: %s", key));
-//                    //logger.warn("В мапе Content есть элементы НЕ из possibleContentTypes: {}", key);
-//                } else {
-//                    if (possibleContentTypes.contains(key)) {
-//                        cnt += 1;
-//                        contentType = key;
-//                    }
-//                }
-//            }
-//
-//            if (cnt == 1) {
-//                mediaType = content.get(contentType);
-//            } else {
-//                throw new IllegalArgumentException(String.format("В мапе несколько нужных элементов/вообще их нет. Количество элементов: %s", cnt));
-//                //logger.warn("В мапе несколько нужных элементов/вообще их нет");
-//            }
         }
         return mediaType;
 

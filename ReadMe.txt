@@ -73,3 +73,49 @@ text/html
     - Научиться проверять http код.
     - Научиться выводить результаты в лог.
 
+
+Проверки responseBody
+Пример responseBody:
+"responseBody": {
+          "number": 45,
+          "last": false,
+          "numberOfElements": 9,
+          "size": 18
+            }
+
+Виды проверок:
+1. Обязательно должно присутствовать все, что есть в responseBody и ничего другого присутствовать не может.
+Валидные responseBody:
+"responseBody": {
+          "number": 45,
+          "last": false,
+          "numberOfElements": 9,
+          "size": 18
+            }
+2. Обязательно должно присутствовать все, что есть в responseBody и могут быть другие теги.
+Валидные responseBody:
+"responseBody": {
+          "number": 45,
+          "last": false,
+          "numberOfElements": 9,
+          "size": 18
+            }
+
+
+"responseBody": {
+          "number": 45,
+          "last": false,
+          "numberOfElements": 9,
+          "size": 18,
+          "pageNumber": 64,
+          "pageSize": 74
+            }
+
+3. Проверяется строгое соответствие значений.
+4. Проверка по паттерну (regex) - опционально!
+5. Проверяется только наличие тега (значения не проверяется, тест на структуру).
+
+
+6. Проверяется responseCode и responseBody.
+7. Проверяется responseCode.
+8. Проверяется responseBody.

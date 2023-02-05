@@ -11,7 +11,10 @@ public class TestCase {
     private Map<String, Object> parametersPath;
     private Map<String, Object> parametersQuery;
     private Object responseBody;
-    private int responseCode;
+    private String responseCode;
+    private ResponseBodyCheckMode responseBodyCheckMode;
+    private ResponseBodyValueCheckMode responseBodyValueCheckMode;
+    private ResponseCheckMode responseCheckMode;
 
 
     public String getCaseName() {
@@ -70,12 +73,36 @@ public class TestCase {
         this.responseBody = responseBody;
     }
 
-    public int getResponseCode() {
+    public String getResponseCode() {
         return responseCode;
     }
 
-    public void setResponseCode(int responseCode) {
+    public void setResponseCode(String responseCode) {
         this.responseCode = responseCode;
+    }
+
+    public ResponseBodyCheckMode getResponseBodyCheckMode() {
+        return responseBodyCheckMode;
+    }
+
+    public void setResponseBodyCheckMode(ResponseBodyCheckMode responseBodyCheckMode) {
+        this.responseBodyCheckMode = responseBodyCheckMode;
+    }
+
+    public ResponseBodyValueCheckMode getResponseBodyValueCheckMode() {
+        return responseBodyValueCheckMode;
+    }
+
+    public void setResponseBodyValueCheckMode(ResponseBodyValueCheckMode responseBodyValueCheckMode) {
+        this.responseBodyValueCheckMode = responseBodyValueCheckMode;
+    }
+
+    public ResponseCheckMode getResponseCheckMode() {
+        return responseCheckMode;
+    }
+
+    public void setResponseCheckMode(ResponseCheckMode responseCheckMode) {
+        this.responseCheckMode = responseCheckMode;
     }
 }
 
