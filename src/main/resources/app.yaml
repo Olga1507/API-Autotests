@@ -1,0 +1,7 @@
+methodAPI-case1:
+  path: /dsd/dsds
+  type: POST
+  request-body: {"loadChannelTypeId": 14, "brief": "ftp" }
+  parameters:
+    fields : abc #Int
+    id : def #String

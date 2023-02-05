@@ -1,0 +1,170 @@
+Параметры могут присутствовать в пути к ресурсу и в самих параметрах запроса:
+http://qmmmsgpackage.msghub.qrun.diasoft.ru:80/qmmmsgpackage/MsgPkgPrtcl/v1/584?fields=sdfds%2C%20aaa
+В данном примере значение 584 - параметр пути. Значение sdfds%2C%20aaa - параметр запроса.
+В теге "in" описывается куда вставлять значение данного параметра
+{
+"parameters": [
+{
+"name": "msgPkgPrtclId",
+"in": "path",
+"description": "msgPkgPrtclId",
+"required": true,
+"style": "simple",
+"schema": {
+"type": "integer",
+"format": "int64"
+}
+},
+{
+"name": "fields",
+"in": "query",
+"description": "Field set for return",
+"required": false,
+"style": "form",
+"schema": {
+"type": "string"
+}
+}
+]
+}
+
+{
+  "$ref":  "Ссылка на другую схему. Если он заолнен, остальные теги не имеют значения.",
+  "title": "Название схемы. Не интересен.",
+  "type": "Тип данных схемы. Если схема представляет собой сложный тип, то тут пишется object. Если массив - array (должен быть заполнен тег items). Если тип примитивный - то он (boolean, integer и тд.).",
+  "properties": "Если схема представляет сложный тип, то здесь указываются поля этого объекта (массив).",
+  "additionalProperties": "Заполняется, если названия тегов заранее не изместны (не массив!).",
+  "enum": "Указываются допустимые значения для enum-типов (массив). При этом в поле type дб String.",
+  "format": "Формат значений. Если type = String и поле format не пустое, то в примере указываем значение из format.",
+  "example": "Пример значения. Если поле example не пустое, то в примере указываем значение из example.",
+  "description": "Описание схемы. Если type = String и поле description не пустое, то в примере указываем значение из description.",
+  "items": "Тип элементов массива (в этом теге не массив!). Заполняется, если type = array."
+
+}
+
+{
+  "type": "object",
+  "additionalProperties": {
+    "type": "object"
+  }
+}
+
+{
+  "$ref": "#/components/schemas/JsonNode"
+}
+
+{
+  "type": "boolean"
+}
+
+{
+  "type": "string",
+  "enum": [
+    "ARRAY",
+    "BINARY",
+    "BOOLEAN",
+    "MISSING",
+    "NULL",
+    "NUMBER",
+    "OBJECT",
+    "POJO",
+    "STRING"
+  ]
+}
+
+{
+  "type": "object",
+  "additionalProperties": {
+    "type": "object"
+  }
+}
+
+{
+  "type": "integer",
+  "format": "int32"
+}
+
+{
+  "type": "integer",
+  "format": "int64"
+}
+
+{
+  "type": "string",
+  "example": "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+}
+
+{
+  "type": "integer",
+  "description": "Направление",
+  "format": "int32"
+}
+
+{
+  "type": "string",
+  "description": "Дата и время создания сообщения",
+  "format": "date-time"
+}
+
+{
+  "type": "array",
+  "items": {
+    "type": "object"
+  }
+}
+
+{
+  "type": "array",
+  "items": {
+    "$ref": "#/components/schemas/MsgPackage"
+  }
+}
+
+{
+  "Pageable": {
+    "title": "Pageable",
+    "type": "object",
+    "properties": {
+      "offset": {
+        "type": "integer",
+        "format": "int64"
+      },
+      "pageNumber": {
+        "type": "integer",
+        "format": "int32"
+      },
+      "pageSize": {
+        "type": "integer",
+        "format": "int32"
+      },
+      "paged": {
+        "type": "boolean"
+      },
+      "sort": {
+        "$ref": "#/components/schemas/Sort"
+      },
+      "unpaged": {
+        "type": "boolean"
+      }
+    }
+  }
+}
+
+
+Пример body по схеме (см. метод "/qmmmsgpackage/actuator/archaius")
+Если есть addProp, то это может говорить о том, что у какого-то объекта заранее не изместны названия тегов, но известен их тип.
+При этом тег type у родительской схемы скорее всего всегда object.
+
+{
+  "type": "object",
+  "additionalProperties": {
+    "type": "string"
+  }
+}
+
+body
+{
+  "additionalProp1": "string",
+  "additionalProp2": "string",
+  "additionalProp3": "string"
+}

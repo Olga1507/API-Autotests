@@ -1,0 +1,40 @@
+{
+  "cases": [
+    {
+      "caseName": "methodAPI-case1",
+      "methodPath": "/dsd/dsds",
+      "methodType": "POST",
+      "requestBody": {
+        "abc": "dasd"
+      },
+      "parameters": {
+        "fields": "abc",
+        "id": "def"
+      }
+    },
+    {
+      "caseName": "methodAPI-case2",
+      "methodPath": "/dsd/dsds",
+      "methodType": "POST",
+      "requestBody": {
+        "abc": "dasd"
+      },
+      "parameters": {
+        "fields": "abc",
+        "id": "def"
+      }
+    },
+    {
+      "caseName": "methodAPI-case3",
+      "methodPath": "/dsd/dsds",
+      "methodType": "POST",
+      "requestBody": {
+        "abc": "dasd"
+      },
+      "parameters": {
+        "fields": "abc",
+        "id": "def"
+      }
+    }
+  ]
+}

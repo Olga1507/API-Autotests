@@ -1,0 +1,44 @@
+{
+  "serverUrl": "http://qmmmsgpackage.msghubtmp.qrun.diasoft.ru",
+  "cases": [
+    {
+      "methodPath": "/qmmmsgpackage/Msg/v1/{msgId}/abc/{fields}",
+      "methodType": "GET",
+      "parameters": {
+        "msgId": "1",
+        "fields": "456"
+      }
+    },
+    {
+      "methodPath": "/qmmmsgpackage/Msg/v1/{msgId}/abc/{fields}",
+      "methodType": "GET",
+      "parameters": {
+        "msgId": "1",
+        "fields": "789"
+      }
+    },
+    {
+      "methodPath": "/qmmmsgpackage/Msg/v1/{msgId}",
+      "methodType": "GET",
+      "parameters": {
+        "msgId": "2",
+        "fields": "111"
+      }
+    },
+    {
+      "methodPath": "/qmmmsgpackage/Msg/v1/{msgId1}",
+      "methodType": "GET",
+      "parameters": {
+        "msgId": "2",
+        "fields": "111"
+      }
+    },
+    {
+      "methodPath": "/qmmmsgpackage/Msg/v1/{msgId}",
+      "methodType": "GET",
+      "parameters": {
+
+      }
+    }
+  ]
+}

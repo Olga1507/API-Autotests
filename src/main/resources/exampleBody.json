@@ -1,0 +1,222 @@
+{
+  "LoadRule": {
+    "loadRuleId": 28,
+    "loadChannelId": 73,
+    "msgProjectId": 92,
+    "isActive": true,
+    "recipient": "*НАШ_БАНК",
+    "branchName": "*НАШ_БАНК",
+    "name": "Загрузка по фтп 2",
+    "destination": "ВТБ",
+    "msgFormatId": 1,
+    "loadProcessId": 65,
+    "attributes": [
+      {
+        "loadRuleAttributeId": 24,
+        "brief": "testAttr",
+        "value": "888",
+        "loadRuleId": 28,
+        "messageFormatAttributeId": 4
+      },
+      {
+        "loadRuleAttributeId": 3,
+        "brief": "package",
+        "value": "msgPackageId, createAt, loadRuleName, destination, fileName, formatVersion, source, direction, status, parentMsgPackageId, msgFormatId, sourceType, branchName, formatName, messageCount, sender, childCount, humanTaskId, msgPackageType, processId",
+        "loadRuleId": 28,
+        "messageFormatAttributeId": 1
+      }
+    ]
+  },
+  "LoadChannel": {
+    "loadChannelId": 73,
+    "loadChannelType": "FTP",
+    "brief": "Загрузка по фтп 2",
+    "name": "Загрузка по фтп 2",
+    "msgProjectId": 92,
+    "attributes": [
+      {
+        "loadChannelAttributeId": 108,
+        "name": "username",
+        "value": "ftpuser",
+        "loadChannelId": 73,
+        "loadChannelTypeAttributeId": 13
+      },
+      {
+        "loadChannelAttributeId": 109,
+        "name": "delay",
+        "value": "15000",
+        "loadChannelId": 73,
+        "loadChannelTypeAttributeId": 15
+      },
+      {
+        "loadChannelAttributeId": 110,
+        "name": "password",
+        "value": "1qazxsw2",
+        "loadChannelId": 73,
+        "loadChannelTypeAttributeId": 14
+      },
+      {
+        "loadChannelAttributeId": 111,
+        "name": "path",
+        "value": "ftp://10.20.65.244:21/ftpLoad1",
+        "loadChannelId": 73,
+        "loadChannelTypeAttributeId": 16
+      },
+      {
+        "loadChannelAttributeId": 113,
+        "name": "qcmdbNetStoreSaveName",
+        "value": "",
+        "loadChannelId": 73,
+        "loadChannelTypeAttributeId": 27
+      },
+      {
+        "loadChannelAttributeId": 114,
+        "name": "fileStorageSubFolder",
+        "value": "",
+        "loadChannelId": 73,
+        "loadChannelTypeAttributeId": 28
+      },
+      {
+        "loadChannelAttributeId": 115,
+        "name": "qcmdbNetStoreLoadName",
+        "value": "",
+        "loadChannelId": 73,
+        "loadChannelTypeAttributeId": 29
+      },
+      {
+        "loadChannelAttributeId": 112,
+        "name": "mask",
+        "value": "*.xml",
+        "loadChannelId": 73,
+        "loadChannelTypeAttributeId": 17
+      }
+    ]
+  },
+  "LoadChannelType": {
+    "loadChannelTypeId": 12,
+    "brief": "FTP",
+    "name": "FTP",
+    "attributes": [
+      {
+        "loadChannelTypeAttributeId": 13,
+        "loadChannelTypeId": 12,
+        "obligatoryFlag": 1,
+        "type": "string",
+        "brief": "username",
+        "name": "Логин",
+        "description": ""
+      },
+      {
+        "loadChannelTypeAttributeId": 15,
+        "loadChannelTypeId": 12,
+        "obligatoryFlag": 1,
+        "type": "number",
+        "brief": "delay",
+        "name": " Период сканирования, мс",
+        "description": ""
+      },
+      {
+        "loadChannelTypeAttributeId": 14,
+        "loadChannelTypeId": 12,
+        "obligatoryFlag": 1,
+        "type": "string",
+        "brief": "password",
+        "name": "Пароль",
+        "description": ""
+      },
+      {
+        "loadChannelTypeAttributeId": 16,
+        "loadChannelTypeId": 12,
+        "obligatoryFlag": 1,
+        "type": "string",
+        "brief": "path",
+        "name": "Адрес подключения",
+        "description": ""
+      },
+      {
+        "loadChannelTypeAttributeId": 17,
+        "loadChannelTypeId": 12,
+        "obligatoryFlag": 1,
+        "type": "string",
+        "brief": "mask",
+        "name": "Маска отбора ",
+        "description": "*.*"
+      },
+      {
+        "loadChannelTypeAttributeId": 27,
+        "loadChannelTypeId": 12,
+        "obligatoryFlag": 2,
+        "type": "string",
+        "brief": "qcmdbNetStoreSaveName",
+        "name": "Наим. сетевого хранилища для хранения загруженных пакетов",
+        "description": "Наим. сетевого хранилища для хранения загруженных пакетов"
+      },
+      {
+        "loadChannelTypeAttributeId": 28,
+        "loadChannelTypeId": 12,
+        "obligatoryFlag": 2,
+        "type": "string",
+        "brief": "fileStorageSubFolder",
+        "name": "Поддиректория для сохранения исходных файлов",
+        "description": "Поддиректория хранилища FileStorage для сохранения исходных файлов"
+      },
+      {
+        "loadChannelTypeAttributeId": 29,
+        "loadChannelTypeId": 12,
+        "obligatoryFlag": 2,
+        "type": "string",
+        "brief": "qcmdbNetStoreLoadName",
+        "name": "Наим. сетевого хранилища для загрузки пакетов сообщений",
+        "description": "Наим. сетевого хранилища для загрузки пакетов сообщений из Q.CMDB"
+      }
+    ]
+  },
+  "Process": {
+    "processId": 65,
+    "sysName": "loadpaymentmessagesprocessfa",
+    "name": "Процесс обработки загруженных сообщений формата ISO20022 для модуля Центр сообщений FA#",
+    "service": "qisopmloadpmprocessfabpm",
+    "msgProjectId": 92,
+    "processStartOption": 1,
+    "topicName": ""
+  },
+  "MessageFormat": {
+    "msgFormatId": 1,
+    "isCheckSign": false,
+    "viewServiceId": 0,
+    "version": "PCCB2022.02",
+    "dataFormat": "XML",
+    "name": "PCCB_UFEBS2",
+    "validationServiceId": null,
+    "businessPlatformId": 14,
+    "businessPlatformSysName": "Q.MessageHub",
+    "pbcId": 1637060490311,
+    "pbcLocalName": "Обмен сообщениями",
+    "attributes": [
+      {
+        "msgFormatAttributeId": 1,
+        "type": "string",
+        "msgFormatId": 1,
+        "brief": "package",
+        "name": "package",
+        "description": "Набор передаваемых в процесс параметров пакета"
+      },
+      {
+        "msgFormatAttributeId": 4,
+        "type": "number",
+        "msgFormatId": 1,
+        "brief": "testAttr",
+        "name": "testAttr",
+        "description": "число"
+      }
+    ]
+  },
+  "MessagingProject": {
+    "msgProjectId": 92,
+    "type": 1,
+    "pbcBrief": "",
+    "projectName": "project_3",
+    "version": 9,
+    "sysNamePrefix": ""
+  }
+}
