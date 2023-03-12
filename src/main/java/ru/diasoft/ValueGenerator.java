@@ -75,20 +75,6 @@ public class ValueGenerator {
             throw new IllegalArgumentException("Набора схем нет! Обрабатывать не будем.");
         }
 
-        //схема Schema schema может быть двух видов: обычная или со ссылкой:
-        //  "application/json": {
-        //                    "schema": {
-        //                        "$ref": "#/components/schemas/MsgCreate"
-        //                    }
-        //                }
-        // "application/json": {
-        //                    "schema": {
-        //                        "type": "object",
-        //                        "additionalProperties": {
-        //                            "type": "string"
-        //                        }
-        //                    }
-        //                }
         //поэтому пропишем обработку для этих вариантов
         Set<Schema> knownSchemas = new HashSet<>();
         while (schema.get$ref() != null) {
@@ -113,7 +99,6 @@ public class ValueGenerator {
         //2. Массив (properties и additionalProperties = null, type = array)
         //3. Сложный тип (properties и/или additionalProperties != null)
         //4. Все, что не подходит под эти три категории - кидать ошибку
-
 
         if (schema.getProperties() == null && schema.getAdditionalProperties() == null) {
             //2. Массив (properties и additionalProperties = null, type = array)

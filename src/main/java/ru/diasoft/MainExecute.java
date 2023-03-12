@@ -52,7 +52,7 @@ public class MainExecute {
                 System.out.println(mapper.writerWithDefaultPrettyPrinter().writeValueAsString(jsonObject));
 
                 if (response.statusCode() != correctStatusCode) {
-                    logger.error("Ошибка валидации ответа. Полученн некорректный статус код: {}", response.statusCode());
+                    logger.error("Ошибка валидации ответа. Получен некорректный статус код: {}", response.statusCode());
                 }
                 else {
                     logger.info("Получен корректный статус - код: {}", response.statusCode());

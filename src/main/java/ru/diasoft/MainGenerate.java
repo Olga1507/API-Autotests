@@ -21,59 +21,14 @@ public class MainGenerate {
 
     //Логирование
     private static Logger logger = LoggerFactory.getLogger(MainGenerate.class);
-    // static List<TestCase> testCaseList = new ArrayList<>();
-
 
     public static void main(String[] args) throws Exception {
-
-//
-//        //Преобразование из JSON в классы
-//        InputStream inputStream = Main.class.getClassLoader().getResourceAsStream("data.json");
-//        Root root = new ObjectMapper().readValue(inputStream, Root.class);
-//
-//
-//        //Преобразование из классов в строку JSON
-//        Gson gson = new GsonBuilder().setPrettyPrinting().create();
-//        String json = gson.toJson(root, Root.class);
-//
-//
-//
-//        System.out.println(json);
-
-        //int k = 0;
-
-
-/*
-        // create a client
-        HttpClient client = HttpClient.newHttpClient();
-
-        // create a request
-        HttpRequest request = HttpRequest.newBuilder(URI.create("https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY"))
-                .header("accept", "application/json")
-                .GET()
-                .build();
-
-        HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
-
-        System.out.println(response.body());
-*/
-
         // parse a swagger description from the petstore and get the result
         //SwaggerParseResult result = new OpenAPIParser().readLocation("http://qmmmsgpackage.msghubtmp.qrun.diasoft.ru/qmmmsgpackage/v3/api-docs", null, null);
         SwaggerParseResult result = new OpenAPIParser().readLocation(MainGenerate.class.getClassLoader().getResource("api-docs.json").toString(), null, null);
 
-        // or from a file
-        //   SwaggerParseResult result = new OpenAPIParser().readLocation("./path/to/openapi.yaml", null, null);
-
         // the parsed POJO
         OpenAPI openAPI = result.getOpenAPI();
-        //int i = 0;
-
-//        if (result.getMessages() != null) {
-//            result.getMessages().forEach(System.err::println); // validation errors and warnings
-//        }
-
-        //List<MethodAPI> methods = new ArrayList<>();
 
         AllCases allCases = new AllCases();
         List<TestCase> testCaseList = new ArrayList<>();
@@ -96,15 +51,6 @@ public class MainGenerate {
         System.out.println(json1);
     }
 
-
-
-//// отладочный метод
-//    public static void main(String[] args) {
-//        SchemaTypesExample schemaTypesExample = new SchemaTypesExample();
-//
-//        System.out.println(schemaTypesExample.getTypeExample("fghgf"));
-//
-//    }
 
     static SortedSet<String> possibleResponseCodes = new TreeSet<>();
     static {
@@ -136,7 +82,6 @@ public class MainGenerate {
      */
 
     public static void tryCreateTestCase(List<TestCase> testCaseList, String pathName, Operation methodDescription, MethodTypes methodType, Map<String, Schema> schemas) {
-
 
         TestCase testCase = null;
 
