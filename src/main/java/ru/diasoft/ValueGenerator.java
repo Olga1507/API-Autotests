@@ -17,7 +17,7 @@ public class ValueGenerator {
     private static Logger logger = LoggerFactory.getLogger(MainGenerate.class);
 
     /**
-     * Генерит пример значения по параметру для запо
+     * Генерит пример значения по параметру
      * @param parameter
      * @param schemas
      * @return

@@ -126,13 +126,13 @@ public class MainGenerate {
     }
 
     /**
-     * Формирует/не форимирует тест-кейс на основе описания из swagger и добавляет его в List
+     * Формирует/не формирует тест-кейс на основе описания из swagger и добавляет его в List
      *
      * @param pathName
      * @param methodDescription
      * @param methodType
      * @param schemas
-     * @return если что-то внутри упадет (например, methodDescription вернутся некорреткный или схема), возвращается null
+     * @return если что-то внутри упадет (например, methodDescription вернутся некорректный или схема), возвращается null
      */
 
     public static void tryCreateTestCase(List<TestCase> testCaseList, String pathName, Operation methodDescription, MethodTypes methodType, Map<String, Schema> schemas) {
@@ -191,7 +191,8 @@ public class MainGenerate {
                 }
 
                 if (apiResponse == null){
-                    throw new IllegalArgumentException(String.format("Ни один из кодов ответа не соответствует possibleResponseCodes. Количество найденных кодов ответа: %s", methodDescription.getResponses().size()));
+                    throw new IllegalArgumentException(String.format("Ни один из кодов ответа не соответствует possibleResponseCodes. Количество найденных кодов ответа: %s",
+                            methodDescription.getResponses().size()));
                 }
             }
         }

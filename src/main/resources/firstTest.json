@@ -4,41 +4,155 @@
     {
       "methodPath": "/qmmmsgpackage/Msg/v1/{msgId}/abc/{fields}",
       "methodType": "GET",
-      "parameters": {
-        "msgId": "1",
-        "fields": "456"
-      }
+      "parametersPath": {
+        "msgId": 27701
+      },
+      "parametersQuery": {
+        "fields": "56"
+      },
+      "responseBody": {
+        "messageBody": "str-trTal38jlOKo",
+        "receiver": "str-GxJLX",
+        "msgPackageId": 64,
+        "formatName": "str-ZeFilAsJWEQ",
+        "msgId": 81,
+        "inDatetime": "yyyy-MM-dd\u0027T\u0027HH:mm:ss.SSSZ",
+        "msgFormatId": 48,
+        "number": "str-9dKGvZ6--jjsJa",
+        "messageType": "str-LK8ONC3uHOyr",
+        "sender": "str-lvXhnYzRo88",
+        "formatVersion": "str-VgYwSLq0",
+        "direction": 62,
+        "status": 56
+      },
+      "responseCode": "200",
+      "responseBodyCheckMode": "DECLARED_AND_ANY_TAGS",
+      "responseBodyValueCheckMode": "STRICT",
+      "responseCheckMode": "RESPONSE_CODE_AND_BODY"
     },
     {
       "methodPath": "/qmmmsgpackage/Msg/v1/{msgId}/abc/{fields}",
       "methodType": "GET",
-      "parameters": {
-        "msgId": "1",
-        "fields": "789"
-      }
+      "parametersPath": {
+        "msgId": 27700
+      },
+      "parametersQuery": {
+        "fields": "888"
+      },
+      "responseBody": {
+        "messageBody": "str-trTal38jlOKo",
+        "receiver": "str-GxJLX",
+        "msgPackageId": 64,
+        "formatName": "str-ZeFilAsJWEQ",
+        "msgId": 81,
+        "inDatetime": "yyyy-MM-dd\u0027T\u0027HH:mm:ss.SSSZ",
+        "msgFormatId": 48,
+        "number": "str-9dKGvZ6--jjsJa",
+        "messageType": "str-LK8ONC3uHOyr",
+        "sender": "str-lvXhnYzRo88",
+        "formatVersion": "str-VgYwSLq0",
+        "direction": 62,
+        "status": 56
+      },
+      "responseCode": "200",
+      "responseBodyCheckMode": "DECLARED_AND_ANY_TAGS",
+      "responseBodyValueCheckMode": "STRICT",
+      "responseCheckMode": "RESPONSE_CODE_AND_BODY"
     },
     {
       "methodPath": "/qmmmsgpackage/Msg/v1/{msgId}",
       "methodType": "GET",
-      "parameters": {
-        "msgId": "2",
-        "fields": "111"
-      }
+      "parametersPath": {
+        "msgId": 27700
+      },
+      "parametersQuery": {
+        "fields": "1"
+      },
+      "responseBody": {
+        "messageBody": "str-trTal38jlOKo",
+        "receiver": "str-GxJLX",
+        "msgPackageId": 64,
+        "formatName": "str-ZeFilAsJWEQ",
+        "msgId": 81,
+        "inDatetime": "yyyy-MM-dd\u0027T\u0027HH:mm:ss.SSSZ",
+        "msgFormatId": 48,
+        "number": "str-9dKGvZ6--jjsJa",
+        "messageType": "str-LK8ONC3uHOyr",
+        "sender": "str-lvXhnYzRo88",
+        "formatVersion": "str-VgYwSLq0",
+        "direction": 62,
+        "status": 56
+      },
+      "responseCode": "200",
+      "responseBodyCheckMode": "DECLARED_AND_ANY_TAGS",
+      "responseBodyValueCheckMode": "STRICT",
+      "responseCheckMode": "RESPONSE_CODE_AND_BODY"
     },
     {
-      "methodPath": "/qmmmsgpackage/Msg/v1/{msgId1}",
+      "methodPath": "/qmmmsgpackage/MsgPackage/v1/{msgPackageId}",
       "methodType": "GET",
-      "parameters": {
-        "msgId": "2",
-        "fields": "111"
-      }
-    },
-    {
-      "methodPath": "/qmmmsgpackage/Msg/v1/{msgId}",
-      "methodType": "GET",
-      "parameters": {
+      "parametersPath": {
+        "msgPackageId": 27701
+      },
+      "parametersQuery": {
 
-      }
+      },
+      "responseBody": {
+        "fileName": "str-IFSZSAAW",
+        "messageCount": 87,
+        "msgPackageType": "str-UzKKhN",
+        "msgPackageId": 59,
+        "destination": "str-xlxTFfGheZ4",
+        "formatName": "str-E5oSRmPkSvoY",
+        "branchName": "str-BIFHJoVD",
+        "childCount": 6,
+        "source": "str-Uwyz-",
+        "createAt": "yyyy-MM-dd\u0027T\u0027HH:mm:ss.SSSZ",
+        "msgFormatId": 45,
+        "humanTaskId": "str-m-1gTCllEcteWl",
+        "sender": "str-NabZY6G",
+        "formatVersion": "str-puU9FSvz",
+        "parentMsgPackageId": 14,
+        "direction": 93,
+        "status": 4
+      },
+      "responseCode": "200",
+      "responseBodyCheckMode": "DECLARED_AND_ANY_TAGS",
+      "responseBodyValueCheckMode": "STRICT",
+      "responseCheckMode": "RESPONSE_CODE_AND_BODY"
+    },
+    {
+      "methodPath": "/qmmmsgpackage/MsgPackage/v1/{msgPackageId}",
+      "methodType": "GET",
+      "parametersPath": {
+        "msgPackageId": 11
+      },
+      "parametersQuery": {
+        "fields": "str-zSa8kZanpnF"
+      },
+      "responseBody": {
+        "fileName": "str-IFSZSAAW",
+        "messageCount": 87,
+        "msgPackageType": "str-UzKKhN",
+        "msgPackageId": 59,
+        "destination": "str-xlxTFfGheZ4",
+        "formatName": "str-E5oSRmPkSvoY",
+        "branchName": "str-BIFHJoVD",
+        "childCount": 6,
+        "source": "str-Uwyz-",
+        "createAt": "yyyy-MM-dd\u0027T\u0027HH:mm:ss.SSSZ",
+        "msgFormatId": 45,
+        "humanTaskId": "str-m-1gTCllEcteWl",
+        "sender": "str-NabZY6G",
+        "formatVersion": "str-puU9FSvz",
+        "parentMsgPackageId": 14,
+        "direction": 93,
+        "status": 4
+      },
+      "responseCode": "200",
+      "responseBodyCheckMode": "DECLARED_AND_ANY_TAGS",
+      "responseBodyValueCheckMode": "STRICT",
+      "responseCheckMode": "RESPONSE_CODE_AND_BODY"
     }
   ]
 }

@@ -1,6 +1,8 @@
 package ru.diasoft;
 
+
 import com.fasterxml.jackson.databind.ObjectMapper;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import ru.diasoft.domain.TestCase;
@@ -39,8 +41,15 @@ public class MainExecute {
 
                 String resultUrl = allCases.getServerUrl().concat(correctUrl);
                 HttpResponse<String> response = sendRequest(resultUrl, case0.getMethodType());
-                // System.out.println(response.statusCode());
-                // System.out.println(response.body());
+
+                //Для кpacивoго oфopмлeния JSON cтpoки
+                ObjectMapper mapper = new ObjectMapper();
+                Object jsonObject = mapper.readValue(response.body(), Object.class);
+
+
+                System.out.println(resultUrl);
+                System.out.println("http-code: " + response.statusCode());
+                System.out.println(mapper.writerWithDefaultPrettyPrinter().writeValueAsString(jsonObject));
 
                 if (response.statusCode() != correctStatusCode) {
                     logger.error("Ошибка валидации ответа. Полученн некорректный статус код: {}", response.statusCode());
