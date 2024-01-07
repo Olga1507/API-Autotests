@@ -1,6 +1,7 @@
 package ru.diasoft;
 
 
+import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import org.json.JSONObject;
@@ -42,16 +43,39 @@ public class MainExecute {
                 //System.out.println(correctUrl);
 
                 String resultUrl = allCases.getServerUrl().concat(correctUrl);
+                logger.info("URL для запроса: {}", resultUrl);
                 HttpResponse<String> response = sendRequest(resultUrl, case0.getMethodType());
+                logger.info("Получен ответ. Код: {}. Тело ответа: {}", response.statusCode(), response.body());
+                logger.info("Начали валидацию тела ответа из expectedObjects");
 
                 //Для кpacивoго oфopмлeния JSON cтpoки
                 ObjectMapper mapper = new ObjectMapper();
-                Object jsonObject = mapper.readValue(response.body(), Object.class);
+                JsonNode responseJson = mapper.readValue(response.body(), JsonNode.class);
+                //JsonNode node1 = mapper.valueToTree(jsonObject);
 
 
-                System.out.println(resultUrl);
-                System.out.println("http-code: " + response.statusCode());
-                System.out.println(mapper.writerWithDefaultPrettyPrinter().writeValueAsString(jsonObject));
+                //реализация валидации тела ответа: используется подход с expectedObjects/unexpectedObjects
+
+                JsonNode expectedObjects = mapper.valueToTree(case0.getExpectedObjects());
+
+                //цикл поиска по expectedObjects
+                expectedObjects.fields().forEachRemaining(stringJsonNodeEntry -> {
+                    //поиск одного объекта из expectedObjects во всём теле ответа
+                    JsonNode founded = responseJson.get(stringJsonNodeEntry.getKey());
+                    if (founded == null) {
+                        throw new RuntimeException("Не найдено обязательное поле в теле ответа: " + stringJsonNodeEntry.getKey());
+                    }
+                    if (!stringJsonNodeEntry.getValue().equals(founded)) {
+                        throw new RuntimeException(String.format("Получили ошибку при сравнении тега '%s': полученное значение '%s' не совпало с ожидаемым '%s'",
+                                stringJsonNodeEntry.getKey(), founded, stringJsonNodeEntry.getValue()));
+                    }
+
+
+                });
+                logger.info("Валидация прошла успешно!");
+
+
+
 
                 if (response.statusCode() != correctStatusCode) {
                     logger.error("Ошибка валидации ответа. Получен некорректный статус код: {}", response.statusCode());

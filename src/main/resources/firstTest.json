@@ -2,6 +2,28 @@
   "serverUrl": "http://qmmmsgpackage.msghubtmp.qrun.diasoft.ru",
   "cases": [
     {
+      "caseName": "Дебаг",
+      "methodPath": "/qmmmsgpackage/MsgPackage/v1/{msgPackageId}",
+      "methodType": "GET",
+      "requestBody": null,
+      "parametersPath": {
+        "msgPackageId": 11
+      },
+      "parametersQuery": {
+        "fields": "str-nLQzBwWSZ"
+      },
+      "responseCode": "200",
+      "expectedObjects": {
+        "fileName": "ED101_121.xml",
+        "msgPackageId": 11,
+        "destination": "044525000",
+        "formatName": "PCCB",
+        "branchName": "НашБанк",
+        "createAt": "2022-02-24T07:03:03.582+0000"
+      },
+      "unexpectedObjects": null
+    },
+    {
       "methodPath": "/qmmmsgpackage/Msg/v1/{msgId}/abc/{fields}",
       "methodType": "GET",
       "parametersPath": {
@@ -10,7 +32,8 @@
       "parametersQuery": {
         "fields": "56"
       },
-      "responseBody": {
+      "responseCode": "200",
+      "expectedObjects": {
         "messageBody": "str-trTal38jlOKo",
         "receiver": "str-GxJLX",
         "msgPackageId": 64,
@@ -25,10 +48,7 @@
         "direction": 62,
         "status": 56
       },
-      "responseCode": "200",
-      "responseBodyCheckMode": "DECLARED_AND_ANY_TAGS",
-      "responseBodyValueCheckMode": "STRICT",
-      "responseCheckMode": "RESPONSE_CODE_AND_BODY"
+      "unexpectedObjects": null
     },
     {
       "methodPath": "/qmmmsgpackage/Msg/v1/{msgId}/abc/{fields}",
@@ -39,7 +59,8 @@
       "parametersQuery": {
         "fields": "888"
       },
-      "responseBody": {
+      "responseCode": "200",
+      "expectedObjects": {
         "messageBody": "str-trTal38jlOKo",
         "receiver": "str-GxJLX",
         "msgPackageId": 64,
@@ -54,10 +75,7 @@
         "direction": 62,
         "status": 56
       },
-      "responseCode": "200",
-      "responseBodyCheckMode": "DECLARED_AND_ANY_TAGS",
-      "responseBodyValueCheckMode": "STRICT",
-      "responseCheckMode": "RESPONSE_CODE_AND_BODY"
+      "unexpectedObjects": null
     },
     {
       "methodPath": "/qmmmsgpackage/Msg/v1/{msgId}",
@@ -68,7 +86,8 @@
       "parametersQuery": {
         "fields": "1"
       },
-      "responseBody": {
+      "responseCode": "200",
+      "expectedObjects": {
         "messageBody": "str-trTal38jlOKo",
         "receiver": "str-GxJLX",
         "msgPackageId": 64,
@@ -83,10 +102,7 @@
         "direction": 62,
         "status": 56
       },
-      "responseCode": "200",
-      "responseBodyCheckMode": "DECLARED_AND_ANY_TAGS",
-      "responseBodyValueCheckMode": "STRICT",
-      "responseCheckMode": "RESPONSE_CODE_AND_BODY"
+      "unexpectedObjects": null
     },
     {
       "methodPath": "/qmmmsgpackage/MsgPackage/v1/{msgPackageId}",
@@ -97,7 +113,8 @@
       "parametersQuery": {
 
       },
-      "responseBody": {
+      "responseCode": "200",
+      "expectedObjects": {
         "fileName": "str-IFSZSAAW",
         "messageCount": 87,
         "msgPackageType": "str-UzKKhN",
@@ -116,10 +133,7 @@
         "direction": 93,
         "status": 4
       },
-      "responseCode": "200",
-      "responseBodyCheckMode": "DECLARED_AND_ANY_TAGS",
-      "responseBodyValueCheckMode": "STRICT",
-      "responseCheckMode": "RESPONSE_CODE_AND_BODY"
+      "unexpectedObjects": null
     },
     {
       "methodPath": "/qmmmsgpackage/MsgPackage/v1/{msgPackageId}",
@@ -130,7 +144,8 @@
       "parametersQuery": {
         "fields": "str-zSa8kZanpnF"
       },
-      "responseBody": {
+      "responseCode": "200",
+      "expectedObjects": {
         "fileName": "str-IFSZSAAW",
         "messageCount": 87,
         "msgPackageType": "str-UzKKhN",
@@ -149,10 +164,7 @@
         "direction": 93,
         "status": 4
       },
-      "responseCode": "200",
-      "responseBodyCheckMode": "DECLARED_AND_ANY_TAGS",
-      "responseBodyValueCheckMode": "STRICT",
-      "responseCheckMode": "RESPONSE_CODE_AND_BODY"
+      "unexpectedObjects": null
     }
   ]
 }

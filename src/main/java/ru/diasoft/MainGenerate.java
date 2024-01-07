@@ -46,7 +46,7 @@ public class MainGenerate {
             // int i = 0;
         }
         allCases.setCases(testCaseList);
-        Gson gson1 = new GsonBuilder().setPrettyPrinting().create();
+        Gson gson1 = new GsonBuilder().setPrettyPrinting().serializeNulls().create();
         String json1 = gson1.toJson(allCases, AllCases.class);
         System.out.println(json1);
     }
@@ -92,10 +92,7 @@ public class MainGenerate {
             testCase.setMethodPath(pathName);
             testCase.setMethodType(methodType);
 
-            //определение как проверять наш ответ
-            testCase.setResponseBodyCheckMode(ResponseBodyCheckMode.DECLARED_AND_ANY_TAGS);
-            testCase.setResponseBodyValueCheckMode(ResponseBodyValueCheckMode.STRICT);
-            testCase.setResponseCheckMode(ResponseCheckMode.RESPONSE_CODE_AND_BODY);
+
 
 
             //заполняем параметры метода
@@ -129,7 +126,7 @@ public class MainGenerate {
                 for (String possibleResponseCode : possibleResponseCodes){
                     if (methodDescription.getResponses().containsKey(possibleResponseCode)){
                         apiResponse = methodDescription.getResponses().get(possibleResponseCode);
-                        testCase.setResponseBody(ValueGenerator.generateValueByContent(apiResponse.getContent(), schemas));
+                        testCase.setExpectedObjects(ValueGenerator.generateValueByContent(apiResponse.getContent(), schemas));
                         testCase.setResponseCode(possibleResponseCode);
                         break;
                     }
