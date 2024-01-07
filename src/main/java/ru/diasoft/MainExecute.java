@@ -3,6 +3,7 @@ package ru.diasoft;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
+import org.json.JSONObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import ru.diasoft.domain.TestCase;
@@ -11,11 +12,12 @@ import ru.diasoft.domain.AllCases;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.URI;
+import java.net.URLEncoder;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
-import java.util.ArrayList;
-import java.util.List;
+import java.nio.charset.StandardCharsets;
+import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -53,8 +55,7 @@ public class MainExecute {
 
                 if (response.statusCode() != correctStatusCode) {
                     logger.error("Ошибка валидации ответа. Получен некорректный статус код: {}", response.statusCode());
-                }
-                else {
+                } else {
                     logger.info("Получен корректный статус - код: {}", response.statusCode());
                 }
             } catch (Exception e) {
@@ -103,11 +104,54 @@ public class MainExecute {
         // create a request
         HttpRequest request = HttpRequest.newBuilder(URI.create(url))
                 .header("accept", "application/json")
+                .header("Authorization", "Bearer" + getAuthToken())
                 .GET()
                 .build();
 
         HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
         return response;
     }
+
+    public static String getAuthToken() throws IOException, InterruptedException {
+        Map<String, String> formData = new HashMap<>();
+        formData.put("grant_type","password");
+        formData.put("scope","openid");
+        formData.put("username","dqtech");
+        formData.put("password","12345678");
+
+        HttpClient client = HttpClient.newHttpClient();
+
+        HttpRequest request = HttpRequest.newBuilder()
+                .header("Content-Type", "application/x-www-form-urlencoded")
+                .uri(URI.create("http://mdpauth.msghubtmp.qrun.diasoft.ru/mdpauth/oauth/token"))
+                .POST(HttpRequest.BodyPublishers.ofString(getFormDataAsString(formData)))
+                .header("Authorization", "Basic " +
+                        Base64.getEncoder().encodeToString(("client:secret").getBytes()))
+                .build();
+
+        HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
+
+        String authToken = new JSONObject(response.body()).getString("access_token");
+
+        return authToken;
+    }
+
+    private static String getFormDataAsString(Map<String, String> formData) {
+        StringBuilder formBodyBuilder = new StringBuilder();
+        for (Map.Entry<String, String> singleEntry : formData.entrySet()) {
+            if (formBodyBuilder.length() > 0) {
+                formBodyBuilder.append("&");
+            }
+            formBodyBuilder.append(URLEncoder.encode(singleEntry.getKey(), StandardCharsets.UTF_8));
+            formBodyBuilder.append("=");
+            formBodyBuilder.append(URLEncoder.encode(singleEntry.getValue(), StandardCharsets.UTF_8));
+        }
+        return formBodyBuilder.toString();
+    }
+
+
+
+
+
 
 }
