@@ -21,7 +21,9 @@
         "branchName": "НашБанк",
         "createAt": "2022-02-24T07:03:03.582+0000"
       },
-      "unexpectedObjects": null
+      "unexpectedObjects": {
+        "sourceType" : 1
+      }
     },
     {
       "methodPath": "/qmmmsgpackage/Msg/v1/{msgId}/abc/{fields}",

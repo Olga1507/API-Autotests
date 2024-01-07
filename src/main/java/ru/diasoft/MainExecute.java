@@ -54,25 +54,47 @@ public class MainExecute {
                 //JsonNode node1 = mapper.valueToTree(jsonObject);
 
 
-                //реализация валидации тела ответа: используется подход с expectedObjects/unexpectedObjects
+                //Реализация валидации тела ответа: используется подход с expectedObjects/unexpectedObjects
 
-                JsonNode expectedObjects = mapper.valueToTree(case0.getExpectedObjects());
-
-                //цикл поиска по expectedObjects
-                expectedObjects.fields().forEachRemaining(stringJsonNodeEntry -> {
-                    //поиск одного объекта из expectedObjects во всём теле ответа
-                    JsonNode founded = responseJson.get(stringJsonNodeEntry.getKey());
-                    if (founded == null) {
-                        throw new RuntimeException("Не найдено обязательное поле в теле ответа: " + stringJsonNodeEntry.getKey());
-                    }
-                    if (!stringJsonNodeEntry.getValue().equals(founded)) {
-                        throw new RuntimeException(String.format("Получили ошибку при сравнении тега '%s': полученное значение '%s' не совпало с ожидаемым '%s'",
-                                stringJsonNodeEntry.getKey(), founded, stringJsonNodeEntry.getValue()));
-                    }
+                JsonNode unexpectedObjects = mapper.valueToTree(case0.getUnexpectedObjects());
 
 
-                });
+               //проверка на null expectedObjects
+                if (case0.getExpectedObjects() != null) {
+                    JsonNode expectedObjects = mapper.valueToTree(case0.getExpectedObjects());
+                    //цикл поиска по expectedObjects
+                    expectedObjects.fields().forEachRemaining(stringJsonNodeEntry -> {
+                        //поиск одного объекта из expectedObjects во всём теле ответа
+                        JsonNode founded = responseJson.get(stringJsonNodeEntry.getKey());
+                        if (founded == null) {
+                            throw new RuntimeException("Не найдено обязательное поле в теле ответа: " + stringJsonNodeEntry.getKey());
+                        }
+                        if (!stringJsonNodeEntry.getValue().equals(founded)) {
+                            throw new RuntimeException(String.format("Получили ошибку при сравнении тега '%s': полученное значение '%s' не совпало с ожидаемым '%s'",
+                                    stringJsonNodeEntry.getKey(), founded, stringJsonNodeEntry.getValue()));
+                        }
+                    });
+
+                }
+
+                if (case0.getUnexpectedObjects() != null) {
+                    //цикл поиска по unexpectedObjects
+                    unexpectedObjects.fields().forEachRemaining(stringJsonNodeEntry -> {
+                        JsonNode founded = responseJson.get(stringJsonNodeEntry.getKey());
+                        //проверяется только тег без учёта значения
+//                        if (founded != null) {
+//                            throw new RuntimeException("Указанное поле не должно быть в теле ответа: " + stringJsonNodeEntry.getKey());
+//                        }
+                        if (stringJsonNodeEntry.getValue().equals(founded)) {
+                            throw new RuntimeException(String.format("В теле ответа не должно быть тега '%s' с значением '%s'",
+                                    stringJsonNodeEntry.getKey(), founded));
+                        }
+
+                    });
+                }
                 logger.info("Валидация прошла успешно!");
+
+                //TODO научиться работь с вложенными телами ответов - через рекурсию
 
 
 
@@ -138,10 +160,10 @@ public class MainExecute {
 
     public static String getAuthToken() throws IOException, InterruptedException {
         Map<String, String> formData = new HashMap<>();
-        formData.put("grant_type","password");
-        formData.put("scope","openid");
-        formData.put("username","dqtech");
-        formData.put("password","12345678");
+        formData.put("grant_type", "password");
+        formData.put("scope", "openid");
+        formData.put("username", "dqtech");
+        formData.put("password", "12345678");
 
         HttpClient client = HttpClient.newHttpClient();
 
@@ -172,10 +194,6 @@ public class MainExecute {
         }
         return formBodyBuilder.toString();
     }
-
-
-
-
 
 
 }
