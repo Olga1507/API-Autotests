@@ -21,6 +21,8 @@ import java.nio.charset.StandardCharsets;
 import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
 
 public class MainExecute {
     //Логирование
@@ -53,50 +55,56 @@ public class MainExecute {
                 JsonNode responseJson = mapper.readValue(response.body(), JsonNode.class);
                 //JsonNode node1 = mapper.valueToTree(jsonObject);
 
+                //Валидация
 
-                //Реализация валидации тела ответа: используется подход с expectedObjects/unexpectedObjects
-
-                JsonNode unexpectedObjects = mapper.valueToTree(case0.getUnexpectedObjects());
-
-
-               //проверка на null expectedObjects
-                if (case0.getExpectedObjects() != null) {
-                    JsonNode expectedObjects = mapper.valueToTree(case0.getExpectedObjects());
-                    //цикл поиска по expectedObjects
-                    expectedObjects.fields().forEachRemaining(stringJsonNodeEntry -> {
-                        //поиск одного объекта из expectedObjects во всём теле ответа
-                        JsonNode founded = responseJson.get(stringJsonNodeEntry.getKey());
-                        if (founded == null) {
-                            throw new RuntimeException("Не найдено обязательное поле в теле ответа: " + stringJsonNodeEntry.getKey());
-                        }
-                        if (!stringJsonNodeEntry.getValue().equals(founded)) {
-                            throw new RuntimeException(String.format("Получили ошибку при сравнении тега '%s': полученное значение '%s' не совпало с ожидаемым '%s'",
-                                    stringJsonNodeEntry.getKey(), founded, stringJsonNodeEntry.getValue()));
-                        }
-                    });
-
+                try {
+                    validateResponse(responseJson, case0);
+                } catch (RuntimeException e) {
+                    System.err.println("Ошибка валидации: " + e.getMessage());
                 }
 
-                if (case0.getUnexpectedObjects() != null) {
-                    //цикл поиска по unexpectedObjects
-                    unexpectedObjects.fields().forEachRemaining(stringJsonNodeEntry -> {
-                        JsonNode founded = responseJson.get(stringJsonNodeEntry.getKey());
-                        //проверяется только тег без учёта значения
-//                        if (founded != null) {
-//                            throw new RuntimeException("Указанное поле не должно быть в теле ответа: " + stringJsonNodeEntry.getKey());
+
+
+
+//                //Реализация валидации тела ответа: используется подход с expectedObjects/unexpectedObjects
+//
+//                JsonNode unexpectedObjects = mapper.valueToTree(case0.getUnexpectedObjects());
+//
+//
+//               //проверка на null expectedObjects
+//                if (case0.getExpectedObjects() != null) {
+//                    JsonNode expectedObjects = mapper.valueToTree(case0.getExpectedObjects());
+//                    //цикл поиска по expectedObjects
+//                    expectedObjects.fields().forEachRemaining(stringJsonNodeEntry -> {
+//                        //поиск одного объекта из expectedObjects во всём теле ответа
+//                        JsonNode founded = responseJson.get(stringJsonNodeEntry.getKey());
+//                        if (founded == null) {
+//                            throw new RuntimeException("Не найдено обязательное поле в теле ответа: " + stringJsonNodeEntry.getKey());
 //                        }
-                        if (stringJsonNodeEntry.getValue().equals(founded)) {
-                            throw new RuntimeException(String.format("В теле ответа не должно быть тега '%s' с значением '%s'",
-                                    stringJsonNodeEntry.getKey(), founded));
-                        }
-
-                    });
-                }
-                logger.info("Валидация прошла успешно!");
-
-                //TODO научиться работать с вложенными телами ответов - через рекурсию
-
-
+//                        if (!stringJsonNodeEntry.getValue().equals(founded)) {
+//                            throw new RuntimeException(String.format("Получили ошибку при сравнении тега '%s': полученное значение '%s' не совпало с ожидаемым '%s'",
+//                                    stringJsonNodeEntry.getKey(), founded, stringJsonNodeEntry.getValue()));
+//                        }
+//                    });
+//
+//                }
+//
+//                if (case0.getUnexpectedObjects() != null) {
+//                    //цикл поиска по unexpectedObjects
+//                    unexpectedObjects.fields().forEachRemaining(stringJsonNodeEntry -> {
+//                        JsonNode founded = responseJson.get(stringJsonNodeEntry.getKey());
+//                        //проверяется только тег без учёта значения
+////                        if (founded != null) {
+////                            throw new RuntimeException("Указанное поле не должно быть в теле ответа: " + stringJsonNodeEntry.getKey());
+////                        }
+//                        if (stringJsonNodeEntry.getValue().equals(founded)) {
+//                            throw new RuntimeException(String.format("В теле ответа не должно быть тега '%s' с значением '%s'",
+//                                    stringJsonNodeEntry.getKey(), founded));
+//                        }
+//
+//                    });
+//                }
+//                logger.info("Валидация прошла успешно!");
 
 
                 if (response.statusCode() != correctStatusCode) {
@@ -115,6 +123,59 @@ public class MainExecute {
         logger.info("Обработка завершена.");
 
     }
+    // ВАЛИДАЦИЯ
+    // create object mapper instance
+    static ObjectMapper mapper = new ObjectMapper();
+
+    public static void validateResponse(JsonNode responseJson, TestCase case0) {
+        validateObjects(responseJson, mapper.valueToTree(case0.getExpectedObjects()), true);
+        validateObjects(responseJson, mapper.valueToTree(case0.getUnexpectedObjects()), false);
+        System.out.println("Валидация прошла успешно!");
+    }
+
+    private static void validateObjects(JsonNode responseJson, JsonNode objects, boolean expected) {
+        if (objects != null) {
+            objects.fields().forEachRemaining(stringJsonNodeEntry -> {
+                String key = stringJsonNodeEntry.getKey();
+                JsonNode expectedValue = stringJsonNodeEntry.getValue();
+                JsonNode founded = responseJson.get(key);
+
+                if (expected) {
+                    validateExpectedObject(key, expectedValue, founded);
+                } else {
+                    validateUnexpectedObject(key, expectedValue, founded);
+                }
+
+                // Рекурсивный вызов для вложенных объектов
+                if (founded != null && founded.isObject()) {
+                    validateObjects(founded, expectedValue, expected);
+                }
+            });
+        }
+    }
+
+    private static void validateExpectedObject(String key, JsonNode expectedValue, JsonNode founded) {
+        if (founded == null) {
+            throw new RuntimeException("Не найдено обязательное поле в теле ответа: " + key);
+        }
+        if (!expectedValue.equals(founded)) {
+            throw new RuntimeException(String.format(
+                    "Получили ошибку при сравнении тега '%s': полученное значение '%s' не совпало с ожидаемым '%s'",
+                    key, founded, expectedValue));
+        }
+    }
+
+    private static void validateUnexpectedObject(String key, JsonNode expectedValue, JsonNode founded) {
+        // Проверка отсутствия неожиданного поля
+        if (founded != null && expectedValue.equals(founded)) {
+            throw new RuntimeException(String.format(
+                    "В теле ответа не должно быть тега '%s' с значением '%s'",
+                    key, founded));
+        }
+    }
+
+
+    //
 
     public static String getUrl(TestCase testCase) throws Exception {
         String regex = "\\{([^}]*)\\}";
@@ -142,6 +203,8 @@ public class MainExecute {
         }
         return res;
     }
+
+
 
     public static HttpResponse<String> sendRequest(String url, MethodTypes type) throws IOException, InterruptedException {
         // create a client
