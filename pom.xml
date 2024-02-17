@@ -30,6 +30,7 @@
             <scope>test</scope>
         </dependency>
 
+
         <!-- Парсер Swagger'а -->
         <dependency>
             <groupId>io.swagger.parser.v3</groupId>

@@ -24,6 +24,7 @@ import java.util.regex.Pattern;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
+
 public class MainExecute {
     //Логирование
     private static Logger logger = LoggerFactory.getLogger(MainExecute.class);
@@ -47,7 +48,15 @@ public class MainExecute {
                 String resultUrl = allCases.getServerUrl().concat(correctUrl);
                 logger.info("URL для запроса: {}", resultUrl);
                 HttpResponse<String> response = sendRequest(resultUrl, case0.getMethodType());
+
                 logger.info("Получен ответ. Код: {}. Тело ответа: {}", response.statusCode(), response.body());
+
+                if (response.statusCode() != correctStatusCode) {
+                    logger.error("Ошибка валидации ответа. Получен некорректный статус код: {}", response.statusCode());
+                } else {
+                    logger.info("Получен корректный статус - код: {}", response.statusCode());
+                }
+
                 logger.info("Начали валидацию тела ответа из expectedObjects");
 
                 //Для кpacивoго oфopмлeния JSON cтpoки
@@ -55,15 +64,14 @@ public class MainExecute {
                 JsonNode responseJson = mapper.readValue(response.body(), JsonNode.class);
                 //JsonNode node1 = mapper.valueToTree(jsonObject);
 
+
                 //Валидация
 
                 try {
                     validateResponse(responseJson, case0);
                 } catch (RuntimeException e) {
-                    System.err.println("Ошибка валидации: " + e.getMessage());
+                    logger.error("Ошибка валидации: " + e.getMessage());
                 }
-
-
 
 
 //                //Реализация валидации тела ответа: используется подход с expectedObjects/unexpectedObjects
@@ -107,22 +115,22 @@ public class MainExecute {
 //                logger.info("Валидация прошла успешно!");
 
 
-                if (response.statusCode() != correctStatusCode) {
-                    logger.error("Ошибка валидации ответа. Получен некорректный статус код: {}", response.statusCode());
-                } else {
-                    logger.info("Получен корректный статус - код: {}", response.statusCode());
-                }
+
             } catch (Exception e) {
                 logger.error("Ошибка: {}", e.getMessage());
             }
 
-            logger.info("Закончили обработку тест-кейса {}", i);
 
+            logger.info("Закончили обработку тест-кейса {}", i);
 
         }
         logger.info("Обработка завершена.");
 
+
+
     }
+
+
     // ВАЛИДАЦИЯ
     // create object mapper instance
     static ObjectMapper mapper = new ObjectMapper();
@@ -173,7 +181,6 @@ public class MainExecute {
                     key, founded));
         }
     }
-
 
     //
 
