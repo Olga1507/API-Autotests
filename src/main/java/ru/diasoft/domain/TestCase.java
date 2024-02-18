@@ -16,7 +16,7 @@ public class TestCase {
     private Object requestBody;
     private Map<String, Object> parametersPath;
     private Map<String, Object> parametersQuery;
-    private String responseCode;
+    private int responseCode;
     private Object expectedObjects;
     private Object unexpectedObjects;
 }

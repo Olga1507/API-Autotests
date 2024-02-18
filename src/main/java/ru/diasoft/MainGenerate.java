@@ -127,7 +127,7 @@ public class MainGenerate {
                     if (methodDescription.getResponses().containsKey(possibleResponseCode)){
                         apiResponse = methodDescription.getResponses().get(possibleResponseCode);
                         testCase.setExpectedObjects(ValueGenerator.generateValueByContent(apiResponse.getContent(), schemas));
-                        testCase.setResponseCode(possibleResponseCode);
+                        testCase.setResponseCode(Integer.parseInt(possibleResponseCode));
                         break;
                     }
                 }

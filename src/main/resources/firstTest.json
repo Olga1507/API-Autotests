@@ -12,7 +12,7 @@
       "parametersQuery": {
         "fields": "str-nLQzBwWSZ"
       },
-      "responseCode": "200",
+      "responseCode": 200,
       "expectedObjects": {
         "fileName": "ED101_121.xml",
         "msgPackageId": 11,
@@ -34,7 +34,7 @@
       "parametersQuery": {
         "fields": "56"
       },
-      "responseCode": "200",
+      "responseCode": 200,
       "expectedObjects": {
         "messageBody": "str-trTal38jlOKo",
         "receiver": "str-GxJLX",
@@ -61,7 +61,7 @@
       "parametersQuery": {
         "fields": "888"
       },
-      "responseCode": "200",
+      "responseCode": 200,
       "expectedObjects": {
         "messageBody": "str-trTal38jlOKo",
         "receiver": "str-GxJLX",
@@ -88,7 +88,7 @@
       "parametersQuery": {
         "fields": "1"
       },
-      "responseCode": "200",
+      "responseCode": 200,
       "expectedObjects": {
         "messageBody": "str-trTal38jlOKo",
         "receiver": "str-GxJLX",
@@ -115,7 +115,7 @@
       "parametersQuery": {
 
       },
-      "responseCode": "200",
+      "responseCode": 200,
       "expectedObjects": {
         "fileName": "str-IFSZSAAW",
         "messageCount": 87,
@@ -146,25 +146,29 @@
       "parametersQuery": {
         "fields": "str-zSa8kZanpnF"
       },
-      "responseCode": "200",
+      "responseCode": 200,
       "expectedObjects": {
-        "fileName": "str-IFSZSAAW",
-        "messageCount": 87,
-        "msgPackageType": "str-UzKKhN",
-        "msgPackageId": 59,
-        "destination": "str-xlxTFfGheZ4",
-        "formatName": "str-E5oSRmPkSvoY",
-        "branchName": "str-BIFHJoVD",
-        "childCount": 6,
-        "source": "str-Uwyz-",
-        "createAt": "yyyy-MM-dd\u0027T\u0027HH:mm:ss.SSSZ",
-        "msgFormatId": 45,
-        "humanTaskId": "str-m-1gTCllEcteWl",
-        "sender": "str-NabZY6G",
-        "formatVersion": "str-puU9FSvz",
-        "parentMsgPackageId": 14,
-        "direction": 93,
-        "status": 4
+        "destination": "044525000",
+        "sender": "НАШБАНК",
+        "msgPackageId": 11,
+        "childCount": 0,
+        "createAt": "2022-02-24T07:03:03.582+0000",
+        "msgFormatId": 3,
+        "branchName": "НашБанк",
+        "formatName": "PCCB",
+        "formatVersion": "УФЭБС2022.2",
+        "parentMsgPackageId": 0,
+        "fileName": "ED101_121.xml",
+        "source": "PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iV0lORE9XUy0xMjUxIj8+DQo8UGFja2V0RVBEIHhtbG5zPSJ1cm46Y2JyLXJ1OmVkOnYyLjAiIEVETm89IjIwMCIgRUREYXRlPSIyMDIyLTAyLTAxIiBFREF1dGhvcj0iNDUyNTAwMDAwMCIgRURRdWFudGl0eT0iMSIgU3VtPSIzMDAwIiBTeXN0ZW1Db2RlPSIwMiI+DQoJPEVEMTAxIHhtbG5zPSJ1cm46Y2JyLXJ1OmVkOnYyLjAiIEVETm89IjIwMSIgRUREYXRlPSIyMDIyLTAyLTAxIiBFREF1dGhvcj0iNDUyNTAwMDAwMCIgU3lzdGVtQ29kZT0iMDIiIFBheXRLaW5kPSI0IiBQYXltZW50SUQ9IjEwMCIgU3VtPSIzMDAwIiBUcmFuc0tpbmQ9IjAxIiBQcmlvcml0eT0iNSIgUmVjZWlwdERhdGU9IjIwMjItMDItMDEiIENoYXJnZU9mZkRhdGU9IjIwMjItMDItMDEiIFBheW1lbnRQcmVjZWRlbmNlPSI3MCIgQ29kZVB1cnBvc2U9IjEiPg0KCQk8QWNjRG9jIEFjY0RvY05vPSIyMDIiIEFjY0RvY0RhdGU9IjIwMjItMDItMDEiLz4NCgkJPFBheWVyIFBlcnNvbmFsQWNjPSI0MDcwMjgxMDkwMDAwMDAwMDAwNSIgSU5OPSIxMjM0NSIgS1BQPSIxMTExMTExMTEiPg0KCQkJPE5hbWU+MTExPC9OYW1lPg0KCQkJPEJhbmsgQklDPSIwNDQ1MjUxODciIENvcnJlc3BBY2M9IjMwMTAxODEwNzAwMDAwMDAwMTg3Ii8+DQoJCTwvUGF5ZXI+DQoJCTxQYXllZSBJTk49Ijc4MDU2MzkyMjYiIFBlcnNvbmFsQWNjPSI0MjEwODgxMDIyMDAwMDAwMDAwMCI+DQoJCQk8TmFtZT7Ozs4gyuDr7vjgIOggw+Dr7vjgPC9OYW1lPg0KCQkJPEJhbmsgQklDPSIwNDQ1ODM3NzQiIENvcnJlc3BBY2M9IjMwMTAxODEwMTAwMDAwMDAwNzc0Ii8+DQoJCTwvUGF5ZWU+DQoJCTxQdXJwb3NlPsHl5yDNxNE8L1B1cnBvc2U+DQoJCTxQcm9jZXNzaW5nRGV0YWlscyBCdXNpbmVzc1NjZW5hcmlvPSJCTFNXIiBEZWJpdERhdGU9IjIwMjItMDItMDEiIENyZWRpdERhdGU9IjIwMjItMDItMDEiPg0KCQkJPFNlc3Npb24gU2Vzc2lvblR5cGU9IlVSR04iPg0KCQkJCTxTZXNzaW9uSUQ+MzwvU2Vzc2lvbklEPg0KCQkJPC9TZXNzaW9uPg0KCQk8L1Byb2Nlc3NpbmdEZXRhaWxzPg0KCTwvRUQxMDE+DQo8L1BhY2tldEVQRD4NCg==",
+        "direction": 0,
+        "messageCount": 0,
+        "msgPackageType": "",
+        "status": 1,
+        "humanTaskId": "",
+        "loadRuleName": "",
+        "sourceType": 1,
+        "processId": "",
+        "msgBodyCode": 0
       },
       "unexpectedObjects": null
     }
