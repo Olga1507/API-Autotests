@@ -212,10 +212,6 @@ public class ReportUtils {
         clTd3.appendChild(tdTx3);
         clTr.appendChild(clTd3);
 
-//        Element clTd4 = document.createElement("td");
-//        Text tdTx4 = document.createTextNode(String.valueOf(testCaseLog.getErrors()));
-//        clTd4.appendChild(tdTx4);
-//        clTr.appendChild(clTd4);
 
         if (testCaseLog.getErrors().isEmpty()) {
             Element clTd4 = document.createElement("td");

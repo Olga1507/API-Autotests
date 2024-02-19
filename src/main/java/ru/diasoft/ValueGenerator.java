@@ -16,20 +16,25 @@ public class ValueGenerator {
     //Логирование
     private static Logger logger = LoggerFactory.getLogger(MainGenerate.class);
 
+    private static final Map<String, String> BAD_REFS = Map.of(
+            "Error-ModelName{namespace='java.time', name='ZonedDateTime'}", "ZonedDateTime",
+            "Error-ModelName{namespace='java.time', name='LocalDate'}", "LocalDate");
+
     /**
      * Генерит пример значения по параметру
+     *
      * @param parameter
      * @param schemas
      * @return
      */
-    public static Object generateValueByParameter(Parameter parameter, Map<String, Schema> schemas){
-        if (parameter.getExample() != null){
+    public static Object generateValueByParameter(Parameter parameter, Map<String, Schema> schemas) {
+        if (parameter.getExample() != null) {
             return parameter.getExample();
         }
-        if (parameter.getSchema() != null){
+        if (parameter.getSchema() != null) {
             return generateValueBySchema(parameter.getSchema(), schemas);
         } else {
-            if (parameter.getDescription() != null){
+            if (parameter.getDescription() != null) {
                 return parameter.getDescription();
             }
             return "object";
@@ -38,11 +43,12 @@ public class ValueGenerator {
 
     /**
      * Генерит примеры значений по контенту
+     *
      * @param content
      * @param schemas
      * @return
      */
-    public static Object generateValueByContent (Content content, Map<String, Schema> schemas) {
+    public static Object generateValueByContent(Content content, Map<String, Schema> schemas) {
         Object requestBody = null;
         //пытаемся получить Media type - нужно чтобы исключить непонятные mediaType (например, XML)
         MediaType mediaType = getMediaTypeFromContent(content);
@@ -60,6 +66,11 @@ public class ValueGenerator {
         return requestBody;
     }
 
+    public static Object generateValueBySchema(Schema schema, Map<String, Schema> schemas) {
+        Set<Schema> knownSchemas = new HashSet<>();
+        return generateValueBySchema(schema, schemas, knownSchemas);
+    }
+
     /**
      * Функция получает пример значения по схеме. Она вызывается до тех пор, пока мы не расскроем сложный тип до простого и там уже будем использовать метод generateValueBySimpleType
      *
@@ -67,30 +78,48 @@ public class ValueGenerator {
      * @param schemas - весь набор схем в проекте, которые есть в api-docs (см components - schemas)
      * @return - пример значения по схеме
      */
-    public static Object generateValueBySchema(Schema schema, Map<String, Schema> schemas) {
+    private static Object generateValueBySchema(Schema schema, Map<String, Schema> schemas, Set<Schema> knownSchemas) {
         if (schema == null) {
             throw new IllegalArgumentException("В схеме ничего нет! Обрабатывать не будем.");
         }
         if (schemas == null) {
             throw new IllegalArgumentException("Набора схем нет! Обрабатывать не будем.");
         }
+        if (knownSchemas.contains(schema)) {
+            logger.error("Обнаружены циклические ссылки в схемах. Последняя схема: " + schema.getName());
+            return "ERROR! Cyclic schema!";
+            //throw new IllegalArgumentException("Обнаружены циклические ссылки в схемах. Последняя схема: " + schema.getName());
+        }
+        knownSchemas.add(schema);
 
         //поэтому пропишем обработку для этих вариантов
-        Set<Schema> knownSchemas = new HashSet<>();
-        while (schema.get$ref() != null) {
+        //Set<Schema> knownSchemas = new HashSet<>();
+        if (schema.get$ref() != null) {
             //если схема будет ссылаться на саму же себя (защита от колец) - идея запоминания всех пройденных схем
-            knownSchemas.add(schema);
+            //knownSchemas.add(schema);
             //Из объекта schema мы получаем ссылку $ref
             String ref = schema.get$ref();
 
             //получаем название схемы из ссылки
             String schemaName = getSchemaName(ref);
 
-            // получение схемы по ее имени
-            schema = schemas.get(schemaName);
+            //Проверяем, не является ли наименование схемы некорректным
+            String shortBadRef = BAD_REFS.get(schemaName);
+            if (shortBadRef == null) {
+                // получение схемы по ее имени
+                schema = schemas.get(schemaName);
 
-            if (knownSchemas.contains(schema)) {
-                throw new IllegalArgumentException("Обнаружены циклические ссылки в схемах. Последняя схема: " + ref);
+                if (schema == null) {
+                    throw new IllegalArgumentException("Не найдена схема с именем: " + schemaName);
+                }
+
+//            if (knownSchemas.contains(schema)) {
+//                throw new IllegalArgumentException("Обнаружены циклические ссылки в схемах. Последняя схема: " + ref);
+//            }
+                return generateValueBySchema(schema, schemas, knownSchemas);
+            } else {
+                schema.setType(shortBadRef.toLowerCase());
+                //break;
             }
         }
 
@@ -103,8 +132,8 @@ public class ValueGenerator {
         if (schema.getProperties() == null && schema.getAdditionalProperties() == null) {
             //2. Массив (properties и additionalProperties = null, type = array)
             if ("array".equals(schema.getType())) {
-                Object o1 = generateValueBySchema(schema.getItems(), schemas);
-                Object o2 = generateValueBySchema(schema.getItems(), schemas);
+                Object o1 = generateValueBySchema(schema.getItems(), schemas, knownSchemas);
+                Object o2 = generateValueBySchema(schema.getItems(), schemas, knownSchemas);
                 return List.of(o1, o2);
             }
             //1. Примитивный тип (properties и additionalProperties = null, type != array)
@@ -117,16 +146,18 @@ public class ValueGenerator {
             Map<String, Object> result = new HashMap<>();
             if (schema.getProperties() != null) {
                 schema.getProperties().forEach((key, value) -> {
+                    //System.out.println(key);
                     //см pic1.png
-                    result.put((String) key, generateValueBySchema((Schema) value, schemas));
+                    result.put((String) key, generateValueBySchema((Schema) value, schemas, knownSchemas));
                 });
+
             }
 
             //todo решить вопрос с перезаписью additionalProp1, если такие же названия есть в Properties
             if (schema.getAdditionalProperties() != null) {
-                result.put("additionalProp1", generateValueBySchema((Schema) schema.getAdditionalProperties(), schemas));
-                result.put("additionalProp2", generateValueBySchema((Schema) schema.getAdditionalProperties(), schemas));
-                result.put("additionalProp3", generateValueBySchema((Schema) schema.getAdditionalProperties(), schemas));
+                result.put("additionalProp1", generateValueBySchema((Schema) schema.getAdditionalProperties(), schemas, knownSchemas));
+                result.put("additionalProp2", generateValueBySchema((Schema) schema.getAdditionalProperties(), schemas, knownSchemas));
+                result.put("additionalProp3", generateValueBySchema((Schema) schema.getAdditionalProperties(), schemas, knownSchemas));
             }
             return result;
 
@@ -152,28 +183,29 @@ public class ValueGenerator {
 
     /**
      * Метод генерит примеры значений по схеме, но только для примитивных типов
+     *
      * @param schema
      * @return - рандомный пример значений в зависимотсти от типа данных
      */
     public static Object generateValueBySimpleType(Schema schema) {
         //описание в schemasExamples.json
-        if (schema.getType() == null){
+        if (schema.getType() == null) {
             throw new IllegalArgumentException("Тег type у схемы не заполнен. Невозможно сформировать пример значения.");
         }
-        if (schema.getExample() != null){
+        if (schema.getExample() != null) {
             return schema.getExample();
         }
         switch (schema.getType().toLowerCase(Locale.ROOT)) {
             case "integer":
                 return Randomizer.rndInt(100);
             case "string":
-                if(schema.getEnum() != null && schema.getEnum().size() > 0){
+                if (schema.getEnum() != null && schema.getEnum().size() > 0) {
                     return Randomizer.rndListValue(schema.getEnum());
                 }
-                if (schema.getFormat() != null){
+                if (schema.getFormat() != null) {
                     return schema.getFormat();
                 }
-                if (schema.getDescription() != null){
+                if (schema.getDescription() != null) {
                     return schema.getDescription();
                 }
                 return "str-" + Randomizer.rndString(10);
@@ -185,6 +217,10 @@ public class ValueGenerator {
                 return Randomizer.rndDouble(10);
             case "float":
                 return Randomizer.rndFloat(10);
+            case "zoneddatetime":
+                return Randomizer.rndZonedDateTime();
+            case "localdate":
+                return Randomizer.rndLocalDate();
             default:
                 throw new IllegalArgumentException("Невозможно сформировать пример значения для типа: " + schema.getType());
         }
@@ -194,6 +230,7 @@ public class ValueGenerator {
     //определили словарь из возможных вариантов типов контента
     //записываются в том порядке, в котором мы их записали TreeSet
     static SortedSet<String> possibleContentTypes = new TreeSet<>();
+
     static {
         possibleContentTypes.add("application/json");
         possibleContentTypes.add("*/*");
@@ -223,14 +260,14 @@ public class ValueGenerator {
         MediaType mediaType = null;
 
         if (content != null) {
-            for (String possibleContent : possibleContentTypes){
-                if (content.keySet().contains(possibleContent)){
+            for (String possibleContent : possibleContentTypes) {
+                if (content.keySet().contains(possibleContent)) {
                     mediaType = content.get(possibleContent);
                     break;
                 }
             }
 
-            if (mediaType == null){
+            if (mediaType == null) {
                 throw new IllegalArgumentException(String.format("В мапе Content нет элементов/ни один из элементов в мапе Content не соответствует possibleContentTypes. Количество элементов в мапе Content: %s", content.size()));
             }
         }

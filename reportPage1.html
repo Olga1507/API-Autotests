@@ -1,0 +1,93 @@
+<html lang="ru">
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <style>TABLE {
+    /*width: 300px; /* Ширина таблицы */
+    background: #fffff0; /* Цвет фона нечетных строк */
+    border: 1px solid #a52a2a; /* Рамка вокруг таблицы */
+    border-collapse: collapse; /* Убираем двойные линии между ячейками */
+   }
+   TD, TH {
+    padding: 3px; /* Поля вокруг содержимого ячейки */
+    border:1px solid;
+   }
+   TD {
+    text-align: left; /* Выравнивание по левому краю */
+    border-bottom: 1px solid #5a1111; /* Линия внизу ячейки */
+    
+    
+   }
+   TH {
+    text-align: center;
+    background: #91c2ed; /* Цвет фона */
+    color: white; /* Цвет текста */
+   }
+   TR {
+    background: #fff8dc; 
+   }
+
+   TR.even {
+    background: #f1f1ee; 
+   }
+
+   TR.fail {
+    background: #ee5858; 
+   }
+
+   TR.success {
+    background: #a5da7f; 
+   }</style>
+    </head>
+    <body>
+        <h1>Отчёт о выполнении тест-кейсов</h1>
+        <table style="background-color:#00FF00;">
+            <tbody>
+                <tr>
+                    <td>Дата запуска обработки:</td><td>2024-02-18T19:44:43.442871800Z</td>
+                </tr>
+                <tr>
+                    <td>Дата окончания обработки:</td><td>2024-02-18T19:44:44.834331Z</td>
+                </tr>
+                <tr>
+                    <td>Наименование файла с тестами:</td><td>firstTest.json</td>
+                </tr>
+                <tr>
+                    <td>Общее количество тестов:</td><td>6</td>
+                </tr>
+                <tr>
+                    <td>Количество успешных тестов:</td><td>1</td>
+                </tr>
+                <tr>
+                    <td>Количество проваленных тестов:</td><td>5</td>
+                </tr>
+            </tbody>
+        </table>
+        <hr style="opacity:0">
+        <caption>Детализация</caption>
+        <table style="background-color:#00FF00;">
+            <tbody>
+                <tr>
+                    <th>Номер кейса</th><th>URL запроса</th><th>Код ответа</th><th>Ошибки</th><th>Результат</th>
+                </tr>
+                <tr class="fail">
+                    <td>0</td><td>http://qmmmsgpackage.msghubtmp.qrun.diasoft.ru/qmmmsgpackage/MsgPackage/v1/11</td><td>200</td><td>[Ошибка валидации: В теле ответа не должно быть тега 'sourceType' с значением '1']</td><td>Провал</td>
+                </tr>
+                <tr class="fail">
+                    <td>1</td><td></td><td>0</td><td>[Ошибка: Ошибка при формировании URL]</td><td>Провал</td>
+                </tr>
+                <tr class="fail">
+                    <td>2</td><td></td><td>0</td><td>[Ошибка: Ошибка при формировании URL]</td><td>Провал</td>
+                </tr>
+                <tr class="fail">
+                    <td>3</td><td>http://qmmmsgpackage.msghubtmp.qrun.diasoft.ru/qmmmsgpackage/Msg/v1/27700</td><td>404</td><td>[Ошибка валидации ответа. Получен некорректный статус код: 404, Ошибка валидации: Не найдено обязательное поле в теле ответа: messageBody]</td><td>Провал</td>
+                </tr>
+                <tr class="fail">
+                    <td>4</td><td>http://qmmmsgpackage.msghubtmp.qrun.diasoft.ru/qmmmsgpackage/MsgPackage/v1/27701</td><td>200</td><td>[Ошибка валидации: Получили ошибку при сравнении тега 'fileName': полученное значение '"kafka-file-loader-from-kafka-a-file-loader-from-kafka2-22"' не совпало с ожидаемым '"str-IFSZSAAW"']</td><td>Провал</td>
+                </tr>
+                <tr class="success">
+                    <td>5</td><td>http://qmmmsgpackage.msghubtmp.qrun.diasoft.ru/qmmmsgpackage/MsgPackage/v1/11</td><td>200</td><td>Ошибок нет</td><td>Успех</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

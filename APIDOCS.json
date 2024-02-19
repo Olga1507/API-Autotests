@@ -1,0 +1,2700 @@
+{
+  "cases": [
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/error",
+      "methodType": "GET",
+      "requestBody": null,
+      "parametersPath": {},
+      "parametersQuery": {},
+      "responseCode": 200,
+      "expectedObjects": {
+        "additionalProp1": "object",
+        "additionalProp3": "ERROR! Cyclic schema!",
+        "additionalProp2": "ERROR! Cyclic schema!"
+      },
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/error",
+      "methodType": "PUT",
+      "requestBody": null,
+      "parametersPath": {},
+      "parametersQuery": {},
+      "responseCode": 200,
+      "expectedObjects": {
+        "additionalProp1": "object",
+        "additionalProp3": "ERROR! Cyclic schema!",
+        "additionalProp2": "ERROR! Cyclic schema!"
+      },
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/error",
+      "methodType": "POST",
+      "requestBody": null,
+      "parametersPath": {},
+      "parametersQuery": {},
+      "responseCode": 200,
+      "expectedObjects": {
+        "additionalProp1": "object",
+        "additionalProp3": "ERROR! Cyclic schema!",
+        "additionalProp2": "ERROR! Cyclic schema!"
+      },
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/error",
+      "methodType": "DELETE",
+      "requestBody": null,
+      "parametersPath": {},
+      "parametersQuery": {},
+      "responseCode": 200,
+      "expectedObjects": {
+        "additionalProp1": "object",
+        "additionalProp3": "ERROR! Cyclic schema!",
+        "additionalProp2": "ERROR! Cyclic schema!"
+      },
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/BusinessAttributeValue",
+      "methodType": "POST",
+      "requestBody": {
+        "msgPackageId": 87,
+        "formatName": "Наименование формата",
+        "formatBusinessAttributeId": 56,
+        "value": "Значение"
+      },
+      "parametersPath": {},
+      "parametersQuery": {},
+      "responseCode": 200,
+      "expectedObjects": {
+        "businessAttributeValueId": 74,
+        "msgPackageId": 36,
+        "formatName": "Наименование формата",
+        "formatBusinessAttributeId": 69,
+        "value": "Значение"
+      },
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/BusinessAttributeValue/{businessAttributeValueId}",
+      "methodType": "GET",
+      "requestBody": null,
+      "parametersPath": {
+        "businessAttributeValueId": 1
+      },
+      "parametersQuery": {
+        "fields": "str-zgBJ3"
+      },
+      "responseCode": 200,
+      "expectedObjects": {
+        "businessAttributeValueId": 46,
+        "msgPackageId": 20,
+        "formatName": "Наименование формата",
+        "formatBusinessAttributeId": 15,
+        "value": "Значение"
+      },
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/BusinessAttributeValue/{businessAttributeValueId}",
+      "methodType": "PUT",
+      "requestBody": {
+        "businessAttributeValueId": 25,
+        "msgPackageId": 47,
+        "formatName": "Наименование формата",
+        "formatBusinessAttributeId": 4,
+        "value": "Значение"
+      },
+      "parametersPath": {
+        "businessAttributeValueId": 42
+      },
+      "parametersQuery": {},
+      "responseCode": 200,
+      "expectedObjects": {
+        "businessAttributeValueId": 67,
+        "msgPackageId": 18,
+        "formatName": "Наименование формата",
+        "formatBusinessAttributeId": 67,
+        "value": "Значение"
+      },
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/BusinessAttributeValue/{businessAttributeValueId}",
+      "methodType": "DELETE",
+      "requestBody": null,
+      "parametersPath": {
+        "businessAttributeValueId": 0
+      },
+      "parametersQuery": {},
+      "responseCode": 200,
+      "expectedObjects": null,
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/BusinessAttributeValues",
+      "methodType": "GET",
+      "requestBody": null,
+      "parametersPath": {},
+      "parametersQuery": {
+        "businessAttributeValueId": 76,
+        "size": 73,
+        "msgPackageId": 8,
+        "formatName": "str-Jg7uL6wLCsR",
+        "formatBusinessAttributeId": 91,
+        "page": 42,
+        "sort": [
+          "str-U8e6oi",
+          "ERROR! Cyclic schema!"
+        ],
+        "fields": "str-HihIAS4vP",
+        "value": "str-rV0Mf3ZOq2R"
+      },
+      "responseCode": 200,
+      "expectedObjects": {
+        "number": 59,
+        "last": "ERROR! Cyclic schema!",
+        "numberOfElements": "ERROR! Cyclic schema!",
+        "size": "ERROR! Cyclic schema!",
+        "totalPages": "ERROR! Cyclic schema!",
+        "pageable": {
+          "paged": "ERROR! Cyclic schema!",
+          "pageNumber": "ERROR! Cyclic schema!",
+          "offset": 75,
+          "pageSize": "ERROR! Cyclic schema!",
+          "unpaged": "ERROR! Cyclic schema!",
+          "sort": {
+            "unsorted": "ERROR! Cyclic schema!",
+            "sorted": "ERROR! Cyclic schema!",
+            "empty": "ERROR! Cyclic schema!"
+          }
+        },
+        "sort": "ERROR! Cyclic schema!",
+        "content": [
+          {
+            "businessAttributeValueId": 65,
+            "msgPackageId": 81,
+            "formatName": "Наименование формата",
+            "formatBusinessAttributeId": 47,
+            "value": "Значение"
+          },
+          "ERROR! Cyclic schema!"
+        ],
+        "first": "ERROR! Cyclic schema!",
+        "empty": false,
+        "totalElements": "ERROR! Cyclic schema!"
+      },
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/permission/checkobjectrights/v1/{objectSysName}",
+      "methodType": "GET",
+      "requestBody": null,
+      "parametersPath": {
+        "objectSysName": "str-kVCBY7"
+      },
+      "parametersQuery": {},
+      "responseCode": 200,
+      "expectedObjects": "object",
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/healthCheck",
+      "methodType": "GET",
+      "requestBody": null,
+      "parametersPath": {},
+      "parametersQuery": {},
+      "responseCode": 200,
+      "expectedObjects": {
+        "currentDbUrl": "ERROR! Cyclic schema!",
+        "currentDbUser": "ERROR! Cyclic schema!",
+        "currentAuthAddress": "ERROR! Cyclic schema!",
+        "configKafkaServers": "ERROR! Cyclic schema!",
+        "configAuthAddress": "str-MjHPAYoS4t8pQK",
+        "currentKafkaServers": "ERROR! Cyclic schema!",
+        "configDbUser": "ERROR! Cyclic schema!",
+        "configDbUrl": "ERROR! Cyclic schema!"
+      },
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/cache/v1",
+      "methodType": "GET",
+      "requestBody": null,
+      "parametersPath": {},
+      "parametersQuery": {},
+      "responseCode": 200,
+      "expectedObjects": {
+        "statusCodeValue": 40,
+        "body": "object",
+        "statusCode": "LOCKED"
+      },
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/cache/v1/{cache}",
+      "methodType": "DELETE",
+      "requestBody": null,
+      "parametersPath": {
+        "cache": "str-MVKZt"
+      },
+      "parametersQuery": {},
+      "responseCode": 200,
+      "expectedObjects": {
+        "statusCodeValue": 69,
+        "body": "object",
+        "statusCode": "PRECONDITION_FAILED"
+      },
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/FormatBusinessAttribute",
+      "methodType": "POST",
+      "requestBody": {
+        "formatName": "Наименование формата",
+        "attributeName": "Наименование бизнес-атрибута"
+      },
+      "parametersPath": {},
+      "parametersQuery": {},
+      "responseCode": 200,
+      "expectedObjects": {
+        "formatName": "Наименование формата",
+        "attributeName": "Наименование бизнес-атрибута",
+        "formatBusinessAttributeId": 15
+      },
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/FormatBusinessAttribute/{formatBusinessAttributeId}",
+      "methodType": "GET",
+      "requestBody": null,
+      "parametersPath": {
+        "formatBusinessAttributeId": 34
+      },
+      "parametersQuery": {
+        "fields": "str-G9qT4f5ATI8AY"
+      },
+      "responseCode": 200,
+      "expectedObjects": {
+        "formatName": "Наименование формата",
+        "attributeName": "Наименование бизнес-атрибута",
+        "formatBusinessAttributeId": 64
+      },
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/FormatBusinessAttribute/{formatBusinessAttributeId}",
+      "methodType": "PUT",
+      "requestBody": {
+        "formatName": "Наименование формата",
+        "attributeName": "Наименование бизнес-атрибута",
+        "formatBusinessAttributeId": 11
+      },
+      "parametersPath": {
+        "formatBusinessAttributeId": 84
+      },
+      "parametersQuery": {},
+      "responseCode": 200,
+      "expectedObjects": {
+        "formatName": "Наименование формата",
+        "attributeName": "Наименование бизнес-атрибута",
+        "formatBusinessAttributeId": 9
+      },
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/FormatBusinessAttribute/{formatBusinessAttributeId}",
+      "methodType": "DELETE",
+      "requestBody": null,
+      "parametersPath": {
+        "formatBusinessAttributeId": 5
+      },
+      "parametersQuery": {},
+      "responseCode": 200,
+      "expectedObjects": null,
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/FormatBusinessAttributes",
+      "methodType": "GET",
+      "requestBody": null,
+      "parametersPath": {},
+      "parametersQuery": {
+        "size": 93,
+        "formatName": "str-VGzY12rJmF7n",
+        "attributeName": "str-5NDD92NHZX",
+        "formatBusinessAttributeId": 24,
+        "page": 62,
+        "sort": [
+          "str-wbBRUi",
+          "ERROR! Cyclic schema!"
+        ],
+        "fields": "str-gRKxPkiT0sR"
+      },
+      "responseCode": 200,
+      "expectedObjects": {
+        "number": 44,
+        "last": "ERROR! Cyclic schema!",
+        "numberOfElements": "ERROR! Cyclic schema!",
+        "size": "ERROR! Cyclic schema!",
+        "totalPages": "ERROR! Cyclic schema!",
+        "pageable": {
+          "paged": "ERROR! Cyclic schema!",
+          "pageNumber": "ERROR! Cyclic schema!",
+          "offset": 78,
+          "pageSize": "ERROR! Cyclic schema!",
+          "unpaged": "ERROR! Cyclic schema!",
+          "sort": {
+            "unsorted": "ERROR! Cyclic schema!",
+            "sorted": "ERROR! Cyclic schema!",
+            "empty": "ERROR! Cyclic schema!"
+          }
+        },
+        "sort": "ERROR! Cyclic schema!",
+        "content": [
+          {
+            "formatName": "Наименование формата",
+            "attributeName": "Наименование бизнес-атрибута",
+            "formatBusinessAttributeId": 96
+          },
+          "ERROR! Cyclic schema!"
+        ],
+        "first": "ERROR! Cyclic schema!",
+        "empty": false,
+        "totalElements": "ERROR! Cyclic schema!"
+      },
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/Msg/v1",
+      "methodType": "POST",
+      "requestBody": {
+        "msgFormatId": 83,
+        "number": "Номер",
+        "messageBody": "Текст сообщения",
+        "messageType": "Тип сообщения",
+        "receiver": "Адресат",
+        "sender": "Отправитель/Получатель",
+        "msgPackageId": "ERROR! Cyclic schema!",
+        "formatName": "Наименование формата",
+        "inDatetime": "date-time",
+        "formatVersion": "Версия формата",
+        "direction": 73,
+        "status": 2
+      },
+      "parametersPath": {},
+      "parametersQuery": {},
+      "responseCode": 200,
+      "expectedObjects": {
+        "messageBody": "ERROR! Cyclic schema!",
+        "receiver": "ERROR! Cyclic schema!",
+        "msgPackageId": "ERROR! Cyclic schema!",
+        "formatName": "str-H5baUK",
+        "msgId": "ERROR! Cyclic schema!",
+        "inDatetime": "yyyy-MM-dd\u0027T\u0027HH:mm:ss.SSSZ",
+        "msgFormatId": 48,
+        "number": "ERROR! Cyclic schema!",
+        "messageType": "ERROR! Cyclic schema!",
+        "sender": "ERROR! Cyclic schema!",
+        "formatVersion": "ERROR! Cyclic schema!",
+        "direction": 94,
+        "status": "ERROR! Cyclic schema!"
+      },
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/Msg/v1/{msgId}",
+      "methodType": "GET",
+      "requestBody": null,
+      "parametersPath": {
+        "msgId": 16
+      },
+      "parametersQuery": {
+        "fields": "str-Q6cBZnlG9"
+      },
+      "responseCode": 200,
+      "expectedObjects": {
+        "messageBody": "ERROR! Cyclic schema!",
+        "receiver": "ERROR! Cyclic schema!",
+        "msgPackageId": "ERROR! Cyclic schema!",
+        "formatName": "str-eWlJ-I",
+        "msgId": "ERROR! Cyclic schema!",
+        "inDatetime": "yyyy-MM-dd\u0027T\u0027HH:mm:ss.SSSZ",
+        "msgFormatId": 4,
+        "number": "ERROR! Cyclic schema!",
+        "messageType": "ERROR! Cyclic schema!",
+        "sender": "ERROR! Cyclic schema!",
+        "formatVersion": "ERROR! Cyclic schema!",
+        "direction": 88,
+        "status": "ERROR! Cyclic schema!"
+      },
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/Msg/v1/{msgId}",
+      "methodType": "PUT",
+      "requestBody": {
+        "messageBody": "ERROR! Cyclic schema!",
+        "receiver": "ERROR! Cyclic schema!",
+        "msgPackageId": "ERROR! Cyclic schema!",
+        "formatName": "str-qmCDd9soMDp",
+        "msgId": "ERROR! Cyclic schema!",
+        "inDatetime": "yyyy-MM-dd\u0027T\u0027HH:mm:ss.SSSZ",
+        "msgFormatId": 58,
+        "number": "ERROR! Cyclic schema!",
+        "messageType": "ERROR! Cyclic schema!",
+        "sender": "ERROR! Cyclic schema!",
+        "formatVersion": "ERROR! Cyclic schema!",
+        "direction": 5,
+        "status": "ERROR! Cyclic schema!"
+      },
+      "parametersPath": {
+        "msgId": 16
+      },
+      "parametersQuery": {},
+      "responseCode": 200,
+      "expectedObjects": {
+        "messageBody": "ERROR! Cyclic schema!",
+        "receiver": "ERROR! Cyclic schema!",
+        "msgPackageId": "ERROR! Cyclic schema!",
+        "formatName": "str-PagelEZOGUKaZU",
+        "msgId": "ERROR! Cyclic schema!",
+        "inDatetime": "yyyy-MM-dd\u0027T\u0027HH:mm:ss.SSSZ",
+        "msgFormatId": 0,
+        "number": "ERROR! Cyclic schema!",
+        "messageType": "ERROR! Cyclic schema!",
+        "sender": "ERROR! Cyclic schema!",
+        "formatVersion": "ERROR! Cyclic schema!",
+        "direction": 26,
+        "status": "ERROR! Cyclic schema!"
+      },
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/Msg/v1/{msgId}",
+      "methodType": "DELETE",
+      "requestBody": null,
+      "parametersPath": {
+        "msgId": 59
+      },
+      "parametersQuery": {},
+      "responseCode": 200,
+      "expectedObjects": null,
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/Msgs/v1",
+      "methodType": "GET",
+      "requestBody": null,
+      "parametersPath": {},
+      "parametersQuery": {
+        "messageBody": "str-UxsKNlUGm",
+        "receiver": "str-Y27F-",
+        "msgPackageId": 13,
+        "formatName": "str-Jb6f1V6k",
+        "msgId": 63,
+        "inDatetime": {
+          "dateTime": {
+            "date": {
+              "year": 2020,
+              "month": 6,
+              "day": 1
+            },
+            "time": {
+              "hour": 10,
+              "minute": 17,
+              "second": 0,
+              "nano": 365000000
+            }
+          },
+          "offset": {
+            "totalSeconds": 10800
+          },
+          "zone": {
+            "id": "Europe/Moscow"
+          }
+        },
+        "sort": [
+          "str-GfqkmV86S",
+          "ERROR! Cyclic schema!"
+        ],
+        "msgFormatId": 5,
+        "number": "str-I47k4XKi2jEXk",
+        "messageType": "str-64DpKh",
+        "size": 10,
+        "sender": "str-2mb0bW0oTXI",
+        "page": 1,
+        "fields": "str-EWweS",
+        "formatVersion": "str-zhMmPsjhDy4",
+        "direction": 52,
+        "status": 61
+      },
+      "responseCode": 200,
+      "expectedObjects": {
+        "number": "ERROR! Cyclic schema!",
+        "last": "ERROR! Cyclic schema!",
+        "numberOfElements": "ERROR! Cyclic schema!",
+        "size": "ERROR! Cyclic schema!",
+        "totalPages": "ERROR! Cyclic schema!",
+        "pageable": {
+          "paged": "ERROR! Cyclic schema!",
+          "pageNumber": "ERROR! Cyclic schema!",
+          "offset": "ERROR! Cyclic schema!",
+          "pageSize": "ERROR! Cyclic schema!",
+          "unpaged": "ERROR! Cyclic schema!",
+          "sort": {
+            "unsorted": "ERROR! Cyclic schema!",
+            "sorted": "ERROR! Cyclic schema!",
+            "empty": "ERROR! Cyclic schema!"
+          }
+        },
+        "sort": "ERROR! Cyclic schema!",
+        "content": [
+          {
+            "messageBody": "ERROR! Cyclic schema!",
+            "receiver": "ERROR! Cyclic schema!",
+            "msgPackageId": "ERROR! Cyclic schema!",
+            "formatName": "str-FD8TKzJ4",
+            "msgId": "ERROR! Cyclic schema!",
+            "inDatetime": "yyyy-MM-dd\u0027T\u0027HH:mm:ss.SSSZ",
+            "msgFormatId": 97,
+            "number": "ERROR! Cyclic schema!",
+            "messageType": "ERROR! Cyclic schema!",
+            "sender": "ERROR! Cyclic schema!",
+            "formatVersion": "ERROR! Cyclic schema!",
+            "direction": 96,
+            "status": "ERROR! Cyclic schema!"
+          },
+          "ERROR! Cyclic schema!"
+        ],
+        "first": "ERROR! Cyclic schema!",
+        "empty": false,
+        "totalElements": "ERROR! Cyclic schema!"
+      },
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/FindLstBroadcastingSheetByParam",
+      "methodType": "GET",
+      "requestBody": null,
+      "parametersPath": {},
+      "parametersQuery": {
+        "size": 24,
+        "dateStart": "date-time",
+        "sourceType": 96,
+        "page": 0,
+        "sort": [
+          "str-Fo1rkjD-b5OB3",
+          "ERROR! Cyclic schema!"
+        ],
+        "dateEnd": "date-time",
+        "fields": "str-f-pIQXw"
+      },
+      "responseCode": 200,
+      "expectedObjects": {
+        "number": 41,
+        "last": "ERROR! Cyclic schema!",
+        "numberOfElements": "ERROR! Cyclic schema!",
+        "size": "ERROR! Cyclic schema!",
+        "totalPages": "ERROR! Cyclic schema!",
+        "pageable": {
+          "paged": "ERROR! Cyclic schema!",
+          "pageNumber": "ERROR! Cyclic schema!",
+          "offset": 83,
+          "pageSize": "ERROR! Cyclic schema!",
+          "unpaged": "ERROR! Cyclic schema!",
+          "sort": {
+            "unsorted": "ERROR! Cyclic schema!",
+            "sorted": "ERROR! Cyclic schema!",
+            "empty": "ERROR! Cyclic schema!"
+          }
+        },
+        "sort": "ERROR! Cyclic schema!",
+        "content": [
+          {
+            "msgPackageId": 99
+          },
+          "ERROR! Cyclic schema!"
+        ],
+        "first": "ERROR! Cyclic schema!",
+        "empty": true,
+        "totalElements": "ERROR! Cyclic schema!"
+      },
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/MsgPackage/v1",
+      "methodType": "POST",
+      "requestBody": {
+        "fileName": "Наименование файла",
+        "messageCount": 92,
+        "msgPackageType": "Перечисляемый тип пакета. Возможные значения: Пакет, Сообщение",
+        "msgBodyCode": 59,
+        "destination": "Адресат",
+        "formatName": "Наименование формата",
+        "branchName": "Полное наименование филиала",
+        "childCount": 33,
+        "source": "Тело пакета (содержимое), должно передаваться в формате base64",
+        "createAt": "date-time",
+        "loadRuleName": "Наименование правила загрузки",
+        "msgFormatId": 11,
+        "humanTaskId": "Идентификатор задачи пользователя",
+        "processId": "Идентификатор последнего запущенного процесса по пакету",
+        "sender": "Отправитель/Получатель",
+        "sourceType": 21,
+        "formatVersion": "Версия формата",
+        "parentMsgPackageId": 31,
+        "direction": 36,
+        "status": 96
+      },
+      "parametersPath": {},
+      "parametersQuery": {},
+      "responseCode": 200,
+      "expectedObjects": {
+        "fileName": "ERROR! Cyclic schema!",
+        "messageCount": "ERROR! Cyclic schema!",
+        "msgPackageType": "ERROR! Cyclic schema!",
+        "msgBodyCode": "ERROR! Cyclic schema!",
+        "msgPackageId": "ERROR! Cyclic schema!",
+        "destination": "ERROR! Cyclic schema!",
+        "formatName": "ERROR! Cyclic schema!",
+        "branchName": "str-O1IiOyjHpL",
+        "childCount": 7,
+        "source": "ERROR! Cyclic schema!",
+        "createAt": "yyyy-MM-dd\u0027T\u0027HH:mm:ss.SSSZ",
+        "loadRuleName": "ERROR! Cyclic schema!",
+        "msgFormatId": 22,
+        "humanTaskId": "ERROR! Cyclic schema!",
+        "processId": "ERROR! Cyclic schema!",
+        "sender": "ERROR! Cyclic schema!",
+        "sourceType": "ERROR! Cyclic schema!",
+        "formatVersion": "ERROR! Cyclic schema!",
+        "parentMsgPackageId": "ERROR! Cyclic schema!",
+        "direction": "ERROR! Cyclic schema!",
+        "status": "ERROR! Cyclic schema!"
+      },
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/MsgPackage/v1/{msgPackageId}",
+      "methodType": "GET",
+      "requestBody": null,
+      "parametersPath": {
+        "msgPackageId": 55
+      },
+      "parametersQuery": {
+        "fields": "str-V0E22jXJXyFdqN"
+      },
+      "responseCode": 200,
+      "expectedObjects": {
+        "fileName": "ERROR! Cyclic schema!",
+        "messageCount": "ERROR! Cyclic schema!",
+        "msgPackageType": "ERROR! Cyclic schema!",
+        "msgBodyCode": "ERROR! Cyclic schema!",
+        "msgPackageId": "ERROR! Cyclic schema!",
+        "destination": "ERROR! Cyclic schema!",
+        "formatName": "ERROR! Cyclic schema!",
+        "branchName": "str-OfCM-Pw4ovsxFI",
+        "childCount": 93,
+        "source": "ERROR! Cyclic schema!",
+        "createAt": "yyyy-MM-dd\u0027T\u0027HH:mm:ss.SSSZ",
+        "loadRuleName": "ERROR! Cyclic schema!",
+        "msgFormatId": 50,
+        "humanTaskId": "ERROR! Cyclic schema!",
+        "processId": "ERROR! Cyclic schema!",
+        "sender": "ERROR! Cyclic schema!",
+        "sourceType": "ERROR! Cyclic schema!",
+        "formatVersion": "ERROR! Cyclic schema!",
+        "parentMsgPackageId": "ERROR! Cyclic schema!",
+        "direction": "ERROR! Cyclic schema!",
+        "status": "ERROR! Cyclic schema!"
+      },
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/MsgPackage/v1/{msgPackageId}",
+      "methodType": "PUT",
+      "requestBody": {
+        "fileName": "ERROR! Cyclic schema!",
+        "messageCount": "ERROR! Cyclic schema!",
+        "msgPackageType": "ERROR! Cyclic schema!",
+        "msgBodyCode": "ERROR! Cyclic schema!",
+        "msgPackageId": "ERROR! Cyclic schema!",
+        "destination": "ERROR! Cyclic schema!",
+        "formatName": "ERROR! Cyclic schema!",
+        "branchName": "str-F4bsUl",
+        "childCount": 56,
+        "source": "ERROR! Cyclic schema!",
+        "createAt": "yyyy-MM-dd\u0027T\u0027HH:mm:ss.SSSZ",
+        "loadRuleName": "ERROR! Cyclic schema!",
+        "msgFormatId": 62,
+        "humanTaskId": "ERROR! Cyclic schema!",
+        "processId": "ERROR! Cyclic schema!",
+        "sender": "ERROR! Cyclic schema!",
+        "sourceType": "ERROR! Cyclic schema!",
+        "formatVersion": "ERROR! Cyclic schema!",
+        "parentMsgPackageId": "ERROR! Cyclic schema!",
+        "direction": "ERROR! Cyclic schema!",
+        "status": "ERROR! Cyclic schema!"
+      },
+      "parametersPath": {
+        "msgPackageId": 55
+      },
+      "parametersQuery": {},
+      "responseCode": 200,
+      "expectedObjects": {
+        "fileName": "ERROR! Cyclic schema!",
+        "messageCount": "ERROR! Cyclic schema!",
+        "msgPackageType": "ERROR! Cyclic schema!",
+        "msgBodyCode": "ERROR! Cyclic schema!",
+        "msgPackageId": "ERROR! Cyclic schema!",
+        "destination": "ERROR! Cyclic schema!",
+        "formatName": "ERROR! Cyclic schema!",
+        "branchName": "str-0aZD9Hj",
+        "childCount": 65,
+        "source": "ERROR! Cyclic schema!",
+        "createAt": "yyyy-MM-dd\u0027T\u0027HH:mm:ss.SSSZ",
+        "loadRuleName": "ERROR! Cyclic schema!",
+        "msgFormatId": 64,
+        "humanTaskId": "ERROR! Cyclic schema!",
+        "processId": "ERROR! Cyclic schema!",
+        "sender": "ERROR! Cyclic schema!",
+        "sourceType": "ERROR! Cyclic schema!",
+        "formatVersion": "ERROR! Cyclic schema!",
+        "parentMsgPackageId": "ERROR! Cyclic schema!",
+        "direction": "ERROR! Cyclic schema!",
+        "status": "ERROR! Cyclic schema!"
+      },
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/MsgPackage/v1/{msgPackageId}",
+      "methodType": "DELETE",
+      "requestBody": null,
+      "parametersPath": {
+        "msgPackageId": 92
+      },
+      "parametersQuery": {},
+      "responseCode": 200,
+      "expectedObjects": null,
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/MsgPackageSearchBody",
+      "methodType": "GET",
+      "requestBody": null,
+      "parametersPath": {},
+      "parametersQuery": {
+        "size": 19,
+        "createAtFrom": "date-time",
+        "formatName": "str-qqtVN-XkVxODl",
+        "page": 76,
+        "sort": [
+          "str-RZh1o4",
+          "ERROR! Cyclic schema!"
+        ],
+        "fields": "str-vwm81dAp2TJLX",
+        "maskSource": "str-9BvhxR4wBGYSad",
+        "createAtTo": "date-time"
+      },
+      "responseCode": 200,
+      "expectedObjects": {
+        "number": "ERROR! Cyclic schema!",
+        "last": "ERROR! Cyclic schema!",
+        "numberOfElements": "ERROR! Cyclic schema!",
+        "size": "ERROR! Cyclic schema!",
+        "totalPages": "ERROR! Cyclic schema!",
+        "pageable": {
+          "paged": "ERROR! Cyclic schema!",
+          "pageNumber": "ERROR! Cyclic schema!",
+          "offset": "ERROR! Cyclic schema!",
+          "pageSize": "ERROR! Cyclic schema!",
+          "unpaged": "ERROR! Cyclic schema!",
+          "sort": {
+            "unsorted": "ERROR! Cyclic schema!",
+            "sorted": "ERROR! Cyclic schema!",
+            "empty": "ERROR! Cyclic schema!"
+          }
+        },
+        "sort": "ERROR! Cyclic schema!",
+        "content": [
+          {
+            "fileName": "ERROR! Cyclic schema!",
+            "messageCount": "ERROR! Cyclic schema!",
+            "msgPackageType": "ERROR! Cyclic schema!",
+            "msgBodyCode": "ERROR! Cyclic schema!",
+            "msgPackageId": "ERROR! Cyclic schema!",
+            "destination": "ERROR! Cyclic schema!",
+            "formatName": "ERROR! Cyclic schema!",
+            "branchName": "str-FTLJOA",
+            "childCount": 23,
+            "source": "ERROR! Cyclic schema!",
+            "createAt": "yyyy-MM-dd\u0027T\u0027HH:mm:ss.SSSZ",
+            "loadRuleName": "ERROR! Cyclic schema!",
+            "msgFormatId": 22,
+            "humanTaskId": "ERROR! Cyclic schema!",
+            "processId": "ERROR! Cyclic schema!",
+            "sender": "ERROR! Cyclic schema!",
+            "sourceType": "ERROR! Cyclic schema!",
+            "formatVersion": "ERROR! Cyclic schema!",
+            "parentMsgPackageId": "ERROR! Cyclic schema!",
+            "direction": "ERROR! Cyclic schema!",
+            "status": "ERROR! Cyclic schema!"
+          },
+          "ERROR! Cyclic schema!"
+        ],
+        "first": "ERROR! Cyclic schema!",
+        "empty": false,
+        "totalElements": "ERROR! Cyclic schema!"
+      },
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/MsgPackages/v1",
+      "methodType": "GET",
+      "requestBody": null,
+      "parametersPath": {},
+      "parametersQuery": {
+        "fileName": "str-OxT7nzJl",
+        "messageCount": 18,
+        "msgPackageType": "str-Bp3oNRUPLSd3",
+        "msgPackageId": 72,
+        "destination": "str-xKib-",
+        "source": "str-bw-vJL",
+        "createAt": {
+          "dateTime": {
+            "date": {
+              "year": 2019,
+              "month": 6,
+              "day": 30
+            },
+            "time": {
+              "hour": 9,
+              "minute": 5,
+              "second": 11,
+              "nano": 374000000
+            }
+          },
+          "offset": {
+            "totalSeconds": 10800
+          },
+          "zone": {
+            "id": "Europe/Moscow"
+          }
+        },
+        "msgFormatId": 20,
+        "processId": "str-a0JeguYZ4L",
+        "formatVersion": "str-4NPmjNrE",
+        "direction": 22,
+        "msgBodyCode": 7,
+        "formatName": "str-LhHCAMr9",
+        "branchName": "str-TJI9Xz2E",
+        "childCount": 93,
+        "sort": [
+          "str-wbFP6sKa",
+          "ERROR! Cyclic schema!"
+        ],
+        "loadRuleName": "str-pmqQbG",
+        "humanTaskId": "str-FkbHMm5Fr",
+        "size": 75,
+        "sender": "str-fLaATyB",
+        "sourceType": 14,
+        "page": 11,
+        "fields": "str-mb3Mm6wEQ-eA",
+        "parentMsgPackageId": 20,
+        "status": 48
+      },
+      "responseCode": 200,
+      "expectedObjects": {
+        "number": "ERROR! Cyclic schema!",
+        "last": "ERROR! Cyclic schema!",
+        "numberOfElements": "ERROR! Cyclic schema!",
+        "size": "ERROR! Cyclic schema!",
+        "totalPages": "ERROR! Cyclic schema!",
+        "pageable": {
+          "paged": "ERROR! Cyclic schema!",
+          "pageNumber": "ERROR! Cyclic schema!",
+          "offset": "ERROR! Cyclic schema!",
+          "pageSize": "ERROR! Cyclic schema!",
+          "unpaged": "ERROR! Cyclic schema!",
+          "sort": {
+            "unsorted": "ERROR! Cyclic schema!",
+            "sorted": "ERROR! Cyclic schema!",
+            "empty": "ERROR! Cyclic schema!"
+          }
+        },
+        "sort": "ERROR! Cyclic schema!",
+        "content": [
+          {
+            "fileName": "ERROR! Cyclic schema!",
+            "messageCount": "ERROR! Cyclic schema!",
+            "msgPackageType": "ERROR! Cyclic schema!",
+            "msgBodyCode": "ERROR! Cyclic schema!",
+            "msgPackageId": "ERROR! Cyclic schema!",
+            "destination": "ERROR! Cyclic schema!",
+            "formatName": "ERROR! Cyclic schema!",
+            "branchName": "str-lvhODM",
+            "childCount": 44,
+            "source": "ERROR! Cyclic schema!",
+            "createAt": "yyyy-MM-dd\u0027T\u0027HH:mm:ss.SSSZ",
+            "loadRuleName": "ERROR! Cyclic schema!",
+            "msgFormatId": 93,
+            "humanTaskId": "ERROR! Cyclic schema!",
+            "processId": "ERROR! Cyclic schema!",
+            "sender": "ERROR! Cyclic schema!",
+            "sourceType": "ERROR! Cyclic schema!",
+            "formatVersion": "ERROR! Cyclic schema!",
+            "parentMsgPackageId": "ERROR! Cyclic schema!",
+            "direction": "ERROR! Cyclic schema!",
+            "status": "ERROR! Cyclic schema!"
+          },
+          "ERROR! Cyclic schema!"
+        ],
+        "first": "ERROR! Cyclic schema!",
+        "empty": true,
+        "totalElements": "ERROR! Cyclic schema!"
+      },
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/StartLoadProcess/v1/{msgPackageId}",
+      "methodType": "POST",
+      "requestBody": null,
+      "parametersPath": {
+        "msgPackageId": 70
+      },
+      "parametersQuery": {},
+      "responseCode": 200,
+      "expectedObjects": null,
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/dq-message-management/qmmMsgPackage/v1/{msgPackageId}",
+      "methodType": "GET",
+      "requestBody": null,
+      "parametersPath": {
+        "msgPackageId": 81
+      },
+      "parametersQuery": {
+        "fields": "str-xipxqBr"
+      },
+      "responseCode": 200,
+      "expectedObjects": {
+        "dqMsgPackage": "ERROR! Cyclic schema!",
+        "source": "Исходные данные. Текст пакета закодированный в base64"
+      },
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/MsgPackageMovementHistory",
+      "methodType": "POST",
+      "requestBody": {
+        "msgPackageId": 51,
+        "ruleName": "Наименование правила",
+        "channelType": "Вид канала обмена",
+        "comment": "Описание",
+        "value": "Адрес источника данных/доставки",
+        "createAt": "date-time",
+        "direction": 5
+      },
+      "parametersPath": {},
+      "parametersQuery": {},
+      "responseCode": 200,
+      "expectedObjects": {
+        "msgPackageId": 48,
+        "ruleName": "Наименование правила",
+        "channelType": "Вид канала обмена",
+        "comment": "Описание",
+        "msgPackageMovementHistoryId": 1,
+        "value": "Адрес источника данных/доставки",
+        "createAt": "date-time",
+        "direction": 22
+      },
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/MsgPackageMovementHistory/{msgPackageMovementHistoryId}",
+      "methodType": "GET",
+      "requestBody": null,
+      "parametersPath": {
+        "msgPackageMovementHistoryId": 22
+      },
+      "parametersQuery": {
+        "fields": "str-UOwIK"
+      },
+      "responseCode": 200,
+      "expectedObjects": {
+        "msgPackageId": 80,
+        "ruleName": "Наименование правила",
+        "channelType": "Вид канала обмена",
+        "comment": "Описание",
+        "msgPackageMovementHistoryId": 3,
+        "value": "Адрес источника данных/доставки",
+        "createAt": "date-time",
+        "direction": 6
+      },
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/MsgPackageMovementHistory/{msgPackageMovementHistoryId}",
+      "methodType": "DELETE",
+      "requestBody": null,
+      "parametersPath": {
+        "msgPackageMovementHistoryId": 3
+      },
+      "parametersQuery": {},
+      "responseCode": 200,
+      "expectedObjects": null,
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/MsgPackageMovementHistorys",
+      "methodType": "GET",
+      "requestBody": null,
+      "parametersPath": {},
+      "parametersQuery": {
+        "size": 27,
+        "msgPackageId": 46,
+        "ruleName": "str-bu3MvOKQeSPW",
+        "channelType": "str-r8aCrnGTy-i",
+        "comment": "str-z6eviJJgZmU5dN",
+        "msgPackageMovementHistoryId": 97,
+        "page": 13,
+        "sort": [
+          "str-TSBS6JI",
+          "ERROR! Cyclic schema!"
+        ],
+        "fields": "str-3o0hSji1amqG",
+        "value": "str-Vnz5UFHoxca",
+        "createAt": {
+          "dateTime": {
+            "date": {
+              "year": 2018,
+              "month": 11,
+              "day": 3
+            },
+            "time": {
+              "hour": 19,
+              "minute": 28,
+              "second": 30,
+              "nano": 797000000
+            }
+          },
+          "offset": {
+            "totalSeconds": 10800
+          },
+          "zone": {
+            "id": "Europe/Moscow"
+          }
+        },
+        "direction": 41
+      },
+      "responseCode": 200,
+      "expectedObjects": {
+        "number": 23,
+        "last": "ERROR! Cyclic schema!",
+        "numberOfElements": "ERROR! Cyclic schema!",
+        "size": "ERROR! Cyclic schema!",
+        "totalPages": "ERROR! Cyclic schema!",
+        "pageable": {
+          "paged": "ERROR! Cyclic schema!",
+          "pageNumber": "ERROR! Cyclic schema!",
+          "offset": 30,
+          "pageSize": "ERROR! Cyclic schema!",
+          "unpaged": "ERROR! Cyclic schema!",
+          "sort": {
+            "unsorted": "ERROR! Cyclic schema!",
+            "sorted": "ERROR! Cyclic schema!",
+            "empty": "ERROR! Cyclic schema!"
+          }
+        },
+        "sort": "ERROR! Cyclic schema!",
+        "content": [
+          {
+            "msgPackageId": 45,
+            "ruleName": "Наименование правила",
+            "channelType": "Вид канала обмена",
+            "comment": "Описание",
+            "msgPackageMovementHistoryId": 86,
+            "value": "Адрес источника данных/доставки",
+            "createAt": "date-time",
+            "direction": 91
+          },
+          "ERROR! Cyclic schema!"
+        ],
+        "first": "ERROR! Cyclic schema!",
+        "empty": true,
+        "totalElements": "ERROR! Cyclic schema!"
+      },
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/MsgPackageRelations",
+      "methodType": "POST",
+      "requestBody": {
+        "parentMsgPackageRelationId": 30,
+        "pbcProfileId": 54,
+        "endDate": "date-time",
+        "directionKind": 45,
+        "msgPackageId": 72,
+        "externalSystemId": 99,
+        "description": "Описание связи пакета сообщений",
+        "externalObjectId": "Внешний идентификатор бизнес-объекта во внешней системе",
+        "boProfileId": 74,
+        "startDate": "date-time"
+      },
+      "parametersPath": {},
+      "parametersQuery": {},
+      "responseCode": 200,
+      "expectedObjects": {
+        "parentMsgPackageRelationId": 33,
+        "pbcProfileId": 98,
+        "endDate": "date-time",
+        "directionKind": 18,
+        "msgPackageId": 64,
+        "externalSystemId": 36,
+        "msgPackageRelationId": 96,
+        "description": "Описание связи пакета сообщений",
+        "externalObjectId": "Внешний идентификатор бизнес-объекта во внешней системе",
+        "boProfileId": 94,
+        "startDate": "date-time"
+      },
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/MsgPackageRelations/{msgPackageRelationId}",
+      "methodType": "GET",
+      "requestBody": null,
+      "parametersPath": {
+        "msgPackageRelationId": 4
+      },
+      "parametersQuery": {
+        "fields": "str-2An3tAe"
+      },
+      "responseCode": 200,
+      "expectedObjects": {
+        "parentMsgPackageRelationId": 3,
+        "pbcProfileId": 4,
+        "endDate": "date-time",
+        "directionKind": 34,
+        "msgPackageId": 30,
+        "externalSystemId": 82,
+        "msgPackageRelationId": 57,
+        "description": "Описание связи пакета сообщений",
+        "externalObjectId": "Внешний идентификатор бизнес-объекта во внешней системе",
+        "boProfileId": 90,
+        "startDate": "date-time"
+      },
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/MsgPackageRelations/{msgPackageRelationId}",
+      "methodType": "PUT",
+      "requestBody": {
+        "parentMsgPackageRelationId": 35,
+        "pbcProfileId": 71,
+        "endDate": "date-time",
+        "directionKind": 91,
+        "msgPackageId": 20,
+        "externalSystemId": 76,
+        "msgPackageRelationId": 26,
+        "description": "Описание связи пакета сообщений",
+        "externalObjectId": "Внешний идентификатор бизнес-объекта во внешней системе",
+        "boProfileId": 84,
+        "startDate": "date-time"
+      },
+      "parametersPath": {
+        "msgPackageRelationId": 80
+      },
+      "parametersQuery": {},
+      "responseCode": 200,
+      "expectedObjects": {
+        "parentMsgPackageRelationId": 87,
+        "pbcProfileId": 0,
+        "endDate": "date-time",
+        "directionKind": 59,
+        "msgPackageId": 88,
+        "externalSystemId": 3,
+        "msgPackageRelationId": 64,
+        "description": "Описание связи пакета сообщений",
+        "externalObjectId": "Внешний идентификатор бизнес-объекта во внешней системе",
+        "boProfileId": 14,
+        "startDate": "date-time"
+      },
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/MsgPackageRelations/{msgPackageRelationId}",
+      "methodType": "DELETE",
+      "requestBody": null,
+      "parametersPath": {
+        "msgPackageRelationId": 78
+      },
+      "parametersQuery": {},
+      "responseCode": 200,
+      "expectedObjects": null,
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/MsgPackageRelationss",
+      "methodType": "GET",
+      "requestBody": null,
+      "parametersPath": {},
+      "parametersQuery": {
+        "parentMsgPackageRelationId": 80,
+        "pbcProfileId": 58,
+        "endDate": {
+          "year": 2020,
+          "month": 10,
+          "day": 2
+        },
+        "msgPackageId": 68,
+        "msgPackageRelationId": 74,
+        "description": "str-sXhRthY",
+        "sort": [
+          "str-cfvMY9F",
+          "ERROR! Cyclic schema!"
+        ],
+        "externalObjectId": "str-U8GyHJkuaa5hO",
+        "size": 15,
+        "directionKind": 63,
+        "externalSystemId": 17,
+        "page": 50,
+        "fields": "str-pFUzO",
+        "boProfileId": 28,
+        "startDate": {
+          "year": 2020,
+          "month": 3,
+          "day": 3
+        }
+      },
+      "responseCode": 200,
+      "expectedObjects": {
+        "number": 51,
+        "last": "ERROR! Cyclic schema!",
+        "numberOfElements": "ERROR! Cyclic schema!",
+        "size": "ERROR! Cyclic schema!",
+        "totalPages": "ERROR! Cyclic schema!",
+        "pageable": {
+          "paged": "ERROR! Cyclic schema!",
+          "pageNumber": "ERROR! Cyclic schema!",
+          "offset": 85,
+          "pageSize": "ERROR! Cyclic schema!",
+          "unpaged": "ERROR! Cyclic schema!",
+          "sort": {
+            "unsorted": "ERROR! Cyclic schema!",
+            "sorted": "ERROR! Cyclic schema!",
+            "empty": "ERROR! Cyclic schema!"
+          }
+        },
+        "sort": "ERROR! Cyclic schema!",
+        "content": [
+          {
+            "parentMsgPackageRelationId": 27,
+            "pbcProfileId": 15,
+            "endDate": "date-time",
+            "directionKind": 97,
+            "msgPackageId": 6,
+            "externalSystemId": 84,
+            "msgPackageRelationId": 66,
+            "description": "Описание связи пакета сообщений",
+            "externalObjectId": "Внешний идентификатор бизнес-объекта во внешней системе",
+            "boProfileId": 26,
+            "startDate": "date-time"
+          },
+          "ERROR! Cyclic schema!"
+        ],
+        "first": "ERROR! Cyclic schema!",
+        "empty": true,
+        "totalElements": "ERROR! Cyclic schema!"
+      },
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/MsgPkgPrtcl/v1",
+      "methodType": "POST",
+      "requestBody": {
+        "msgPackageId": 31,
+        "errorMessage": "Текст сообщения",
+        "errorCode": 8,
+        "messageId": 25,
+        "protocolAt": "date-time"
+      },
+      "parametersPath": {},
+      "parametersQuery": {},
+      "responseCode": 200,
+      "expectedObjects": {
+        "msgPkgPrtclId": "ERROR! Cyclic schema!",
+        "msgPackageId": "ERROR! Cyclic schema!",
+        "errorMessage": "str-dKfJRHCsPhQ",
+        "errorCode": 6,
+        "messageId": 43,
+        "protocolAt": "yyyy-MM-dd\u0027T\u0027HH:mm:ss.SSSZ"
+      },
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/MsgPkgPrtcl/v1/{msgPkgPrtclId}",
+      "methodType": "GET",
+      "requestBody": null,
+      "parametersPath": {
+        "msgPkgPrtclId": 81
+      },
+      "parametersQuery": {
+        "fields": "str-CocKXk4VK24"
+      },
+      "responseCode": 200,
+      "expectedObjects": {
+        "msgPkgPrtclId": "ERROR! Cyclic schema!",
+        "msgPackageId": "ERROR! Cyclic schema!",
+        "errorMessage": "str-mpPTMPup7pT",
+        "errorCode": 25,
+        "messageId": 79,
+        "protocolAt": "yyyy-MM-dd\u0027T\u0027HH:mm:ss.SSSZ"
+      },
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/MsgPkgPrtcl/v1/{msgPkgPrtclId}",
+      "methodType": "PUT",
+      "requestBody": {
+        "msgPkgPrtclId": "ERROR! Cyclic schema!",
+        "msgPackageId": "ERROR! Cyclic schema!",
+        "errorMessage": "str-m03PvR6AkQ",
+        "errorCode": 57,
+        "messageId": 99,
+        "protocolAt": "yyyy-MM-dd\u0027T\u0027HH:mm:ss.SSSZ"
+      },
+      "parametersPath": {
+        "msgPkgPrtclId": 39
+      },
+      "parametersQuery": {},
+      "responseCode": 200,
+      "expectedObjects": {
+        "msgPkgPrtclId": "ERROR! Cyclic schema!",
+        "msgPackageId": "ERROR! Cyclic schema!",
+        "errorMessage": "str-CGkOu4PM",
+        "errorCode": 20,
+        "messageId": 1,
+        "protocolAt": "yyyy-MM-dd\u0027T\u0027HH:mm:ss.SSSZ"
+      },
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/MsgPkgPrtcl/v1/{msgPkgPrtclId}",
+      "methodType": "DELETE",
+      "requestBody": null,
+      "parametersPath": {
+        "msgPkgPrtclId": 61
+      },
+      "parametersQuery": {},
+      "responseCode": 200,
+      "expectedObjects": null,
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/MsgPkgPrtcls/v1",
+      "methodType": "GET",
+      "requestBody": null,
+      "parametersPath": {},
+      "parametersQuery": {
+        "size": 41,
+        "msgPkgPrtclId": 7,
+        "msgPackageId": 17,
+        "errorMessage": "str-7y4rR8F4lmCeUJ",
+        "errorCode": 33,
+        "messageId": 77,
+        "protocolAt": {
+          "dateTime": {
+            "date": {
+              "year": 2020,
+              "month": 3,
+              "day": 24
+            },
+            "time": {
+              "hour": 4,
+              "minute": 7,
+              "second": 36,
+              "nano": 792000000
+            }
+          },
+          "offset": {
+            "totalSeconds": 10800
+          },
+          "zone": {
+            "id": "Europe/Moscow"
+          }
+        },
+        "page": 6,
+        "sort": [
+          "str-zqQe1cjcLBhx",
+          "ERROR! Cyclic schema!"
+        ],
+        "fields": "str-3HPsD7uTDplMc"
+      },
+      "responseCode": 200,
+      "expectedObjects": {
+        "number": "ERROR! Cyclic schema!",
+        "last": "ERROR! Cyclic schema!",
+        "numberOfElements": "ERROR! Cyclic schema!",
+        "size": "ERROR! Cyclic schema!",
+        "totalPages": "ERROR! Cyclic schema!",
+        "pageable": {
+          "paged": "ERROR! Cyclic schema!",
+          "pageNumber": "ERROR! Cyclic schema!",
+          "offset": "ERROR! Cyclic schema!",
+          "pageSize": "ERROR! Cyclic schema!",
+          "unpaged": "ERROR! Cyclic schema!",
+          "sort": {
+            "unsorted": "ERROR! Cyclic schema!",
+            "sorted": "ERROR! Cyclic schema!",
+            "empty": "ERROR! Cyclic schema!"
+          }
+        },
+        "sort": "ERROR! Cyclic schema!",
+        "content": [
+          {
+            "msgPkgPrtclId": "ERROR! Cyclic schema!",
+            "msgPackageId": "ERROR! Cyclic schema!",
+            "errorMessage": "str-wiYWxFJTQ",
+            "errorCode": 42,
+            "messageId": 66,
+            "protocolAt": "yyyy-MM-dd\u0027T\u0027HH:mm:ss.SSSZ"
+          },
+          "ERROR! Cyclic schema!"
+        ],
+        "first": "ERROR! Cyclic schema!",
+        "empty": true,
+        "totalElements": "ERROR! Cyclic schema!"
+      },
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/actuator/beans",
+      "methodType": "GET",
+      "requestBody": {
+        "additionalProp1": "str-ufRwifsYt3Rx",
+        "additionalProp3": "ERROR! Cyclic schema!",
+        "additionalProp2": "ERROR! Cyclic schema!"
+      },
+      "parametersPath": {},
+      "parametersQuery": {},
+      "responseCode": 200,
+      "expectedObjects": "object",
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/actuator/bindings",
+      "methodType": "GET",
+      "requestBody": {
+        "additionalProp1": "str-nyIw-5-zC",
+        "additionalProp3": "ERROR! Cyclic schema!",
+        "additionalProp2": "ERROR! Cyclic schema!"
+      },
+      "parametersPath": {},
+      "parametersQuery": {},
+      "responseCode": 200,
+      "expectedObjects": "object",
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/actuator/bindings/{name}",
+      "methodType": "GET",
+      "requestBody": {
+        "additionalProp1": "str-nwy-zzL",
+        "additionalProp3": "ERROR! Cyclic schema!",
+        "additionalProp2": "ERROR! Cyclic schema!"
+      },
+      "parametersPath": {},
+      "parametersQuery": {},
+      "responseCode": 200,
+      "expectedObjects": "object",
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/actuator/bindings/{name}",
+      "methodType": "POST",
+      "requestBody": {
+        "additionalProp1": "str-GdpbD0",
+        "additionalProp3": "ERROR! Cyclic schema!",
+        "additionalProp2": "ERROR! Cyclic schema!"
+      },
+      "parametersPath": {},
+      "parametersQuery": {},
+      "responseCode": 200,
+      "expectedObjects": "object",
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/actuator/caches",
+      "methodType": "GET",
+      "requestBody": {
+        "additionalProp1": "str-wOTLvsXCy0EPL",
+        "additionalProp3": "ERROR! Cyclic schema!",
+        "additionalProp2": "ERROR! Cyclic schema!"
+      },
+      "parametersPath": {},
+      "parametersQuery": {},
+      "responseCode": 200,
+      "expectedObjects": "object",
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/actuator/caches",
+      "methodType": "DELETE",
+      "requestBody": {
+        "additionalProp1": "str-AvbfCe",
+        "additionalProp3": "ERROR! Cyclic schema!",
+        "additionalProp2": "ERROR! Cyclic schema!"
+      },
+      "parametersPath": {},
+      "parametersQuery": {},
+      "responseCode": 200,
+      "expectedObjects": "object",
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/actuator/caches/{cache}",
+      "methodType": "GET",
+      "requestBody": {
+        "additionalProp1": "str-PG5qWHPtVVbj",
+        "additionalProp3": "ERROR! Cyclic schema!",
+        "additionalProp2": "ERROR! Cyclic schema!"
+      },
+      "parametersPath": {},
+      "parametersQuery": {},
+      "responseCode": 200,
+      "expectedObjects": "object",
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/actuator/caches/{cache}",
+      "methodType": "DELETE",
+      "requestBody": {
+        "additionalProp1": "str-gZavae",
+        "additionalProp3": "ERROR! Cyclic schema!",
+        "additionalProp2": "ERROR! Cyclic schema!"
+      },
+      "parametersPath": {},
+      "parametersQuery": {},
+      "responseCode": 200,
+      "expectedObjects": "object",
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/actuator/channels",
+      "methodType": "GET",
+      "requestBody": {
+        "additionalProp1": "str-UmttZ7XBG",
+        "additionalProp3": "ERROR! Cyclic schema!",
+        "additionalProp2": "ERROR! Cyclic schema!"
+      },
+      "parametersPath": {},
+      "parametersQuery": {},
+      "responseCode": 200,
+      "expectedObjects": "object",
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/actuator/conditions",
+      "methodType": "GET",
+      "requestBody": {
+        "additionalProp1": "str-FPh1B",
+        "additionalProp3": "ERROR! Cyclic schema!",
+        "additionalProp2": "ERROR! Cyclic schema!"
+      },
+      "parametersPath": {},
+      "parametersQuery": {},
+      "responseCode": 200,
+      "expectedObjects": "object",
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/actuator/configprops",
+      "methodType": "GET",
+      "requestBody": {
+        "additionalProp1": "str-AQPupdalJm",
+        "additionalProp3": "ERROR! Cyclic schema!",
+        "additionalProp2": "ERROR! Cyclic schema!"
+      },
+      "parametersPath": {},
+      "parametersQuery": {},
+      "responseCode": 200,
+      "expectedObjects": "object",
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/actuator/configprops/{prefix}",
+      "methodType": "GET",
+      "requestBody": {
+        "additionalProp1": "str-3cdfdCtzr2",
+        "additionalProp3": "ERROR! Cyclic schema!",
+        "additionalProp2": "ERROR! Cyclic schema!"
+      },
+      "parametersPath": {},
+      "parametersQuery": {},
+      "responseCode": 200,
+      "expectedObjects": "object",
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/actuator/env",
+      "methodType": "GET",
+      "requestBody": {
+        "additionalProp1": "str-1hyDxs",
+        "additionalProp3": "ERROR! Cyclic schema!",
+        "additionalProp2": "ERROR! Cyclic schema!"
+      },
+      "parametersPath": {},
+      "parametersQuery": {},
+      "responseCode": 200,
+      "expectedObjects": "object",
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/actuator/env/{toMatch}",
+      "methodType": "GET",
+      "requestBody": {
+        "additionalProp1": "str-UDNDbYgCsVk",
+        "additionalProp3": "ERROR! Cyclic schema!",
+        "additionalProp2": "ERROR! Cyclic schema!"
+      },
+      "parametersPath": {},
+      "parametersQuery": {},
+      "responseCode": 200,
+      "expectedObjects": "object",
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/actuator/features",
+      "methodType": "GET",
+      "requestBody": {
+        "additionalProp1": "str-j8h6VYs",
+        "additionalProp3": "ERROR! Cyclic schema!",
+        "additionalProp2": "ERROR! Cyclic schema!"
+      },
+      "parametersPath": {},
+      "parametersQuery": {},
+      "responseCode": 200,
+      "expectedObjects": "object",
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/actuator/functions",
+      "methodType": "GET",
+      "requestBody": {
+        "additionalProp1": "str-PSNgRH",
+        "additionalProp3": "ERROR! Cyclic schema!",
+        "additionalProp2": "ERROR! Cyclic schema!"
+      },
+      "parametersPath": {},
+      "parametersQuery": {},
+      "responseCode": 200,
+      "expectedObjects": "object",
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/actuator/health",
+      "methodType": "GET",
+      "requestBody": {
+        "additionalProp1": "str-mDDYCb13MmG",
+        "additionalProp3": "ERROR! Cyclic schema!",
+        "additionalProp2": "ERROR! Cyclic schema!"
+      },
+      "parametersPath": {},
+      "parametersQuery": {},
+      "responseCode": 200,
+      "expectedObjects": "object",
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/actuator/health/**",
+      "methodType": "GET",
+      "requestBody": {
+        "additionalProp1": "str-Xm6hfefxJ2J",
+        "additionalProp3": "ERROR! Cyclic schema!",
+        "additionalProp2": "ERROR! Cyclic schema!"
+      },
+      "parametersPath": {},
+      "parametersQuery": {},
+      "responseCode": 200,
+      "expectedObjects": "object",
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/actuator/heapdump",
+      "methodType": "GET",
+      "requestBody": {
+        "additionalProp1": "str-Ph5c0R8QKdz88",
+        "additionalProp3": "ERROR! Cyclic schema!",
+        "additionalProp2": "ERROR! Cyclic schema!"
+      },
+      "parametersPath": {},
+      "parametersQuery": {},
+      "responseCode": 200,
+      "expectedObjects": "object",
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/actuator/info",
+      "methodType": "GET",
+      "requestBody": {
+        "additionalProp1": "str-kkbCWEvhVJ",
+        "additionalProp3": "ERROR! Cyclic schema!",
+        "additionalProp2": "ERROR! Cyclic schema!"
+      },
+      "parametersPath": {},
+      "parametersQuery": {},
+      "responseCode": 200,
+      "expectedObjects": "object",
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/actuator/integrationgraph",
+      "methodType": "GET",
+      "requestBody": {
+        "additionalProp1": "str-02gkh5VrB1VuF",
+        "additionalProp3": "ERROR! Cyclic schema!",
+        "additionalProp2": "ERROR! Cyclic schema!"
+      },
+      "parametersPath": {},
+      "parametersQuery": {},
+      "responseCode": 200,
+      "expectedObjects": "object",
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/actuator/integrationgraph",
+      "methodType": "POST",
+      "requestBody": {
+        "additionalProp1": "str-qDGCeN",
+        "additionalProp3": "ERROR! Cyclic schema!",
+        "additionalProp2": "ERROR! Cyclic schema!"
+      },
+      "parametersPath": {},
+      "parametersQuery": {},
+      "responseCode": 200,
+      "expectedObjects": "object",
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/actuator/loggers",
+      "methodType": "GET",
+      "requestBody": {
+        "additionalProp1": "str-vJ7auFOBc",
+        "additionalProp3": "ERROR! Cyclic schema!",
+        "additionalProp2": "ERROR! Cyclic schema!"
+      },
+      "parametersPath": {},
+      "parametersQuery": {},
+      "responseCode": 200,
+      "expectedObjects": "object",
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/actuator/loggers/{name}",
+      "methodType": "GET",
+      "requestBody": {
+        "additionalProp1": "str-tOMpqVAurS3",
+        "additionalProp3": "ERROR! Cyclic schema!",
+        "additionalProp2": "ERROR! Cyclic schema!"
+      },
+      "parametersPath": {},
+      "parametersQuery": {},
+      "responseCode": 200,
+      "expectedObjects": "object",
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/actuator/loggers/{name}",
+      "methodType": "POST",
+      "requestBody": {
+        "additionalProp1": "str-MwX5t1iHRVfaM",
+        "additionalProp3": "ERROR! Cyclic schema!",
+        "additionalProp2": "ERROR! Cyclic schema!"
+      },
+      "parametersPath": {},
+      "parametersQuery": {},
+      "responseCode": 200,
+      "expectedObjects": "object",
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/actuator/mappings",
+      "methodType": "GET",
+      "requestBody": {
+        "additionalProp1": "str-pwL1U7k6Zep3CU",
+        "additionalProp3": "ERROR! Cyclic schema!",
+        "additionalProp2": "ERROR! Cyclic schema!"
+      },
+      "parametersPath": {},
+      "parametersQuery": {},
+      "responseCode": 200,
+      "expectedObjects": "object",
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/actuator/metrics",
+      "methodType": "GET",
+      "requestBody": {
+        "additionalProp1": "str-aNvEr",
+        "additionalProp3": "ERROR! Cyclic schema!",
+        "additionalProp2": "ERROR! Cyclic schema!"
+      },
+      "parametersPath": {},
+      "parametersQuery": {},
+      "responseCode": 200,
+      "expectedObjects": "object",
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/actuator/metrics/{requiredMetricName}",
+      "methodType": "GET",
+      "requestBody": {
+        "additionalProp1": "str-5PHqbh3ZM7NO0",
+        "additionalProp3": "ERROR! Cyclic schema!",
+        "additionalProp2": "ERROR! Cyclic schema!"
+      },
+      "parametersPath": {},
+      "parametersQuery": {},
+      "responseCode": 200,
+      "expectedObjects": "object",
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/actuator/prometheus",
+      "methodType": "GET",
+      "requestBody": {
+        "additionalProp1": "str-VhRhF4gSHo2YTn",
+        "additionalProp3": "ERROR! Cyclic schema!",
+        "additionalProp2": "ERROR! Cyclic schema!"
+      },
+      "parametersPath": {},
+      "parametersQuery": {},
+      "responseCode": 200,
+      "expectedObjects": "object",
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/actuator/refresh",
+      "methodType": "POST",
+      "requestBody": {
+        "additionalProp1": "str-eQSE332DfLP",
+        "additionalProp3": "ERROR! Cyclic schema!",
+        "additionalProp2": "ERROR! Cyclic schema!"
+      },
+      "parametersPath": {},
+      "parametersQuery": {},
+      "responseCode": 200,
+      "expectedObjects": "object",
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/actuator/scheduledtasks",
+      "methodType": "GET",
+      "requestBody": {
+        "additionalProp1": "str-r2Wcdzf",
+        "additionalProp3": "ERROR! Cyclic schema!",
+        "additionalProp2": "ERROR! Cyclic schema!"
+      },
+      "parametersPath": {},
+      "parametersQuery": {},
+      "responseCode": 200,
+      "expectedObjects": "object",
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/actuator/threaddump",
+      "methodType": "GET",
+      "requestBody": {
+        "additionalProp1": "str-9HzrTMdM5LDoU",
+        "additionalProp3": "ERROR! Cyclic schema!",
+        "additionalProp2": "ERROR! Cyclic schema!"
+      },
+      "parametersPath": {},
+      "parametersQuery": {},
+      "responseCode": 200,
+      "expectedObjects": "object",
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/mock/qmmBusinessattributevalueCreateReply",
+      "methodType": "GET",
+      "requestBody": null,
+      "parametersPath": {},
+      "parametersQuery": {},
+      "responseCode": 200,
+      "expectedObjects": {
+        "businessAttributeValueList": [
+          {
+            "businessAttributeValueId": 89,
+            "msgPackageId": "ERROR! Cyclic schema!",
+            "formatBusinessAttributeId": "ERROR! Cyclic schema!"
+          },
+          "ERROR! Cyclic schema!"
+        ]
+      },
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/mock/qmmMsgEvent",
+      "methodType": "GET",
+      "requestBody": null,
+      "parametersPath": {},
+      "parametersQuery": {},
+      "responseCode": 200,
+      "expectedObjects": {
+        "messageBody": "ERROR! Cyclic schema!",
+        "receiver": "ERROR! Cyclic schema!",
+        "msgPackageId": "ERROR! Cyclic schema!",
+        "formatName": "str-x1kXuY",
+        "msgId": "ERROR! Cyclic schema!",
+        "inDatetime": "yyyy-MM-dd\u0027T\u0027HH:mm:ss.SSSZ",
+        "msgFormatId": 18,
+        "number": "ERROR! Cyclic schema!",
+        "messageType": "ERROR! Cyclic schema!",
+        "sender": "ERROR! Cyclic schema!",
+        "formatVersion": "ERROR! Cyclic schema!",
+        "direction": 36,
+        "status": "ERROR! Cyclic schema!"
+      },
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/mock/qmmMsgReply",
+      "methodType": "GET",
+      "requestBody": null,
+      "parametersPath": {},
+      "parametersQuery": {},
+      "responseCode": 200,
+      "expectedObjects": {
+        "object": "object"
+      },
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/mock/qmmMsgpackageAndMsgpackageAttributeEvent",
+      "methodType": "GET",
+      "requestBody": null,
+      "parametersPath": {},
+      "parametersQuery": {},
+      "responseCode": 200,
+      "expectedObjects": {
+        "fileName": "ERROR! Cyclic schema!",
+        "messageCount": "ERROR! Cyclic schema!",
+        "msgPackageType": "ERROR! Cyclic schema!",
+        "msgBodyCode": "ERROR! Cyclic schema!",
+        "msgPackageId": "ERROR! Cyclic schema!",
+        "destination": "ERROR! Cyclic schema!",
+        "formatName": "ERROR! Cyclic schema!",
+        "branchName": "str-msKE6xtqZXjsj",
+        "childCount": 39,
+        "source": "ERROR! Cyclic schema!",
+        "createAt": "yyyy-MM-dd\u0027T\u0027HH:mm:ss.SSSZ",
+        "loadRuleName": "ERROR! Cyclic schema!",
+        "msgFormatId": 86,
+        "humanTaskId": "ERROR! Cyclic schema!",
+        "processId": "ERROR! Cyclic schema!",
+        "sender": "ERROR! Cyclic schema!",
+        "sourceType": "ERROR! Cyclic schema!",
+        "formatVersion": "ERROR! Cyclic schema!",
+        "parentMsgPackageId": "ERROR! Cyclic schema!",
+        "direction": "ERROR! Cyclic schema!",
+        "status": "ERROR! Cyclic schema!"
+      },
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/mock/qmmMsgpackageAndMsgpackageAttributeReply",
+      "methodType": "GET",
+      "requestBody": null,
+      "parametersPath": {},
+      "parametersQuery": {},
+      "responseCode": 200,
+      "expectedObjects": {
+        "object": "object"
+      },
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/mock/qmmMsgpackageMovementHistoryReply",
+      "methodType": "GET",
+      "requestBody": null,
+      "parametersPath": {},
+      "parametersQuery": {},
+      "responseCode": 200,
+      "expectedObjects": {
+        "object": "object"
+      },
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/mock/qmmMsgpackageStartLoadprocess",
+      "methodType": "GET",
+      "requestBody": null,
+      "parametersPath": {},
+      "parametersQuery": {},
+      "responseCode": 200,
+      "expectedObjects": {
+        "MsgPackage": {
+          "fileName": "ERROR! Cyclic schema!",
+          "messageCount": "ERROR! Cyclic schema!",
+          "msgPackageType": "ERROR! Cyclic schema!",
+          "msgBodyCode": "ERROR! Cyclic schema!",
+          "msgPackageId": "ERROR! Cyclic schema!",
+          "destination": "ERROR! Cyclic schema!",
+          "formatName": "ERROR! Cyclic schema!",
+          "branchName": "str-20RTaUhzTRL",
+          "childCount": 27,
+          "source": "ERROR! Cyclic schema!",
+          "createAt": "yyyy-MM-dd\u0027T\u0027HH:mm:ss.SSSZ",
+          "loadRuleName": "ERROR! Cyclic schema!",
+          "msgFormatId": 85,
+          "humanTaskId": "ERROR! Cyclic schema!",
+          "processId": "ERROR! Cyclic schema!",
+          "sender": "ERROR! Cyclic schema!",
+          "sourceType": "ERROR! Cyclic schema!",
+          "formatVersion": "ERROR! Cyclic schema!",
+          "parentMsgPackageId": "ERROR! Cyclic schema!",
+          "direction": "ERROR! Cyclic schema!",
+          "status": "ERROR! Cyclic schema!"
+        },
+        "inputTopicName": "ERROR! Cyclic schema!"
+      },
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/mock/qmmMsgpackageStartUnloadprocess",
+      "methodType": "GET",
+      "requestBody": null,
+      "parametersPath": {},
+      "parametersQuery": {},
+      "responseCode": 200,
+      "expectedObjects": {
+        "msgPackageId": 86,
+        "msgSender": "ERROR! Cyclic schema!",
+        "destination": "ERROR! Cyclic schema!",
+        "formatName": "ERROR! Cyclic schema!",
+        "branchName": "str-AYwXqG",
+        "formatVersion": "ERROR! Cyclic schema!",
+        "direction": 9,
+        "status": "ERROR! Cyclic schema!"
+      },
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/mock/qmmMsgpackagerelationsReply",
+      "methodType": "GET",
+      "requestBody": null,
+      "parametersPath": {},
+      "parametersQuery": {},
+      "responseCode": 200,
+      "expectedObjects": {
+        "object": "object"
+      },
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/mock/qmmMsgpkgprtclAndMsgpkgprtclAttributeEvent",
+      "methodType": "GET",
+      "requestBody": null,
+      "parametersPath": {},
+      "parametersQuery": {},
+      "responseCode": 200,
+      "expectedObjects": {
+        "msgPkgPrtclId": "ERROR! Cyclic schema!",
+        "msgPackageId": "ERROR! Cyclic schema!",
+        "errorMessage": "str-DgQ8Cn",
+        "errorCode": 75,
+        "messageId": 77,
+        "protocolAt": "yyyy-MM-dd\u0027T\u0027HH:mm:ss.SSSZ"
+      },
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/mock/qmmMsgpkgprtclAndMsgpkgprtclAttributeReply",
+      "methodType": "GET",
+      "requestBody": null,
+      "parametersPath": {},
+      "parametersQuery": {},
+      "responseCode": 200,
+      "expectedObjects": {
+        "object": "object"
+      },
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/qvrnversion/compareversion/v1",
+      "methodType": "GET",
+      "requestBody": null,
+      "parametersPath": {},
+      "parametersQuery": {
+        "paged": true,
+        "pageNumber": 3,
+        "offset": 25,
+        "previousCompare": true,
+        "pageSize": 12,
+        "boAttributeId": 30,
+        "sort": [
+          "str-Jie31WW",
+          "ERROR! Cyclic schema!"
+        ],
+        "boAttributeLocalName": "str-G5AlFUmz",
+        "sort.sorted": true,
+        "currentCompare": false,
+        "boAttributeSysName": "str-kyxCddi",
+        "versionId": 61,
+        "size": 23,
+        "sort.unsorted": false,
+        "versionCompareId": 45,
+        "unpaged": false,
+        "page": 14,
+        "fields": "str-DZAl4H3JRWfpKR",
+        "changed": true
+      },
+      "responseCode": 200,
+      "expectedObjects": {
+        "number": 19,
+        "last": "ERROR! Cyclic schema!",
+        "numberOfElements": "ERROR! Cyclic schema!",
+        "size": "ERROR! Cyclic schema!",
+        "totalPages": "ERROR! Cyclic schema!",
+        "pageable": {
+          "paged": "ERROR! Cyclic schema!",
+          "pageNumber": "ERROR! Cyclic schema!",
+          "offset": 85,
+          "pageSize": "ERROR! Cyclic schema!",
+          "unpaged": "ERROR! Cyclic schema!",
+          "sort": {
+            "unsorted": "ERROR! Cyclic schema!",
+            "sorted": "ERROR! Cyclic schema!",
+            "empty": "ERROR! Cyclic schema!"
+          }
+        },
+        "sort": "ERROR! Cyclic schema!",
+        "content": [
+          {
+            "date": "date-time",
+            "depFullNameOld": "Наименование подразделения старой версии",
+            "depFullName": "Наименование подразделения",
+            "valueOld": "Старое значение параметра",
+            "boAttributeId": 98,
+            "login": "Логин пользователя",
+            "userName": "Наименование пользователя",
+            "boAttributeLocalName": "Наименование параметра",
+            "loginOld": "Логин пользователя старой версии",
+            "boAttributeSysName": "Системное имя параметра",
+            "userNameOld": "ERROR! Cyclic schema!",
+            "valueNew": "Новое значение параметра",
+            "changed": false,
+            "dateOld": "date-time"
+          },
+          "ERROR! Cyclic schema!"
+        ],
+        "first": "ERROR! Cyclic schema!",
+        "empty": true,
+        "totalElements": "ERROR! Cyclic schema!"
+      },
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/qvrnversion/findlistattributeLinkedBobyparam/v1",
+      "methodType": "GET",
+      "requestBody": null,
+      "parametersPath": {},
+      "parametersQuery": {
+        "date": "date-time",
+        "paged": true,
+        "pageNumber": 67,
+        "offset": 71,
+        "boSysName": "str-PEFc4mdx1O2cEk",
+        "boId": 95,
+        "objectLinkedId": "str-XmhPTvYFT28pza",
+        "pageSize": 58,
+        "sort": [
+          "str-jeQzXpRZl5L1MN",
+          "ERROR! Cyclic schema!"
+        ],
+        "sort.sorted": false,
+        "boAttributeSysName": "str-VSEG40gh5aB3",
+        "versionId": 39,
+        "size": 94,
+        "sort.unsorted": true,
+        "unpaged": true,
+        "page": 81,
+        "fields": "str-yHpmvtTd"
+      },
+      "responseCode": 200,
+      "expectedObjects": {
+        "number": 39,
+        "last": "ERROR! Cyclic schema!",
+        "numberOfElements": "ERROR! Cyclic schema!",
+        "size": "ERROR! Cyclic schema!",
+        "totalPages": "ERROR! Cyclic schema!",
+        "pageable": {
+          "paged": "ERROR! Cyclic schema!",
+          "pageNumber": "ERROR! Cyclic schema!",
+          "offset": 46,
+          "pageSize": "ERROR! Cyclic schema!",
+          "unpaged": "ERROR! Cyclic schema!",
+          "sort": {
+            "unsorted": "ERROR! Cyclic schema!",
+            "sorted": "ERROR! Cyclic schema!",
+            "empty": "ERROR! Cyclic schema!"
+          }
+        },
+        "sort": "ERROR! Cyclic schema!",
+        "content": [
+          {
+            "boAttributeSysName": "Системное наименование атрибута",
+            "boAttributeId": 96,
+            "value": "Значение атрибута",
+            "boAttributeLocalName": "Наименование атрибута"
+          },
+          "ERROR! Cyclic schema!"
+        ],
+        "first": "ERROR! Cyclic schema!",
+        "empty": false,
+        "totalElements": "ERROR! Cyclic schema!"
+      },
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/qvrnversion/findlistattributebobyparam/v1",
+      "methodType": "GET",
+      "requestBody": null,
+      "parametersPath": {},
+      "parametersQuery": {
+        "date": "date-time",
+        "paged": true,
+        "pageNumber": 40,
+        "offset": 26,
+        "boSysName": "str-fIWaC2ZBJhsTjK",
+        "boId": 32,
+        "pageSize": 62,
+        "sort": [
+          "str-r6MFy",
+          "ERROR! Cyclic schema!"
+        ],
+        "sort.sorted": true,
+        "size": 85,
+        "sort.unsorted": false,
+        "unpaged": true,
+        "page": 63,
+        "fields": "str-a0D-o-oF",
+        "objectId": "str-X5Nkj"
+      },
+      "responseCode": 200,
+      "expectedObjects": {
+        "number": 38,
+        "last": "ERROR! Cyclic schema!",
+        "numberOfElements": "ERROR! Cyclic schema!",
+        "size": "ERROR! Cyclic schema!",
+        "totalPages": "ERROR! Cyclic schema!",
+        "pageable": {
+          "paged": "ERROR! Cyclic schema!",
+          "pageNumber": "ERROR! Cyclic schema!",
+          "offset": 90,
+          "pageSize": "ERROR! Cyclic schema!",
+          "unpaged": "ERROR! Cyclic schema!",
+          "sort": {
+            "unsorted": "ERROR! Cyclic schema!",
+            "sorted": "ERROR! Cyclic schema!",
+            "empty": "ERROR! Cyclic schema!"
+          }
+        },
+        "sort": "ERROR! Cyclic schema!",
+        "content": [
+          {
+            "boAttributeSysName": "Системное наименование",
+            "boAttributeId": 81,
+            "value": "Значение",
+            "boAttributeLocalName": "Наименование"
+          },
+          "ERROR! Cyclic schema!"
+        ],
+        "first": "ERROR! Cyclic schema!",
+        "empty": false,
+        "totalElements": "ERROR! Cyclic schema!"
+      },
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/qvrnversion/findlistattributebyparam/v1",
+      "methodType": "GET",
+      "requestBody": null,
+      "parametersPath": {},
+      "parametersQuery": {
+        "paged": false,
+        "pageNumber": 3,
+        "offset": 46,
+        "pageSize": 39,
+        "boAttributeId": 70,
+        "sort": [
+          "str-18cCv",
+          "ERROR! Cyclic schema!"
+        ],
+        "boAttributeLocalName": "str-Eetx5jllHgpzX",
+        "sort.sorted": false,
+        "boAttributeSysName": "str-siZYX",
+        "versionId": 58,
+        "size": 31,
+        "sort.unsorted": true,
+        "unpaged": false,
+        "page": 25,
+        "fields": "str-HFim1Qqz"
+      },
+      "responseCode": 200,
+      "expectedObjects": {
+        "number": 43,
+        "last": "ERROR! Cyclic schema!",
+        "numberOfElements": "ERROR! Cyclic schema!",
+        "size": "ERROR! Cyclic schema!",
+        "totalPages": "ERROR! Cyclic schema!",
+        "pageable": {
+          "paged": "ERROR! Cyclic schema!",
+          "pageNumber": "ERROR! Cyclic schema!",
+          "offset": 89,
+          "pageSize": "ERROR! Cyclic schema!",
+          "unpaged": "ERROR! Cyclic schema!",
+          "sort": {
+            "unsorted": "ERROR! Cyclic schema!",
+            "sorted": "ERROR! Cyclic schema!",
+            "empty": "ERROR! Cyclic schema!"
+          }
+        },
+        "sort": "ERROR! Cyclic schema!",
+        "content": [
+          {
+            "boAttributeSysName": "Системное наименование",
+            "isLinked": false,
+            "boAttributeId": 98,
+            "value": "Значение атрибута",
+            "boAttributeLocalName": "Наименование"
+          },
+          "ERROR! Cyclic schema!"
+        ],
+        "first": "ERROR! Cyclic schema!",
+        "empty": true,
+        "totalElements": "ERROR! Cyclic schema!"
+      },
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/qvrnversion/findlistversionbyparam/v1",
+      "methodType": "GET",
+      "requestBody": null,
+      "parametersPath": {},
+      "parametersQuery": {
+        "date": "date-time",
+        "paged": true,
+        "pageNumber": 65,
+        "offset": 68,
+        "endDate": "date-time",
+        "boId": 49,
+        "pageSize": 37,
+        "sort": [
+          "str-55KTXwV",
+          "ERROR! Cyclic schema!"
+        ],
+        "sort.sorted": true,
+        "versionKey": "str-fyeHh",
+        "isFirst": true,
+        "isCurrent": true,
+        "versionId": 35,
+        "size": 32,
+        "isData": false,
+        "sort.unsorted": true,
+        "comment": "str-In8Qk3Rzp4z1C",
+        "unpaged": false,
+        "isLastVersions": false,
+        "page": 58,
+        "fields": "str-lB7cAO3Q",
+        "objectId": "str-IUJhxTv",
+        "startDate": "date-time"
+      },
+      "responseCode": 200,
+      "expectedObjects": {
+        "number": 29,
+        "last": "ERROR! Cyclic schema!",
+        "numberOfElements": "ERROR! Cyclic schema!",
+        "size": "ERROR! Cyclic schema!",
+        "totalPages": "ERROR! Cyclic schema!",
+        "pageable": {
+          "paged": "ERROR! Cyclic schema!",
+          "pageNumber": "ERROR! Cyclic schema!",
+          "offset": 42,
+          "pageSize": "ERROR! Cyclic schema!",
+          "unpaged": "ERROR! Cyclic schema!",
+          "sort": {
+            "unsorted": "ERROR! Cyclic schema!",
+            "sorted": "ERROR! Cyclic schema!",
+            "empty": "ERROR! Cyclic schema!"
+          }
+        },
+        "sort": "ERROR! Cyclic schema!",
+        "content": [
+          {
+            "date": "date-time",
+            "isFirst": false,
+            "number": 47,
+            "isCurrent": false,
+            "versionId": 15,
+            "depFullName": "Наименование департамента",
+            "isData": false,
+            "comment": "Комментарий",
+            "login": "Логин пользователя",
+            "userName": "Наименование пользователя",
+            "versionKey": "Ссылка на событие аудита"
+          },
+          "ERROR! Cyclic schema!"
+        ],
+        "first": "ERROR! Cyclic schema!",
+        "empty": true,
+        "totalElements": "ERROR! Cyclic schema!"
+      },
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/qvrnversion/findversionbyid/v1/{versionId}",
+      "methodType": "GET",
+      "requestBody": null,
+      "parametersPath": {
+        "versionId": 70
+      },
+      "parametersQuery": {
+        "fields": "str-ENYSYk3RYjd-"
+      },
+      "responseCode": 200,
+      "expectedObjects": {
+        "date": "date-time",
+        "depFullName": "Наименование подразделения",
+        "boId": 69,
+        "login": "Логин пользователя",
+        "userName": "Наименование пользователя",
+        "versionKey": "Связь с событием аудита",
+        "isFirst": false,
+        "number": 13,
+        "isCurrent": false,
+        "versionId": 48,
+        "isData": false,
+        "comment": "Комментарий",
+        "objectId": "Идентификатор экземпляра бизнес-объекта"
+      },
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/VersionSetting/{versionSettingId}",
+      "methodType": "GET",
+      "requestBody": null,
+      "parametersPath": {
+        "versionSettingId": 0
+      },
+      "parametersQuery": {
+        "fields": "str-5XBW-"
+      },
+      "responseCode": 200,
+      "expectedObjects": {
+        "boDescription": "Описание БО",
+        "useVersion": false,
+        "boLocalName": "Наименование БО",
+        "boSysName": "Системное имя БО",
+        "boId": 89,
+        "versionSettingId": 70
+      },
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/VersionSettings",
+      "methodType": "GET",
+      "requestBody": null,
+      "parametersPath": {},
+      "parametersQuery": {
+        "paged": false,
+        "pageNumber": 6,
+        "useVersion": true,
+        "offset": 28,
+        "boId": 77,
+        "pageSize": 68,
+        "sort": [
+          "str-Isw5qq",
+          "ERROR! Cyclic schema!"
+        ],
+        "serviceName": "str-TCrCH6vQa4s7s",
+        "sort.sorted": false,
+        "url": "str-XgUWM26Kea",
+        "size": 47,
+        "sort.unsorted": true,
+        "unpaged": false,
+        "page": 33,
+        "versionSettingId": 62,
+        "fields": "str-K3ZMJAmL9GuV"
+      },
+      "responseCode": 200,
+      "expectedObjects": {
+        "number": 55,
+        "last": "ERROR! Cyclic schema!",
+        "numberOfElements": "ERROR! Cyclic schema!",
+        "size": "ERROR! Cyclic schema!",
+        "totalPages": "ERROR! Cyclic schema!",
+        "pageable": {
+          "paged": "ERROR! Cyclic schema!",
+          "pageNumber": "ERROR! Cyclic schema!",
+          "offset": 62,
+          "pageSize": "ERROR! Cyclic schema!",
+          "unpaged": "ERROR! Cyclic schema!",
+          "sort": {
+            "unsorted": "ERROR! Cyclic schema!",
+            "sorted": "ERROR! Cyclic schema!",
+            "empty": "ERROR! Cyclic schema!"
+          }
+        },
+        "sort": "ERROR! Cyclic schema!",
+        "content": [
+          {
+            "boDescription": "Описание БО",
+            "useVersion": false,
+            "boLocalName": "Наименование БО",
+            "boSysName": "Системное имя БО",
+            "boId": 85,
+            "versionSettingId": 53
+          },
+          "ERROR! Cyclic schema!"
+        ],
+        "first": "ERROR! Cyclic schema!",
+        "empty": false,
+        "totalElements": "ERROR! Cyclic schema!"
+      },
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/qvrnversion/updateversionsetting/v1",
+      "methodType": "PUT",
+      "requestBody": {
+        "useVersion": false,
+        "versionSettingId": 62
+      },
+      "parametersPath": {},
+      "parametersQuery": {},
+      "responseCode": 200,
+      "expectedObjects": null,
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/actuator",
+      "methodType": "GET",
+      "requestBody": null,
+      "parametersPath": {},
+      "parametersQuery": {},
+      "responseCode": 200,
+      "expectedObjects": {
+        "additionalProp1": "object",
+        "additionalProp3": "ERROR! Cyclic schema!",
+        "additionalProp2": "ERROR! Cyclic schema!"
+      },
+      "unexpectedObjects": null
+    }
+  ],
+  "serverUrl": null
+}

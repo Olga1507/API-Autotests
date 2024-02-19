@@ -4,6 +4,10 @@ import javax.xml.datatype.DatatypeConfigurationException;
 import javax.xml.datatype.DatatypeFactory;
 import javax.xml.datatype.XMLGregorianCalendar;
 import java.math.BigInteger;
+import java.time.Instant;
+import java.time.LocalDate;
+import java.time.ZoneId;
+import java.time.ZonedDateTime;
 import java.util.*;
 import java.util.concurrent.ThreadLocalRandom;
 
@@ -103,6 +107,19 @@ public class Randomizer {
                 .nextLong(startMillis, endMillis);
         Date date = new Date(randomMillisSinceEpoch);
         return date;
+    }
+
+    public static ZonedDateTime rndZonedDateTime() {
+        Date d = rndDate();
+        ZonedDateTime rndZonedDateTime = ZonedDateTime.ofInstant(d.toInstant(),
+                ZoneId.systemDefault());
+        return rndZonedDateTime;
+    }
+
+    public static LocalDate rndLocalDate() {
+        Date d = rndDate();
+        LocalDate rndLocalDate = d.toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
+        return rndLocalDate;
     }
 
 //    public static XMLGregorianCalendar getNextDate(XMLGregorianCalendar xmlGregorianCalendar) throws DatatypeConfigurationException {

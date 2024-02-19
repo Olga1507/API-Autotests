@@ -15,6 +15,8 @@ import org.slf4j.LoggerFactory;
 import ru.diasoft.domain.*;
 import ru.diasoft.domain.TestCase;
 
+import java.io.File;
+import java.io.FileOutputStream;
 import java.util.*;
 
 public class MainGenerate {
@@ -23,9 +25,13 @@ public class MainGenerate {
     private static Logger logger = LoggerFactory.getLogger(MainGenerate.class);
 
     public static void main(String[] args) throws Exception {
+        //Для записи в файл
+        File myFile = new File("APIDOCS.json");
+        FileOutputStream outputStream = new FileOutputStream(myFile);
+
         // parse a swagger description from the petstore and get the result
         //SwaggerParseResult result = new OpenAPIParser().readLocation("http://qmmmsgpackage.msghubtmp.qrun.diasoft.ru/qmmmsgpackage/v3/api-docs", null, null);
-        SwaggerParseResult result = new OpenAPIParser().readLocation(MainGenerate.class.getClassLoader().getResource("api-docs.json").toString(), null, null);
+        SwaggerParseResult result = new OpenAPIParser().readLocation(MainGenerate.class.getClassLoader().getResource("api-docs_new.json").toString(), null, null);
 
         // the parsed POJO
         OpenAPI openAPI = result.getOpenAPI();
@@ -49,6 +55,11 @@ public class MainGenerate {
         Gson gson1 = new GsonBuilder().setPrettyPrinting().serializeNulls().create();
         String json1 = gson1.toJson(allCases, AllCases.class);
         System.out.println(json1);
+
+        // Запись результатов в файл
+        byte[] buffer = json1.getBytes();
+        outputStream.write(buffer);
+        outputStream.close();
     }
 
 
