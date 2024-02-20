@@ -23,6 +23,7 @@ import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import ru.diasoft.report.ReportUtils;
 import ru.diasoft.report.domain.Report;
 import ru.diasoft.report.domain.TestCaseLog;
 
@@ -66,7 +67,16 @@ public class MainExecute {
                 logger.info("URL для запроса: {}", resultUrl);
                 //Записали URL для отчёта
                 testCaseLog.setRequestUrl(resultUrl);
-                HttpResponse<String> response = sendRequest(resultUrl, case0.getMethodType());
+
+                //Формируем body (маршаллинг)
+                ObjectMapper mapper = new ObjectMapper();
+
+                //Java Object -> JSON
+                String requestBodyString = mapper.writeValueAsString(case0.getRequestBody());
+                logger.info("Request Body: {}", requestBodyString);
+
+
+                HttpResponse<String> response = sendRequest(resultUrl, case0.getMethodType(), requestBodyString);
 
                 logger.info("Получен ответ. Код: {}. Тело ответа: {}", response.statusCode(), response.body());
 
@@ -88,7 +98,7 @@ public class MainExecute {
                 logger.info("Начали валидацию тела ответа из expectedObjects");
 
                 //Для кpacивoго oфopмлeния JSON cтpoки
-                ObjectMapper mapper = new ObjectMapper();
+                //ObjectMapper mapper = new ObjectMapper(); - создали выше!
                 JsonNode responseJson = mapper.readValue(response.body(), JsonNode.class);
                 //JsonNode node1 = mapper.valueToTree(jsonObject);
 
@@ -102,7 +112,6 @@ public class MainExecute {
                     result = false;
                     testCaseLog.getErrors().add("Ошибка валидации: " + e.getMessage());
                 }
-
 
 
             } catch (Exception e) {
@@ -127,9 +136,7 @@ public class MainExecute {
         logger.info("Отчёт готов!");
 
 
-
     }
-
 
 
     // ВАЛИДАЦИЯ
@@ -139,7 +146,7 @@ public class MainExecute {
     public static void validateResponse(JsonNode responseJson, TestCase case0) {
         validateObjects(responseJson, mapper.valueToTree(case0.getExpectedObjects()), true);
         validateObjects(responseJson, mapper.valueToTree(case0.getUnexpectedObjects()), false);
-       logger.info("Валидация прошла успешно!");
+        logger.info("Валидация прошла успешно!");
     }
 
     private static void validateObjects(JsonNode responseJson, JsonNode objects, boolean expected) {
@@ -213,29 +220,37 @@ public class MainExecute {
     }
 
 
-
-    public static HttpResponse<String> sendRequest(String url, MethodTypes type) throws IOException, InterruptedException {
+    public static HttpResponse<String> sendRequest(String url, MethodTypes type, String requestBody) throws IOException, InterruptedException {
         // create a client
         HttpClient client = HttpClient.newHttpClient();
 
         // create a request
         HttpRequest.Builder tmp = HttpRequest.newBuilder(URI.create(url))
                 .header("accept", "application/json")
-                .header("Authorization", "Bearer" + getAuthToken());
+                .header("Content-Type", "application/json")
+                .header("Authorization", "Bearer " + getAuthToken());
 
         HttpRequest request;
 
         switch (type) {
 
-            case GET: request = tmp.GET().build(); break;
-            case POST: request = tmp.POST(HttpRequest.BodyPublishers.noBody()).build(); break;
-            case PUT: request = tmp.PUT(HttpRequest.BodyPublishers.noBody()).build(); break;
-            case DELETE: request = tmp.DELETE().build(); break;
+            case GET:
+                request = tmp.GET().build();
+                break;
+            //case POST: request = tmp.POST(HttpRequest.BodyPublishers.noBody()).build(); break;
+            case POST:
+                request = tmp.POST(HttpRequest.BodyPublishers.ofString(requestBody)).build();
+                break;
+            case PUT:
+                request = tmp.PUT(HttpRequest.BodyPublishers.ofString(requestBody)).build();
+                break;
+            case DELETE:
+                request = tmp.DELETE().build();
+                break;
 
-            default: throw new IllegalArgumentException("Некорректное значение MethodType: " + String.valueOf(type));
+            default:
+                throw new IllegalArgumentException("Некорректное значение MethodType: " + String.valueOf(type));
         }
-
-
 
 
         HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
