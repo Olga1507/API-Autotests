@@ -107,16 +107,18 @@ public class ValueGenerator {
             String shortBadRef = BAD_REFS.get(schemaName);
             if (shortBadRef == null) {
                 // получение схемы по ее имени
-                schema = schemas.get(schemaName);
+                Schema schemaByRef = schemas.get(schemaName);
 
-                if (schema == null) {
+                if (schemaByRef == null) {
                     throw new IllegalArgumentException("Не найдена схема с именем: " + schemaName);
                 }
 
 //            if (knownSchemas.contains(schema)) {
 //                throw new IllegalArgumentException("Обнаружены циклические ссылки в схемах. Последняя схема: " + ref);
 //            }
-                return generateValueBySchema(schema, schemas, knownSchemas);
+                Object buferVal = generateValueBySchema(schemaByRef, schemas, knownSchemas);
+                knownSchemas.remove(schema);
+                return buferVal;
             } else {
                 schema.setType(shortBadRef.toLowerCase());
                 //break;
@@ -134,11 +136,14 @@ public class ValueGenerator {
             if ("array".equals(schema.getType())) {
                 Object o1 = generateValueBySchema(schema.getItems(), schemas, knownSchemas);
                 Object o2 = generateValueBySchema(schema.getItems(), schemas, knownSchemas);
+                knownSchemas.remove(schema);
                 return List.of(o1, o2);
             }
             //1. Примитивный тип (properties и additionalProperties = null, type != array)
             else {
-                return generateValueBySimpleType(schema);
+                Object buferVal = generateValueBySimpleType(schema);
+                knownSchemas.remove(schema);
+                return buferVal;
             }
         }
         //3. Сложный тип (properties и/или additionalProperties != null)
@@ -159,6 +164,7 @@ public class ValueGenerator {
                 result.put("additionalProp2", generateValueBySchema((Schema) schema.getAdditionalProperties(), schemas, knownSchemas));
                 result.put("additionalProp3", generateValueBySchema((Schema) schema.getAdditionalProperties(), schemas, knownSchemas));
             }
+            knownSchemas.remove(schema);
             return result;
 
         }
