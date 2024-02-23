@@ -5,7 +5,6 @@ import com.google.gson.GsonBuilder;
 import io.swagger.parser.OpenAPIParser;
 import io.swagger.v3.oas.models.Operation;
 import io.swagger.v3.oas.models.media.Content;
-import io.swagger.v3.oas.models.media.MediaType;
 import io.swagger.v3.oas.models.media.Schema;
 import io.swagger.v3.oas.models.responses.ApiResponse;
 import io.swagger.v3.parser.core.models.SwaggerParseResult;
@@ -21,19 +20,11 @@ import java.util.*;
 
 public class MainGenerate {
 
-    //Логирование
-    private static Logger logger = LoggerFactory.getLogger(MainGenerate.class);
-
     public static void main(String[] args) throws Exception {
-        //Для записи в файл
-        File myFile = new File("APIDOCS.json");
-        FileOutputStream outputStream = new FileOutputStream(myFile);
-
         // parse a swagger description from the petstore and get the result
-        //SwaggerParseResult result = new OpenAPIParser().readLocation("http://qmmmsgpackage.msghubtmp.qrun.diasoft.ru/qmmmsgpackage/v3/api-docs", null, null);
-        SwaggerParseResult result = new OpenAPIParser().readLocation(MainGenerate.class.getClassLoader().getResource("api-docs_new.json").toString(), null, null);
+        SwaggerParseResult result = new OpenAPIParser().readLocation(MainGenerate.class.getClassLoader()
+                .getResource("api-docs_new.json").toString(), null, null);
 
-        // the parsed POJO
         OpenAPI openAPI = result.getOpenAPI();
 
         AllCases allCases = new AllCases();
@@ -47,9 +38,6 @@ public class MainGenerate {
                 tryCreateTestCase(testCaseList, pathName, pathItem.getPost(), MethodTypes.POST, schemas);
                 tryCreateTestCase(testCaseList, pathName, pathItem.getDelete(), MethodTypes.DELETE, schemas);
             });
-
-            //io.swagger.v3.oas.models.media.Schema schema = openAPI.getComponents().getSchemas().get("ModelAndView");
-            // int i = 0;
         }
         allCases.setCases(testCaseList);
         Gson gson1 = new GsonBuilder().setPrettyPrinting().serializeNulls().create();
@@ -57,11 +45,12 @@ public class MainGenerate {
         System.out.println(json1);
 
         // Запись результатов в файл
+        File myFile = new File("APIDOCS.json");
+        FileOutputStream outputStream = new FileOutputStream(myFile);
         byte[] buffer = json1.getBytes();
         outputStream.write(buffer);
         outputStream.close();
     }
-
 
     static SortedSet<String> possibleResponseCodes = new TreeSet<>();
     static {
@@ -92,7 +81,8 @@ public class MainGenerate {
      * @return если что-то внутри упадет (например, methodDescription вернутся некорректный или схема), возвращается null
      */
 
-    public static void tryCreateTestCase(List<TestCase> testCaseList, String pathName, Operation methodDescription, MethodTypes methodType, Map<String, Schema> schemas) {
+    public static void tryCreateTestCase(List<TestCase> testCaseList, String pathName, Operation methodDescription,
+                                         MethodTypes methodType, Map<String, Schema> schemas) {
 
         TestCase testCase = null;
 
@@ -102,8 +92,6 @@ public class MainGenerate {
             testCase = new TestCase();
             testCase.setMethodPath(pathName);
             testCase.setMethodType(methodType);
-
-
 
 
             //заполняем параметры метода
@@ -116,7 +104,9 @@ public class MainGenerate {
                     } else if ("query".equals(param.getIn())){
                         parametersQuery.put(param.getName(), ValueGenerator.generateValueByParameter(param, schemas));
                     } else {
-                        throw new IllegalArgumentException(String.format("В теге in параметра %s содержится некорректное значение: %s", param.getName(), param.getIn()));
+                        throw new IllegalArgumentException(String.format(
+                                "В теге in параметра %s содержится некорректное значение: %s",
+                                param.getName(), param.getIn()));
                     }
 
                 });
@@ -144,7 +134,9 @@ public class MainGenerate {
                 }
 
                 if (apiResponse == null){
-                    throw new IllegalArgumentException(String.format("Ни один из кодов ответа не соответствует possibleResponseCodes. Количество найденных кодов ответа: %s",
+                    throw new IllegalArgumentException(String.format(
+                            "Ни один из кодов ответа не соответствует possibleResponseCodes. " +
+                                    "Количество найденных кодов ответа: %s",
                             methodDescription.getResponses().size()));
                 }
             }

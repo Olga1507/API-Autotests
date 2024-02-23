@@ -90,7 +90,8 @@ public class MainExecute {
                 if (response.statusCode() != case0.getResponseCode()) {
                     logger.error("Ошибка валидации ответа. Получен некорректный статус код: {}", response.statusCode());
                     result = false;
-                    testCaseLog.getErrors().add("Ошибка валидации ответа. Получен некорректный статус код: " + response.statusCode());
+                    testCaseLog.getErrors().add("Ошибка валидации ответа. Получен некорректный статус код: " +
+                            response.statusCode());
                 } else {
                     logger.info("Получен корректный статус - код: {}", response.statusCode());
                 }
@@ -220,7 +221,8 @@ public class MainExecute {
     }
 
 
-    public static HttpResponse<String> sendRequest(String url, MethodTypes type, String requestBody) throws IOException, InterruptedException {
+    public static HttpResponse<String> sendRequest(String url, MethodTypes type, String requestBody)
+            throws IOException, InterruptedException {
         // create a client
         HttpClient client = HttpClient.newHttpClient();
 

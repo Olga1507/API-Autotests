@@ -61,15 +61,18 @@
         "tags": [
           "basic-error-controller"
         ],
-        "summary": "errorHtml",
-        "operationId": "errorHtmlUsingGET",
+        "summary": "error",
+        "operationId": "errorUsingGET",
         "responses": {
           "200": {
             "description": "OK",
             "content": {
-              "text/html": {
+              "*/*": {
                 "schema": {
-                  "$ref": "#/components/schemas/ModelAndView"
+                  "type": "object",
+                  "additionalProperties": {
+                    "type": "object"
+                  }
                 }
               }
             }
@@ -96,15 +99,18 @@
         "tags": [
           "basic-error-controller"
         ],
-        "summary": "errorHtml",
-        "operationId": "errorHtmlUsingPUT",
+        "summary": "error",
+        "operationId": "errorUsingPUT",
         "responses": {
           "200": {
             "description": "OK",
             "content": {
-              "text/html": {
+              "*/*": {
                 "schema": {
-                  "$ref": "#/components/schemas/ModelAndView"
+                  "type": "object",
+                  "additionalProperties": {
+                    "type": "object"
+                  }
                 }
               }
             }
@@ -134,15 +140,18 @@
         "tags": [
           "basic-error-controller"
         ],
-        "summary": "errorHtml",
-        "operationId": "errorHtmlUsingPOST",
+        "summary": "error",
+        "operationId": "errorUsingPOST",
         "responses": {
           "200": {
             "description": "OK",
             "content": {
-              "text/html": {
+              "*/*": {
                 "schema": {
-                  "$ref": "#/components/schemas/ModelAndView"
+                  "type": "object",
+                  "additionalProperties": {
+                    "type": "object"
+                  }
                 }
               }
             }
@@ -172,15 +181,18 @@
         "tags": [
           "basic-error-controller"
         ],
-        "summary": "errorHtml",
-        "operationId": "errorHtmlUsingDELETE",
+        "summary": "error",
+        "operationId": "errorUsingDELETE",
         "responses": {
           "200": {
             "description": "OK",
             "content": {
-              "text/html": {
+              "*/*": {
                 "schema": {
-                  "$ref": "#/components/schemas/ModelAndView"
+                  "type": "object",
+                  "additionalProperties": {
+                    "type": "object"
+                  }
                 }
               }
             }
@@ -207,15 +219,18 @@
         "tags": [
           "basic-error-controller"
         ],
-        "summary": "errorHtml",
-        "operationId": "errorHtmlUsingOPTIONS",
+        "summary": "error",
+        "operationId": "errorUsingOPTIONS",
         "responses": {
           "200": {
             "description": "OK",
             "content": {
-              "text/html": {
+              "*/*": {
                 "schema": {
-                  "$ref": "#/components/schemas/ModelAndView"
+                  "type": "object",
+                  "additionalProperties": {
+                    "type": "object"
+                  }
                 }
               }
             }
@@ -242,15 +257,18 @@
         "tags": [
           "basic-error-controller"
         ],
-        "summary": "errorHtml",
-        "operationId": "errorHtmlUsingHEAD",
+        "summary": "error",
+        "operationId": "errorUsingHEAD",
         "responses": {
           "200": {
             "description": "OK",
             "content": {
-              "text/html": {
+              "*/*": {
                 "schema": {
-                  "$ref": "#/components/schemas/ModelAndView"
+                  "type": "object",
+                  "additionalProperties": {
+                    "type": "object"
+                  }
                 }
               }
             }
@@ -277,15 +295,18 @@
         "tags": [
           "basic-error-controller"
         ],
-        "summary": "errorHtml",
-        "operationId": "errorHtmlUsingPATCH",
+        "summary": "error",
+        "operationId": "errorUsingPATCH",
         "responses": {
           "200": {
             "description": "OK",
             "content": {
-              "text/html": {
+              "*/*": {
                 "schema": {
-                  "$ref": "#/components/schemas/ModelAndView"
+                  "type": "object",
+                  "additionalProperties": {
+                    "type": "object"
+                  }
                 }
               }
             }
@@ -312,15 +333,18 @@
         "tags": [
           "basic-error-controller"
         ],
-        "summary": "errorHtml",
-        "operationId": "errorHtmlUsingTRACE",
+        "summary": "error",
+        "operationId": "errorUsingTRACE",
         "responses": {
           "200": {
             "description": "OK",
             "content": {
-              "text/html": {
+              "*/*": {
                 "schema": {
-                  "$ref": "#/components/schemas/ModelAndView"
+                  "type": "object",
+                  "additionalProperties": {
+                    "type": "object"
+                  }
                 }
               }
             }
@@ -5868,43 +5892,6 @@
         ]
       }
     },
-    "/qmmmsgpackage/mock/qmmMsgpackagerelationsFindMassReply": {
-      "get": {
-        "tags": [
-          "mock-ctlr-qmmmsgpackage"
-        ],
-        "summary": "qmmMsgpackagerelationsFindMassReply",
-        "operationId": "qmmMsgpackagerelationsFindMassReplyUsingGET",
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "*/*": {
-                "schema": {
-                  "$ref": "#/components/schemas/QmmMsgpackagerelationsFindMassReplyMessageData"
-                }
-              }
-            }
-          },
-          "401": {
-            "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
-          },
-          "404": {
-            "description": "Not Found"
-          }
-        },
-        "security": [
-          {
-            "Authorization": [
-              "global"
-            ]
-          }
-        ]
-      }
-    },
     "/qmmmsgpackage/mock/qmmMsgpackagerelationsReply": {
       "get": {
         "tags": [
@@ -6912,6 +6899,17 @@
             }
           },
           {
+            "name": "isData",
+            "in": "query",
+            "description": "Признак наличия данных",
+            "required": false,
+            "style": "form",
+            "allowReserved": true,
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
             "name": "isFirst",
             "in": "query",
             "description": "Признак первой версии",
@@ -7777,6 +7775,10 @@
         "title": "DqMsgPackage",
         "type": "object",
         "properties": {
+          "dqMsgPackage": {
+            "description": "Тело пакета сообщений",
+            "$ref": "#/components/schemas/DqMsgPackage"
+          },
           "source": {
             "type": "string",
             "description": "Исходные данные. Текст пакета закодированный в base64"
@@ -7820,6 +7822,11 @@
           "isCurrent": {
             "type": "boolean",
             "description": "Признак текущей версии",
+            "example": false
+          },
+          "isData": {
+            "type": "boolean",
+            "description": "Признак наличия данных",
             "example": false
           },
           "isFirst": {
@@ -8496,45 +8503,56 @@
         "properties": {
           "boProfileId": {
             "type": "integer",
+            "description": "Профиль бизнес-объекта (FK)",
             "format": "int64"
           },
           "description": {
-            "type": "string"
+            "type": "string",
+            "description": "Описание связи пакета сообщений"
           },
           "directionKind": {
             "type": "integer",
+            "description": "Вид направления связи (KV)  Возможные значения: \"1\" - Родитель (Основание для создания пакета) \"2\" - Дочерний (Создан на основе пакета)",
             "format": "int32"
           },
           "endDate": {
             "type": "string",
-            "example": "yyyy-MM-dd"
+            "description": "Дата окончания действия",
+            "format": "date-time"
           },
           "externalObjectId": {
-            "type": "string"
+            "type": "string",
+            "description": "Внешний идентификатор бизнес-объекта во внешней системе"
           },
           "externalSystemId": {
             "type": "integer",
+            "description": "Идентификатор внешней система (FK). Указывается если владелец бизнес-объекта - внешняя система и не имеет профиля PBC",
             "format": "int64"
           },
           "msgPackageId": {
             "type": "integer",
+            "description": "Идентификатор пакета сообщений (FK)",
             "format": "int64"
           },
           "msgPackageRelationId": {
             "type": "integer",
+            "description": "PrimaryKey autogenerated",
             "format": "int64"
           },
           "parentMsgPackageRelationId": {
             "type": "integer",
+            "description": "Идентификатор родительской связи пакета сообщений с бизнес-объектом",
             "format": "int64"
           },
           "pbcProfileId": {
             "type": "integer",
+            "description": "Идентификатор профиля PBC (FK). Указывается, если система владелец бизнес-объекта имеет профиль PBC",
             "format": "int64"
           },
           "startDate": {
             "type": "string",
-            "example": "yyyy-MM-dd"
+            "description": "Дата начала действия",
+            "format": "date-time"
           }
         }
       },
@@ -8589,15 +8607,6 @@
             "type": "string",
             "description": "Дата начала действия",
             "format": "date-time"
-          }
-        }
-      },
-      "MsgPackageRelationsLinkedList": {
-        "title": "MsgPackageRelationsLinkedList",
-        "type": "object",
-        "properties": {
-          "MsgPackageRelations": {
-            "$ref": "#/components/schemas/MsgPackageRelations"
           }
         }
       },
@@ -8657,62 +8666,6 @@
             "type": "string",
             "description": "Дата и время записи",
             "format": "date-time"
-          }
-        }
-      },
-      "MsgpackagerelationsList": {
-        "title": "MsgpackagerelationsList",
-        "type": "object",
-        "properties": {
-          "boProfileId": {
-            "type": "integer",
-            "format": "int64"
-          },
-          "boSysName": {
-            "type": "string"
-          },
-          "countObjects": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "errorCode": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "errorMessage": {
-            "type": "string"
-          },
-          "externalObjectId": {
-            "type": "string"
-          },
-          "externalSystemId": {
-            "type": "integer",
-            "format": "int64"
-          },
-          "linkId": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "msgPackageId": {
-            "type": "integer",
-            "format": "int64"
-          },
-          "msgPackageRelationId": {
-            "type": "integer",
-            "format": "int64"
-          },
-          "msgPackageRelationsLinkedList": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/MsgPackageRelationsLinkedList"
-            }
-          },
-          "pbcProfileId": {
-            "type": "integer",
-            "format": "int64"
-          },
-          "pbcSysName": {
-            "type": "string"
           }
         }
       },
@@ -9460,18 +9413,6 @@
           }
         }
       },
-      "QmmMsgpackagerelationsFindMassReplyMessageData": {
-        "title": "QmmMsgpackagerelationsFindMassReplyMessageData",
-        "type": "object",
-        "properties": {
-          "msgpackagerelationsList": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/MsgpackagerelationsList"
-            }
-          }
-        }
-      },
       "QvrnFindVersionByIdResponse": {
         "title": "QvrnFindVersionByIdResponse",
         "type": "object",
@@ -9497,6 +9438,11 @@
           "isCurrent": {
             "type": "boolean",
             "description": "Признак текущей версии",
+            "example": false
+          },
+          "isData": {
+            "type": "boolean",
+            "description": "Признак наличия данных",
             "example": false
           },
           "isFirst": {

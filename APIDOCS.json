@@ -9,9 +9,19 @@
       "parametersQuery": {},
       "responseCode": 200,
       "expectedObjects": {
-        "additionalProp1": "object",
-        "additionalProp3": "object",
-        "additionalProp2": "object"
+        "reference": false,
+        "view": {
+          "contentType": "str-9T1mqYftZ"
+        },
+        "viewName": "str-pzGcVdN",
+        "model": "object",
+        "modelMap": {
+          "additionalProp1": "object",
+          "additionalProp3": "object",
+          "additionalProp2": "object"
+        },
+        "empty": false,
+        "status": "CREATED"
       },
       "unexpectedObjects": null
     },
@@ -24,9 +34,19 @@
       "parametersQuery": {},
       "responseCode": 200,
       "expectedObjects": {
-        "additionalProp1": "object",
-        "additionalProp3": "object",
-        "additionalProp2": "object"
+        "reference": false,
+        "view": {
+          "contentType": "str-U0s5w"
+        },
+        "viewName": "str-KBSeGSEC",
+        "model": "object",
+        "modelMap": {
+          "additionalProp1": "object",
+          "additionalProp3": "object",
+          "additionalProp2": "object"
+        },
+        "empty": true,
+        "status": "CONTINUE"
       },
       "unexpectedObjects": null
     },
@@ -39,9 +59,19 @@
       "parametersQuery": {},
       "responseCode": 200,
       "expectedObjects": {
-        "additionalProp1": "object",
-        "additionalProp3": "object",
-        "additionalProp2": "object"
+        "reference": false,
+        "view": {
+          "contentType": "str-LRaN2yPXl"
+        },
+        "viewName": "str-D56Y1bdQ0qZF",
+        "model": "object",
+        "modelMap": {
+          "additionalProp1": "object",
+          "additionalProp3": "object",
+          "additionalProp2": "object"
+        },
+        "empty": true,
+        "status": "MOVED_TEMPORARILY"
       },
       "unexpectedObjects": null
     },
@@ -54,9 +84,19 @@
       "parametersQuery": {},
       "responseCode": 200,
       "expectedObjects": {
-        "additionalProp1": "object",
-        "additionalProp3": "object",
-        "additionalProp2": "object"
+        "reference": true,
+        "view": {
+          "contentType": "str-vADu9M6"
+        },
+        "viewName": "str-KYpOI5km",
+        "model": "object",
+        "modelMap": {
+          "additionalProp1": "object",
+          "additionalProp3": "object",
+          "additionalProp2": "object"
+        },
+        "empty": true,
+        "status": "NOT_MODIFIED"
       },
       "unexpectedObjects": null
     },
@@ -65,19 +105,19 @@
       "methodPath": "/qmmmsgpackage/BusinessAttributeValue",
       "methodType": "POST",
       "requestBody": {
-        "msgPackageId": 50,
+        "msgPackageId": 49,
         "formatName": "Наименование формата",
-        "formatBusinessAttributeId": 27,
+        "formatBusinessAttributeId": 52,
         "value": "Значение"
       },
       "parametersPath": {},
       "parametersQuery": {},
       "responseCode": 200,
       "expectedObjects": {
-        "businessAttributeValueId": 81,
-        "msgPackageId": 52,
+        "businessAttributeValueId": 98,
+        "msgPackageId": 98,
         "formatName": "Наименование формата",
-        "formatBusinessAttributeId": 82,
+        "formatBusinessAttributeId": 8,
         "value": "Значение"
       },
       "unexpectedObjects": null
@@ -88,17 +128,17 @@
       "methodType": "GET",
       "requestBody": null,
       "parametersPath": {
-        "businessAttributeValueId": 79
+        "businessAttributeValueId": 35
       },
       "parametersQuery": {
-        "fields": "str-z0inJOg"
+        "fields": "str-ASMKDiBRUCkPp"
       },
       "responseCode": 200,
       "expectedObjects": {
-        "businessAttributeValueId": 3,
-        "msgPackageId": 1,
+        "businessAttributeValueId": 81,
+        "msgPackageId": 43,
         "formatName": "Наименование формата",
-        "formatBusinessAttributeId": 42,
+        "formatBusinessAttributeId": 36,
         "value": "Значение"
       },
       "unexpectedObjects": null
@@ -108,22 +148,22 @@
       "methodPath": "/qmmmsgpackage/BusinessAttributeValue/{businessAttributeValueId}",
       "methodType": "PUT",
       "requestBody": {
-        "businessAttributeValueId": 17,
-        "msgPackageId": 75,
+        "businessAttributeValueId": 79,
+        "msgPackageId": 51,
         "formatName": "Наименование формата",
-        "formatBusinessAttributeId": 84,
+        "formatBusinessAttributeId": 43,
         "value": "Значение"
       },
       "parametersPath": {
-        "businessAttributeValueId": 74
+        "businessAttributeValueId": 80
       },
       "parametersQuery": {},
       "responseCode": 200,
       "expectedObjects": {
-        "businessAttributeValueId": 85,
-        "msgPackageId": 12,
+        "businessAttributeValueId": 77,
+        "msgPackageId": 53,
         "formatName": "Наименование формата",
-        "formatBusinessAttributeId": 61,
+        "formatBusinessAttributeId": 57,
         "value": "Значение"
       },
       "unexpectedObjects": null
@@ -134,7 +174,7 @@
       "methodType": "DELETE",
       "requestBody": null,
       "parametersPath": {
-        "businessAttributeValueId": 22
+        "businessAttributeValueId": 45
       },
       "parametersQuery": {},
       "responseCode": 200,
@@ -148,31 +188,31 @@
       "requestBody": null,
       "parametersPath": {},
       "parametersQuery": {
-        "businessAttributeValueId": 61,
-        "size": 1,
-        "msgPackageId": 20,
-        "formatName": "str-tBjxZhd",
-        "formatBusinessAttributeId": 67,
-        "page": 76,
+        "businessAttributeValueId": 41,
+        "size": 81,
+        "msgPackageId": 29,
+        "formatName": "str-mxtlV9",
+        "formatBusinessAttributeId": 2,
+        "page": 81,
         "sort": [
-          "str-gmOOG",
-          "str-0IHumo2"
+          "str-rlp7QDH",
+          "str-UGdZ3"
         ],
-        "fields": "str-hVE6jkvmUbDm",
-        "value": "str-XhZpgv4"
+        "fields": "str-brasacm",
+        "value": "str-Yexo6i0BXqH3W"
       },
       "responseCode": 200,
       "expectedObjects": {
-        "number": 85,
-        "last": true,
-        "numberOfElements": 57,
-        "size": 27,
-        "totalPages": 54,
+        "number": 42,
+        "last": false,
+        "numberOfElements": 36,
+        "size": 96,
+        "totalPages": 84,
         "pageable": {
           "paged": false,
           "pageNumber": 78,
-          "offset": 47,
-          "pageSize": 22,
+          "offset": 29,
+          "pageSize": 40,
           "unpaged": false,
           "sort": {
             "unsorted": false,
@@ -182,28 +222,28 @@
         },
         "sort": {
           "unsorted": true,
-          "sorted": true,
+          "sorted": false,
           "empty": false
         },
         "content": [
           {
-            "businessAttributeValueId": 37,
-            "msgPackageId": 10,
+            "businessAttributeValueId": 6,
+            "msgPackageId": 84,
             "formatName": "Наименование формата",
-            "formatBusinessAttributeId": 9,
+            "formatBusinessAttributeId": 89,
             "value": "Значение"
           },
           {
-            "businessAttributeValueId": 81,
-            "msgPackageId": 59,
+            "businessAttributeValueId": 3,
+            "msgPackageId": 1,
             "formatName": "Наименование формата",
-            "formatBusinessAttributeId": 44,
+            "formatBusinessAttributeId": 71,
             "value": "Значение"
           }
         ],
         "first": false,
         "empty": false,
-        "totalElements": 45
+        "totalElements": 93
       },
       "unexpectedObjects": null
     },
@@ -213,7 +253,7 @@
       "methodType": "GET",
       "requestBody": null,
       "parametersPath": {
-        "objectSysName": "str-srqIZ9qAo"
+        "objectSysName": "str-tuwR9N"
       },
       "parametersQuery": {},
       "responseCode": 200,
@@ -229,14 +269,14 @@
       "parametersQuery": {},
       "responseCode": 200,
       "expectedObjects": {
-        "currentDbUrl": "str-Ujtljua5WEhnw",
-        "currentDbUser": "str-gawYTx",
-        "currentAuthAddress": "str-obsA1H",
-        "configKafkaServers": "str-n7Muq1BJ",
-        "configAuthAddress": "str-HvdZlE1O6ESmo",
-        "currentKafkaServers": "str-flyc7SXDr",
-        "configDbUser": "str-Xm3YJi",
-        "configDbUrl": "str-artkTDq82s"
+        "currentDbUrl": "str-zsEzJb4",
+        "currentDbUser": "str-I3pNmJ14F",
+        "currentAuthAddress": "str-uT8QvSX",
+        "configKafkaServers": "str-rGieeA1bTQ7N",
+        "configAuthAddress": "str-b4ID6",
+        "currentKafkaServers": "str-0VkzXLQrq02P0Y",
+        "configDbUser": "str-dAIMXYW",
+        "configDbUrl": "str-XtUD9Ujn"
       },
       "unexpectedObjects": null
     },
@@ -249,9 +289,9 @@
       "parametersQuery": {},
       "responseCode": 200,
       "expectedObjects": {
-        "statusCodeValue": 34,
+        "statusCodeValue": 30,
         "body": "object",
-        "statusCode": "PROXY_AUTHENTICATION_REQUIRED"
+        "statusCode": "CREATED"
       },
       "unexpectedObjects": null
     },
@@ -261,14 +301,14 @@
       "methodType": "DELETE",
       "requestBody": null,
       "parametersPath": {
-        "cache": "str-Zkt3tKafBcXOF"
+        "cache": "str-7cFEuem2nKZ4m"
       },
       "parametersQuery": {},
       "responseCode": 200,
       "expectedObjects": {
-        "statusCodeValue": 65,
+        "statusCodeValue": 76,
         "body": "object",
-        "statusCode": "REQUESTED_RANGE_NOT_SATISFIABLE"
+        "statusCode": "INTERNAL_SERVER_ERROR"
       },
       "unexpectedObjects": null
     },
@@ -286,7 +326,7 @@
       "expectedObjects": {
         "formatName": "Наименование формата",
         "attributeName": "Наименование бизнес-атрибута",
-        "formatBusinessAttributeId": 62
+        "formatBusinessAttributeId": 25
       },
       "unexpectedObjects": null
     },
@@ -296,16 +336,16 @@
       "methodType": "GET",
       "requestBody": null,
       "parametersPath": {
-        "formatBusinessAttributeId": 77
+        "formatBusinessAttributeId": 58
       },
       "parametersQuery": {
-        "fields": "str-F4PCp8"
+        "fields": "str-zv6bbhVTk"
       },
       "responseCode": 200,
       "expectedObjects": {
         "formatName": "Наименование формата",
         "attributeName": "Наименование бизнес-атрибута",
-        "formatBusinessAttributeId": 77
+        "formatBusinessAttributeId": 67
       },
       "unexpectedObjects": null
     },
@@ -316,17 +356,17 @@
       "requestBody": {
         "formatName": "Наименование формата",
         "attributeName": "Наименование бизнес-атрибута",
-        "formatBusinessAttributeId": 26
+        "formatBusinessAttributeId": 21
       },
       "parametersPath": {
-        "formatBusinessAttributeId": 29
+        "formatBusinessAttributeId": 8
       },
       "parametersQuery": {},
       "responseCode": 200,
       "expectedObjects": {
         "formatName": "Наименование формата",
         "attributeName": "Наименование бизнес-атрибута",
-        "formatBusinessAttributeId": 63
+        "formatBusinessAttributeId": 94
       },
       "unexpectedObjects": null
     },
@@ -336,7 +376,7 @@
       "methodType": "DELETE",
       "requestBody": null,
       "parametersPath": {
-        "formatBusinessAttributeId": 68
+        "formatBusinessAttributeId": 4
       },
       "parametersQuery": {},
       "responseCode": 200,
@@ -350,56 +390,56 @@
       "requestBody": null,
       "parametersPath": {},
       "parametersQuery": {
-        "size": 97,
-        "formatName": "str-pnmjQM8VNnb-",
-        "attributeName": "str-Ult3BVgRV6m",
-        "formatBusinessAttributeId": 11,
-        "page": 63,
+        "size": 29,
+        "formatName": "str-2O82KTbU",
+        "attributeName": "str-s1Cx5k",
+        "formatBusinessAttributeId": 12,
+        "page": 94,
         "sort": [
-          "str-CndyxnVBdGwFAm",
-          "str-Qpc0d1"
+          "str-Glcdh-sQdgua8Q",
+          "str-w3RlEyJ8N"
         ],
-        "fields": "str-dKNvnqhJjg"
+        "fields": "str-PrYD5JZ26nB"
       },
       "responseCode": 200,
       "expectedObjects": {
-        "number": 99,
-        "last": true,
-        "numberOfElements": 7,
-        "size": 78,
-        "totalPages": 20,
+        "number": 87,
+        "last": false,
+        "numberOfElements": 41,
+        "size": 69,
+        "totalPages": 29,
         "pageable": {
-          "paged": false,
-          "pageNumber": 0,
-          "offset": 42,
-          "pageSize": 85,
-          "unpaged": true,
+          "paged": true,
+          "pageNumber": 89,
+          "offset": 44,
+          "pageSize": 8,
+          "unpaged": false,
           "sort": {
             "unsorted": false,
             "sorted": false,
-            "empty": true
+            "empty": false
           }
         },
         "sort": {
-          "unsorted": true,
-          "sorted": false,
-          "empty": true
+          "unsorted": false,
+          "sorted": true,
+          "empty": false
         },
         "content": [
           {
             "formatName": "Наименование формата",
             "attributeName": "Наименование бизнес-атрибута",
-            "formatBusinessAttributeId": 34
+            "formatBusinessAttributeId": 63
           },
           {
             "formatName": "Наименование формата",
             "attributeName": "Наименование бизнес-атрибута",
-            "formatBusinessAttributeId": 73
+            "formatBusinessAttributeId": 43
           }
         ],
         "first": false,
         "empty": false,
-        "totalElements": 3
+        "totalElements": 93
       },
       "unexpectedObjects": null
     },
@@ -408,36 +448,36 @@
       "methodPath": "/qmmmsgpackage/Msg/v1",
       "methodType": "POST",
       "requestBody": {
-        "msgFormatId": 87,
+        "msgFormatId": 71,
         "number": "Номер",
         "messageBody": "Текст сообщения",
         "messageType": "Тип сообщения",
         "receiver": "Адресат",
         "sender": "Отправитель/Получатель",
-        "msgPackageId": 37,
+        "msgPackageId": 43,
         "formatName": "Наименование формата",
         "inDatetime": "date-time",
         "formatVersion": "Версия формата",
-        "direction": 52,
-        "status": 83
+        "direction": 24,
+        "status": 0
       },
       "parametersPath": {},
       "parametersQuery": {},
       "responseCode": 200,
       "expectedObjects": {
-        "messageBody": "str-ahDCYWCPv5",
-        "receiver": "str-bkCitj3",
-        "msgPackageId": 57,
-        "formatName": "str-Hi8Ja",
-        "msgId": 87,
+        "messageBody": "str-cjUv783R9llQ2S",
+        "receiver": "str-x7MQ7RWeTOkS",
+        "msgPackageId": 25,
+        "formatName": "str-ZkKE5XuJ",
+        "msgId": 99,
         "inDatetime": "yyyy-MM-dd\u0027T\u0027HH:mm:ss.SSSZ",
-        "msgFormatId": 6,
-        "number": "str-8AK3a",
-        "messageType": "str-kkuvI",
-        "sender": "str-PDz26aW",
-        "formatVersion": "str-wh38J",
-        "direction": 26,
-        "status": 77
+        "msgFormatId": 11,
+        "number": "str-J1Veq",
+        "messageType": "str-z6eN7b9Fu8eAe",
+        "sender": "str-P1CDgQq",
+        "formatVersion": "str-AVRccAJ",
+        "direction": 35,
+        "status": 61
       },
       "unexpectedObjects": null
     },
@@ -447,26 +487,26 @@
       "methodType": "GET",
       "requestBody": null,
       "parametersPath": {
-        "msgId": 78
+        "msgId": 36
       },
       "parametersQuery": {
-        "fields": "str-SWI29pDj-L3q3"
+        "fields": "str-DYrumhKu"
       },
       "responseCode": 200,
       "expectedObjects": {
-        "messageBody": "str-ZoDKU",
-        "receiver": "str--yPd132J",
-        "msgPackageId": 63,
-        "formatName": "str-KsyDYCvEby8z",
-        "msgId": 49,
+        "messageBody": "str-M2t9MkX4lQx",
+        "receiver": "str-Li6038uu20kij3",
+        "msgPackageId": 65,
+        "formatName": "str-qpPQsAtFKyw2u",
+        "msgId": 67,
         "inDatetime": "yyyy-MM-dd\u0027T\u0027HH:mm:ss.SSSZ",
-        "msgFormatId": 45,
-        "number": "str-DIdhsbxKI",
-        "messageType": "str-05AgO",
-        "sender": "str-sqODvkZLykNNKm",
-        "formatVersion": "str-t7R0Z",
-        "direction": 20,
-        "status": 22
+        "msgFormatId": 12,
+        "number": "str-om702aM7HdGsz",
+        "messageType": "str-D5e9z-SczkEWPP",
+        "sender": "str-gTMslZ",
+        "formatVersion": "str-SM2IY8jD",
+        "direction": 56,
+        "status": 53
       },
       "unexpectedObjects": null
     },
@@ -475,39 +515,39 @@
       "methodPath": "/qmmmsgpackage/Msg/v1/{msgId}",
       "methodType": "PUT",
       "requestBody": {
-        "messageBody": "str-FVuywX5DJ",
-        "receiver": "str-0qdhyZY8O6F9",
-        "msgPackageId": 51,
-        "formatName": "str-mH61dmXm",
-        "msgId": 96,
+        "messageBody": "str-MLf4rWgQ9a",
+        "receiver": "str-n8Tto8yC",
+        "msgPackageId": 81,
+        "formatName": "str-DVBxTx2Bda3dPY",
+        "msgId": 77,
         "inDatetime": "yyyy-MM-dd\u0027T\u0027HH:mm:ss.SSSZ",
-        "msgFormatId": 81,
-        "number": "str-vUyerubaWo3f",
-        "messageType": "str-Asf4qxs6Cz8",
-        "sender": "str-ktMQEBc5doTfp0",
-        "formatVersion": "str-JD3f4JOU",
-        "direction": 71,
-        "status": 55
+        "msgFormatId": 89,
+        "number": "str-dm5OlQbdy",
+        "messageType": "str-W5gkmK",
+        "sender": "str---g9pjUge8J",
+        "formatVersion": "str-uQ1Hy",
+        "direction": 70,
+        "status": 93
       },
       "parametersPath": {
-        "msgId": 78
+        "msgId": 22
       },
       "parametersQuery": {},
       "responseCode": 200,
       "expectedObjects": {
-        "messageBody": "str-Ucof6Sj",
-        "receiver": "str-0qcbqhiZXU",
-        "msgPackageId": 57,
-        "formatName": "str-iaQfmpBRu",
-        "msgId": 59,
+        "messageBody": "str-68H8LxngUpZs5",
+        "receiver": "str-MNcj90g-elzNoO",
+        "msgPackageId": 66,
+        "formatName": "str-PXUO7D75vK7zX",
+        "msgId": 36,
         "inDatetime": "yyyy-MM-dd\u0027T\u0027HH:mm:ss.SSSZ",
-        "msgFormatId": 43,
-        "number": "str-ScShXkfpQ",
-        "messageType": "str-Bcbsna",
-        "sender": "str-Ppdnntp",
-        "formatVersion": "str-QH9xwmPteSYf",
-        "direction": 12,
-        "status": 54
+        "msgFormatId": 45,
+        "number": "str-kjsP51j-T8CLHo",
+        "messageType": "str-ZXTEiQwVn",
+        "sender": "str-qGub1vx12",
+        "formatVersion": "str-VVZt1tro",
+        "direction": 38,
+        "status": 71
       },
       "unexpectedObjects": null
     },
@@ -517,7 +557,7 @@
       "methodType": "DELETE",
       "requestBody": null,
       "parametersPath": {
-        "msgId": 97
+        "msgId": 62
       },
       "parametersQuery": {},
       "responseCode": 200,
@@ -531,23 +571,23 @@
       "requestBody": null,
       "parametersPath": {},
       "parametersQuery": {
-        "messageBody": "str-MAxB-",
-        "receiver": "str-bbc-6w4k7vG",
-        "msgPackageId": 25,
-        "formatName": "str-DyBVCaBBOQY20",
-        "msgId": 79,
+        "messageBody": "str-BkyNsPdUfaVTeH",
+        "receiver": "str-f2ISJRMlQJtzy",
+        "msgPackageId": 11,
+        "formatName": "str-1no3ZsB-",
+        "msgId": 33,
         "inDatetime": {
           "dateTime": {
             "date": {
               "year": 2021,
-              "month": 7,
-              "day": 6
+              "month": 3,
+              "day": 23
             },
             "time": {
-              "hour": 13,
-              "minute": 22,
-              "second": 12,
-              "nano": 406000000
+              "hour": 22,
+              "minute": 51,
+              "second": 42,
+              "nano": 96000000
             }
           },
           "offset": {
@@ -558,79 +598,79 @@
           }
         },
         "sort": [
-          "str-fULkd0ihutn",
-          "str-jgr-vmZyO0C1j"
+          "str-v1lbK5",
+          "str-K9eUfKL"
         ],
-        "msgFormatId": 88,
-        "number": "str-W1cnth3hq",
-        "messageType": "str-gFkb1QKBXDGA",
-        "size": 94,
-        "sender": "str-nl5vc-QqlWmN",
-        "page": 10,
-        "fields": "str-M7WUE1CZUbJ6x",
-        "formatVersion": "str-eoDml345uK",
-        "direction": 16,
-        "status": 88
+        "msgFormatId": 5,
+        "number": "str-Xbt4dpz",
+        "messageType": "str-ES2Vsp082jP",
+        "size": 44,
+        "sender": "str-Ykwqj",
+        "page": 55,
+        "fields": "str-jFAy3lH14",
+        "formatVersion": "str-MC8stg",
+        "direction": 59,
+        "status": 84
       },
       "responseCode": 200,
       "expectedObjects": {
-        "number": 95,
+        "number": 41,
         "last": false,
-        "numberOfElements": 93,
-        "size": 9,
-        "totalPages": 48,
+        "numberOfElements": 24,
+        "size": 98,
+        "totalPages": 17,
         "pageable": {
           "paged": false,
-          "pageNumber": 78,
-          "offset": 10,
-          "pageSize": 22,
+          "pageNumber": 85,
+          "offset": 18,
+          "pageSize": 25,
           "unpaged": false,
           "sort": {
             "unsorted": false,
             "sorted": true,
-            "empty": true
+            "empty": false
           }
         },
         "sort": {
-          "unsorted": true,
+          "unsorted": false,
           "sorted": true,
           "empty": false
         },
         "content": [
           {
-            "messageBody": "str-zaHVcfB",
-            "receiver": "str-oluoje6gNmK-r",
-            "msgPackageId": 29,
-            "formatName": "str-PgdymQZcayttjR",
-            "msgId": 72,
+            "messageBody": "str-UcWc2uji-I",
+            "receiver": "str-FvWvzx0Aprx8tn",
+            "msgPackageId": 36,
+            "formatName": "str-zSM5Ulnh",
+            "msgId": 80,
             "inDatetime": "yyyy-MM-dd\u0027T\u0027HH:mm:ss.SSSZ",
-            "msgFormatId": 44,
-            "number": "str-ErGSe0l",
-            "messageType": "str-PEqQlhwC",
-            "sender": "str-cQm7n5Q9",
-            "formatVersion": "str-23YzplKCUPlj",
-            "direction": 54,
-            "status": 51
+            "msgFormatId": 65,
+            "number": "str-azB2t00mZfyCLn",
+            "messageType": "str-hUnIiVtGcLpAc",
+            "sender": "str-v1TXCbWNoFJSr8",
+            "formatVersion": "str-fWbSU1hSmRJw",
+            "direction": 41,
+            "status": 68
           },
           {
-            "messageBody": "str-opy3KHgU4",
-            "receiver": "str-UmBne2",
-            "msgPackageId": 36,
-            "formatName": "str-lJf8hz2wN8rc",
-            "msgId": 19,
+            "messageBody": "str-8XGCrPA",
+            "receiver": "str-WFzfIEPt",
+            "msgPackageId": 57,
+            "formatName": "str-UDn6oLjIh",
+            "msgId": 81,
             "inDatetime": "yyyy-MM-dd\u0027T\u0027HH:mm:ss.SSSZ",
-            "msgFormatId": 72,
-            "number": "str-dvZ0Um0rH5H",
-            "messageType": "str-pHyoZ",
-            "sender": "str-Cb7zGG0CzI",
-            "formatVersion": "str-Arzz-eXTgTLl",
-            "direction": 77,
-            "status": 19
+            "msgFormatId": 52,
+            "number": "str-HpGgT427",
+            "messageType": "str-Ng7TZWCk",
+            "sender": "str-hADA0NWTFhc",
+            "formatVersion": "str-QYTaLKgD5",
+            "direction": 15,
+            "status": 4
           }
         ],
-        "first": true,
+        "first": false,
         "empty": true,
-        "totalElements": 97
+        "totalElements": 62
       },
       "unexpectedObjects": null
     },
@@ -641,52 +681,52 @@
       "requestBody": null,
       "parametersPath": {},
       "parametersQuery": {
-        "size": 3,
+        "size": 28,
         "dateStart": "date-time",
-        "sourceType": 82,
-        "page": 37,
+        "sourceType": 0,
+        "page": 49,
         "sort": [
-          "str-GKKhCbiSdgS",
-          "str-vR4-fiv"
+          "str-mqNFin",
+          "str-iQWJj6SPAB2s"
         ],
         "dateEnd": "date-time",
-        "fields": "str-XheHZ5gNSsg"
+        "fields": "str-dhv9llj"
       },
       "responseCode": 200,
       "expectedObjects": {
-        "number": 81,
-        "last": false,
-        "numberOfElements": 10,
-        "size": 87,
-        "totalPages": 18,
+        "number": 26,
+        "last": true,
+        "numberOfElements": 74,
+        "size": 70,
+        "totalPages": 32,
         "pageable": {
           "paged": true,
-          "pageNumber": 81,
-          "offset": 14,
-          "pageSize": 87,
-          "unpaged": true,
+          "pageNumber": 11,
+          "offset": 34,
+          "pageSize": 33,
+          "unpaged": false,
           "sort": {
             "unsorted": true,
-            "sorted": true,
+            "sorted": false,
             "empty": false
           }
         },
         "sort": {
-          "unsorted": true,
+          "unsorted": false,
           "sorted": false,
           "empty": true
         },
         "content": [
           {
-            "msgPackageId": 56
+            "msgPackageId": 62
           },
           {
-            "msgPackageId": 3
+            "msgPackageId": 8
           }
         ],
-        "first": true,
+        "first": false,
         "empty": true,
-        "totalElements": 97
+        "totalElements": 15
       },
       "unexpectedObjects": null
     },
@@ -696,51 +736,51 @@
       "methodType": "POST",
       "requestBody": {
         "fileName": "Наименование файла",
-        "messageCount": 15,
+        "messageCount": 28,
         "msgPackageType": "Перечисляемый тип пакета. Возможные значения: Пакет, Сообщение",
-        "msgBodyCode": 72,
+        "msgBodyCode": 9,
         "destination": "Адресат",
         "formatName": "Наименование формата",
         "branchName": "Полное наименование филиала",
-        "childCount": 77,
+        "childCount": 25,
         "source": "Тело пакета (содержимое), должно передаваться в формате base64",
         "createAt": "date-time",
         "loadRuleName": "Наименование правила загрузки",
-        "msgFormatId": 21,
+        "msgFormatId": 3,
         "humanTaskId": "Идентификатор задачи пользователя",
         "processId": "Идентификатор последнего запущенного процесса по пакету",
         "sender": "Отправитель/Получатель",
-        "sourceType": 10,
+        "sourceType": 5,
         "formatVersion": "Версия формата",
-        "parentMsgPackageId": 20,
-        "direction": 73,
-        "status": 83
+        "parentMsgPackageId": 55,
+        "direction": 22,
+        "status": 29
       },
       "parametersPath": {},
       "parametersQuery": {},
       "responseCode": 200,
       "expectedObjects": {
-        "fileName": "str-TjSO0uWeJBaRhw",
-        "messageCount": 61,
-        "msgPackageType": "str-2f5apDh",
-        "msgBodyCode": 24,
-        "msgPackageId": 80,
-        "destination": "str-JtMCub",
-        "formatName": "str-9OgNYgVVJIp",
-        "branchName": "str-cSP1z",
-        "childCount": 33,
-        "source": "str-Kh5dVRuCSZ5wG",
+        "fileName": "str-tfkMov7jnRB",
+        "messageCount": 78,
+        "msgPackageType": "str-XlDz4qY0NYJlXu",
+        "msgBodyCode": 66,
+        "msgPackageId": 32,
+        "destination": "str-ta6cSsW1dpyr",
+        "formatName": "str-jgwpnARW1MlYYU",
+        "branchName": "str-g9yhI",
+        "childCount": 49,
+        "source": "str-iytfqZCiG9I",
         "createAt": "yyyy-MM-dd\u0027T\u0027HH:mm:ss.SSSZ",
-        "loadRuleName": "str-FNBC2mBN-",
-        "msgFormatId": 28,
-        "humanTaskId": "str-zbWjX2J8l",
-        "processId": "str-mqOxjj9L7Qm4X",
-        "sender": "str-feiLkykTz",
-        "sourceType": 37,
-        "formatVersion": "str-oou7f27MlaplWj",
-        "parentMsgPackageId": 75,
-        "direction": 38,
-        "status": 61
+        "loadRuleName": "str-uWQs81JK",
+        "msgFormatId": 87,
+        "humanTaskId": "str-Bl2yEkoEr",
+        "processId": "str-t4bc6YO4qz23",
+        "sender": "str-CypQGZpImf56",
+        "sourceType": 32,
+        "formatVersion": "str-f6l76LtSuBF8",
+        "parentMsgPackageId": 5,
+        "direction": 59,
+        "status": 69
       },
       "unexpectedObjects": null
     },
@@ -750,34 +790,34 @@
       "methodType": "GET",
       "requestBody": null,
       "parametersPath": {
-        "msgPackageId": 18
+        "msgPackageId": 34
       },
       "parametersQuery": {
-        "fields": "str-gwrfwS137z"
+        "fields": "str-nKwRM"
       },
       "responseCode": 200,
       "expectedObjects": {
-        "fileName": "str-8GdTtarfpBq",
-        "messageCount": 13,
-        "msgPackageType": "str-7iRgq8cS",
-        "msgBodyCode": 93,
-        "msgPackageId": 9,
-        "destination": "str-g7V4hCy",
-        "formatName": "str-8yvCbIQiJ",
-        "branchName": "str-dDpHKYntyK5e",
-        "childCount": 26,
-        "source": "str-rvMjmc-8C4QvU",
+        "fileName": "str-ZFyCdc-LHWDh",
+        "messageCount": 15,
+        "msgPackageType": "str-6kgMHy",
+        "msgBodyCode": 83,
+        "msgPackageId": 79,
+        "destination": "str-m4OspxMqNpPZ9X",
+        "formatName": "str-rEUATE8N",
+        "branchName": "str-2OGMvgYWLO",
+        "childCount": 18,
+        "source": "str-BYVefbmByqoOW",
         "createAt": "yyyy-MM-dd\u0027T\u0027HH:mm:ss.SSSZ",
-        "loadRuleName": "str-dIC7n5ky9wIt",
-        "msgFormatId": 90,
-        "humanTaskId": "str-wXPPSmGpBRKJsn",
-        "processId": "str-eOZrd",
-        "sender": "str-Fe4v2PNSWt9-3u",
-        "sourceType": 95,
-        "formatVersion": "str-XYfIqKK",
-        "parentMsgPackageId": 70,
-        "direction": 25,
-        "status": 83
+        "loadRuleName": "str-QgnAZFX",
+        "msgFormatId": 42,
+        "humanTaskId": "str-UUcoAKYD",
+        "processId": "str-1hFdW6QX0",
+        "sender": "str-L4RfWTbX0vLec",
+        "sourceType": 70,
+        "formatVersion": "str-3SGsUB6YgV",
+        "parentMsgPackageId": 35,
+        "direction": 34,
+        "status": 23
       },
       "unexpectedObjects": null
     },
@@ -786,55 +826,55 @@
       "methodPath": "/qmmmsgpackage/MsgPackage/v1/{msgPackageId}",
       "methodType": "PUT",
       "requestBody": {
-        "fileName": "str-rhLPyCZWV",
-        "messageCount": 4,
-        "msgPackageType": "str-8PZyMXV0",
-        "msgBodyCode": 16,
-        "msgPackageId": 18,
-        "destination": "str-cbPcY",
-        "formatName": "str-M1Ka4tf",
-        "branchName": "str-CTOBBiC",
-        "childCount": 53,
-        "source": "str-lcUBfX7EzL3",
+        "fileName": "str-kiEJTLg",
+        "messageCount": 11,
+        "msgPackageType": "str-lJpI4dkH8Sf35f",
+        "msgBodyCode": 9,
+        "msgPackageId": 75,
+        "destination": "str-VYizO6hVufJjWm",
+        "formatName": "str-aB2tA",
+        "branchName": "str-5LKGFWilUx9O-",
+        "childCount": 37,
+        "source": "str-Dv7g2avD",
         "createAt": "yyyy-MM-dd\u0027T\u0027HH:mm:ss.SSSZ",
-        "loadRuleName": "str-nklypvAqSw8T",
-        "msgFormatId": 51,
-        "humanTaskId": "str--m3eKvJEI",
-        "processId": "str-8dejTGqhLuJ5E",
-        "sender": "str-rOQXerqA4Mc2",
-        "sourceType": 17,
-        "formatVersion": "str-0E4arFuTYuK",
-        "parentMsgPackageId": 3,
-        "direction": 81,
-        "status": 92
+        "loadRuleName": "str-Sls5ZcnjnmqeRV",
+        "msgFormatId": 29,
+        "humanTaskId": "str-nVOGm6g3AezAd",
+        "processId": "str-Q8XSC",
+        "sender": "str-LON7H",
+        "sourceType": 66,
+        "formatVersion": "str-beZljC",
+        "parentMsgPackageId": 63,
+        "direction": 80,
+        "status": 24
       },
       "parametersPath": {
-        "msgPackageId": 84
+        "msgPackageId": 87
       },
       "parametersQuery": {},
       "responseCode": 200,
       "expectedObjects": {
-        "fileName": "str-NDlcjqOXJ",
-        "messageCount": 84,
-        "msgPackageType": "str-rLzItovpmU",
-        "msgBodyCode": 88,
-        "msgPackageId": 78,
-        "destination": "str-cztXu9P0VHKqG",
-        "formatName": "str-OgZP7ei8YA",
-        "branchName": "str-NFa6U1kN",
-        "childCount": 67,
-        "source": "str-rDkFX",
+        "fileName": "str-ZAejSvYzNm",
+        "messageCount": 73,
+        "msgPackageType": "str-yiF6X3LR4xaC",
+        "msgBodyCode": 72,
+        "msgPackageId": 28,
+        "destination": "str-iorVz",
+        "formatName": "str-KT8h1tRkOqnVr",
+        "branchName": "str-FpQZphfc",
+        "childCount": 74,
+        "source": "str-mMwNFy4JMX",
         "createAt": "yyyy-MM-dd\u0027T\u0027HH:mm:ss.SSSZ",
-        "loadRuleName": "str-agk2sQZbAi",
-        "msgFormatId": 30,
-        "humanTaskId": "str-VsFb7b",
-        "processId": "str-Ulnixlue5MgFP",
-        "sender": "str-zLobocnftV",
-        "sourceType": 3,
-        "formatVersion": "str-XmHc45e8e",
-        "parentMsgPackageId": 24,
-        "direction": 91,
-        "status": 71
+        "loadRuleName": "str-tDybHJe",
+        "msgFormatId": 78,
+        "humanTaskId": "str-UgLZawGrZM",
+        "processId": "str-OX0PVs6l",
+        "sender": "str-FO5sd",
+        "sourceType": 30,
+        "formatVersion": "str-OSz6Do",
+        "parentMsgPackageId": 77,
+        "direction": 4,
+        "status": 53
       },
       "unexpectedObjects": null
     },
@@ -844,7 +884,7 @@
       "methodType": "DELETE",
       "requestBody": null,
       "parametersPath": {
-        "msgPackageId": 73
+        "msgPackageId": 69
       },
       "parametersQuery": {},
       "responseCode": 200,
@@ -858,93 +898,93 @@
       "requestBody": null,
       "parametersPath": {},
       "parametersQuery": {
-        "size": 46,
+        "size": 58,
         "createAtFrom": "date-time",
-        "formatName": "str-IKjak1-ZFXGN",
-        "page": 70,
+        "formatName": "str-lBfC7578ccqEWl",
+        "page": 35,
         "sort": [
-          "str-RyNNvUq",
-          "str-1RUpTy09CitmkC"
+          "str-VIcBGZ7Qg",
+          "str-R1a9Voms"
         ],
-        "fields": "str-j8fY3M2lcKnP9",
-        "maskSource": "str-d-KJSWcK",
+        "fields": "str-zGbXlnlHE",
+        "maskSource": "str-cxyNyAOiGz",
         "createAtTo": "date-time"
       },
       "responseCode": 200,
       "expectedObjects": {
-        "number": 86,
-        "last": true,
-        "numberOfElements": 45,
-        "size": 96,
-        "totalPages": 58,
+        "number": 18,
+        "last": false,
+        "numberOfElements": 38,
+        "size": 14,
+        "totalPages": 39,
         "pageable": {
-          "paged": true,
-          "pageNumber": 40,
-          "offset": 20,
-          "pageSize": 88,
+          "paged": false,
+          "pageNumber": 56,
+          "offset": 60,
+          "pageSize": 39,
           "unpaged": true,
           "sort": {
-            "unsorted": false,
-            "sorted": true,
-            "empty": false
+            "unsorted": true,
+            "sorted": false,
+            "empty": true
           }
         },
         "sort": {
           "unsorted": true,
-          "sorted": false,
-          "empty": false
+          "sorted": true,
+          "empty": true
         },
         "content": [
           {
-            "fileName": "str-LbY6unJSKHwUq",
-            "messageCount": 65,
-            "msgPackageType": "str-GMxa2T",
-            "msgBodyCode": 3,
-            "msgPackageId": 57,
-            "destination": "str-WSmGq",
-            "formatName": "str-A-Hk3",
-            "branchName": "str-LwU-ucrzz",
-            "childCount": 86,
-            "source": "str-e3TaiZZ",
+            "fileName": "str-jXTeaE9XN",
+            "messageCount": 51,
+            "msgPackageType": "str-7dV0pps7V3",
+            "msgBodyCode": 35,
+            "msgPackageId": 30,
+            "destination": "str-5OpzrZzjykvZbb",
+            "formatName": "str-UmC9Ns",
+            "branchName": "str-kBtR36",
+            "childCount": 56,
+            "source": "str-YAKtKezHLDwxJ",
             "createAt": "yyyy-MM-dd\u0027T\u0027HH:mm:ss.SSSZ",
-            "loadRuleName": "str-pBDjHGrg-Mb",
-            "msgFormatId": 32,
-            "humanTaskId": "str-mkrA9chJq0bI0",
-            "processId": "str-P8iNhlef",
-            "sender": "str-eB070JAJiNqi",
-            "sourceType": 78,
-            "formatVersion": "str-Tqar7Vn1N6F",
-            "parentMsgPackageId": 64,
-            "direction": 20,
-            "status": 82
+            "loadRuleName": "str-WucVlYc0a7",
+            "msgFormatId": 18,
+            "humanTaskId": "str-W-8S-eHNST",
+            "processId": "str-cWcCi",
+            "sender": "str-zgCwi4",
+            "sourceType": 56,
+            "formatVersion": "str-gOe22SGmBVwbJ",
+            "parentMsgPackageId": 17,
+            "direction": 44,
+            "status": 19
           },
           {
-            "fileName": "str-6gvc8",
-            "messageCount": 98,
-            "msgPackageType": "str-XuZdby0f",
-            "msgBodyCode": 11,
-            "msgPackageId": 87,
-            "destination": "str-QNhPA",
-            "formatName": "str-cG-kl",
-            "branchName": "str-2qm6zEXvxoYnW7",
-            "childCount": 82,
-            "source": "str-OayiqhY",
+            "fileName": "str-qrn6d-PhgPX4",
+            "messageCount": 37,
+            "msgPackageType": "str-RuyJy",
+            "msgBodyCode": 99,
+            "msgPackageId": 35,
+            "destination": "str-1PAqMFTz",
+            "formatName": "str-zu2nN66poRrl",
+            "branchName": "str-pUT-9qe4eLPg12",
+            "childCount": 12,
+            "source": "str-YQhiKSp",
             "createAt": "yyyy-MM-dd\u0027T\u0027HH:mm:ss.SSSZ",
-            "loadRuleName": "str-rhwPF5VFem",
-            "msgFormatId": 69,
-            "humanTaskId": "str-LCFqPM-i",
-            "processId": "str-zWSWSFYKKxR",
-            "sender": "str-7YJjfBC",
-            "sourceType": 70,
-            "formatVersion": "str-paZmkMUAp2pBq",
-            "parentMsgPackageId": 58,
-            "direction": 10,
-            "status": 11
+            "loadRuleName": "str-CE4ekMuPD",
+            "msgFormatId": 72,
+            "humanTaskId": "str--aBm55",
+            "processId": "str-YVDfz",
+            "sender": "str-MYTsIt9TdpwEyE",
+            "sourceType": 79,
+            "formatVersion": "str-AqEvEvJ41MU1J",
+            "parentMsgPackageId": 26,
+            "direction": 16,
+            "status": 54
           }
         ],
         "first": true,
         "empty": true,
-        "totalElements": 89
+        "totalElements": 60
       },
       "unexpectedObjects": null
     },
@@ -955,24 +995,24 @@
       "requestBody": null,
       "parametersPath": {},
       "parametersQuery": {
-        "fileName": "str-XQ0rhWDy",
-        "messageCount": 24,
-        "msgPackageType": "str-FTkurb2O",
-        "msgPackageId": 96,
-        "destination": "str-bQuTJoYbxUo",
-        "source": "str-Cb9RSPSyZWhs4",
+        "fileName": "str-GIjaYIhZnd",
+        "messageCount": 63,
+        "msgPackageType": "str-vqbIn1",
+        "msgPackageId": 77,
+        "destination": "str-0U-78ufCYM",
+        "source": "str-2ZcBcH",
         "createAt": {
           "dateTime": {
             "date": {
-              "year": 2020,
-              "month": 6,
-              "day": 27
+              "year": 2021,
+              "month": 2,
+              "day": 28
             },
             "time": {
-              "hour": 14,
-              "minute": 34,
-              "second": 35,
-              "nano": 800000000
+              "hour": 3,
+              "minute": 28,
+              "second": 12,
+              "nano": 445000000
             }
           },
           "offset": {
@@ -982,103 +1022,103 @@
             "id": "Europe/Moscow"
           }
         },
-        "msgFormatId": 18,
-        "processId": "str-VfvYl",
-        "formatVersion": "str-5nlhGA3oWmc",
-        "direction": 81,
-        "msgBodyCode": 54,
-        "formatName": "str-GGSC2",
-        "branchName": "str-Hc0EH6baL",
-        "childCount": 49,
+        "msgFormatId": 91,
+        "processId": "str-883T4-5nm5iY",
+        "formatVersion": "str-3KVBU3ZtEiZVC",
+        "direction": 75,
+        "msgBodyCode": 91,
+        "formatName": "str-SoiNQjSaUio",
+        "branchName": "str-R7Dm3-pJYRdgO2",
+        "childCount": 92,
         "sort": [
-          "str-X-JyLD",
-          "str-f1keIXVnGzFo"
+          "str-f8jbB2EMnuxKJ1",
+          "str-VtEpZT"
         ],
-        "loadRuleName": "str-ab-cWB-gY1n",
-        "humanTaskId": "str-nv71aaGO",
-        "size": 25,
-        "sender": "str-gn-ys",
-        "sourceType": 76,
-        "page": 16,
-        "fields": "str-oQxkHjrS8",
-        "parentMsgPackageId": 63,
-        "status": 39
+        "loadRuleName": "str-C-Rbadxd",
+        "humanTaskId": "str-qWuuXywz",
+        "size": 49,
+        "sender": "str-XtEplBp",
+        "sourceType": 85,
+        "page": 58,
+        "fields": "str-vCqA0",
+        "parentMsgPackageId": 27,
+        "status": 61
       },
       "responseCode": 200,
       "expectedObjects": {
-        "number": 87,
-        "last": false,
-        "numberOfElements": 6,
-        "size": 26,
-        "totalPages": 21,
+        "number": 97,
+        "last": true,
+        "numberOfElements": 84,
+        "size": 75,
+        "totalPages": 24,
         "pageable": {
           "paged": false,
-          "pageNumber": 71,
-          "offset": 6,
-          "pageSize": 31,
-          "unpaged": true,
+          "pageNumber": 69,
+          "offset": 98,
+          "pageSize": 53,
+          "unpaged": false,
           "sort": {
-            "unsorted": false,
+            "unsorted": true,
             "sorted": true,
-            "empty": false
+            "empty": true
           }
         },
         "sort": {
-          "unsorted": true,
+          "unsorted": false,
           "sorted": true,
-          "empty": false
+          "empty": true
         },
         "content": [
           {
-            "fileName": "str-nx7FxA6ewBdVn",
-            "messageCount": 33,
-            "msgPackageType": "str-apX8VlwsNrMoii",
-            "msgBodyCode": 80,
-            "msgPackageId": 67,
-            "destination": "str-z3oO9ijX9A",
-            "formatName": "str-JiZzMo5ri",
-            "branchName": "str-OKRXEEYlAOwx",
-            "childCount": 42,
-            "source": "str-p3--eb5l8",
+            "fileName": "str-9moBx",
+            "messageCount": 71,
+            "msgPackageType": "str-VO-T7taiBi8",
+            "msgBodyCode": 27,
+            "msgPackageId": 43,
+            "destination": "str-IbJi1DWsSpC7",
+            "formatName": "str-ETSqaEqXeOxj",
+            "branchName": "str-sFAmU",
+            "childCount": 11,
+            "source": "str-B84y08OMTBu",
             "createAt": "yyyy-MM-dd\u0027T\u0027HH:mm:ss.SSSZ",
-            "loadRuleName": "str-reIv6",
-            "msgFormatId": 71,
-            "humanTaskId": "str-2VatNK8ifJ4bl",
-            "processId": "str-quwRv2hbcCn",
-            "sender": "str-yvWW2qF-flF5hm",
-            "sourceType": 23,
-            "formatVersion": "str-4hKqbblfZopu",
-            "parentMsgPackageId": 72,
-            "direction": 73,
-            "status": 28
+            "loadRuleName": "str-3FSYJ4mjIMyD6V",
+            "msgFormatId": 0,
+            "humanTaskId": "str-JzN2gZ",
+            "processId": "str-0VsTrFXQSb",
+            "sender": "str-7mG6UisM",
+            "sourceType": 55,
+            "formatVersion": "str-Hfc09",
+            "parentMsgPackageId": 5,
+            "direction": 14,
+            "status": 23
           },
           {
-            "fileName": "str-r-199jLJAivopM",
-            "messageCount": 14,
-            "msgPackageType": "str-4dO3K36jw",
-            "msgBodyCode": 42,
-            "msgPackageId": 68,
-            "destination": "str-6b21l4J",
-            "formatName": "str-gWNk22TDdpulV",
-            "branchName": "str-fsxZjc1zLbZcSp",
-            "childCount": 8,
-            "source": "str-wVvTJNBYq",
+            "fileName": "str-jnWLjnykb3XkKU",
+            "messageCount": 57,
+            "msgPackageType": "str-lKRNZA",
+            "msgBodyCode": 83,
+            "msgPackageId": 58,
+            "destination": "str-O8uV9KgEQ",
+            "formatName": "str-XQt2hK7-m",
+            "branchName": "str-5IXGI",
+            "childCount": 82,
+            "source": "str-x8kzTNIy3kYYey",
             "createAt": "yyyy-MM-dd\u0027T\u0027HH:mm:ss.SSSZ",
-            "loadRuleName": "str-EcYbwV-Y",
-            "msgFormatId": 12,
-            "humanTaskId": "str-SuXYZrKjVlfzAO",
-            "processId": "str-54yW7",
-            "sender": "str-yE6Ak",
-            "sourceType": 95,
-            "formatVersion": "str-XzZAVtwPe1JX",
-            "parentMsgPackageId": 18,
-            "direction": 25,
-            "status": 19
+            "loadRuleName": "str-rX0jwalcHE5KC",
+            "msgFormatId": 21,
+            "humanTaskId": "str-SyQBJT4oexg5",
+            "processId": "str-eRfYG",
+            "sender": "str-D3DPLBt",
+            "sourceType": 93,
+            "formatVersion": "str--etvp9EJUjF734",
+            "parentMsgPackageId": 23,
+            "direction": 99,
+            "status": 31
           }
         ],
         "first": true,
         "empty": false,
-        "totalElements": 4
+        "totalElements": 15
       },
       "unexpectedObjects": null
     },
@@ -1088,7 +1128,7 @@
       "methodType": "POST",
       "requestBody": null,
       "parametersPath": {
-        "msgPackageId": 43
+        "msgPackageId": 56
       },
       "parametersQuery": {},
       "responseCode": 200,
@@ -1101,14 +1141,13 @@
       "methodType": "GET",
       "requestBody": null,
       "parametersPath": {
-        "msgPackageId": 72
+        "msgPackageId": 69
       },
       "parametersQuery": {
-        "fields": "str-cMjc9hXrsi"
+        "fields": "str-ulucE"
       },
       "responseCode": 200,
       "expectedObjects": {
-        "dqMsgPackage": "ERROR! Cyclic schema!",
         "source": "Исходные данные. Текст пакета закодированный в base64"
       },
       "unexpectedObjects": null
@@ -1118,26 +1157,26 @@
       "methodPath": "/qmmmsgpackage/MsgPackageMovementHistory",
       "methodType": "POST",
       "requestBody": {
-        "msgPackageId": 0,
+        "msgPackageId": 37,
         "ruleName": "Наименование правила",
         "channelType": "Вид канала обмена",
         "comment": "Описание",
         "value": "Адрес источника данных/доставки",
         "createAt": "date-time",
-        "direction": 51
+        "direction": 98
       },
       "parametersPath": {},
       "parametersQuery": {},
       "responseCode": 200,
       "expectedObjects": {
-        "msgPackageId": 45,
+        "msgPackageId": 33,
         "ruleName": "Наименование правила",
         "channelType": "Вид канала обмена",
         "comment": "Описание",
-        "msgPackageMovementHistoryId": 94,
+        "msgPackageMovementHistoryId": 16,
         "value": "Адрес источника данных/доставки",
         "createAt": "date-time",
-        "direction": 9
+        "direction": 76
       },
       "unexpectedObjects": null
     },
@@ -1147,21 +1186,21 @@
       "methodType": "GET",
       "requestBody": null,
       "parametersPath": {
-        "msgPackageMovementHistoryId": 84
+        "msgPackageMovementHistoryId": 70
       },
       "parametersQuery": {
-        "fields": "str-Bpt9KHP"
+        "fields": "str-Awl1tS7mvwW"
       },
       "responseCode": 200,
       "expectedObjects": {
-        "msgPackageId": 38,
+        "msgPackageId": 47,
         "ruleName": "Наименование правила",
         "channelType": "Вид канала обмена",
         "comment": "Описание",
-        "msgPackageMovementHistoryId": 98,
+        "msgPackageMovementHistoryId": 75,
         "value": "Адрес источника данных/доставки",
         "createAt": "date-time",
-        "direction": 46
+        "direction": 80
       },
       "unexpectedObjects": null
     },
@@ -1171,7 +1210,7 @@
       "methodType": "DELETE",
       "requestBody": null,
       "parametersPath": {
-        "msgPackageMovementHistoryId": 58
+        "msgPackageMovementHistoryId": 68
       },
       "parametersQuery": {},
       "responseCode": 200,
@@ -1185,31 +1224,31 @@
       "requestBody": null,
       "parametersPath": {},
       "parametersQuery": {
-        "size": 40,
-        "msgPackageId": 10,
-        "ruleName": "str-yHEba05qOyD",
-        "channelType": "str-S8k0HVKzGS87WB",
-        "comment": "str-7EBaFhGQlFzfx6",
-        "msgPackageMovementHistoryId": 43,
-        "page": 24,
+        "size": 63,
+        "msgPackageId": 21,
+        "ruleName": "str-yyKzKr0",
+        "channelType": "str-XNi1ETZ6ite-",
+        "comment": "str-D-sx1969o",
+        "msgPackageMovementHistoryId": 20,
+        "page": 44,
         "sort": [
-          "str-1UORd",
-          "str-pAEJ0"
+          "str-N9ppmQYm9ciMBu",
+          "str-lDE5n1"
         ],
-        "fields": "str-ZY99NcO",
-        "value": "str-xdE-tTFj",
+        "fields": "str-OqRXSk9UIYu4z",
+        "value": "str-FcWTwmT",
         "createAt": {
           "dateTime": {
             "date": {
-              "year": 2022,
-              "month": 4,
-              "day": 29
+              "year": 2018,
+              "month": 10,
+              "day": 25
             },
             "time": {
-              "hour": 3,
-              "minute": 11,
-              "second": 13,
-              "nano": 833000000
+              "hour": 22,
+              "minute": 47,
+              "second": 29,
+              "nano": 304000000
             }
           },
           "offset": {
@@ -1219,21 +1258,21 @@
             "id": "Europe/Moscow"
           }
         },
-        "direction": 91
+        "direction": 64
       },
       "responseCode": 200,
       "expectedObjects": {
-        "number": 43,
+        "number": 84,
         "last": false,
-        "numberOfElements": 33,
-        "size": 85,
-        "totalPages": 4,
+        "numberOfElements": 64,
+        "size": 3,
+        "totalPages": 2,
         "pageable": {
           "paged": false,
-          "pageNumber": 86,
-          "offset": 23,
-          "pageSize": 74,
-          "unpaged": true,
+          "pageNumber": 58,
+          "offset": 36,
+          "pageSize": 63,
+          "unpaged": false,
           "sort": {
             "unsorted": true,
             "sorted": false,
@@ -1241,35 +1280,35 @@
           }
         },
         "sort": {
-          "unsorted": true,
-          "sorted": false,
+          "unsorted": false,
+          "sorted": true,
           "empty": false
         },
         "content": [
           {
-            "msgPackageId": 2,
+            "msgPackageId": 75,
             "ruleName": "Наименование правила",
             "channelType": "Вид канала обмена",
             "comment": "Описание",
-            "msgPackageMovementHistoryId": 18,
+            "msgPackageMovementHistoryId": 57,
             "value": "Адрес источника данных/доставки",
             "createAt": "date-time",
-            "direction": 3
+            "direction": 42
           },
           {
-            "msgPackageId": 81,
+            "msgPackageId": 74,
             "ruleName": "Наименование правила",
             "channelType": "Вид канала обмена",
             "comment": "Описание",
-            "msgPackageMovementHistoryId": 73,
+            "msgPackageMovementHistoryId": 87,
             "value": "Адрес источника данных/доставки",
             "createAt": "date-time",
-            "direction": 32
+            "direction": 17
           }
         ],
         "first": false,
         "empty": true,
-        "totalElements": 46
+        "totalElements": 86
       },
       "unexpectedObjects": null
     },
@@ -1278,32 +1317,32 @@
       "methodPath": "/qmmmsgpackage/MsgPackageRelations",
       "methodType": "POST",
       "requestBody": {
-        "parentMsgPackageRelationId": 8,
-        "pbcProfileId": 75,
+        "parentMsgPackageRelationId": 86,
+        "pbcProfileId": 54,
         "endDate": "date-time",
-        "directionKind": 96,
-        "msgPackageId": 23,
-        "externalSystemId": 69,
+        "directionKind": 14,
+        "msgPackageId": 83,
+        "externalSystemId": 41,
         "description": "Описание связи пакета сообщений",
         "externalObjectId": "Внешний идентификатор бизнес-объекта во внешней системе",
-        "boProfileId": 11,
+        "boProfileId": 82,
         "startDate": "date-time"
       },
       "parametersPath": {},
       "parametersQuery": {},
       "responseCode": 200,
       "expectedObjects": {
-        "parentMsgPackageRelationId": 31,
-        "pbcProfileId": 4,
-        "endDate": "date-time",
-        "directionKind": 76,
-        "msgPackageId": 66,
-        "externalSystemId": 35,
-        "msgPackageRelationId": 20,
-        "description": "Описание связи пакета сообщений",
-        "externalObjectId": "Внешний идентификатор бизнес-объекта во внешней системе",
-        "boProfileId": 37,
-        "startDate": "date-time"
+        "parentMsgPackageRelationId": 64,
+        "pbcProfileId": 50,
+        "endDate": "yyyy-MM-dd",
+        "directionKind": 46,
+        "msgPackageId": 18,
+        "externalSystemId": 60,
+        "msgPackageRelationId": 77,
+        "description": "str-YQZF2UoF",
+        "externalObjectId": "str-k-XAlk",
+        "boProfileId": 1,
+        "startDate": "yyyy-MM-dd"
       },
       "unexpectedObjects": null
     },
@@ -1313,24 +1352,24 @@
       "methodType": "GET",
       "requestBody": null,
       "parametersPath": {
-        "msgPackageRelationId": 6
+        "msgPackageRelationId": 38
       },
       "parametersQuery": {
-        "fields": "str-ERrYb2IZyHSq"
+        "fields": "str-kVc6al3Xq86"
       },
       "responseCode": 200,
       "expectedObjects": {
-        "parentMsgPackageRelationId": 78,
-        "pbcProfileId": 1,
-        "endDate": "date-time",
-        "directionKind": 58,
-        "msgPackageId": 96,
-        "externalSystemId": 57,
-        "msgPackageRelationId": 56,
-        "description": "Описание связи пакета сообщений",
-        "externalObjectId": "Внешний идентификатор бизнес-объекта во внешней системе",
-        "boProfileId": 5,
-        "startDate": "date-time"
+        "parentMsgPackageRelationId": 67,
+        "pbcProfileId": 80,
+        "endDate": "yyyy-MM-dd",
+        "directionKind": 59,
+        "msgPackageId": 20,
+        "externalSystemId": 11,
+        "msgPackageRelationId": 10,
+        "description": "str-SRlfGPaQdh0s",
+        "externalObjectId": "str-6ZwqZOA",
+        "boProfileId": 36,
+        "startDate": "yyyy-MM-dd"
       },
       "unexpectedObjects": null
     },
@@ -1339,35 +1378,35 @@
       "methodPath": "/qmmmsgpackage/MsgPackageRelations/{msgPackageRelationId}",
       "methodType": "PUT",
       "requestBody": {
-        "parentMsgPackageRelationId": 55,
-        "pbcProfileId": 70,
-        "endDate": "date-time",
-        "directionKind": 23,
-        "msgPackageId": 7,
-        "externalSystemId": 88,
-        "msgPackageRelationId": 83,
-        "description": "Описание связи пакета сообщений",
-        "externalObjectId": "Внешний идентификатор бизнес-объекта во внешней системе",
-        "boProfileId": 23,
-        "startDate": "date-time"
+        "parentMsgPackageRelationId": 93,
+        "pbcProfileId": 44,
+        "endDate": "yyyy-MM-dd",
+        "directionKind": 9,
+        "msgPackageId": 20,
+        "externalSystemId": 50,
+        "msgPackageRelationId": 94,
+        "description": "str-em8Ghiyk",
+        "externalObjectId": "str-IAAnkyRM75o",
+        "boProfileId": 92,
+        "startDate": "yyyy-MM-dd"
       },
       "parametersPath": {
-        "msgPackageRelationId": 24
+        "msgPackageRelationId": 89
       },
       "parametersQuery": {},
       "responseCode": 200,
       "expectedObjects": {
-        "parentMsgPackageRelationId": 40,
-        "pbcProfileId": 10,
-        "endDate": "date-time",
-        "directionKind": 29,
-        "msgPackageId": 67,
+        "parentMsgPackageRelationId": 97,
+        "pbcProfileId": 92,
+        "endDate": "yyyy-MM-dd",
+        "directionKind": 65,
+        "msgPackageId": 25,
         "externalSystemId": 55,
-        "msgPackageRelationId": 12,
-        "description": "Описание связи пакета сообщений",
-        "externalObjectId": "Внешний идентификатор бизнес-объекта во внешней системе",
-        "boProfileId": 82,
-        "startDate": "date-time"
+        "msgPackageRelationId": 4,
+        "description": "str-PCxUBYlrc",
+        "externalObjectId": "str-71z5LQN",
+        "boProfileId": 97,
+        "startDate": "yyyy-MM-dd"
       },
       "unexpectedObjects": null
     },
@@ -1377,7 +1416,7 @@
       "methodType": "DELETE",
       "requestBody": null,
       "parametersPath": {
-        "msgPackageRelationId": 39
+        "msgPackageRelationId": 21
       },
       "parametersQuery": {},
       "responseCode": 200,
@@ -1391,45 +1430,45 @@
       "requestBody": null,
       "parametersPath": {},
       "parametersQuery": {
-        "parentMsgPackageRelationId": 56,
-        "pbcProfileId": 90,
+        "parentMsgPackageRelationId": 24,
+        "pbcProfileId": 27,
         "endDate": {
-          "year": 2018,
-          "month": 11,
-          "day": 9
+          "year": 2020,
+          "month": 3,
+          "day": 29
         },
-        "msgPackageId": 46,
-        "msgPackageRelationId": 30,
-        "description": "str-kaMrLpcv",
+        "msgPackageId": 35,
+        "msgPackageRelationId": 24,
+        "description": "str-G4B0ki",
         "sort": [
-          "str-eToCSsfmsv",
-          "str-9AaHZr4c7QTeYC"
+          "str-z0GbD7g0DHu",
+          "str-hVqVk"
         ],
-        "externalObjectId": "str-Q9WdwQz",
-        "size": 95,
-        "directionKind": 43,
-        "externalSystemId": 74,
-        "page": 60,
-        "fields": "str-GnRfixolbPHR",
-        "boProfileId": 54,
+        "externalObjectId": "str-114btA8MXkx9",
+        "size": 11,
+        "directionKind": 7,
+        "externalSystemId": 68,
+        "page": 41,
+        "fields": "str-UR9Unwjmpo9",
+        "boProfileId": 1,
         "startDate": {
-          "year": 2021,
+          "year": 2020,
           "month": 4,
-          "day": 6
+          "day": 5
         }
       },
       "responseCode": 200,
       "expectedObjects": {
-        "number": 80,
-        "last": true,
-        "numberOfElements": 19,
-        "size": 42,
-        "totalPages": 34,
+        "number": 95,
+        "last": false,
+        "numberOfElements": 60,
+        "size": 57,
+        "totalPages": 32,
         "pageable": {
           "paged": false,
-          "pageNumber": 43,
-          "offset": 67,
-          "pageSize": 18,
+          "pageNumber": 16,
+          "offset": 89,
+          "pageSize": 48,
           "unpaged": false,
           "sort": {
             "unsorted": true,
@@ -1438,41 +1477,41 @@
           }
         },
         "sort": {
-          "unsorted": true,
-          "sorted": false,
-          "empty": false
+          "unsorted": false,
+          "sorted": true,
+          "empty": true
         },
         "content": [
           {
-            "parentMsgPackageRelationId": 38,
-            "pbcProfileId": 63,
-            "endDate": "date-time",
-            "directionKind": 85,
-            "msgPackageId": 95,
-            "externalSystemId": 64,
-            "msgPackageRelationId": 47,
-            "description": "Описание связи пакета сообщений",
-            "externalObjectId": "Внешний идентификатор бизнес-объекта во внешней системе",
-            "boProfileId": 43,
-            "startDate": "date-time"
+            "parentMsgPackageRelationId": 15,
+            "pbcProfileId": 58,
+            "endDate": "yyyy-MM-dd",
+            "directionKind": 73,
+            "msgPackageId": 78,
+            "externalSystemId": 42,
+            "msgPackageRelationId": 86,
+            "description": "str-9DcJcMsnD",
+            "externalObjectId": "str-B1ORPYhveW",
+            "boProfileId": 94,
+            "startDate": "yyyy-MM-dd"
           },
           {
-            "parentMsgPackageRelationId": 96,
-            "pbcProfileId": 67,
-            "endDate": "date-time",
-            "directionKind": 97,
-            "msgPackageId": 10,
-            "externalSystemId": 12,
-            "msgPackageRelationId": 40,
-            "description": "Описание связи пакета сообщений",
-            "externalObjectId": "Внешний идентификатор бизнес-объекта во внешней системе",
-            "boProfileId": 14,
-            "startDate": "date-time"
+            "parentMsgPackageRelationId": 19,
+            "pbcProfileId": 83,
+            "endDate": "yyyy-MM-dd",
+            "directionKind": 3,
+            "msgPackageId": 26,
+            "externalSystemId": 28,
+            "msgPackageRelationId": 64,
+            "description": "str-5mJUGjC0AhrO",
+            "externalObjectId": "str-K61nA",
+            "boProfileId": 55,
+            "startDate": "yyyy-MM-dd"
           }
         ],
         "first": true,
         "empty": true,
-        "totalElements": 39
+        "totalElements": 78
       },
       "unexpectedObjects": null
     },
@@ -1481,21 +1520,21 @@
       "methodPath": "/qmmmsgpackage/MsgPkgPrtcl/v1",
       "methodType": "POST",
       "requestBody": {
-        "msgPackageId": 77,
+        "msgPackageId": 52,
         "errorMessage": "Текст сообщения",
-        "errorCode": 57,
-        "messageId": 84,
+        "errorCode": 67,
+        "messageId": 78,
         "protocolAt": "date-time"
       },
       "parametersPath": {},
       "parametersQuery": {},
       "responseCode": 200,
       "expectedObjects": {
-        "msgPkgPrtclId": 9,
-        "msgPackageId": 13,
-        "errorMessage": "str-82zxbr",
-        "errorCode": 92,
-        "messageId": 75,
+        "msgPkgPrtclId": 85,
+        "msgPackageId": 15,
+        "errorMessage": "str-YgoLzVJHY3DoX",
+        "errorCode": 45,
+        "messageId": 47,
         "protocolAt": "yyyy-MM-dd\u0027T\u0027HH:mm:ss.SSSZ"
       },
       "unexpectedObjects": null
@@ -1506,18 +1545,18 @@
       "methodType": "GET",
       "requestBody": null,
       "parametersPath": {
-        "msgPkgPrtclId": 9
+        "msgPkgPrtclId": 69
       },
       "parametersQuery": {
-        "fields": "str-F5xmYjJVFP"
+        "fields": "str-kBvpVnb1DZC"
       },
       "responseCode": 200,
       "expectedObjects": {
-        "msgPkgPrtclId": 29,
-        "msgPackageId": 89,
-        "errorMessage": "str-Fgjlu1",
-        "errorCode": 13,
-        "messageId": 94,
+        "msgPkgPrtclId": 23,
+        "msgPackageId": 66,
+        "errorMessage": "str-ZFsnnXGq",
+        "errorCode": 55,
+        "messageId": 20,
         "protocolAt": "yyyy-MM-dd\u0027T\u0027HH:mm:ss.SSSZ"
       },
       "unexpectedObjects": null
@@ -1527,24 +1566,24 @@
       "methodPath": "/qmmmsgpackage/MsgPkgPrtcl/v1/{msgPkgPrtclId}",
       "methodType": "PUT",
       "requestBody": {
-        "msgPkgPrtclId": 33,
-        "msgPackageId": 8,
-        "errorMessage": "str-AGczOTbes3d",
-        "errorCode": 87,
-        "messageId": 34,
+        "msgPkgPrtclId": 46,
+        "msgPackageId": 11,
+        "errorMessage": "str-0TkVQ30Dv3",
+        "errorCode": 24,
+        "messageId": 90,
         "protocolAt": "yyyy-MM-dd\u0027T\u0027HH:mm:ss.SSSZ"
       },
       "parametersPath": {
-        "msgPkgPrtclId": 85
+        "msgPkgPrtclId": 72
       },
       "parametersQuery": {},
       "responseCode": 200,
       "expectedObjects": {
-        "msgPkgPrtclId": 2,
-        "msgPackageId": 68,
-        "errorMessage": "str-wkFY0wj",
-        "errorCode": 31,
-        "messageId": 96,
+        "msgPkgPrtclId": 66,
+        "msgPackageId": 83,
+        "errorMessage": "str-U7ZC5eXFsx2p5",
+        "errorCode": 43,
+        "messageId": 29,
         "protocolAt": "yyyy-MM-dd\u0027T\u0027HH:mm:ss.SSSZ"
       },
       "unexpectedObjects": null
@@ -1555,7 +1594,7 @@
       "methodType": "DELETE",
       "requestBody": null,
       "parametersPath": {
-        "msgPkgPrtclId": 97
+        "msgPkgPrtclId": 32
       },
       "parametersQuery": {},
       "responseCode": 200,
@@ -1569,24 +1608,24 @@
       "requestBody": null,
       "parametersPath": {},
       "parametersQuery": {
-        "size": 58,
-        "msgPkgPrtclId": 92,
-        "msgPackageId": 2,
-        "errorMessage": "str-6WDAWbl",
-        "errorCode": 34,
+        "size": 35,
+        "msgPkgPrtclId": 4,
+        "msgPackageId": 58,
+        "errorMessage": "str-4jwSwzO",
+        "errorCode": 18,
         "messageId": 69,
         "protocolAt": {
           "dateTime": {
             "date": {
-              "year": 2021,
-              "month": 11,
-              "day": 29
+              "year": 2018,
+              "month": 10,
+              "day": 2
             },
             "time": {
-              "hour": 8,
-              "minute": 1,
-              "second": 7,
-              "nano": 494000000
+              "hour": 5,
+              "minute": 56,
+              "second": 18,
+              "nano": 471000000
             }
           },
           "offset": {
@@ -1596,28 +1635,28 @@
             "id": "Europe/Moscow"
           }
         },
-        "page": 45,
+        "page": 5,
         "sort": [
-          "str-MLTji",
-          "str-KAYxyK"
+          "str-QkIDVTaEagFpZn",
+          "str-rZboQ4H"
         ],
-        "fields": "str-fX7z74TBpB"
+        "fields": "str-5ncdunsi"
       },
       "responseCode": 200,
       "expectedObjects": {
-        "number": 35,
+        "number": 51,
         "last": true,
-        "numberOfElements": 22,
-        "size": 49,
-        "totalPages": 29,
+        "numberOfElements": 36,
+        "size": 33,
+        "totalPages": 63,
         "pageable": {
-          "paged": false,
-          "pageNumber": 24,
-          "offset": 75,
-          "pageSize": 65,
+          "paged": true,
+          "pageNumber": 54,
+          "offset": 61,
+          "pageSize": 49,
           "unpaged": true,
           "sort": {
-            "unsorted": true,
+            "unsorted": false,
             "sorted": true,
             "empty": false
           }
@@ -1625,29 +1664,29 @@
         "sort": {
           "unsorted": true,
           "sorted": true,
-          "empty": false
+          "empty": true
         },
         "content": [
           {
-            "msgPkgPrtclId": 36,
-            "msgPackageId": 33,
-            "errorMessage": "str-JauVlG",
-            "errorCode": 16,
-            "messageId": 8,
+            "msgPkgPrtclId": 84,
+            "msgPackageId": 19,
+            "errorMessage": "str-GEaW4j",
+            "errorCode": 47,
+            "messageId": 43,
             "protocolAt": "yyyy-MM-dd\u0027T\u0027HH:mm:ss.SSSZ"
           },
           {
-            "msgPkgPrtclId": 19,
-            "msgPackageId": 6,
-            "errorMessage": "str-Ta0ZXLYFTX",
-            "errorCode": 50,
-            "messageId": 57,
+            "msgPkgPrtclId": 87,
+            "msgPackageId": 53,
+            "errorMessage": "str-JhQceQC4t",
+            "errorCode": 39,
+            "messageId": 41,
             "protocolAt": "yyyy-MM-dd\u0027T\u0027HH:mm:ss.SSSZ"
           }
         ],
-        "first": false,
-        "empty": false,
-        "totalElements": 32
+        "first": true,
+        "empty": true,
+        "totalElements": 15
       },
       "unexpectedObjects": null
     },
@@ -1656,9 +1695,9 @@
       "methodPath": "/qmmmsgpackage/actuator/beans",
       "methodType": "GET",
       "requestBody": {
-        "additionalProp1": "str-aKqVbfq",
-        "additionalProp3": "str-W4aqhG3pF0",
-        "additionalProp2": "str-e-pujbx8"
+        "additionalProp1": "str-IlJq7uNX",
+        "additionalProp3": "str-cHpKab8bDiBtYC",
+        "additionalProp2": "str-iTZce"
       },
       "parametersPath": {},
       "parametersQuery": {},
@@ -1671,9 +1710,9 @@
       "methodPath": "/qmmmsgpackage/actuator/bindings",
       "methodType": "GET",
       "requestBody": {
-        "additionalProp1": "str-kIrLkmbsj",
-        "additionalProp3": "str-ftNoLhgMpTVs",
-        "additionalProp2": "str-aK1qman9GpJly"
+        "additionalProp1": "str-UT63lJiETB",
+        "additionalProp3": "str-MaGMcCDpo",
+        "additionalProp2": "str-IOtDgAW"
       },
       "parametersPath": {},
       "parametersQuery": {},
@@ -1686,9 +1725,9 @@
       "methodPath": "/qmmmsgpackage/actuator/bindings/{name}",
       "methodType": "GET",
       "requestBody": {
-        "additionalProp1": "str-2WPRx",
-        "additionalProp3": "str-WvXXY",
-        "additionalProp2": "str-3hAIbLGMDyxJ32"
+        "additionalProp1": "str-tYPpzE-w",
+        "additionalProp3": "str-r3E69kk",
+        "additionalProp2": "str-V6vaUfkb2Z6i"
       },
       "parametersPath": {},
       "parametersQuery": {},
@@ -1701,9 +1740,9 @@
       "methodPath": "/qmmmsgpackage/actuator/bindings/{name}",
       "methodType": "POST",
       "requestBody": {
-        "additionalProp1": "str-Zv25nL02DzJl",
-        "additionalProp3": "str-iA4Yg8KtxQ0",
-        "additionalProp2": "str-mMXPG1G"
+        "additionalProp1": "str-J2Fhg7kWBsI",
+        "additionalProp3": "str-nxaTCZF8WSJBS",
+        "additionalProp2": "str-80Ycjo44"
       },
       "parametersPath": {},
       "parametersQuery": {},
@@ -1716,9 +1755,9 @@
       "methodPath": "/qmmmsgpackage/actuator/caches",
       "methodType": "GET",
       "requestBody": {
-        "additionalProp1": "str-4C6H3K",
-        "additionalProp3": "str-hxFPbFsZ",
-        "additionalProp2": "str-MqvBZrbOuXVV"
+        "additionalProp1": "str-JjaIvmS",
+        "additionalProp3": "str-qYRhjJQt",
+        "additionalProp2": "str-LyK0CPGaNb5y7"
       },
       "parametersPath": {},
       "parametersQuery": {},
@@ -1731,9 +1770,9 @@
       "methodPath": "/qmmmsgpackage/actuator/caches",
       "methodType": "DELETE",
       "requestBody": {
-        "additionalProp1": "str-77Fu4abW74IsX",
-        "additionalProp3": "str-1mrRNpdCyzhjm",
-        "additionalProp2": "str-cDo95EG3Klh"
+        "additionalProp1": "str-8kfbW3aB",
+        "additionalProp3": "str-KmanocO",
+        "additionalProp2": "str-CJrAK"
       },
       "parametersPath": {},
       "parametersQuery": {},
@@ -1746,9 +1785,9 @@
       "methodPath": "/qmmmsgpackage/actuator/caches/{cache}",
       "methodType": "GET",
       "requestBody": {
-        "additionalProp1": "str-jxv7umcq5S0",
-        "additionalProp3": "str-i6ZKG17",
-        "additionalProp2": "str-DyTFQqdn4vk76"
+        "additionalProp1": "str--3E8usDxhwU1p",
+        "additionalProp3": "str-ci7GzCmLp",
+        "additionalProp2": "str-SWGSUpxPEIgMM4"
       },
       "parametersPath": {},
       "parametersQuery": {},
@@ -1761,9 +1800,9 @@
       "methodPath": "/qmmmsgpackage/actuator/caches/{cache}",
       "methodType": "DELETE",
       "requestBody": {
-        "additionalProp1": "str-vMSHAyQ",
-        "additionalProp3": "str-PeFxZN3w6",
-        "additionalProp2": "str-XN4NOEv"
+        "additionalProp1": "str-bhAM8i",
+        "additionalProp3": "str-SL21kGvAfEk",
+        "additionalProp2": "str-s-M7XE-P0jqzDL"
       },
       "parametersPath": {},
       "parametersQuery": {},
@@ -1776,9 +1815,9 @@
       "methodPath": "/qmmmsgpackage/actuator/channels",
       "methodType": "GET",
       "requestBody": {
-        "additionalProp1": "str-p9PK7nSQ1gOv",
-        "additionalProp3": "str-f3fVRzvBeI0",
-        "additionalProp2": "str-qyfjo9JA-ivGIz"
+        "additionalProp1": "str-iSpyBuXFweiIIO",
+        "additionalProp3": "str-TcTzB",
+        "additionalProp2": "str-KI6hXG"
       },
       "parametersPath": {},
       "parametersQuery": {},
@@ -1791,9 +1830,9 @@
       "methodPath": "/qmmmsgpackage/actuator/conditions",
       "methodType": "GET",
       "requestBody": {
-        "additionalProp1": "str-edMeihR",
-        "additionalProp3": "str-xzm4jV",
-        "additionalProp2": "str-afg67Kx9BasJ-"
+        "additionalProp1": "str-SzWsNtrqmzX",
+        "additionalProp3": "str-N64qD",
+        "additionalProp2": "str-WzYWA"
       },
       "parametersPath": {},
       "parametersQuery": {},
@@ -1806,9 +1845,9 @@
       "methodPath": "/qmmmsgpackage/actuator/configprops",
       "methodType": "GET",
       "requestBody": {
-        "additionalProp1": "str-ExKleGP",
-        "additionalProp3": "str-yyVi-8bhmC5",
-        "additionalProp2": "str-y7ZD5AEwH"
+        "additionalProp1": "str-dPUCM5lsM",
+        "additionalProp3": "str-L1Z-lMWg1BrKo",
+        "additionalProp2": "str-t4IEdD2ITJQkch"
       },
       "parametersPath": {},
       "parametersQuery": {},
@@ -1821,9 +1860,9 @@
       "methodPath": "/qmmmsgpackage/actuator/configprops/{prefix}",
       "methodType": "GET",
       "requestBody": {
-        "additionalProp1": "str-udBM7ZDTjD",
-        "additionalProp3": "str-ogaodhGdGd",
-        "additionalProp2": "str-kPIeFT"
+        "additionalProp1": "str-ZSWy8725aX",
+        "additionalProp3": "str-iO3etU",
+        "additionalProp2": "str-dF0blxV2f0zB4"
       },
       "parametersPath": {},
       "parametersQuery": {},
@@ -1836,9 +1875,9 @@
       "methodPath": "/qmmmsgpackage/actuator/env",
       "methodType": "GET",
       "requestBody": {
-        "additionalProp1": "str-9dAJVy07p-O",
-        "additionalProp3": "str-TEnx7m",
-        "additionalProp2": "str-6sAZPBflR"
+        "additionalProp1": "str-gR5iSZeKb",
+        "additionalProp3": "str-jZi406fXqPpsx",
+        "additionalProp2": "str-X0xTg"
       },
       "parametersPath": {},
       "parametersQuery": {},
@@ -1851,9 +1890,9 @@
       "methodPath": "/qmmmsgpackage/actuator/env/{toMatch}",
       "methodType": "GET",
       "requestBody": {
-        "additionalProp1": "str-m-wU9tnHtacnD",
-        "additionalProp3": "str-cro-QP9",
-        "additionalProp2": "str-KVAqvj-iR2qa"
+        "additionalProp1": "str-eL7YfbKy-HG",
+        "additionalProp3": "str-2xOKHPXbUD",
+        "additionalProp2": "str-7OG4-"
       },
       "parametersPath": {},
       "parametersQuery": {},
@@ -1866,9 +1905,9 @@
       "methodPath": "/qmmmsgpackage/actuator/features",
       "methodType": "GET",
       "requestBody": {
-        "additionalProp1": "str-6vPdZ0Q2P4",
-        "additionalProp3": "str-4VHGdFFkA6",
-        "additionalProp2": "str-TLSNHiTy1ai95"
+        "additionalProp1": "str-U71syetqt4Qe",
+        "additionalProp3": "str-J58A0",
+        "additionalProp2": "str-Ov94IIVBxae"
       },
       "parametersPath": {},
       "parametersQuery": {},
@@ -1881,9 +1920,9 @@
       "methodPath": "/qmmmsgpackage/actuator/functions",
       "methodType": "GET",
       "requestBody": {
-        "additionalProp1": "str-4OcLJR-FpR7D",
-        "additionalProp3": "str-sdgP38rKcsR1F",
-        "additionalProp2": "str-yeQbS29wpeZ"
+        "additionalProp1": "str-YpKQZDU",
+        "additionalProp3": "str-rYPCNWuyLB",
+        "additionalProp2": "str-o99aSsw"
       },
       "parametersPath": {},
       "parametersQuery": {},
@@ -1896,9 +1935,9 @@
       "methodPath": "/qmmmsgpackage/actuator/health",
       "methodType": "GET",
       "requestBody": {
-        "additionalProp1": "str-vp9iGSnqXaPtr",
-        "additionalProp3": "str-0ocWSkywgo",
-        "additionalProp2": "str-E1hQ7"
+        "additionalProp1": "str-meo62nnFjtSHg",
+        "additionalProp3": "str-dpr3FsaVwB",
+        "additionalProp2": "str-kF93vO"
       },
       "parametersPath": {},
       "parametersQuery": {},
@@ -1911,9 +1950,9 @@
       "methodPath": "/qmmmsgpackage/actuator/health/**",
       "methodType": "GET",
       "requestBody": {
-        "additionalProp1": "str-8b64Bj1",
-        "additionalProp3": "str-Sd7ca5qnDXM8",
-        "additionalProp2": "str-uWJjW7NH"
+        "additionalProp1": "str-tjR7AR",
+        "additionalProp3": "str-L1N9sYAZ0T",
+        "additionalProp2": "str-ahd-erDtbYF"
       },
       "parametersPath": {},
       "parametersQuery": {},
@@ -1926,9 +1965,9 @@
       "methodPath": "/qmmmsgpackage/actuator/heapdump",
       "methodType": "GET",
       "requestBody": {
-        "additionalProp1": "str-tRS6fKU8oqZ",
-        "additionalProp3": "str-ZtajOeUws1nIS1",
-        "additionalProp2": "str-HItQHT5bSEp2"
+        "additionalProp1": "str-DN2rB",
+        "additionalProp3": "str-zJH4XtMLn",
+        "additionalProp2": "str-zm8Z1EH"
       },
       "parametersPath": {},
       "parametersQuery": {},
@@ -1941,9 +1980,9 @@
       "methodPath": "/qmmmsgpackage/actuator/info",
       "methodType": "GET",
       "requestBody": {
-        "additionalProp1": "str-AeUbbMacHow",
-        "additionalProp3": "str-yIdixy15pqhyc0",
-        "additionalProp2": "str-kCS8dxR4Q4eOH"
+        "additionalProp1": "str-GLWGzrIbZWh",
+        "additionalProp3": "str-5wBpx",
+        "additionalProp2": "str-tkXTQ7hw3X4J2"
       },
       "parametersPath": {},
       "parametersQuery": {},
@@ -1956,9 +1995,9 @@
       "methodPath": "/qmmmsgpackage/actuator/integrationgraph",
       "methodType": "GET",
       "requestBody": {
-        "additionalProp1": "str-hw6E3GRK0HorY",
-        "additionalProp3": "str-vJI0vyEXRW1m1",
-        "additionalProp2": "str-Q1Z7Bj"
+        "additionalProp1": "str-iEDuIf0CQWa",
+        "additionalProp3": "str-TY1mo",
+        "additionalProp2": "str-pfuTA46Zq"
       },
       "parametersPath": {},
       "parametersQuery": {},
@@ -1971,9 +2010,9 @@
       "methodPath": "/qmmmsgpackage/actuator/integrationgraph",
       "methodType": "POST",
       "requestBody": {
-        "additionalProp1": "str-swPSvA1-kPh9r",
-        "additionalProp3": "str-IQaQzQ3uan",
-        "additionalProp2": "str-D1G7IpJdF6i"
+        "additionalProp1": "str-RlMKmcyzCxAwGy",
+        "additionalProp3": "str-kgeQeYwEW",
+        "additionalProp2": "str-1FEZegLan"
       },
       "parametersPath": {},
       "parametersQuery": {},
@@ -1986,9 +2025,9 @@
       "methodPath": "/qmmmsgpackage/actuator/loggers",
       "methodType": "GET",
       "requestBody": {
-        "additionalProp1": "str-vc3Dvku",
-        "additionalProp3": "str-eEZ9AWIH1dI",
-        "additionalProp2": "str-yPZe4UFj"
+        "additionalProp1": "str-KORjb73U",
+        "additionalProp3": "str-3OxL7-NvVU",
+        "additionalProp2": "str-tf1RGE9EoT"
       },
       "parametersPath": {},
       "parametersQuery": {},
@@ -2001,9 +2040,9 @@
       "methodPath": "/qmmmsgpackage/actuator/loggers/{name}",
       "methodType": "GET",
       "requestBody": {
-        "additionalProp1": "str-RbtNZs-uJP",
-        "additionalProp3": "str-LMzAAxExXRee",
-        "additionalProp2": "str-PfnRZq"
+        "additionalProp1": "str-YibRWNV3ER5zOi",
+        "additionalProp3": "str-qFtbsxrvv",
+        "additionalProp2": "str-u31BFCz"
       },
       "parametersPath": {},
       "parametersQuery": {},
@@ -2016,9 +2055,9 @@
       "methodPath": "/qmmmsgpackage/actuator/loggers/{name}",
       "methodType": "POST",
       "requestBody": {
-        "additionalProp1": "str-yShmzT8B5",
-        "additionalProp3": "str-m2KXm0yAH7",
-        "additionalProp2": "str-P78wEJ7YbqOlVE"
+        "additionalProp1": "str-rDBWjrCG",
+        "additionalProp3": "str-m7E37jbIb",
+        "additionalProp2": "str-zHDepOHribHvi"
       },
       "parametersPath": {},
       "parametersQuery": {},
@@ -2031,9 +2070,9 @@
       "methodPath": "/qmmmsgpackage/actuator/mappings",
       "methodType": "GET",
       "requestBody": {
-        "additionalProp1": "str-FDAjrJZ9R",
-        "additionalProp3": "str-nUuZm",
-        "additionalProp2": "str-KsaAb3Bh"
+        "additionalProp1": "str-zclgBS",
+        "additionalProp3": "str-nI31dxR4X",
+        "additionalProp2": "str-VWq-OTu2Q"
       },
       "parametersPath": {},
       "parametersQuery": {},
@@ -2046,9 +2085,9 @@
       "methodPath": "/qmmmsgpackage/actuator/metrics",
       "methodType": "GET",
       "requestBody": {
-        "additionalProp1": "str-FIHBvIRG",
-        "additionalProp3": "str--YMkXvcdb59B",
-        "additionalProp2": "str-GnjlvP"
+        "additionalProp1": "str-CGvxSd5tEGb8Rc",
+        "additionalProp3": "str-8oTHs",
+        "additionalProp2": "str-Bxlwvqy"
       },
       "parametersPath": {},
       "parametersQuery": {},
@@ -2061,9 +2100,9 @@
       "methodPath": "/qmmmsgpackage/actuator/metrics/{requiredMetricName}",
       "methodType": "GET",
       "requestBody": {
-        "additionalProp1": "str-4lFOix3fs5tLm",
-        "additionalProp3": "str-1YUSQtmrp8gg",
-        "additionalProp2": "str--i4Eb"
+        "additionalProp1": "str-ruLZft",
+        "additionalProp3": "str-blYwWwYSGeYe",
+        "additionalProp2": "str-YObwJUPMBc"
       },
       "parametersPath": {},
       "parametersQuery": {},
@@ -2076,9 +2115,9 @@
       "methodPath": "/qmmmsgpackage/actuator/prometheus",
       "methodType": "GET",
       "requestBody": {
-        "additionalProp1": "str-In0XJ5bneacVD",
-        "additionalProp3": "str-ipAoHAsKJtY",
-        "additionalProp2": "str-PtSx73ORQ"
+        "additionalProp1": "str-O7IatZO3bKP",
+        "additionalProp3": "str-4uuAUA",
+        "additionalProp2": "str-z6zWZ4EV"
       },
       "parametersPath": {},
       "parametersQuery": {},
@@ -2091,9 +2130,9 @@
       "methodPath": "/qmmmsgpackage/actuator/refresh",
       "methodType": "POST",
       "requestBody": {
-        "additionalProp1": "str-gStmrDiE",
-        "additionalProp3": "str-ukcqD",
-        "additionalProp2": "str-rJB747"
+        "additionalProp1": "str-DtaO97Zw-A-",
+        "additionalProp3": "str-cDFAc",
+        "additionalProp2": "str-XtTJr7r"
       },
       "parametersPath": {},
       "parametersQuery": {},
@@ -2106,9 +2145,9 @@
       "methodPath": "/qmmmsgpackage/actuator/scheduledtasks",
       "methodType": "GET",
       "requestBody": {
-        "additionalProp1": "str-EWfhR",
-        "additionalProp3": "str-WFSDoWJJV1",
-        "additionalProp2": "str-aIeLi6eWiFGu"
+        "additionalProp1": "str-bMt4bO8qxC",
+        "additionalProp3": "str-zU1lBoTq",
+        "additionalProp2": "str-dumgfh29"
       },
       "parametersPath": {},
       "parametersQuery": {},
@@ -2121,9 +2160,9 @@
       "methodPath": "/qmmmsgpackage/actuator/threaddump",
       "methodType": "GET",
       "requestBody": {
-        "additionalProp1": "str-KFxgQ7DLgTY6",
-        "additionalProp3": "str-z3-ET1D",
-        "additionalProp2": "str-LBJBjCq3xROYu"
+        "additionalProp1": "str-wdjBuM4ZwbG4",
+        "additionalProp3": "str--yN0n8ta",
+        "additionalProp2": "str-pAz23GW"
       },
       "parametersPath": {},
       "parametersQuery": {},
@@ -2142,14 +2181,14 @@
       "expectedObjects": {
         "businessAttributeValueList": [
           {
-            "businessAttributeValueId": 49,
-            "msgPackageId": 77,
-            "formatBusinessAttributeId": 16
+            "businessAttributeValueId": 79,
+            "msgPackageId": 24,
+            "formatBusinessAttributeId": 35
           },
           {
-            "businessAttributeValueId": 88,
-            "msgPackageId": 84,
-            "formatBusinessAttributeId": 90
+            "businessAttributeValueId": 48,
+            "msgPackageId": 74,
+            "formatBusinessAttributeId": 89
           }
         ]
       },
@@ -2164,19 +2203,19 @@
       "parametersQuery": {},
       "responseCode": 200,
       "expectedObjects": {
-        "messageBody": "str-sW57o",
-        "receiver": "str-auQrtdb",
+        "messageBody": "str-JVb0Beul",
+        "receiver": "str-6nO8t",
         "msgPackageId": 30,
-        "formatName": "str-Zw0B1P780HhHj",
-        "msgId": 57,
+        "formatName": "str-q-V7iap",
+        "msgId": 85,
         "inDatetime": "yyyy-MM-dd\u0027T\u0027HH:mm:ss.SSSZ",
-        "msgFormatId": 79,
-        "number": "str-TqDAVRq0",
-        "messageType": "str-0IDTQZ",
-        "sender": "str-VVIod862Z2",
-        "formatVersion": "str-uC8mhfhftQ",
-        "direction": 96,
-        "status": 59
+        "msgFormatId": 19,
+        "number": "str-q8dMVJv4m",
+        "messageType": "str-RvsW2H9",
+        "sender": "str-s1zYbTaS",
+        "formatVersion": "str-mvgIR8aqjCI4X",
+        "direction": 90,
+        "status": 9
       },
       "unexpectedObjects": null
     },
@@ -2202,27 +2241,27 @@
       "parametersQuery": {},
       "responseCode": 200,
       "expectedObjects": {
-        "fileName": "str-kzENGfRz1N0wgw",
-        "messageCount": 72,
-        "msgPackageType": "str-PM840AI",
+        "fileName": "str-87RDSVT",
+        "messageCount": 50,
+        "msgPackageType": "str-qjfLdw9w-yWV",
         "msgBodyCode": 56,
-        "msgPackageId": 66,
-        "destination": "str--hV-sOo6JK1qf",
-        "formatName": "str-CVyF59y-",
-        "branchName": "str-j1-R4OGAEDTDb",
-        "childCount": 93,
-        "source": "str-EQ4qZj1xzMj",
+        "msgPackageId": 1,
+        "destination": "str-rT6uydczeh",
+        "formatName": "str-yqSarITYl",
+        "branchName": "str-0MjtgKUjbt",
+        "childCount": 44,
+        "source": "str-ZP82Nh4KR-Hm",
         "createAt": "yyyy-MM-dd\u0027T\u0027HH:mm:ss.SSSZ",
-        "loadRuleName": "str-iMM746ZAT",
-        "msgFormatId": 47,
-        "humanTaskId": "str-LgQX-",
-        "processId": "str-zWvA6D",
-        "sender": "str-lqR4GP",
-        "sourceType": 87,
-        "formatVersion": "str-IGXuM0uo2J1Duh",
-        "parentMsgPackageId": 42,
-        "direction": 16,
-        "status": 86
+        "loadRuleName": "str-Dot5l",
+        "msgFormatId": 28,
+        "humanTaskId": "str-bFp5a",
+        "processId": "str-9G4xr7dcs",
+        "sender": "str-ACmZet",
+        "sourceType": 76,
+        "formatVersion": "str-CF0UciVk6xnN",
+        "parentMsgPackageId": 97,
+        "direction": 95,
+        "status": 5
       },
       "unexpectedObjects": null
     },
@@ -2262,29 +2301,29 @@
       "responseCode": 200,
       "expectedObjects": {
         "MsgPackage": {
-          "fileName": "str-0xoC3n24xbe-",
-          "messageCount": 52,
-          "msgPackageType": "str-2wtAAqkWi",
-          "msgBodyCode": 45,
-          "msgPackageId": 51,
-          "destination": "str-yC3VhW2E25m6z5",
-          "formatName": "str-T9DnDYm",
-          "branchName": "str--6O711BE7SIwR0",
-          "childCount": 5,
-          "source": "str-GvZnZsON6pB",
+          "fileName": "str-rJ0sIT",
+          "messageCount": 95,
+          "msgPackageType": "str-1zRbPxJhLf2P",
+          "msgBodyCode": 15,
+          "msgPackageId": 86,
+          "destination": "str-boGI07eZoJKe",
+          "formatName": "str-HB9Fn3g",
+          "branchName": "str-f0alyfLy2h7qyy",
+          "childCount": 42,
+          "source": "str-z7RIg3",
           "createAt": "yyyy-MM-dd\u0027T\u0027HH:mm:ss.SSSZ",
-          "loadRuleName": "str-MYGCMoYrOksDz3",
-          "msgFormatId": 77,
-          "humanTaskId": "str-mW6ExwPy9",
-          "processId": "str-Hyj9HyDIC1vS",
-          "sender": "str-Exk8HE",
-          "sourceType": 42,
-          "formatVersion": "str-IEIi5ADQe9",
-          "parentMsgPackageId": 95,
-          "direction": 41,
-          "status": 4
+          "loadRuleName": "str-sTHMlQjJS1gcWM",
+          "msgFormatId": 27,
+          "humanTaskId": "str-9i5wIAYvh6gE",
+          "processId": "str-ng850HAPfAuH",
+          "sender": "str-YretbkkdT4OHA",
+          "sourceType": 30,
+          "formatVersion": "str-53XaE1g3R5dIS",
+          "parentMsgPackageId": 25,
+          "direction": 49,
+          "status": 31
         },
-        "inputTopicName": "str-8QXOSzSPH6UnsV"
+        "inputTopicName": "str-NBpWaXB"
       },
       "unexpectedObjects": null
     },
@@ -2297,14 +2336,58 @@
       "parametersQuery": {},
       "responseCode": 200,
       "expectedObjects": {
-        "msgPackageId": 69,
-        "msgSender": "str-bpmUz",
-        "destination": "str-wxI4JkvyJYsX",
-        "formatName": "str-RLdvm8jf",
-        "branchName": "str-z9arqWm-6Hp2sI",
-        "formatVersion": "str-S23FmrjgyHvZ",
-        "direction": 69,
-        "status": 10
+        "msgPackageId": 56,
+        "msgSender": "str-vsimk1",
+        "destination": "str-3GvkJWXZEEMe",
+        "formatName": "str-zf7fxuUO",
+        "branchName": "str-AqVPXin5ThuvV5",
+        "formatVersion": "str-hvx3SUZCwb",
+        "direction": 88,
+        "status": 57
+      },
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/mock/qmmMsgpackagerelationsFindMassReply",
+      "methodType": "GET",
+      "requestBody": null,
+      "parametersPath": {},
+      "parametersQuery": {},
+      "responseCode": 200,
+      "expectedObjects": {
+        "msgpackagerelationsList": [
+          {
+            "pbcProfileId": 24,
+            "boSysName": "str-yokqn2",
+            "pbcSysName": "str-1ls5m-VSczx",
+            "msgPackageId": 37,
+            "errorMessage": "str-6hvyCS",
+            "msgPackageRelationId": 48,
+            "errorCode": 88,
+            "countObjects": 23,
+            "externalObjectId": "str-OZQvzj5qXT",
+            "linkId": 12,
+            "externalSystemId": 99,
+            "msgPackageRelationsLinkedList": "ERROR! Cyclic schema!",
+            "boProfileId": 84
+          },
+          {
+            "pbcProfileId": 47,
+            "boSysName": "str-8m0DnD46",
+            "pbcSysName": "str-RnteUXgwLJU-I",
+            "msgPackageId": 84,
+            "errorMessage": "str-QUpEOA",
+            "msgPackageRelationId": 58,
+            "errorCode": 74,
+            "countObjects": 43,
+            "externalObjectId": "str-M4KTqdxmKVJ",
+            "linkId": 10,
+            "externalSystemId": 15,
+            "msgPackageRelationsLinkedList": "ERROR! Cyclic schema!",
+            "boProfileId": 11
+          }
+        ]
       },
       "unexpectedObjects": null
     },
@@ -2330,11 +2413,11 @@
       "parametersQuery": {},
       "responseCode": 200,
       "expectedObjects": {
-        "msgPkgPrtclId": 84,
-        "msgPackageId": 30,
-        "errorMessage": "str-8FioS6wkL9Sk",
-        "errorCode": 29,
-        "messageId": 14,
+        "msgPkgPrtclId": 52,
+        "msgPackageId": 78,
+        "errorMessage": "str-cQuoX4pM5",
+        "errorCode": 84,
+        "messageId": 15,
         "protocolAt": "yyyy-MM-dd\u0027T\u0027HH:mm:ss.SSSZ"
       },
       "unexpectedObjects": null
@@ -2359,52 +2442,52 @@
       "requestBody": null,
       "parametersPath": {},
       "parametersQuery": {
-        "paged": false,
-        "pageNumber": 30,
-        "offset": 4,
+        "paged": true,
+        "pageNumber": 82,
+        "offset": 69,
         "previousCompare": true,
-        "pageSize": 40,
-        "boAttributeId": 57,
+        "pageSize": 37,
+        "boAttributeId": 81,
         "sort": [
-          "str-aEu9MbTmv-4",
-          "str-QvG9pt4lYqI4U6"
+          "str-a9BVjz",
+          "str-PDEDU1-"
         ],
-        "boAttributeLocalName": "str-gz6k3BsOqA",
-        "sort.sorted": true,
-        "currentCompare": false,
-        "boAttributeSysName": "str-6eHyb",
-        "versionId": 29,
-        "size": 68,
-        "sort.unsorted": true,
-        "versionCompareId": 39,
-        "unpaged": true,
-        "page": 81,
-        "fields": "str-nJJ5sjGLSWu",
+        "boAttributeLocalName": "str-Sy01Atn2Zo8O",
+        "sort.sorted": false,
+        "currentCompare": true,
+        "boAttributeSysName": "str-YxNCHoSuazD",
+        "versionId": 67,
+        "size": 50,
+        "sort.unsorted": false,
+        "versionCompareId": 67,
+        "unpaged": false,
+        "page": 11,
+        "fields": "str-Qs3y-",
         "changed": false
       },
       "responseCode": 200,
       "expectedObjects": {
-        "number": 66,
+        "number": 62,
         "last": true,
-        "numberOfElements": 70,
-        "size": 92,
-        "totalPages": 53,
+        "numberOfElements": 51,
+        "size": 32,
+        "totalPages": 93,
         "pageable": {
-          "paged": false,
-          "pageNumber": 74,
-          "offset": 91,
-          "pageSize": 23,
+          "paged": true,
+          "pageNumber": 54,
+          "offset": 39,
+          "pageSize": 72,
           "unpaged": true,
           "sort": {
             "unsorted": true,
-            "sorted": true,
-            "empty": true
+            "sorted": false,
+            "empty": false
           }
         },
         "sort": {
           "unsorted": false,
           "sorted": false,
-          "empty": true
+          "empty": false
         },
         "content": [
           {
@@ -2412,7 +2495,7 @@
             "depFullNameOld": "Наименование подразделения старой версии",
             "depFullName": "Наименование подразделения",
             "valueOld": "Старое значение параметра",
-            "boAttributeId": 72,
+            "boAttributeId": 94,
             "login": "Логин пользователя",
             "userName": "Наименование пользователя",
             "boAttributeLocalName": "Наименование параметра",
@@ -2428,7 +2511,7 @@
             "depFullNameOld": "Наименование подразделения старой версии",
             "depFullName": "Наименование подразделения",
             "valueOld": "Старое значение параметра",
-            "boAttributeId": 96,
+            "boAttributeId": 82,
             "login": "Логин пользователя",
             "userName": "Наименование пользователя",
             "boAttributeLocalName": "Наименование параметра",
@@ -2440,9 +2523,9 @@
             "dateOld": "date-time"
           }
         ],
-        "first": false,
+        "first": true,
         "empty": true,
-        "totalElements": 46
+        "totalElements": 30
       },
       "unexpectedObjects": null
     },
@@ -2455,37 +2538,37 @@
       "parametersQuery": {
         "date": "date-time",
         "paged": false,
-        "pageNumber": 77,
-        "offset": 38,
-        "boSysName": "str-uh2-aOeJY0",
-        "boId": 48,
-        "objectLinkedId": "str-a8SVy3HyfyOzq",
-        "pageSize": 11,
+        "pageNumber": 4,
+        "offset": 79,
+        "boSysName": "str-wKu1WS06vj",
+        "boId": 52,
+        "objectLinkedId": "str-IqEpjklQZx53",
+        "pageSize": 90,
         "sort": [
-          "str-6ivPPC0gsn",
-          "str-KSg6-DlHWSWCro"
+          "str-OXidLtzKHl",
+          "str-dlQgrpQNd7"
         ],
         "sort.sorted": true,
-        "boAttributeSysName": "str-OyfTCO23",
-        "versionId": 86,
-        "size": 38,
+        "boAttributeSysName": "str-lDYYj9Im",
+        "versionId": 62,
+        "size": 58,
         "sort.unsorted": false,
-        "unpaged": true,
-        "page": 45,
-        "fields": "str-v6HccX9MMIvD3"
+        "unpaged": false,
+        "page": 91,
+        "fields": "str-CNY18S"
       },
       "responseCode": 200,
       "expectedObjects": {
-        "number": 35,
-        "last": true,
-        "numberOfElements": 13,
-        "size": 64,
-        "totalPages": 74,
+        "number": 96,
+        "last": false,
+        "numberOfElements": 83,
+        "size": 48,
+        "totalPages": 12,
         "pageable": {
           "paged": true,
-          "pageNumber": 21,
-          "offset": 5,
-          "pageSize": 64,
+          "pageNumber": 10,
+          "offset": 28,
+          "pageSize": 48,
           "unpaged": false,
           "sort": {
             "unsorted": true,
@@ -2496,25 +2579,25 @@
         "sort": {
           "unsorted": false,
           "sorted": true,
-          "empty": false
+          "empty": true
         },
         "content": [
           {
             "boAttributeSysName": "Системное наименование атрибута",
-            "boAttributeId": 99,
+            "boAttributeId": 36,
             "value": "Значение атрибута",
             "boAttributeLocalName": "Наименование атрибута"
           },
           {
             "boAttributeSysName": "Системное наименование атрибута",
-            "boAttributeId": 14,
+            "boAttributeId": 12,
             "value": "Значение атрибута",
             "boAttributeLocalName": "Наименование атрибута"
           }
         ],
-        "first": false,
+        "first": true,
         "empty": true,
-        "totalElements": 63
+        "totalElements": 78
       },
       "unexpectedObjects": null
     },
@@ -2526,65 +2609,65 @@
       "parametersPath": {},
       "parametersQuery": {
         "date": "date-time",
-        "paged": true,
-        "pageNumber": 44,
-        "offset": 42,
-        "boSysName": "str-duy4GB1uV7QUd2",
-        "boId": 82,
-        "pageSize": 55,
+        "paged": false,
+        "pageNumber": 70,
+        "offset": 13,
+        "boSysName": "str-Kszf00",
+        "boId": 58,
+        "pageSize": 85,
         "sort": [
-          "str-R7-9Bc9BMj",
-          "str-Dcqhk"
+          "str-j45R1GI",
+          "str-I4giFCrxNf9Q"
         ],
         "sort.sorted": true,
-        "size": 13,
-        "sort.unsorted": true,
-        "unpaged": true,
-        "page": 78,
-        "fields": "str-GwFGy6dYLPoB",
-        "objectId": "str-IyC-YW"
+        "size": 0,
+        "sort.unsorted": false,
+        "unpaged": false,
+        "page": 21,
+        "fields": "str-AolUr1pKKpp3J",
+        "objectId": "str-YuQPn"
       },
       "responseCode": 200,
       "expectedObjects": {
-        "number": 45,
-        "last": false,
-        "numberOfElements": 23,
-        "size": 55,
-        "totalPages": 49,
+        "number": 2,
+        "last": true,
+        "numberOfElements": 85,
+        "size": 75,
+        "totalPages": 79,
         "pageable": {
           "paged": true,
-          "pageNumber": 24,
-          "offset": 13,
-          "pageSize": 47,
+          "pageNumber": 63,
+          "offset": 54,
+          "pageSize": 13,
           "unpaged": true,
           "sort": {
             "unsorted": true,
-            "sorted": false,
+            "sorted": true,
             "empty": false
           }
         },
         "sort": {
-          "unsorted": false,
+          "unsorted": true,
           "sorted": true,
           "empty": false
         },
         "content": [
           {
             "boAttributeSysName": "Системное наименование",
-            "boAttributeId": 24,
+            "boAttributeId": 97,
             "value": "Значение",
             "boAttributeLocalName": "Наименование"
           },
           {
             "boAttributeSysName": "Системное наименование",
-            "boAttributeId": 46,
+            "boAttributeId": 51,
             "value": "Значение",
             "boAttributeLocalName": "Наименование"
           }
         ],
         "first": false,
-        "empty": false,
-        "totalElements": 40
+        "empty": true,
+        "totalElements": 61
       },
       "unexpectedObjects": null
     },
@@ -2595,68 +2678,68 @@
       "requestBody": null,
       "parametersPath": {},
       "parametersQuery": {
-        "paged": true,
-        "pageNumber": 34,
-        "offset": 30,
-        "pageSize": 48,
-        "boAttributeId": 32,
+        "paged": false,
+        "pageNumber": 64,
+        "offset": 49,
+        "pageSize": 19,
+        "boAttributeId": 10,
         "sort": [
-          "str-s4WlQfd0xARrp",
-          "str-qZTXy"
+          "str-XRFFERe2d",
+          "str-YBvou5buuZE"
         ],
-        "boAttributeLocalName": "str-zd9e4TSF",
+        "boAttributeLocalName": "str-mwYWXB2",
         "sort.sorted": true,
-        "boAttributeSysName": "str-40p5pL1LvfgJOr",
-        "versionId": 16,
-        "size": 93,
+        "boAttributeSysName": "str-yDuEqIH",
+        "versionId": 5,
+        "size": 83,
         "sort.unsorted": true,
-        "unpaged": true,
-        "page": 60,
-        "fields": "str-e3kRjH"
+        "unpaged": false,
+        "page": 88,
+        "fields": "str-vj-pKZ5cM"
       },
       "responseCode": 200,
       "expectedObjects": {
-        "number": 11,
+        "number": 53,
         "last": false,
-        "numberOfElements": 87,
-        "size": 83,
-        "totalPages": 86,
+        "numberOfElements": 25,
+        "size": 88,
+        "totalPages": 64,
         "pageable": {
           "paged": true,
-          "pageNumber": 25,
-          "offset": 91,
-          "pageSize": 40,
-          "unpaged": false,
+          "pageNumber": 47,
+          "offset": 72,
+          "pageSize": 57,
+          "unpaged": true,
           "sort": {
             "unsorted": true,
             "sorted": false,
-            "empty": false
+            "empty": true
           }
         },
         "sort": {
-          "unsorted": false,
-          "sorted": false,
+          "unsorted": true,
+          "sorted": true,
           "empty": false
         },
         "content": [
           {
             "boAttributeSysName": "Системное наименование",
             "isLinked": false,
-            "boAttributeId": 3,
+            "boAttributeId": 46,
             "value": "Значение атрибута",
             "boAttributeLocalName": "Наименование"
           },
           {
             "boAttributeSysName": "Системное наименование",
             "isLinked": false,
-            "boAttributeId": 63,
+            "boAttributeId": 70,
             "value": "Значение атрибута",
             "boAttributeLocalName": "Наименование"
           }
         ],
-        "first": true,
-        "empty": false,
-        "totalElements": 7
+        "first": false,
+        "empty": true,
+        "totalElements": 14
       },
       "unexpectedObjects": null
     },
@@ -2669,52 +2752,51 @@
       "parametersQuery": {
         "date": "date-time",
         "paged": true,
-        "pageNumber": 24,
-        "offset": 14,
+        "pageNumber": 96,
+        "offset": 35,
         "endDate": "date-time",
-        "boId": 82,
-        "pageSize": 64,
+        "boId": 56,
+        "pageSize": 58,
         "sort": [
-          "str-YVbChbTVjGA",
-          "str-GdwQhbyO"
+          "str-XqCS-",
+          "str-fr1hTCjCh"
         ],
         "sort.sorted": true,
-        "versionKey": "str-Pd2BvP1MlUwp",
-        "isFirst": false,
-        "isCurrent": true,
-        "versionId": 92,
-        "size": 85,
-        "isData": true,
-        "sort.unsorted": true,
-        "comment": "str-fPQQk",
+        "versionKey": "str-25B3cNmv4ABo",
+        "isFirst": true,
+        "isCurrent": false,
+        "versionId": 88,
+        "size": 64,
+        "sort.unsorted": false,
+        "comment": "str-FOo7-vEtz",
         "unpaged": false,
         "isLastVersions": true,
-        "page": 18,
-        "fields": "str-jkOfZHIuyYZfz",
-        "objectId": "str-xojkxrzGH-Ued1",
+        "page": 2,
+        "fields": "str-IA-tKL7a5WP",
+        "objectId": "str-w4bCTegGa5Mm",
         "startDate": "date-time"
       },
       "responseCode": 200,
       "expectedObjects": {
-        "number": 88,
-        "last": true,
-        "numberOfElements": 47,
-        "size": 14,
-        "totalPages": 96,
+        "number": 42,
+        "last": false,
+        "numberOfElements": 74,
+        "size": 89,
+        "totalPages": 36,
         "pageable": {
           "paged": true,
-          "pageNumber": 3,
-          "offset": 29,
-          "pageSize": 11,
+          "pageNumber": 32,
+          "offset": 10,
+          "pageSize": 94,
           "unpaged": false,
           "sort": {
-            "unsorted": true,
-            "sorted": true,
+            "unsorted": false,
+            "sorted": false,
             "empty": false
           }
         },
         "sort": {
-          "unsorted": true,
+          "unsorted": false,
           "sorted": true,
           "empty": false
         },
@@ -2722,11 +2804,10 @@
           {
             "date": "date-time",
             "isFirst": false,
-            "number": 49,
+            "number": 58,
             "isCurrent": false,
-            "versionId": 74,
+            "versionId": 60,
             "depFullName": "Наименование департамента",
-            "isData": false,
             "comment": "Комментарий",
             "login": "Логин пользователя",
             "userName": "Наименование пользователя",
@@ -2735,20 +2816,19 @@
           {
             "date": "date-time",
             "isFirst": false,
-            "number": 95,
+            "number": 75,
             "isCurrent": false,
-            "versionId": 17,
+            "versionId": 46,
             "depFullName": "Наименование департамента",
-            "isData": false,
             "comment": "Комментарий",
             "login": "Логин пользователя",
             "userName": "Наименование пользователя",
             "versionKey": "Ссылка на событие аудита"
           }
         ],
-        "first": false,
-        "empty": true,
-        "totalElements": 41
+        "first": true,
+        "empty": false,
+        "totalElements": 42
       },
       "unexpectedObjects": null
     },
@@ -2758,26 +2838,25 @@
       "methodType": "GET",
       "requestBody": null,
       "parametersPath": {
-        "versionId": 76
+        "versionId": 57
       },
       "parametersQuery": {
-        "fields": "str-emqAPMwlzQ"
+        "fields": "str-g6ew7B"
       },
       "responseCode": 200,
       "expectedObjects": {
         "date": "date-time",
+        "isFirst": false,
+        "number": 58,
+        "isCurrent": false,
+        "versionId": 45,
         "depFullName": "Наименование подразделения",
-        "boId": 41,
+        "boId": 36,
+        "comment": "Комментарий",
         "login": "Логин пользователя",
         "userName": "Наименование пользователя",
-        "versionKey": "Связь с событием аудита",
-        "isFirst": false,
-        "number": 2,
-        "isCurrent": false,
-        "versionId": 95,
-        "isData": false,
-        "comment": "Комментарий",
-        "objectId": "Идентификатор экземпляра бизнес-объекта"
+        "objectId": "Идентификатор экземпляра бизнес-объекта",
+        "versionKey": "Связь с событием аудита"
       },
       "unexpectedObjects": null
     },
@@ -2787,10 +2866,10 @@
       "methodType": "GET",
       "requestBody": null,
       "parametersPath": {
-        "versionSettingId": 36
+        "versionSettingId": 58
       },
       "parametersQuery": {
-        "fields": "str-Wh9tNzDN"
+        "fields": "str-h-o3PC37jSJV"
       },
       "responseCode": 200,
       "expectedObjects": {
@@ -2798,8 +2877,8 @@
         "useVersion": false,
         "boLocalName": "Наименование БО",
         "boSysName": "Системное имя БО",
-        "boId": 91,
-        "versionSettingId": 64
+        "boId": 22,
+        "versionSettingId": 62
       },
       "unexpectedObjects": null
     },
@@ -2810,48 +2889,48 @@
       "requestBody": null,
       "parametersPath": {},
       "parametersQuery": {
-        "paged": true,
-        "pageNumber": 79,
+        "paged": false,
+        "pageNumber": 93,
         "useVersion": true,
-        "offset": 55,
-        "boId": 94,
-        "pageSize": 97,
+        "offset": 17,
+        "boId": 13,
+        "pageSize": 75,
         "sort": [
-          "str-olYK4mP",
-          "str-fjfTQNaO"
+          "str-ZvKVUdCEAnXc3O",
+          "str-COhfGvTiZ"
         ],
-        "serviceName": "str-NhuEquLg",
-        "sort.sorted": false,
-        "url": "str--T8Tvsld",
-        "size": 84,
+        "serviceName": "str-sR0K5wTr4",
+        "sort.sorted": true,
+        "url": "str-gjsMKCzx8hg",
+        "size": 62,
         "sort.unsorted": true,
         "unpaged": false,
-        "page": 50,
-        "versionSettingId": 58,
-        "fields": "str-sLzsdtv"
+        "page": 69,
+        "versionSettingId": 6,
+        "fields": "str-v-sxPJX"
       },
       "responseCode": 200,
       "expectedObjects": {
-        "number": 31,
-        "last": true,
-        "numberOfElements": 28,
-        "size": 13,
-        "totalPages": 24,
+        "number": 10,
+        "last": false,
+        "numberOfElements": 73,
+        "size": 60,
+        "totalPages": 70,
         "pageable": {
-          "paged": true,
-          "pageNumber": 84,
-          "offset": 49,
-          "pageSize": 98,
-          "unpaged": true,
+          "paged": false,
+          "pageNumber": 54,
+          "offset": 36,
+          "pageSize": 62,
+          "unpaged": false,
           "sort": {
-            "unsorted": false,
-            "sorted": true,
-            "empty": true
+            "unsorted": true,
+            "sorted": false,
+            "empty": false
           }
         },
         "sort": {
-          "unsorted": true,
-          "sorted": false,
+          "unsorted": false,
+          "sorted": true,
           "empty": true
         },
         "content": [
@@ -2860,21 +2939,21 @@
             "useVersion": false,
             "boLocalName": "Наименование БО",
             "boSysName": "Системное имя БО",
-            "boId": 74,
-            "versionSettingId": 65
+            "boId": 73,
+            "versionSettingId": 28
           },
           {
             "boDescription": "Описание БО",
             "useVersion": false,
             "boLocalName": "Наименование БО",
             "boSysName": "Системное имя БО",
-            "boId": 46,
-            "versionSettingId": 47
+            "boId": 1,
+            "versionSettingId": 65
           }
         ],
         "first": false,
-        "empty": false,
-        "totalElements": 16
+        "empty": true,
+        "totalElements": 2
       },
       "unexpectedObjects": null
     },
@@ -2884,7 +2963,7 @@
       "methodType": "PUT",
       "requestBody": {
         "useVersion": false,
-        "versionSettingId": 50
+        "versionSettingId": 72
       },
       "parametersPath": {},
       "parametersQuery": {},
