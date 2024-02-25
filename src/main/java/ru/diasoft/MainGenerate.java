@@ -9,8 +9,6 @@ import io.swagger.v3.oas.models.media.Schema;
 import io.swagger.v3.oas.models.responses.ApiResponse;
 import io.swagger.v3.parser.core.models.SwaggerParseResult;
 import io.swagger.v3.oas.models.OpenAPI;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import ru.diasoft.domain.*;
 import ru.diasoft.domain.TestCase;
 
@@ -23,7 +21,7 @@ public class MainGenerate {
     public static void main(String[] args) throws Exception {
         // parse a swagger description from the petstore and get the result
         SwaggerParseResult result = new OpenAPIParser().readLocation(MainGenerate.class.getClassLoader()
-                .getResource("api-docs_new.json").toString(), null, null);
+                .getResource("api-docs_24022204.json").toString(), null, null);
 
         OpenAPI openAPI = result.getOpenAPI();
 
@@ -45,7 +43,7 @@ public class MainGenerate {
         System.out.println(json1);
 
         // Запись результатов в файл
-        File myFile = new File("APIDOCS.json");
+        File myFile = new File("APIDOCS_test-case pattern.json");
         FileOutputStream outputStream = new FileOutputStream(myFile);
         byte[] buffer = json1.getBytes();
         outputStream.write(buffer);

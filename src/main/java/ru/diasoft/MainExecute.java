@@ -88,7 +88,7 @@ public class MainExecute {
                 testCaseLog.setRespCode(response.statusCode());
 
                 if (response.statusCode() != case0.getResponseCode()) {
-                    String errorText = String.format("Получен некорректный статус код: %s. Ожидаемый статус код: %s.",
+                    String errorText = String.format("Получен некорректный статус код: %s. Ожидаемый статус код: %s",
                             response.statusCode(), case0.getResponseCode());
                     logger.error(errorText);
                     result = false;

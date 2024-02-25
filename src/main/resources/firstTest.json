@@ -177,7 +177,7 @@
       "methodPath": "/qmmmsgpackage/MsgPackage/v1",
       "methodType": "POST",
       "requestBody": {
-        "fileName": "OURBRUMMVTBBRUMMXXX2D769CA63470B825023.xml",
+        "fileName": "OURBRUMMVTBBRUMMXXX2D769CA63470B825024.xml",
         "messageCount": 1,
         "msgPackageType": "1",
         "destination": "ПАО СБЕРБАНК",
@@ -199,7 +199,7 @@
       "parametersQuery": {},
       "responseCode": 200,
       "expectedObjects": {
-        "fileName": "OURBRUMMVTBBRUMMXXX2D769CA63470B825023.xml",
+        "fileName": "OURBRUMMVTBBRUMMXXX2D769CA63470B825024.xml",
         "destination": "ПАО СБЕРБАНК",
         "formatName": "IS022CBPRP",
         "branchName": "*НАШ_БАНК",
