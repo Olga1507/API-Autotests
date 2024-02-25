@@ -43,10 +43,10 @@
         <table style="background-color:#00FF00;">
             <tbody>
                 <tr>
-                    <td>Дата запуска обработки:</td><td>2024-02-20T17:51:43.301249900Z</td>
+                    <td>Дата запуска обработки:</td><td>2024-02-25 15:44:20</td>
                 </tr>
                 <tr>
-                    <td>Дата окончания обработки:</td><td>2024-02-20T17:51:44.732704300Z</td>
+                    <td>Дата окончания обработки:</td><td>2024-02-25 15:44:21</td>
                 </tr>
                 <tr>
                     <td>Наименование файла с тестами:</td><td>firstTest.json</td>
@@ -55,40 +55,40 @@
                     <td>Общее количество тестов:</td><td>7</td>
                 </tr>
                 <tr>
-                    <td>Количество успешных тестов:</td><td>1</td>
+                    <td>Количество успешных тестов:</td><td>2</td>
                 </tr>
                 <tr>
-                    <td>Количество проваленных тестов:</td><td>6</td>
+                    <td>Количество проваленных тестов:</td><td>5</td>
                 </tr>
             </tbody>
         </table>
         <hr style="opacity:0">
-        <caption>Детализация</caption>
+        <h2>Детализация</h2>
         <table style="background-color:#00FF00;">
             <tbody>
                 <tr>
                     <th>Номер кейса</th><th>URL запроса</th><th>Код ответа</th><th>Ошибки</th><th>Результат</th>
                 </tr>
                 <tr class="fail">
-                    <td>0</td><td>http://qmmmsgpackage.msghubtmp.qrun.diasoft.ru/qmmmsgpackage/MsgPackage/v1/11</td><td>200</td><td>[Ошибка валидации: В теле ответа не должно быть тега 'sourceType' с значением '1']</td><td>Провал</td>
+                    <td>1</td><td>http://qmmmsgpackage.msghubtmp.qrun.diasoft.ru/qmmmsgpackage/MsgPackage/v1/11</td><td>200</td><td>[Ошибка валидации: В теле ответа не должно быть тега 'sourceType' с значением '1']</td><td>Провал</td>
                 </tr>
                 <tr class="fail">
-                    <td>1</td><td></td><td>0</td><td>[Ошибка: Ошибка при формировании URL]</td><td>Провал</td>
+                    <td>2</td><td></td><td>-</td><td>[Ошибка: Ошибка при формировании URL]</td><td>Провал</td>
                 </tr>
                 <tr class="fail">
-                    <td>2</td><td></td><td>0</td><td>[Ошибка: Ошибка при формировании URL]</td><td>Провал</td>
+                    <td>3</td><td></td><td>-</td><td>[Ошибка: Ошибка при формировании URL]</td><td>Провал</td>
                 </tr>
                 <tr class="fail">
-                    <td>3</td><td>http://qmmmsgpackage.msghubtmp.qrun.diasoft.ru/qmmmsgpackage/Msg/v1/27700</td><td>404</td><td>[Ошибка валидации ответа. Получен некорректный статус код: 404, Ошибка валидации: Не найдено обязательное поле в теле ответа: messageBody]</td><td>Провал</td>
+                    <td>4</td><td>http://qmmmsgpackage.msghubtmp.qrun.diasoft.ru/qmmmsgpackage/Msg/v1/27700</td><td>404</td><td>[Получен некорректный статус код: 404. Ожидаемый статус код: 200.]</td><td>Провал</td>
                 </tr>
                 <tr class="fail">
-                    <td>4</td><td>http://qmmmsgpackage.msghubtmp.qrun.diasoft.ru/qmmmsgpackage/MsgPackage/v1/27701</td><td>200</td><td>[Ошибка валидации: Получили ошибку при сравнении тега 'fileName': полученное значение '"kafka-file-loader-from-kafka-a-file-loader-from-kafka2-22"' не совпало с ожидаемым '"str-IFSZSAAW"']</td><td>Провал</td>
+                    <td>5</td><td>http://qmmmsgpackage.msghubtmp.qrun.diasoft.ru/qmmmsgpackage/MsgPackage/v1/27701</td><td>200</td><td>[Ошибка валидации: Получили ошибку при сравнении тега 'fileName': полученное значение '"kafka-file-loader-from-kafka-a-file-loader-from-kafka2-22"' не совпало с ожидаемым '"str-IFSZSAAW"']</td><td>Провал</td>
                 </tr>
                 <tr class="success">
-                    <td>5</td><td>http://qmmmsgpackage.msghubtmp.qrun.diasoft.ru/qmmmsgpackage/MsgPackage/v1/11</td><td>200</td><td>Ошибок нет</td><td>Успех</td>
+                    <td>6</td><td>http://qmmmsgpackage.msghubtmp.qrun.diasoft.ru/qmmmsgpackage/MsgPackage/v1/11</td><td>200</td><td>Ошибок нет</td><td>Успех</td>
                 </tr>
-                <tr class="fail">
-                    <td>6</td><td>http://qmmmsgpackage.msghubtmp.qrun.diasoft.ru/qmmmsgpackage/MsgPackage/v1</td><td>500</td><td>[Ошибка валидации ответа. Получен некорректный статус код: 500, Ошибка валидации: Не найдено обязательное поле в теле ответа: fileName]</td><td>Провал</td>
+                <tr class="success">
+                    <td>7</td><td>http://qmmmsgpackage.msghubtmp.qrun.diasoft.ru/qmmmsgpackage/MsgPackage/v1</td><td>200</td><td>Ошибок нет</td><td>Успех</td>
                 </tr>
             </tbody>
         </table>

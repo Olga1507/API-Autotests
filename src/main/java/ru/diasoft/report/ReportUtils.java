@@ -16,16 +16,21 @@ import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.time.ZoneId;
+import java.time.format.DateTimeFormatter;
 
 public class ReportUtils {
+    private static DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")
+            .withZone(ZoneId.systemDefault());
+
     //public static void main(String[] args) {
-    public static void creatHtmlReport (Report report) throws Exception {
+    public static void creatHtmlReport(Report report) throws Exception {
 
         // Подготовьте выходной путь для сохранения документа
         String documentPath = "reportPage1.html";
 
         DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
-        DocumentBuilder db  = dbf.newDocumentBuilder();
+        DocumentBuilder db = dbf.newDocumentBuilder();
         Document document = db.newDocument();
 
         Element html = document.createElement("html");
@@ -104,8 +109,8 @@ public class ReportUtils {
         int cntFailed = 0;
 
 
-        for (int i = 0; i < report.getTestCaseLogs().size(); i++){
-            if (report.getTestCaseLogs().get(i).isResult()){
+        for (int i = 0; i < report.getTestCaseLogs().size(); i++) {
+            if (report.getTestCaseLogs().get(i).isResult()) {
                 cntSuccess++;
             } else {
                 cntFailed++;
@@ -115,8 +120,8 @@ public class ReportUtils {
 
 // ТАБЛИЦА 1
 
-        addToTitleTable("Дата запуска обработки:", String.valueOf(report.getDateStart()), tbody, document);
-        addToTitleTable("Дата окончания обработки:", String.valueOf(report.getDateEnd()), tbody, document);
+        addToTitleTable("Дата запуска обработки:", formatter.format(report.getDateStart()), tbody, document);
+        addToTitleTable("Дата окончания обработки:", formatter.format(report.getDateEnd()), tbody, document);
         addToTitleTable("Наименование файла с тестами:", report.getFileName(), tbody, document);
 
         addToTitleTable("Общее количество тестов:", String.valueOf(report.getTestCaseLogs().size()), tbody, document);
@@ -126,7 +131,7 @@ public class ReportUtils {
         Element hr = document.createElement("hr");
         hr.setAttribute("style", "opacity:0");
 
-        Element caption = document.createElement("caption");
+        Element caption = document.createElement("h2");
         Text capTxt = document.createTextNode("Детализация");
         caption.appendChild(capTxt);
 
@@ -168,8 +173,8 @@ public class ReportUtils {
         th5.appendChild(title5);
         tbTr.appendChild(th5);
 
-
-        for (int i=0; i < report.getTestCaseLogs().size(); i++){
+        // Обходим результаты выполнения тест-кейсов и добавляем их в таблицу Детализации на странице отчёта
+        for (int i = 0; i < report.getTestCaseLogs().size(); i++) {
             addLog(report.getTestCaseLogs().get(i), tbody2, document);
 
         }
@@ -182,15 +187,16 @@ public class ReportUtils {
         body.appendChild(caption);
         body.appendChild(table2);
 
- // Сохраните документ на диск
+        // Сохраните документ на диск
         //document.save(documentPath);
         writeDocument(document, documentPath);
 
     }
 
-    public static void addLog(TestCaseLog testCaseLog, Element tbody, Document document){
+    // добавление строки в таблицу Детализации
+    public static void addLog(TestCaseLog testCaseLog, Element tbody, Document document) {
         Element clTr = document.createElement("tr");
-        if (testCaseLog.isResult()){
+        if (testCaseLog.isResult()) {
             clTr.setAttribute("class", "success");
         } else {
             clTr.setAttribute("class", "fail");
@@ -198,7 +204,7 @@ public class ReportUtils {
 
         tbody.appendChild(clTr);
         Element clTd = document.createElement("td");
-        Text tdTx1 = document.createTextNode(String.valueOf(testCaseLog.getTestCaseNum()));
+        Text tdTx1 = document.createTextNode(String.valueOf(testCaseLog.getTestCaseNum() + 1));
         clTd.appendChild(tdTx1);
         clTr.appendChild(clTd);
 
@@ -208,7 +214,12 @@ public class ReportUtils {
         clTr.appendChild(clTd2);
 
         Element clTd3 = document.createElement("td");
-        Text tdTx3 = document.createTextNode(String.valueOf(testCaseLog.getRespCode()));
+        Text tdTx3;
+        if (testCaseLog.getRespCode() == 0) {
+            tdTx3 = document.createTextNode("-");
+        } else {
+            tdTx3 = document.createTextNode(String.valueOf(testCaseLog.getRespCode()));
+        }
         clTd3.appendChild(tdTx3);
         clTr.appendChild(clTd3);
 
@@ -226,7 +237,7 @@ public class ReportUtils {
             clTr.appendChild(clTd4);
         }
 
-        if (testCaseLog.isResult()){
+        if (testCaseLog.isResult()) {
             Element clTd5 = document.createElement("td");
             Text tdTx5 = document.createTextNode("Успех");
             clTd5.appendChild(tdTx5);
@@ -240,7 +251,8 @@ public class ReportUtils {
         }
     }
 
-    public static void addToTitleTable(String name, String value, Element tbody, Document document){
+    // Добавляем строку в общую таблицу Отчёта
+    public static void addToTitleTable(String name, String value, Element tbody, Document document) {
         Element tr1 = document.createElement("tr");
         tbody.appendChild(tr1);
 
@@ -259,8 +271,7 @@ public class ReportUtils {
      * Процедура сохранения DOM в файл
      */
     private static void writeDocument(Document document, String path)
-            throws TransformerFactoryConfigurationError
-    {
+            throws TransformerFactoryConfigurationError {
         Transformer trf = null;
         DOMSource src = null;
         FileOutputStream fos = null;

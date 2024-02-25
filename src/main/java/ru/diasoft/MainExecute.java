@@ -88,32 +88,31 @@ public class MainExecute {
                 testCaseLog.setRespCode(response.statusCode());
 
                 if (response.statusCode() != case0.getResponseCode()) {
-                    logger.error("Ошибка валидации ответа. Получен некорректный статус код: {}", response.statusCode());
+                    String errorText = String.format("Получен некорректный статус код: %s. Ожидаемый статус код: %s.",
+                            response.statusCode(), case0.getResponseCode());
+                    logger.error(errorText);
                     result = false;
-                    testCaseLog.getErrors().add("Ошибка валидации ответа. Получен некорректный статус код: " +
-                            response.statusCode());
+                    testCaseLog.getErrors().add(errorText);
                 } else {
                     logger.info("Получен корректный статус - код: {}", response.statusCode());
+                    logger.info("Начали валидацию тела ответа из expectedObjects");
+
+                    //Для кpacивoго oфopмлeния JSON cтpoки
+                    //ObjectMapper mapper = new ObjectMapper(); - создали выше!
+                    JsonNode responseJson = mapper.readValue(response.body(), JsonNode.class);
+                    //JsonNode node1 = mapper.valueToTree(jsonObject);
+
+
+                    //Валидация
+
+                    try {
+                        validateResponse(responseJson, case0);
+                    } catch (RuntimeException e) {
+                        logger.error("Ошибка валидации: " + e.getMessage());
+                        result = false;
+                        testCaseLog.getErrors().add("Ошибка валидации: " + e.getMessage());
+                    }
                 }
-
-                logger.info("Начали валидацию тела ответа из expectedObjects");
-
-                //Для кpacивoго oфopмлeния JSON cтpoки
-                //ObjectMapper mapper = new ObjectMapper(); - создали выше!
-                JsonNode responseJson = mapper.readValue(response.body(), JsonNode.class);
-                //JsonNode node1 = mapper.valueToTree(jsonObject);
-
-
-                //Валидация
-
-                try {
-                    validateResponse(responseJson, case0);
-                } catch (RuntimeException e) {
-                    logger.error("Ошибка валидации: " + e.getMessage());
-                    result = false;
-                    testCaseLog.getErrors().add("Ошибка валидации: " + e.getMessage());
-                }
-
 
             } catch (Exception e) {
                 logger.error("Ошибка: {}", e.getMessage());
