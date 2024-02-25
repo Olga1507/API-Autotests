@@ -1,0 +1,2991 @@
+{
+  "cases": [
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/error",
+      "methodType": "GET",
+      "requestBody": null,
+      "parametersPath": {},
+      "parametersQuery": {},
+      "responseCode": 200,
+      "expectedObjects": {
+        "reference": true,
+        "view": {
+          "contentType": "str-VXUtmFRV"
+        },
+        "viewName": "str-y8TIG6TA",
+        "model": "object",
+        "modelMap": {
+          "additionalProp1": "object",
+          "additionalProp3": "object",
+          "additionalProp2": "object"
+        },
+        "empty": true,
+        "status": "TEMPORARY_REDIRECT"
+      },
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/error",
+      "methodType": "PUT",
+      "requestBody": null,
+      "parametersPath": {},
+      "parametersQuery": {},
+      "responseCode": 200,
+      "expectedObjects": {
+        "reference": false,
+        "view": {
+          "contentType": "str-ZsFrGR"
+        },
+        "viewName": "str-Ln9DFeFUYkkgsO",
+        "model": "object",
+        "modelMap": {
+          "additionalProp1": "object",
+          "additionalProp3": "object",
+          "additionalProp2": "object"
+        },
+        "empty": true,
+        "status": "NON_AUTHORITATIVE_INFORMATION"
+      },
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/error",
+      "methodType": "POST",
+      "requestBody": null,
+      "parametersPath": {},
+      "parametersQuery": {},
+      "responseCode": 200,
+      "expectedObjects": {
+        "reference": true,
+        "view": {
+          "contentType": "str-aLz1s1Am5RK3SE"
+        },
+        "viewName": "str-zi31hJ0tPu",
+        "model": "object",
+        "modelMap": {
+          "additionalProp1": "object",
+          "additionalProp3": "object",
+          "additionalProp2": "object"
+        },
+        "empty": true,
+        "status": "NOT_MODIFIED"
+      },
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/error",
+      "methodType": "DELETE",
+      "requestBody": null,
+      "parametersPath": {},
+      "parametersQuery": {},
+      "responseCode": 200,
+      "expectedObjects": {
+        "reference": true,
+        "view": {
+          "contentType": "str-iLi2P7u"
+        },
+        "viewName": "str-EbO6IH",
+        "model": "object",
+        "modelMap": {
+          "additionalProp1": "object",
+          "additionalProp3": "object",
+          "additionalProp2": "object"
+        },
+        "empty": false,
+        "status": "FORBIDDEN"
+      },
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/BusinessAttributeValue",
+      "methodType": "POST",
+      "requestBody": {
+        "msgPackageId": 35,
+        "formatName": "Наименование формата",
+        "formatBusinessAttributeId": 30,
+        "value": "Значение"
+      },
+      "parametersPath": {},
+      "parametersQuery": {},
+      "responseCode": 200,
+      "expectedObjects": {
+        "businessAttributeValueId": 54,
+        "msgPackageId": 81,
+        "formatName": "Наименование формата",
+        "formatBusinessAttributeId": 12,
+        "value": "Значение"
+      },
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/BusinessAttributeValue/{businessAttributeValueId}",
+      "methodType": "GET",
+      "requestBody": null,
+      "parametersPath": {
+        "businessAttributeValueId": 6
+      },
+      "parametersQuery": {
+        "fields": "str-2jTVHJ63BFCX5"
+      },
+      "responseCode": 200,
+      "expectedObjects": {
+        "businessAttributeValueId": 2,
+        "msgPackageId": 53,
+        "formatName": "Наименование формата",
+        "formatBusinessAttributeId": 39,
+        "value": "Значение"
+      },
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/BusinessAttributeValue/{businessAttributeValueId}",
+      "methodType": "PUT",
+      "requestBody": {
+        "businessAttributeValueId": 14,
+        "msgPackageId": 33,
+        "formatName": "Наименование формата",
+        "formatBusinessAttributeId": 86,
+        "value": "Значение"
+      },
+      "parametersPath": {
+        "businessAttributeValueId": 60
+      },
+      "parametersQuery": {},
+      "responseCode": 200,
+      "expectedObjects": {
+        "businessAttributeValueId": 36,
+        "msgPackageId": 78,
+        "formatName": "Наименование формата",
+        "formatBusinessAttributeId": 4,
+        "value": "Значение"
+      },
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/BusinessAttributeValue/{businessAttributeValueId}",
+      "methodType": "DELETE",
+      "requestBody": null,
+      "parametersPath": {
+        "businessAttributeValueId": 40
+      },
+      "parametersQuery": {},
+      "responseCode": 200,
+      "expectedObjects": null,
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/BusinessAttributeValues",
+      "methodType": "GET",
+      "requestBody": null,
+      "parametersPath": {},
+      "parametersQuery": {
+        "businessAttributeValueId": 95,
+        "size": 88,
+        "msgPackageId": 42,
+        "formatName": "str-Fdc5PQHzY",
+        "formatBusinessAttributeId": 15,
+        "page": 77,
+        "sort": [
+          "str-Krc9nYQo",
+          "str-YHjizvS"
+        ],
+        "fields": "str-krj7GbYu",
+        "value": "str-EBS4ANpobbXC"
+      },
+      "responseCode": 200,
+      "expectedObjects": {
+        "number": 73,
+        "last": true,
+        "numberOfElements": 26,
+        "size": 84,
+        "totalPages": 83,
+        "pageable": {
+          "paged": true,
+          "pageNumber": 3,
+          "offset": 18,
+          "pageSize": 54,
+          "unpaged": false,
+          "sort": {
+            "unsorted": false,
+            "sorted": true,
+            "empty": true
+          }
+        },
+        "sort": {
+          "unsorted": false,
+          "sorted": false,
+          "empty": false
+        },
+        "content": [
+          {
+            "businessAttributeValueId": 19,
+            "msgPackageId": 52,
+            "formatName": "Наименование формата",
+            "formatBusinessAttributeId": 87,
+            "value": "Значение"
+          },
+          {
+            "businessAttributeValueId": 27,
+            "msgPackageId": 57,
+            "formatName": "Наименование формата",
+            "formatBusinessAttributeId": 40,
+            "value": "Значение"
+          }
+        ],
+        "first": false,
+        "empty": false,
+        "totalElements": 98
+      },
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/permission/checkobjectrights/v1/{objectSysName}",
+      "methodType": "GET",
+      "requestBody": null,
+      "parametersPath": {
+        "objectSysName": "str-1tV3X6n5AwpYK"
+      },
+      "parametersQuery": {},
+      "responseCode": 200,
+      "expectedObjects": "object",
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/healthCheck",
+      "methodType": "GET",
+      "requestBody": null,
+      "parametersPath": {},
+      "parametersQuery": {},
+      "responseCode": 200,
+      "expectedObjects": {
+        "currentDbUrl": "str-tg2aR3NV",
+        "currentDbUser": "str-cBDVwQ6v440Ul",
+        "currentAuthAddress": "str--EAh39gD-",
+        "configKafkaServers": "str-kE2aL",
+        "configAuthAddress": "str-2huB8U0hUlUz",
+        "currentKafkaServers": "str-yBILKLmSdD",
+        "configDbUser": "str-5sWpXyY",
+        "configDbUrl": "str-3mdDRMp3e"
+      },
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/cache/v1",
+      "methodType": "GET",
+      "requestBody": null,
+      "parametersPath": {},
+      "parametersQuery": {},
+      "responseCode": 200,
+      "expectedObjects": {
+        "statusCodeValue": 80,
+        "body": "object",
+        "statusCode": "EXPECTATION_FAILED"
+      },
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/cache/v1/{cache}",
+      "methodType": "DELETE",
+      "requestBody": null,
+      "parametersPath": {
+        "cache": "str-Fu-fzA"
+      },
+      "parametersQuery": {},
+      "responseCode": 200,
+      "expectedObjects": {
+        "statusCodeValue": 52,
+        "body": "object",
+        "statusCode": "NO_CONTENT"
+      },
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/FormatBusinessAttribute",
+      "methodType": "POST",
+      "requestBody": {
+        "formatName": "Наименование формата",
+        "attributeName": "Наименование бизнес-атрибута"
+      },
+      "parametersPath": {},
+      "parametersQuery": {},
+      "responseCode": 200,
+      "expectedObjects": {
+        "formatName": "Наименование формата",
+        "attributeName": "Наименование бизнес-атрибута",
+        "formatBusinessAttributeId": 79
+      },
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/FormatBusinessAttribute/{formatBusinessAttributeId}",
+      "methodType": "GET",
+      "requestBody": null,
+      "parametersPath": {
+        "formatBusinessAttributeId": 67
+      },
+      "parametersQuery": {
+        "fields": "str-Ep1jN95tHM2lt"
+      },
+      "responseCode": 200,
+      "expectedObjects": {
+        "formatName": "Наименование формата",
+        "attributeName": "Наименование бизнес-атрибута",
+        "formatBusinessAttributeId": 20
+      },
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/FormatBusinessAttribute/{formatBusinessAttributeId}",
+      "methodType": "PUT",
+      "requestBody": {
+        "formatName": "Наименование формата",
+        "attributeName": "Наименование бизнес-атрибута",
+        "formatBusinessAttributeId": 66
+      },
+      "parametersPath": {
+        "formatBusinessAttributeId": 39
+      },
+      "parametersQuery": {},
+      "responseCode": 200,
+      "expectedObjects": {
+        "formatName": "Наименование формата",
+        "attributeName": "Наименование бизнес-атрибута",
+        "formatBusinessAttributeId": 51
+      },
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/FormatBusinessAttribute/{formatBusinessAttributeId}",
+      "methodType": "DELETE",
+      "requestBody": null,
+      "parametersPath": {
+        "formatBusinessAttributeId": 92
+      },
+      "parametersQuery": {},
+      "responseCode": 200,
+      "expectedObjects": null,
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/FormatBusinessAttributes",
+      "methodType": "GET",
+      "requestBody": null,
+      "parametersPath": {},
+      "parametersQuery": {
+        "size": 94,
+        "formatName": "str-KPbEnXZlqoDE",
+        "attributeName": "str-owXE5C",
+        "formatBusinessAttributeId": 14,
+        "page": 32,
+        "sort": [
+          "str-pnEOSDEp",
+          "str-qXG77-Fde-4"
+        ],
+        "fields": "str-IKqpV1rW"
+      },
+      "responseCode": 200,
+      "expectedObjects": {
+        "number": 74,
+        "last": false,
+        "numberOfElements": 89,
+        "size": 40,
+        "totalPages": 26,
+        "pageable": {
+          "paged": true,
+          "pageNumber": 98,
+          "offset": 86,
+          "pageSize": 21,
+          "unpaged": true,
+          "sort": {
+            "unsorted": true,
+            "sorted": true,
+            "empty": true
+          }
+        },
+        "sort": {
+          "unsorted": false,
+          "sorted": false,
+          "empty": false
+        },
+        "content": [
+          {
+            "formatName": "Наименование формата",
+            "attributeName": "Наименование бизнес-атрибута",
+            "formatBusinessAttributeId": 13
+          },
+          {
+            "formatName": "Наименование формата",
+            "attributeName": "Наименование бизнес-атрибута",
+            "formatBusinessAttributeId": 31
+          }
+        ],
+        "first": false,
+        "empty": false,
+        "totalElements": 57
+      },
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/Msg/v1",
+      "methodType": "POST",
+      "requestBody": {
+        "msgFormatId": 4,
+        "number": "Номер",
+        "messageBody": "Текст сообщения",
+        "messageType": "Тип сообщения",
+        "receiver": "Адресат",
+        "sender": "Отправитель/Получатель",
+        "msgPackageId": 95,
+        "formatName": "Наименование формата",
+        "inDatetime": "date-time",
+        "formatVersion": "Версия формата",
+        "direction": 41,
+        "status": 12
+      },
+      "parametersPath": {},
+      "parametersQuery": {},
+      "responseCode": 200,
+      "expectedObjects": {
+        "messageBody": "str-LUwS0Xce",
+        "receiver": "str-9rPqUG",
+        "msgPackageId": 77,
+        "formatName": "str-YA7X6aIoU97zrJ",
+        "msgId": 56,
+        "inDatetime": "yyyy-MM-dd\u0027T\u0027HH:mm:ss.SSSZ",
+        "msgFormatId": 7,
+        "number": "str-YIa9qo3u",
+        "messageType": "str-V3ghCG-dN",
+        "sender": "str-3njfKdFyD",
+        "formatVersion": "str-ZzLKe6onqU",
+        "direction": 82,
+        "status": 27
+      },
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/Msg/v1/{msgId}",
+      "methodType": "GET",
+      "requestBody": null,
+      "parametersPath": {
+        "msgId": 43
+      },
+      "parametersQuery": {
+        "fields": "str--LQnS5"
+      },
+      "responseCode": 200,
+      "expectedObjects": {
+        "messageBody": "str-mGpjQXfbVvkGF",
+        "receiver": "str-cqBmk",
+        "msgPackageId": 85,
+        "formatName": "str-KpCLCB",
+        "msgId": 18,
+        "inDatetime": "yyyy-MM-dd\u0027T\u0027HH:mm:ss.SSSZ",
+        "msgFormatId": 99,
+        "number": "str-7CkY76rakU47",
+        "messageType": "str-yrx6l",
+        "sender": "str-i6xFLw",
+        "formatVersion": "str-AESMXuxFy5FV",
+        "direction": 20,
+        "status": 29
+      },
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/Msg/v1/{msgId}",
+      "methodType": "PUT",
+      "requestBody": {
+        "messageBody": "str-ntbdATG48UC4Re",
+        "receiver": "str-x6Qz5FQ97vUw",
+        "msgPackageId": 6,
+        "formatName": "str-qiWfQsOyYkzqOY",
+        "msgId": 17,
+        "inDatetime": "yyyy-MM-dd\u0027T\u0027HH:mm:ss.SSSZ",
+        "msgFormatId": 4,
+        "number": "str-qMYSKPJtBHiuK9",
+        "messageType": "str-MExP5aPCCR",
+        "sender": "str-DRG-N9-gP8iet",
+        "formatVersion": "str-qP0iu-hohDwSfu",
+        "direction": 62,
+        "status": 85
+      },
+      "parametersPath": {
+        "msgId": 54
+      },
+      "parametersQuery": {},
+      "responseCode": 200,
+      "expectedObjects": {
+        "messageBody": "str-RT3pkrAWlujhn",
+        "receiver": "str-KQ7C-",
+        "msgPackageId": 66,
+        "formatName": "str-0erVYOrV",
+        "msgId": 11,
+        "inDatetime": "yyyy-MM-dd\u0027T\u0027HH:mm:ss.SSSZ",
+        "msgFormatId": 52,
+        "number": "str-EEKzCaJLH3B0",
+        "messageType": "str-1gwLh09TYToSrt",
+        "sender": "str-Li1S2zO3cEjtfd",
+        "formatVersion": "str-EjnEMNFJ1q9lt",
+        "direction": 70,
+        "status": 56
+      },
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/Msg/v1/{msgId}",
+      "methodType": "DELETE",
+      "requestBody": null,
+      "parametersPath": {
+        "msgId": 52
+      },
+      "parametersQuery": {},
+      "responseCode": 200,
+      "expectedObjects": null,
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/Msgs/v1",
+      "methodType": "GET",
+      "requestBody": null,
+      "parametersPath": {},
+      "parametersQuery": {
+        "messageBody": "str-qdx92hBj0CE",
+        "receiver": "str-zqT1n",
+        "msgPackageId": 55,
+        "formatName": "str-WYUvVs4IgtH",
+        "msgId": 33,
+        "inDatetime": {
+          "dateTime": {
+            "date": {
+              "year": 2020,
+              "month": 5,
+              "day": 24
+            },
+            "time": {
+              "hour": 4,
+              "minute": 15,
+              "second": 38,
+              "nano": 526000000
+            }
+          },
+          "offset": {
+            "totalSeconds": 10800
+          },
+          "zone": {
+            "id": "Europe/Moscow"
+          }
+        },
+        "sort": [
+          "str-QkOOeU",
+          "str-8gZCMxuMDF"
+        ],
+        "msgFormatId": 73,
+        "number": "str-YB-Xhu",
+        "messageType": "str-GKqpInHPH7SF",
+        "size": 88,
+        "sender": "str-ZS-jTxYC",
+        "page": 55,
+        "fields": "str-JQwyvEvTIyZd-",
+        "formatVersion": "str-HMHTmI49k",
+        "direction": 58,
+        "status": 51
+      },
+      "responseCode": 200,
+      "expectedObjects": {
+        "number": 74,
+        "last": true,
+        "numberOfElements": 56,
+        "size": 5,
+        "totalPages": 73,
+        "pageable": {
+          "paged": false,
+          "pageNumber": 1,
+          "offset": 8,
+          "pageSize": 1,
+          "unpaged": false,
+          "sort": {
+            "unsorted": true,
+            "sorted": true,
+            "empty": false
+          }
+        },
+        "sort": {
+          "unsorted": false,
+          "sorted": false,
+          "empty": true
+        },
+        "content": [
+          {
+            "messageBody": "str-6mGsQPm4ryaCn",
+            "receiver": "str--hHl7AnqsV",
+            "msgPackageId": 27,
+            "formatName": "str-sOlnfHntd-aic0",
+            "msgId": 30,
+            "inDatetime": "yyyy-MM-dd\u0027T\u0027HH:mm:ss.SSSZ",
+            "msgFormatId": 54,
+            "number": "str-5YTCRKu",
+            "messageType": "str-3WkFmeoS",
+            "sender": "str-KK5fpb4geI",
+            "formatVersion": "str-EGe7x2tHpK7du",
+            "direction": 91,
+            "status": 31
+          },
+          {
+            "messageBody": "str-Yh63g",
+            "receiver": "str-F7aVu2cwS",
+            "msgPackageId": 80,
+            "formatName": "str-4JRRB9gN",
+            "msgId": 96,
+            "inDatetime": "yyyy-MM-dd\u0027T\u0027HH:mm:ss.SSSZ",
+            "msgFormatId": 91,
+            "number": "str-qnQbwRxb",
+            "messageType": "str-zY6tyRb7kQJy",
+            "sender": "str-gFHLSF",
+            "formatVersion": "str-aBxVop21kPv",
+            "direction": 31,
+            "status": 87
+          }
+        ],
+        "first": true,
+        "empty": true,
+        "totalElements": 73
+      },
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/FindLstBroadcastingSheetByParam",
+      "methodType": "GET",
+      "requestBody": null,
+      "parametersPath": {},
+      "parametersQuery": {
+        "size": 19,
+        "dateStart": "date-time",
+        "sourceType": 85,
+        "page": 32,
+        "sort": [
+          "str-RtpZaOQ7j",
+          "str-c9L1fpT96mPPF"
+        ],
+        "dateEnd": "date-time",
+        "fields": "str-wTawRw64lJZ2X"
+      },
+      "responseCode": 200,
+      "expectedObjects": {
+        "number": 70,
+        "last": true,
+        "numberOfElements": 12,
+        "size": 21,
+        "totalPages": 69,
+        "pageable": {
+          "paged": true,
+          "pageNumber": 74,
+          "offset": 43,
+          "pageSize": 84,
+          "unpaged": false,
+          "sort": {
+            "unsorted": false,
+            "sorted": true,
+            "empty": false
+          }
+        },
+        "sort": {
+          "unsorted": false,
+          "sorted": false,
+          "empty": false
+        },
+        "content": [
+          {
+            "msgPackageId": 94
+          },
+          {
+            "msgPackageId": 33
+          }
+        ],
+        "first": false,
+        "empty": false,
+        "totalElements": 55
+      },
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/MsgPackage/v1",
+      "methodType": "POST",
+      "requestBody": {
+        "fileName": "Наименование файла",
+        "messageCount": 46,
+        "msgPackageType": "Перечисляемый тип пакета. Возможные значения: Пакет, Сообщение",
+        "msgBodyCode": 30,
+        "destination": "Адресат",
+        "formatName": "Наименование формата",
+        "branchName": "Полное наименование филиала",
+        "childCount": 27,
+        "source": "Тело пакета (содержимое), должно передаваться в формате base64",
+        "createAt": "date-time",
+        "loadRuleName": "Наименование правила загрузки",
+        "msgFormatId": 68,
+        "humanTaskId": "Идентификатор задачи пользователя",
+        "processId": "Идентификатор последнего запущенного процесса по пакету",
+        "sender": "Отправитель/Получатель",
+        "sourceType": 76,
+        "formatVersion": "Версия формата",
+        "parentMsgPackageId": 14,
+        "direction": 74,
+        "status": 98
+      },
+      "parametersPath": {},
+      "parametersQuery": {},
+      "responseCode": 200,
+      "expectedObjects": {
+        "fileName": "str-fo4rfz3o",
+        "messageCount": 42,
+        "msgPackageType": "str-J1aTe",
+        "msgBodyCode": 95,
+        "msgPackageId": 60,
+        "destination": "str-Adp3GNwFqI",
+        "formatName": "str-DBnJzp0",
+        "branchName": "str-fBXl-j0TbDo",
+        "childCount": 89,
+        "source": "str-OA5F07u",
+        "createAt": "yyyy-MM-dd\u0027T\u0027HH:mm:ss.SSSZ",
+        "loadRuleName": "str-lzYZULrPpUyDg",
+        "msgFormatId": 85,
+        "humanTaskId": "str-cam1Unm",
+        "processId": "str-mVEl9R1h7xGZ",
+        "sender": "str-iBuDWMjE1EWF",
+        "sourceType": 62,
+        "formatVersion": "str-HvgyXF7N0",
+        "parentMsgPackageId": 7,
+        "direction": 49,
+        "status": 60
+      },
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/MsgPackage/v1/{msgPackageId}",
+      "methodType": "GET",
+      "requestBody": null,
+      "parametersPath": {
+        "msgPackageId": 23
+      },
+      "parametersQuery": {
+        "fields": "str-GxLxrDPLgko"
+      },
+      "responseCode": 200,
+      "expectedObjects": {
+        "fileName": "str-068nwej",
+        "messageCount": 9,
+        "msgPackageType": "str-0u98xS",
+        "msgBodyCode": 21,
+        "msgPackageId": 81,
+        "destination": "str-wUh8yH",
+        "formatName": "str-IN8D6l",
+        "branchName": "str-T2ZF284",
+        "childCount": 99,
+        "source": "str-Avabpv-Id-w",
+        "createAt": "yyyy-MM-dd\u0027T\u0027HH:mm:ss.SSSZ",
+        "loadRuleName": "str-Jyl6Md9Z8",
+        "msgFormatId": 47,
+        "humanTaskId": "str-5z9r4DxQy",
+        "processId": "str-gq3oeaqN",
+        "sender": "str-waITvAo",
+        "sourceType": 7,
+        "formatVersion": "str-qcEcqc",
+        "parentMsgPackageId": 24,
+        "direction": 35,
+        "status": 40
+      },
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/MsgPackage/v1/{msgPackageId}",
+      "methodType": "PUT",
+      "requestBody": {
+        "fileName": "str-j7jg32K",
+        "messageCount": 29,
+        "msgPackageType": "str-ZApaT",
+        "msgBodyCode": 11,
+        "msgPackageId": 92,
+        "destination": "str-b8SgIBIir",
+        "formatName": "str-RwNsTWEFN",
+        "branchName": "str-i0VM8n5qQJK",
+        "childCount": 46,
+        "source": "str-8yZOf0grytSY",
+        "createAt": "yyyy-MM-dd\u0027T\u0027HH:mm:ss.SSSZ",
+        "loadRuleName": "str-BrttS5",
+        "msgFormatId": 28,
+        "humanTaskId": "str-nlNFcWIm9j",
+        "processId": "str-877c94N",
+        "sender": "str-AoP8pmUr2y9q",
+        "sourceType": 54,
+        "formatVersion": "str-aNCyty4VDA",
+        "parentMsgPackageId": 70,
+        "direction": 6,
+        "status": 29
+      },
+      "parametersPath": {
+        "msgPackageId": 72
+      },
+      "parametersQuery": {},
+      "responseCode": 200,
+      "expectedObjects": {
+        "fileName": "str-MBtiRh2TevL",
+        "messageCount": 75,
+        "msgPackageType": "str-Bt1fVoX0XM",
+        "msgBodyCode": 32,
+        "msgPackageId": 13,
+        "destination": "str-MtkpBEkB3rRJST",
+        "formatName": "str-JyHesG35pi0FXX",
+        "branchName": "str-1rL-tQGs9",
+        "childCount": 42,
+        "source": "str-pnCOI",
+        "createAt": "yyyy-MM-dd\u0027T\u0027HH:mm:ss.SSSZ",
+        "loadRuleName": "str-pTGLJATAxARbC",
+        "msgFormatId": 77,
+        "humanTaskId": "str-Z9J6Q",
+        "processId": "str--BHpm752F20TW",
+        "sender": "str-G8FNmT",
+        "sourceType": 28,
+        "formatVersion": "str-0QNmbyk",
+        "parentMsgPackageId": 42,
+        "direction": 21,
+        "status": 17
+      },
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/MsgPackage/v1/{msgPackageId}",
+      "methodType": "DELETE",
+      "requestBody": null,
+      "parametersPath": {
+        "msgPackageId": 97
+      },
+      "parametersQuery": {},
+      "responseCode": 200,
+      "expectedObjects": null,
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/MsgPackageSearchBody",
+      "methodType": "GET",
+      "requestBody": null,
+      "parametersPath": {},
+      "parametersQuery": {
+        "size": 33,
+        "createAtFrom": "date-time",
+        "formatName": "str-RX1rDY",
+        "page": 58,
+        "sort": [
+          "str-ri7M1lZJKBxgeE",
+          "str-rTLYzGfmtEu"
+        ],
+        "fields": "str-s5y9nXEDZnP",
+        "maskSource": "str-zgkrNMQsCX89x",
+        "createAtTo": "date-time"
+      },
+      "responseCode": 200,
+      "expectedObjects": {
+        "number": 89,
+        "last": false,
+        "numberOfElements": 67,
+        "size": 53,
+        "totalPages": 46,
+        "pageable": {
+          "paged": false,
+          "pageNumber": 72,
+          "offset": 67,
+          "pageSize": 53,
+          "unpaged": false,
+          "sort": {
+            "unsorted": false,
+            "sorted": false,
+            "empty": true
+          }
+        },
+        "sort": {
+          "unsorted": true,
+          "sorted": true,
+          "empty": false
+        },
+        "content": [
+          {
+            "fileName": "str-z-7dp",
+            "messageCount": 63,
+            "msgPackageType": "str-auBhupbKY2mm",
+            "msgBodyCode": 41,
+            "msgPackageId": 38,
+            "destination": "str-adVdF1mCBo",
+            "formatName": "str-wCL0B-nD8e",
+            "branchName": "str-Xf2rU70K3",
+            "childCount": 93,
+            "source": "str-06unaz",
+            "createAt": "yyyy-MM-dd\u0027T\u0027HH:mm:ss.SSSZ",
+            "loadRuleName": "str-TQWms5F0RRPh",
+            "msgFormatId": 92,
+            "humanTaskId": "str-cRyD4s3tNF1",
+            "processId": "str-iG1LLpePI71mmv",
+            "sender": "str-Imtr9Clf7wFeQ",
+            "sourceType": 22,
+            "formatVersion": "str-w0Bdkr",
+            "parentMsgPackageId": 6,
+            "direction": 20,
+            "status": 49
+          },
+          {
+            "fileName": "str-hIvT5t",
+            "messageCount": 72,
+            "msgPackageType": "str-5JTKkG",
+            "msgBodyCode": 38,
+            "msgPackageId": 53,
+            "destination": "str-szlAwFgPyJA58",
+            "formatName": "str-ZwiSonMGI2h",
+            "branchName": "str-psjO4EhI",
+            "childCount": 59,
+            "source": "str-LKR7unjDwwGsHA",
+            "createAt": "yyyy-MM-dd\u0027T\u0027HH:mm:ss.SSSZ",
+            "loadRuleName": "str-WGK-by5GmvjuB0",
+            "msgFormatId": 83,
+            "humanTaskId": "str-inBWU",
+            "processId": "str-H12z8fDg",
+            "sender": "str-D5reC3vujMQPb",
+            "sourceType": 89,
+            "formatVersion": "str-9yOavPSkQAE",
+            "parentMsgPackageId": 59,
+            "direction": 74,
+            "status": 4
+          }
+        ],
+        "first": true,
+        "empty": false,
+        "totalElements": 75
+      },
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/MsgPackages/v1",
+      "methodType": "GET",
+      "requestBody": null,
+      "parametersPath": {},
+      "parametersQuery": {
+        "fileName": "str-dmghQkeGzF3",
+        "messageCount": 87,
+        "msgPackageType": "str-tedQuNYD",
+        "msgPackageId": 34,
+        "destination": "str-GzRTV",
+        "source": "str-5aVZJMnmCT-NOE",
+        "createAt": {
+          "dateTime": {
+            "date": {
+              "year": 2018,
+              "month": 1,
+              "day": 19
+            },
+            "time": {
+              "hour": 1,
+              "minute": 58,
+              "second": 54,
+              "nano": 618000000
+            }
+          },
+          "offset": {
+            "totalSeconds": 10800
+          },
+          "zone": {
+            "id": "Europe/Moscow"
+          }
+        },
+        "msgFormatId": 24,
+        "processId": "str-CxE3zGr",
+        "formatVersion": "str-XoYShRAUkj",
+        "direction": 30,
+        "msgBodyCode": 33,
+        "formatName": "str-DDwdQwe",
+        "branchName": "str-zOPXXnVy7o3",
+        "childCount": 6,
+        "sort": [
+          "str-1trJ73",
+          "str-TPDZL6kvpc"
+        ],
+        "loadRuleName": "str-r70amm",
+        "humanTaskId": "str-nbhmC8pYv",
+        "size": 54,
+        "sender": "str-bYpNnoIfEy3x",
+        "sourceType": 58,
+        "page": 26,
+        "fields": "str-69EdhUWKgWw8D",
+        "parentMsgPackageId": 48,
+        "status": 22
+      },
+      "responseCode": 200,
+      "expectedObjects": {
+        "number": 83,
+        "last": false,
+        "numberOfElements": 78,
+        "size": 86,
+        "totalPages": 11,
+        "pageable": {
+          "paged": false,
+          "pageNumber": 45,
+          "offset": 84,
+          "pageSize": 47,
+          "unpaged": true,
+          "sort": {
+            "unsorted": false,
+            "sorted": true,
+            "empty": false
+          }
+        },
+        "sort": {
+          "unsorted": false,
+          "sorted": true,
+          "empty": false
+        },
+        "content": [
+          {
+            "fileName": "str-Lb2DxxHJ",
+            "messageCount": 16,
+            "msgPackageType": "str-hWoBL2gYcy0U0",
+            "msgBodyCode": 48,
+            "msgPackageId": 39,
+            "destination": "str-g1ymzHKL-10",
+            "formatName": "str-eezy078uFHU",
+            "branchName": "str-Fb90404vC",
+            "childCount": 67,
+            "source": "str-fln-j",
+            "createAt": "yyyy-MM-dd\u0027T\u0027HH:mm:ss.SSSZ",
+            "loadRuleName": "str-fj9QVYR7UwfRzR",
+            "msgFormatId": 1,
+            "humanTaskId": "str-cRhV-",
+            "processId": "str-DjiCKf6s",
+            "sender": "str-g1z3FHBH5",
+            "sourceType": 74,
+            "formatVersion": "str-Es9kb-Y",
+            "parentMsgPackageId": 52,
+            "direction": 50,
+            "status": 66
+          },
+          {
+            "fileName": "str-ILrzzVXI",
+            "messageCount": 2,
+            "msgPackageType": "str-kBaYJyNBp4",
+            "msgBodyCode": 78,
+            "msgPackageId": 85,
+            "destination": "str-kHeNfir1ENM",
+            "formatName": "str-UiEjJZ",
+            "branchName": "str-0-UPGeKnKQ",
+            "childCount": 76,
+            "source": "str-d6Aoq1pB1DpVs",
+            "createAt": "yyyy-MM-dd\u0027T\u0027HH:mm:ss.SSSZ",
+            "loadRuleName": "str-ldf2ZUMf7LbLJR",
+            "msgFormatId": 55,
+            "humanTaskId": "str-Yliun",
+            "processId": "str-qBtv6y",
+            "sender": "str-9GcIfFYMQe",
+            "sourceType": 81,
+            "formatVersion": "str-DBwmut8o",
+            "parentMsgPackageId": 22,
+            "direction": 56,
+            "status": 93
+          }
+        ],
+        "first": false,
+        "empty": true,
+        "totalElements": 1
+      },
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/StartLoadProcess/v1/{msgPackageId}",
+      "methodType": "POST",
+      "requestBody": null,
+      "parametersPath": {
+        "msgPackageId": 4
+      },
+      "parametersQuery": {},
+      "responseCode": 200,
+      "expectedObjects": null,
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/dq-message-management/qmmMsgPackage/v1/{msgPackageId}",
+      "methodType": "GET",
+      "requestBody": null,
+      "parametersPath": {
+        "msgPackageId": 72
+      },
+      "parametersQuery": {
+        "fields": "str-SQFZ3wL"
+      },
+      "responseCode": 200,
+      "expectedObjects": {
+        "source": "Исходные данные. Текст пакета закодированный в base64"
+      },
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/MsgPackageMovementHistory",
+      "methodType": "POST",
+      "requestBody": {
+        "msgPackageId": 97,
+        "ruleName": "Наименование правила",
+        "channelType": "Вид канала обмена",
+        "comment": "Описание",
+        "value": "Адрес источника данных/доставки",
+        "createAt": "date-time",
+        "direction": 26
+      },
+      "parametersPath": {},
+      "parametersQuery": {},
+      "responseCode": 200,
+      "expectedObjects": {
+        "msgPackageId": 85,
+        "ruleName": "Наименование правила",
+        "channelType": "Вид канала обмена",
+        "comment": "Описание",
+        "msgPackageMovementHistoryId": 93,
+        "value": "Адрес источника данных/доставки",
+        "createAt": "date-time",
+        "direction": 81
+      },
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/MsgPackageMovementHistory/{msgPackageMovementHistoryId}",
+      "methodType": "GET",
+      "requestBody": null,
+      "parametersPath": {
+        "msgPackageMovementHistoryId": 14
+      },
+      "parametersQuery": {
+        "fields": "str-cWJwFLj"
+      },
+      "responseCode": 200,
+      "expectedObjects": {
+        "msgPackageId": 81,
+        "ruleName": "Наименование правила",
+        "channelType": "Вид канала обмена",
+        "comment": "Описание",
+        "msgPackageMovementHistoryId": 49,
+        "value": "Адрес источника данных/доставки",
+        "createAt": "date-time",
+        "direction": 44
+      },
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/MsgPackageMovementHistory/{msgPackageMovementHistoryId}",
+      "methodType": "DELETE",
+      "requestBody": null,
+      "parametersPath": {
+        "msgPackageMovementHistoryId": 35
+      },
+      "parametersQuery": {},
+      "responseCode": 200,
+      "expectedObjects": null,
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/MsgPackageMovementHistorys",
+      "methodType": "GET",
+      "requestBody": null,
+      "parametersPath": {},
+      "parametersQuery": {
+        "size": 79,
+        "msgPackageId": 22,
+        "ruleName": "str-lCnF6V",
+        "channelType": "str-bQKAfuqS",
+        "comment": "str-Ei0NjHydH",
+        "msgPackageMovementHistoryId": 28,
+        "page": 89,
+        "sort": [
+          "str-ZA8d5f",
+          "str-xn4Jtn92jeBJ"
+        ],
+        "fields": "str-yU0wh4qraZsCQ",
+        "value": "str-CIIYQFwbi",
+        "createAt": {
+          "dateTime": {
+            "date": {
+              "year": 2020,
+              "month": 1,
+              "day": 12
+            },
+            "time": {
+              "hour": 23,
+              "minute": 35,
+              "second": 16,
+              "nano": 885000000
+            }
+          },
+          "offset": {
+            "totalSeconds": 10800
+          },
+          "zone": {
+            "id": "Europe/Moscow"
+          }
+        },
+        "direction": 18
+      },
+      "responseCode": 200,
+      "expectedObjects": {
+        "number": 15,
+        "last": false,
+        "numberOfElements": 39,
+        "size": 6,
+        "totalPages": 10,
+        "pageable": {
+          "paged": false,
+          "pageNumber": 81,
+          "offset": 21,
+          "pageSize": 29,
+          "unpaged": true,
+          "sort": {
+            "unsorted": false,
+            "sorted": false,
+            "empty": true
+          }
+        },
+        "sort": {
+          "unsorted": false,
+          "sorted": false,
+          "empty": true
+        },
+        "content": [
+          {
+            "msgPackageId": 25,
+            "ruleName": "Наименование правила",
+            "channelType": "Вид канала обмена",
+            "comment": "Описание",
+            "msgPackageMovementHistoryId": 42,
+            "value": "Адрес источника данных/доставки",
+            "createAt": "date-time",
+            "direction": 84
+          },
+          {
+            "msgPackageId": 6,
+            "ruleName": "Наименование правила",
+            "channelType": "Вид канала обмена",
+            "comment": "Описание",
+            "msgPackageMovementHistoryId": 29,
+            "value": "Адрес источника данных/доставки",
+            "createAt": "date-time",
+            "direction": 49
+          }
+        ],
+        "first": true,
+        "empty": false,
+        "totalElements": 44
+      },
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/MsgPackageRelations",
+      "methodType": "POST",
+      "requestBody": {
+        "parentMsgPackageRelationId": 44,
+        "pbcProfileId": 86,
+        "endDate": "date-time",
+        "directionKind": 75,
+        "msgPackageId": 76,
+        "externalSystemId": 38,
+        "description": "Описание связи пакета сообщений",
+        "externalObjectId": "Внешний идентификатор бизнес-объекта во внешней системе",
+        "boProfileId": 59,
+        "startDate": "date-time"
+      },
+      "parametersPath": {},
+      "parametersQuery": {},
+      "responseCode": 200,
+      "expectedObjects": {
+        "parentMsgPackageRelationId": 55,
+        "pbcProfileId": 5,
+        "endDate": "yyyy-MM-dd",
+        "directionKind": 5,
+        "msgPackageId": 61,
+        "externalSystemId": 70,
+        "msgPackageRelationId": 15,
+        "description": "str-EZgI-VZ7ZFgQ",
+        "externalObjectId": "str-BvdpN2vlA",
+        "boProfileId": 42,
+        "startDate": "yyyy-MM-dd"
+      },
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/MsgPackageRelations/{msgPackageRelationId}",
+      "methodType": "GET",
+      "requestBody": null,
+      "parametersPath": {
+        "msgPackageRelationId": 72
+      },
+      "parametersQuery": {
+        "fields": "str-PggE6AzGo1S"
+      },
+      "responseCode": 200,
+      "expectedObjects": {
+        "parentMsgPackageRelationId": 21,
+        "pbcProfileId": 22,
+        "endDate": "yyyy-MM-dd",
+        "directionKind": 1,
+        "msgPackageId": 98,
+        "externalSystemId": 23,
+        "msgPackageRelationId": 1,
+        "description": "str-S03qiEKWf0",
+        "externalObjectId": "str-8jhsIQSLWtUXY",
+        "boProfileId": 61,
+        "startDate": "yyyy-MM-dd"
+      },
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/MsgPackageRelations/{msgPackageRelationId}",
+      "methodType": "PUT",
+      "requestBody": {
+        "parentMsgPackageRelationId": 41,
+        "pbcProfileId": 84,
+        "endDate": "yyyy-MM-dd",
+        "directionKind": 80,
+        "msgPackageId": 59,
+        "externalSystemId": 60,
+        "msgPackageRelationId": 61,
+        "description": "str-9GDLvgTS0n3xuV",
+        "externalObjectId": "str-pAfvJc5",
+        "boProfileId": 95,
+        "startDate": "yyyy-MM-dd"
+      },
+      "parametersPath": {
+        "msgPackageRelationId": 13
+      },
+      "parametersQuery": {},
+      "responseCode": 200,
+      "expectedObjects": {
+        "parentMsgPackageRelationId": 42,
+        "pbcProfileId": 2,
+        "endDate": "yyyy-MM-dd",
+        "directionKind": 27,
+        "msgPackageId": 45,
+        "externalSystemId": 13,
+        "msgPackageRelationId": 13,
+        "description": "str-bQG8Vnl",
+        "externalObjectId": "str-ZV9frAS",
+        "boProfileId": 42,
+        "startDate": "yyyy-MM-dd"
+      },
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/MsgPackageRelations/{msgPackageRelationId}",
+      "methodType": "DELETE",
+      "requestBody": null,
+      "parametersPath": {
+        "msgPackageRelationId": 86
+      },
+      "parametersQuery": {},
+      "responseCode": 200,
+      "expectedObjects": null,
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/MsgPackageRelationss",
+      "methodType": "GET",
+      "requestBody": null,
+      "parametersPath": {},
+      "parametersQuery": {
+        "parentMsgPackageRelationId": 32,
+        "pbcProfileId": 76,
+        "endDate": {
+          "year": 2020,
+          "month": 4,
+          "day": 27
+        },
+        "msgPackageId": 46,
+        "msgPackageRelationId": 34,
+        "description": "str-BZ2gZ1quEPy",
+        "sort": [
+          "str-JKWaeLXbwy6VQs",
+          "str-QBRW0uMQvqqq"
+        ],
+        "externalObjectId": "str-VHZmQZlJPzNMCk",
+        "size": 24,
+        "directionKind": 74,
+        "externalSystemId": 21,
+        "page": 50,
+        "fields": "str-sVk31PB",
+        "boProfileId": 40,
+        "startDate": {
+          "year": 2019,
+          "month": 4,
+          "day": 2
+        }
+      },
+      "responseCode": 200,
+      "expectedObjects": {
+        "number": 60,
+        "last": false,
+        "numberOfElements": 71,
+        "size": 19,
+        "totalPages": 32,
+        "pageable": {
+          "paged": false,
+          "pageNumber": 31,
+          "offset": 26,
+          "pageSize": 62,
+          "unpaged": false,
+          "sort": {
+            "unsorted": false,
+            "sorted": true,
+            "empty": false
+          }
+        },
+        "sort": {
+          "unsorted": false,
+          "sorted": true,
+          "empty": true
+        },
+        "content": [
+          {
+            "parentMsgPackageRelationId": 97,
+            "pbcProfileId": 17,
+            "endDate": "yyyy-MM-dd",
+            "directionKind": 94,
+            "msgPackageId": 83,
+            "externalSystemId": 15,
+            "msgPackageRelationId": 5,
+            "description": "str-7HjHR97bu6f0q",
+            "externalObjectId": "str-LCer6",
+            "boProfileId": 37,
+            "startDate": "yyyy-MM-dd"
+          },
+          {
+            "parentMsgPackageRelationId": 74,
+            "pbcProfileId": 41,
+            "endDate": "yyyy-MM-dd",
+            "directionKind": 18,
+            "msgPackageId": 14,
+            "externalSystemId": 51,
+            "msgPackageRelationId": 92,
+            "description": "str-VFTAhDIZb0v4fM",
+            "externalObjectId": "str-FEaz-jwFEGSmsJ",
+            "boProfileId": 77,
+            "startDate": "yyyy-MM-dd"
+          }
+        ],
+        "first": true,
+        "empty": false,
+        "totalElements": 61
+      },
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/MsgPkgPrtcl/v1",
+      "methodType": "POST",
+      "requestBody": {
+        "msgPackageId": 12,
+        "errorMessage": "Текст сообщения",
+        "errorCode": 53,
+        "messageId": 66,
+        "protocolAt": "date-time"
+      },
+      "parametersPath": {},
+      "parametersQuery": {},
+      "responseCode": 200,
+      "expectedObjects": {
+        "msgPkgPrtclId": 80,
+        "msgPackageId": 87,
+        "errorMessage": "str-EBCek2urbaC",
+        "errorCode": 65,
+        "messageId": 45,
+        "protocolAt": "yyyy-MM-dd\u0027T\u0027HH:mm:ss.SSSZ"
+      },
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/MsgPkgPrtcl/v1/{msgPkgPrtclId}",
+      "methodType": "GET",
+      "requestBody": null,
+      "parametersPath": {
+        "msgPkgPrtclId": 52
+      },
+      "parametersQuery": {
+        "fields": "str-s06tQRA"
+      },
+      "responseCode": 200,
+      "expectedObjects": {
+        "msgPkgPrtclId": 37,
+        "msgPackageId": 84,
+        "errorMessage": "str-dsrN86Hmuh",
+        "errorCode": 80,
+        "messageId": 30,
+        "protocolAt": "yyyy-MM-dd\u0027T\u0027HH:mm:ss.SSSZ"
+      },
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/MsgPkgPrtcl/v1/{msgPkgPrtclId}",
+      "methodType": "PUT",
+      "requestBody": {
+        "msgPkgPrtclId": 47,
+        "msgPackageId": 42,
+        "errorMessage": "str-Hg3-EHXILs",
+        "errorCode": 42,
+        "messageId": 77,
+        "protocolAt": "yyyy-MM-dd\u0027T\u0027HH:mm:ss.SSSZ"
+      },
+      "parametersPath": {
+        "msgPkgPrtclId": 32
+      },
+      "parametersQuery": {},
+      "responseCode": 200,
+      "expectedObjects": {
+        "msgPkgPrtclId": 3,
+        "msgPackageId": 92,
+        "errorMessage": "str-1yqhs7XfuvxSx1",
+        "errorCode": 45,
+        "messageId": 50,
+        "protocolAt": "yyyy-MM-dd\u0027T\u0027HH:mm:ss.SSSZ"
+      },
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/MsgPkgPrtcl/v1/{msgPkgPrtclId}",
+      "methodType": "DELETE",
+      "requestBody": null,
+      "parametersPath": {
+        "msgPkgPrtclId": 75
+      },
+      "parametersQuery": {},
+      "responseCode": 200,
+      "expectedObjects": null,
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/MsgPkgPrtcls/v1",
+      "methodType": "GET",
+      "requestBody": null,
+      "parametersPath": {},
+      "parametersQuery": {
+        "size": 66,
+        "msgPkgPrtclId": 98,
+        "msgPackageId": 37,
+        "errorMessage": "str-IaQOifHnengNFN",
+        "errorCode": 2,
+        "messageId": 48,
+        "protocolAt": {
+          "dateTime": {
+            "date": {
+              "year": 2020,
+              "month": 6,
+              "day": 20
+            },
+            "time": {
+              "hour": 22,
+              "minute": 1,
+              "second": 42,
+              "nano": 724000000
+            }
+          },
+          "offset": {
+            "totalSeconds": 10800
+          },
+          "zone": {
+            "id": "Europe/Moscow"
+          }
+        },
+        "page": 90,
+        "sort": [
+          "str-9VawROyX",
+          "str-96ET93"
+        ],
+        "fields": "str-pFIbCYuu"
+      },
+      "responseCode": 200,
+      "expectedObjects": {
+        "number": 29,
+        "last": true,
+        "numberOfElements": 77,
+        "size": 49,
+        "totalPages": 33,
+        "pageable": {
+          "paged": false,
+          "pageNumber": 25,
+          "offset": 35,
+          "pageSize": 42,
+          "unpaged": false,
+          "sort": {
+            "unsorted": true,
+            "sorted": true,
+            "empty": true
+          }
+        },
+        "sort": {
+          "unsorted": false,
+          "sorted": true,
+          "empty": true
+        },
+        "content": [
+          {
+            "msgPkgPrtclId": 21,
+            "msgPackageId": 71,
+            "errorMessage": "str-hm6kgkJx0s",
+            "errorCode": 6,
+            "messageId": 0,
+            "protocolAt": "yyyy-MM-dd\u0027T\u0027HH:mm:ss.SSSZ"
+          },
+          {
+            "msgPkgPrtclId": 9,
+            "msgPackageId": 2,
+            "errorMessage": "str-mlAO85w8",
+            "errorCode": 83,
+            "messageId": 38,
+            "protocolAt": "yyyy-MM-dd\u0027T\u0027HH:mm:ss.SSSZ"
+          }
+        ],
+        "first": true,
+        "empty": false,
+        "totalElements": 22
+      },
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/actuator/beans",
+      "methodType": "GET",
+      "requestBody": {
+        "additionalProp1": "str-b1NsbT45gVOQ",
+        "additionalProp3": "str--vJY7YP7VxBl",
+        "additionalProp2": "str-M-WpgoF"
+      },
+      "parametersPath": {},
+      "parametersQuery": {},
+      "responseCode": 200,
+      "expectedObjects": "object",
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/actuator/bindings",
+      "methodType": "GET",
+      "requestBody": {
+        "additionalProp1": "str-83Ia0zc",
+        "additionalProp3": "str-ncWjY1n",
+        "additionalProp2": "str-2WeAVe"
+      },
+      "parametersPath": {},
+      "parametersQuery": {},
+      "responseCode": 200,
+      "expectedObjects": "object",
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/actuator/bindings/{name}",
+      "methodType": "GET",
+      "requestBody": {
+        "additionalProp1": "str-fcLjS",
+        "additionalProp3": "str-rRSn2Fadm",
+        "additionalProp2": "str-DBSbwROztK"
+      },
+      "parametersPath": {},
+      "parametersQuery": {},
+      "responseCode": 200,
+      "expectedObjects": "object",
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/actuator/bindings/{name}",
+      "methodType": "POST",
+      "requestBody": {
+        "additionalProp1": "str-XYAkAtOhF",
+        "additionalProp3": "str-dKgPnWCq88sK",
+        "additionalProp2": "str-YuNd85uygX"
+      },
+      "parametersPath": {},
+      "parametersQuery": {},
+      "responseCode": 200,
+      "expectedObjects": "object",
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/actuator/caches",
+      "methodType": "GET",
+      "requestBody": {
+        "additionalProp1": "str-D9Nfhf7r645",
+        "additionalProp3": "str-4ByBM4r3R50g",
+        "additionalProp2": "str-lYU9Jc0YNzC"
+      },
+      "parametersPath": {},
+      "parametersQuery": {},
+      "responseCode": 200,
+      "expectedObjects": "object",
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/actuator/caches",
+      "methodType": "DELETE",
+      "requestBody": {
+        "additionalProp1": "str-O8CIhn",
+        "additionalProp3": "str-m395qg",
+        "additionalProp2": "str-QxE0dKvG"
+      },
+      "parametersPath": {},
+      "parametersQuery": {},
+      "responseCode": 200,
+      "expectedObjects": "object",
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/actuator/caches/{cache}",
+      "methodType": "GET",
+      "requestBody": {
+        "additionalProp1": "str-HPjTAb8iCN",
+        "additionalProp3": "str-UwFAb4uJYEG",
+        "additionalProp2": "str-3ck8X"
+      },
+      "parametersPath": {},
+      "parametersQuery": {},
+      "responseCode": 200,
+      "expectedObjects": "object",
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/actuator/caches/{cache}",
+      "methodType": "DELETE",
+      "requestBody": {
+        "additionalProp1": "str-ybWK0O6gjW",
+        "additionalProp3": "str-1S1pw",
+        "additionalProp2": "str-epbLUa"
+      },
+      "parametersPath": {},
+      "parametersQuery": {},
+      "responseCode": 200,
+      "expectedObjects": "object",
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/actuator/channels",
+      "methodType": "GET",
+      "requestBody": {
+        "additionalProp1": "str-0rJ3DGYNmRt",
+        "additionalProp3": "str-ImaiC9ur",
+        "additionalProp2": "str-ZSNSGhypkRS"
+      },
+      "parametersPath": {},
+      "parametersQuery": {},
+      "responseCode": 200,
+      "expectedObjects": "object",
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/actuator/conditions",
+      "methodType": "GET",
+      "requestBody": {
+        "additionalProp1": "str-qKNJoqAq28",
+        "additionalProp3": "str-jEaHnQjrQxzRGL",
+        "additionalProp2": "str-QDJovvpCfJ"
+      },
+      "parametersPath": {},
+      "parametersQuery": {},
+      "responseCode": 200,
+      "expectedObjects": "object",
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/actuator/configprops",
+      "methodType": "GET",
+      "requestBody": {
+        "additionalProp1": "str-lPN2Y",
+        "additionalProp3": "str-wd9pY9L4fHj",
+        "additionalProp2": "str-cBwpYv1D"
+      },
+      "parametersPath": {},
+      "parametersQuery": {},
+      "responseCode": 200,
+      "expectedObjects": "object",
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/actuator/configprops/{prefix}",
+      "methodType": "GET",
+      "requestBody": {
+        "additionalProp1": "str-WglnnTRodD2",
+        "additionalProp3": "str-bXx4fRB",
+        "additionalProp2": "str-qeFr-9B5Z"
+      },
+      "parametersPath": {},
+      "parametersQuery": {},
+      "responseCode": 200,
+      "expectedObjects": "object",
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/actuator/env",
+      "methodType": "GET",
+      "requestBody": {
+        "additionalProp1": "str-2KalfcTul",
+        "additionalProp3": "str-U91ftrof",
+        "additionalProp2": "str-MBY4VTEXAraU"
+      },
+      "parametersPath": {},
+      "parametersQuery": {},
+      "responseCode": 200,
+      "expectedObjects": "object",
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/actuator/env/{toMatch}",
+      "methodType": "GET",
+      "requestBody": {
+        "additionalProp1": "str-sJjweoklhAQ",
+        "additionalProp3": "str-jG38NpU",
+        "additionalProp2": "str-uWPHkVrfeis"
+      },
+      "parametersPath": {},
+      "parametersQuery": {},
+      "responseCode": 200,
+      "expectedObjects": "object",
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/actuator/features",
+      "methodType": "GET",
+      "requestBody": {
+        "additionalProp1": "str-tW5QAoo",
+        "additionalProp3": "str-KaB2esNr",
+        "additionalProp2": "str-HT6D8jL"
+      },
+      "parametersPath": {},
+      "parametersQuery": {},
+      "responseCode": 200,
+      "expectedObjects": "object",
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/actuator/functions",
+      "methodType": "GET",
+      "requestBody": {
+        "additionalProp1": "str-KbjlKZ4SUJN",
+        "additionalProp3": "str-I20zz7Jg",
+        "additionalProp2": "str-p7u9lyQk95UO"
+      },
+      "parametersPath": {},
+      "parametersQuery": {},
+      "responseCode": 200,
+      "expectedObjects": "object",
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/actuator/health",
+      "methodType": "GET",
+      "requestBody": {
+        "additionalProp1": "str-7BSj7lZQc",
+        "additionalProp3": "str-wF7pRfm",
+        "additionalProp2": "str-wLTWKZgz"
+      },
+      "parametersPath": {},
+      "parametersQuery": {},
+      "responseCode": 200,
+      "expectedObjects": "object",
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/actuator/health/**",
+      "methodType": "GET",
+      "requestBody": {
+        "additionalProp1": "str-6BXTbE",
+        "additionalProp3": "str-jGbZP",
+        "additionalProp2": "str-FCjAvfbaeL"
+      },
+      "parametersPath": {},
+      "parametersQuery": {},
+      "responseCode": 200,
+      "expectedObjects": "object",
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/actuator/heapdump",
+      "methodType": "GET",
+      "requestBody": {
+        "additionalProp1": "str-cFxkuf",
+        "additionalProp3": "str-znTxkRgEjWi5tk",
+        "additionalProp2": "str-GmzUA-bcRmZVjV"
+      },
+      "parametersPath": {},
+      "parametersQuery": {},
+      "responseCode": 200,
+      "expectedObjects": "object",
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/actuator/info",
+      "methodType": "GET",
+      "requestBody": {
+        "additionalProp1": "str-P7czy",
+        "additionalProp3": "str-nrDEd5u",
+        "additionalProp2": "str-QpKAyjYzKcsec"
+      },
+      "parametersPath": {},
+      "parametersQuery": {},
+      "responseCode": 200,
+      "expectedObjects": "object",
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/actuator/integrationgraph",
+      "methodType": "GET",
+      "requestBody": {
+        "additionalProp1": "str-slXej",
+        "additionalProp3": "str-zQgLc",
+        "additionalProp2": "str-8UQssA1pF8Zxg"
+      },
+      "parametersPath": {},
+      "parametersQuery": {},
+      "responseCode": 200,
+      "expectedObjects": "object",
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/actuator/integrationgraph",
+      "methodType": "POST",
+      "requestBody": {
+        "additionalProp1": "str-0RkmxSFKqGnSq",
+        "additionalProp3": "str-l8nvpUo",
+        "additionalProp2": "str-mmLvCHCTvNft"
+      },
+      "parametersPath": {},
+      "parametersQuery": {},
+      "responseCode": 200,
+      "expectedObjects": "object",
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/actuator/loggers",
+      "methodType": "GET",
+      "requestBody": {
+        "additionalProp1": "str-1tpSlxBnp4o",
+        "additionalProp3": "str-7h1Msn0epP1",
+        "additionalProp2": "str-gi-uwoO3c2"
+      },
+      "parametersPath": {},
+      "parametersQuery": {},
+      "responseCode": 200,
+      "expectedObjects": "object",
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/actuator/loggers/{name}",
+      "methodType": "GET",
+      "requestBody": {
+        "additionalProp1": "str-lTAXhC",
+        "additionalProp3": "str-p7sX1r5lqJf",
+        "additionalProp2": "str-Kc5p68K8FP13"
+      },
+      "parametersPath": {},
+      "parametersQuery": {},
+      "responseCode": 200,
+      "expectedObjects": "object",
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/actuator/loggers/{name}",
+      "methodType": "POST",
+      "requestBody": {
+        "additionalProp1": "str-hiQ9aXXoWjw7-",
+        "additionalProp3": "str-SNRt4KEQkuHu2",
+        "additionalProp2": "str-Ai3BLoTzCWUP"
+      },
+      "parametersPath": {},
+      "parametersQuery": {},
+      "responseCode": 200,
+      "expectedObjects": "object",
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/actuator/mappings",
+      "methodType": "GET",
+      "requestBody": {
+        "additionalProp1": "str-CVsC3",
+        "additionalProp3": "str-yKkG5m",
+        "additionalProp2": "str-9p86aM"
+      },
+      "parametersPath": {},
+      "parametersQuery": {},
+      "responseCode": 200,
+      "expectedObjects": "object",
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/actuator/metrics",
+      "methodType": "GET",
+      "requestBody": {
+        "additionalProp1": "str-BBL-rA",
+        "additionalProp3": "str-oL8MVujbiRNsD",
+        "additionalProp2": "str-ntzQVxba58gC"
+      },
+      "parametersPath": {},
+      "parametersQuery": {},
+      "responseCode": 200,
+      "expectedObjects": "object",
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/actuator/metrics/{requiredMetricName}",
+      "methodType": "GET",
+      "requestBody": {
+        "additionalProp1": "str-U6BfPiA0EXf",
+        "additionalProp3": "str-xe-FejDdxPS",
+        "additionalProp2": "str-VhnZI7FvXl2"
+      },
+      "parametersPath": {},
+      "parametersQuery": {},
+      "responseCode": 200,
+      "expectedObjects": "object",
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/actuator/prometheus",
+      "methodType": "GET",
+      "requestBody": {
+        "additionalProp1": "str-yq0nrbVu-dVven",
+        "additionalProp3": "str-djXRo0oHpTnid",
+        "additionalProp2": "str-L2UBY4CBoLN"
+      },
+      "parametersPath": {},
+      "parametersQuery": {},
+      "responseCode": 200,
+      "expectedObjects": "object",
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/actuator/refresh",
+      "methodType": "POST",
+      "requestBody": {
+        "additionalProp1": "str-oA1n7pfKQPvDp",
+        "additionalProp3": "str-AvGoq",
+        "additionalProp2": "str-OWQxvAOvq8N"
+      },
+      "parametersPath": {},
+      "parametersQuery": {},
+      "responseCode": 200,
+      "expectedObjects": "object",
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/actuator/scheduledtasks",
+      "methodType": "GET",
+      "requestBody": {
+        "additionalProp1": "str-nVyUxiv",
+        "additionalProp3": "str-m2bpjd4Vyt",
+        "additionalProp2": "str-dXv0OeA9CO"
+      },
+      "parametersPath": {},
+      "parametersQuery": {},
+      "responseCode": 200,
+      "expectedObjects": "object",
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/actuator/threaddump",
+      "methodType": "GET",
+      "requestBody": {
+        "additionalProp1": "str-B2N9YCEQUfYcqI",
+        "additionalProp3": "str-y9z90t4jFDV",
+        "additionalProp2": "str-A8S1YbhDgA6L4"
+      },
+      "parametersPath": {},
+      "parametersQuery": {},
+      "responseCode": 200,
+      "expectedObjects": "object",
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/mock/qmmBusinessattributevalueCreateReply",
+      "methodType": "GET",
+      "requestBody": null,
+      "parametersPath": {},
+      "parametersQuery": {},
+      "responseCode": 200,
+      "expectedObjects": {
+        "businessAttributeValueList": [
+          {
+            "businessAttributeValueId": 84,
+            "msgPackageId": 12,
+            "formatBusinessAttributeId": 84
+          },
+          {
+            "businessAttributeValueId": 37,
+            "msgPackageId": 1,
+            "formatBusinessAttributeId": 52
+          }
+        ]
+      },
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/mock/qmmMsgEvent",
+      "methodType": "GET",
+      "requestBody": null,
+      "parametersPath": {},
+      "parametersQuery": {},
+      "responseCode": 200,
+      "expectedObjects": {
+        "messageBody": "str-BlcFMShpI",
+        "receiver": "str-1xOvtEYOfILbJ",
+        "msgPackageId": 93,
+        "formatName": "str-IRM9P",
+        "msgId": 56,
+        "inDatetime": "yyyy-MM-dd\u0027T\u0027HH:mm:ss.SSSZ",
+        "msgFormatId": 48,
+        "number": "str-VbpAUk92AZGC",
+        "messageType": "str--EB9STg3",
+        "sender": "str-jW0IBH6sh",
+        "formatVersion": "str-QtoEfhXIz",
+        "direction": 4,
+        "status": 77
+      },
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/mock/qmmMsgReply",
+      "methodType": "GET",
+      "requestBody": null,
+      "parametersPath": {},
+      "parametersQuery": {},
+      "responseCode": 200,
+      "expectedObjects": {
+        "object": "object"
+      },
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/mock/qmmMsgpackageAndMsgpackageAttributeEvent",
+      "methodType": "GET",
+      "requestBody": null,
+      "parametersPath": {},
+      "parametersQuery": {},
+      "responseCode": 200,
+      "expectedObjects": {
+        "fileName": "str-QhvJsy9",
+        "messageCount": 81,
+        "msgPackageType": "str-S8Mbej70",
+        "msgBodyCode": 98,
+        "msgPackageId": 77,
+        "destination": "str-omQHhILIH",
+        "formatName": "str-H95N9MoMFd",
+        "branchName": "str-WSg9tmDFS",
+        "childCount": 3,
+        "source": "str-bYoKuGsnPny",
+        "createAt": "yyyy-MM-dd\u0027T\u0027HH:mm:ss.SSSZ",
+        "loadRuleName": "str-xQMT8cE9M",
+        "msgFormatId": 77,
+        "humanTaskId": "str-rokq-kid-FrZxN",
+        "processId": "str-UTZpm-uMDcOw",
+        "sender": "str-N9OTvlzhJdyaq",
+        "sourceType": 54,
+        "formatVersion": "str-W10EqaycjYu",
+        "parentMsgPackageId": 43,
+        "direction": 34,
+        "status": 41
+      },
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/mock/qmmMsgpackageAndMsgpackageAttributeReply",
+      "methodType": "GET",
+      "requestBody": null,
+      "parametersPath": {},
+      "parametersQuery": {},
+      "responseCode": 200,
+      "expectedObjects": {
+        "object": "object"
+      },
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/mock/qmmMsgpackageMovementHistoryReply",
+      "methodType": "GET",
+      "requestBody": null,
+      "parametersPath": {},
+      "parametersQuery": {},
+      "responseCode": 200,
+      "expectedObjects": {
+        "object": "object"
+      },
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/mock/qmmMsgpackageStartLoadprocess",
+      "methodType": "GET",
+      "requestBody": null,
+      "parametersPath": {},
+      "parametersQuery": {},
+      "responseCode": 200,
+      "expectedObjects": {
+        "MsgPackage": {
+          "fileName": "str-1Y7qj5zab8oeML",
+          "messageCount": 66,
+          "msgPackageType": "str-XlhJixGEt",
+          "msgBodyCode": 30,
+          "msgPackageId": 7,
+          "destination": "str-zTCAsejm2",
+          "formatName": "str-AgFRbGu2PIV9XM",
+          "branchName": "str-4odVj3E0STZMx",
+          "childCount": 18,
+          "source": "str-86YBmKr",
+          "createAt": "yyyy-MM-dd\u0027T\u0027HH:mm:ss.SSSZ",
+          "loadRuleName": "str-WNYR0I9O7u",
+          "msgFormatId": 5,
+          "humanTaskId": "str-ACZqTF3Aw8",
+          "processId": "str-lxAh0zA1TBR",
+          "sender": "str-4SvhM3Ny-Lf",
+          "sourceType": 94,
+          "formatVersion": "str-MCq6zYD",
+          "parentMsgPackageId": 59,
+          "direction": 9,
+          "status": 3
+        },
+        "inputTopicName": "str-aMQdRwS1Lts1"
+      },
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/mock/qmmMsgpackageStartUnloadprocess",
+      "methodType": "GET",
+      "requestBody": null,
+      "parametersPath": {},
+      "parametersQuery": {},
+      "responseCode": 200,
+      "expectedObjects": {
+        "msgPackageId": 44,
+        "msgSender": "str-IGJ3zxWtIdQJL",
+        "destination": "str-43RTG",
+        "formatName": "str-V08zl",
+        "branchName": "str-VtQmiZ9KtfZ",
+        "formatVersion": "str-FscCx3",
+        "direction": 78,
+        "status": 26
+      },
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/mock/qmmMsgpackagerelationsFindMassReply",
+      "methodType": "GET",
+      "requestBody": null,
+      "parametersPath": {},
+      "parametersQuery": {},
+      "responseCode": 200,
+      "expectedObjects": {
+        "msgpackagerelationsList": [
+          {
+            "pbcProfileId": 83,
+            "boSysName": "str-QCEcV9Xj48tZP",
+            "pbcSysName": "str-UoY2yGvNTcde0",
+            "msgPackageId": 74,
+            "errorMessage": "str-cn2dwIts91",
+            "msgPackageRelationId": 26,
+            "errorCode": 74,
+            "countObjects": 33,
+            "externalObjectId": "str-WXux9v2u0Zw",
+            "linkId": 82,
+            "externalSystemId": 30,
+            "msgPackageRelationsLinkedList": "ERROR! Cyclic schema!",
+            "boProfileId": 12
+          },
+          {
+            "pbcProfileId": 76,
+            "boSysName": "str-iurhtiduJYG9",
+            "pbcSysName": "str-VJKUczAQwi9LQA",
+            "msgPackageId": 44,
+            "errorMessage": "str-hO3AbIElZS",
+            "msgPackageRelationId": 81,
+            "errorCode": 73,
+            "countObjects": 54,
+            "externalObjectId": "str-JbrKibY7h3Yk",
+            "linkId": 87,
+            "externalSystemId": 22,
+            "msgPackageRelationsLinkedList": "ERROR! Cyclic schema!",
+            "boProfileId": 39
+          }
+        ]
+      },
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/mock/qmmMsgpackagerelationsReply",
+      "methodType": "GET",
+      "requestBody": null,
+      "parametersPath": {},
+      "parametersQuery": {},
+      "responseCode": 200,
+      "expectedObjects": {
+        "object": "object"
+      },
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/mock/qmmMsgpkgprtclAndMsgpkgprtclAttributeEvent",
+      "methodType": "GET",
+      "requestBody": null,
+      "parametersPath": {},
+      "parametersQuery": {},
+      "responseCode": 200,
+      "expectedObjects": {
+        "msgPkgPrtclId": 57,
+        "msgPackageId": 84,
+        "errorMessage": "str-Ev9ug8v",
+        "errorCode": 56,
+        "messageId": 58,
+        "protocolAt": "yyyy-MM-dd\u0027T\u0027HH:mm:ss.SSSZ"
+      },
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/mock/qmmMsgpkgprtclAndMsgpkgprtclAttributeReply",
+      "methodType": "GET",
+      "requestBody": null,
+      "parametersPath": {},
+      "parametersQuery": {},
+      "responseCode": 200,
+      "expectedObjects": {
+        "object": "object"
+      },
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/qvrnversion/compareversion/v1",
+      "methodType": "GET",
+      "requestBody": null,
+      "parametersPath": {},
+      "parametersQuery": {
+        "paged": false,
+        "pageNumber": 81,
+        "offset": 25,
+        "previousCompare": false,
+        "pageSize": 99,
+        "boAttributeId": 74,
+        "sort": [
+          "str-FfkFrM6k-T",
+          "str-czdmY7d02cCW"
+        ],
+        "boAttributeLocalName": "str-vvGOMj",
+        "sort.sorted": false,
+        "currentCompare": false,
+        "boAttributeSysName": "str-HUg79GxQm",
+        "versionId": 82,
+        "size": 63,
+        "sort.unsorted": false,
+        "versionCompareId": 49,
+        "unpaged": false,
+        "page": 17,
+        "fields": "str-MpxPuG",
+        "changed": true
+      },
+      "responseCode": 200,
+      "expectedObjects": {
+        "number": 60,
+        "last": false,
+        "numberOfElements": 56,
+        "size": 7,
+        "totalPages": 30,
+        "pageable": {
+          "paged": true,
+          "pageNumber": 11,
+          "offset": 63,
+          "pageSize": 9,
+          "unpaged": true,
+          "sort": {
+            "unsorted": true,
+            "sorted": true,
+            "empty": false
+          }
+        },
+        "sort": {
+          "unsorted": true,
+          "sorted": true,
+          "empty": true
+        },
+        "content": [
+          {
+            "date": "date-time",
+            "depFullNameOld": "Наименование подразделения старой версии",
+            "depFullName": "Наименование подразделения",
+            "valueOld": "Старое значение параметра",
+            "boAttributeId": 36,
+            "login": "Логин пользователя",
+            "userName": "Наименование пользователя",
+            "boAttributeLocalName": "Наименование параметра",
+            "loginOld": "Логин пользователя старой версии",
+            "boAttributeSysName": "Системное имя параметра",
+            "userNameOld": "Наименование пользователя",
+            "valueNew": "Новое значение параметра",
+            "changed": false,
+            "dateOld": "date-time"
+          },
+          {
+            "date": "date-time",
+            "depFullNameOld": "Наименование подразделения старой версии",
+            "depFullName": "Наименование подразделения",
+            "valueOld": "Старое значение параметра",
+            "boAttributeId": 45,
+            "login": "Логин пользователя",
+            "userName": "Наименование пользователя",
+            "boAttributeLocalName": "Наименование параметра",
+            "loginOld": "Логин пользователя старой версии",
+            "boAttributeSysName": "Системное имя параметра",
+            "userNameOld": "Наименование пользователя",
+            "valueNew": "Новое значение параметра",
+            "changed": false,
+            "dateOld": "date-time"
+          }
+        ],
+        "first": false,
+        "empty": false,
+        "totalElements": 8
+      },
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/qvrnversion/findlistattributeLinkedBobyparam/v1",
+      "methodType": "GET",
+      "requestBody": null,
+      "parametersPath": {},
+      "parametersQuery": {
+        "date": "date-time",
+        "paged": false,
+        "pageNumber": 38,
+        "offset": 31,
+        "boSysName": "str-ajQvCu7",
+        "boId": 2,
+        "objectLinkedId": "str-lr8tID",
+        "pageSize": 20,
+        "sort": [
+          "str-VpPrwBYNfm",
+          "str--gVmRvnx"
+        ],
+        "sort.sorted": true,
+        "boAttributeSysName": "str-cF12kvOV9Vj",
+        "versionId": 44,
+        "size": 85,
+        "sort.unsorted": false,
+        "unpaged": true,
+        "page": 84,
+        "fields": "str-piFLl-Zkh7pOo"
+      },
+      "responseCode": 200,
+      "expectedObjects": {
+        "number": 25,
+        "last": false,
+        "numberOfElements": 39,
+        "size": 55,
+        "totalPages": 25,
+        "pageable": {
+          "paged": true,
+          "pageNumber": 38,
+          "offset": 19,
+          "pageSize": 14,
+          "unpaged": true,
+          "sort": {
+            "unsorted": true,
+            "sorted": false,
+            "empty": true
+          }
+        },
+        "sort": {
+          "unsorted": false,
+          "sorted": false,
+          "empty": true
+        },
+        "content": [
+          {
+            "boAttributeSysName": "Системное наименование атрибута",
+            "boAttributeId": 71,
+            "value": "Значение атрибута",
+            "boAttributeLocalName": "Наименование атрибута"
+          },
+          {
+            "boAttributeSysName": "Системное наименование атрибута",
+            "boAttributeId": 70,
+            "value": "Значение атрибута",
+            "boAttributeLocalName": "Наименование атрибута"
+          }
+        ],
+        "first": true,
+        "empty": true,
+        "totalElements": 27
+      },
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/qvrnversion/findlistattributebobyparam/v1",
+      "methodType": "GET",
+      "requestBody": null,
+      "parametersPath": {},
+      "parametersQuery": {
+        "date": "date-time",
+        "paged": false,
+        "pageNumber": 49,
+        "offset": 67,
+        "boSysName": "str-m2V1A",
+        "boId": 6,
+        "pageSize": 34,
+        "sort": [
+          "str-GFH0dRgCRON",
+          "str-emti1"
+        ],
+        "sort.sorted": false,
+        "size": 38,
+        "sort.unsorted": true,
+        "unpaged": true,
+        "page": 98,
+        "fields": "str-1ZMStpzHuv0yM1",
+        "objectId": "str-lOfUb"
+      },
+      "responseCode": 200,
+      "expectedObjects": {
+        "number": 31,
+        "last": false,
+        "numberOfElements": 80,
+        "size": 95,
+        "totalPages": 59,
+        "pageable": {
+          "paged": true,
+          "pageNumber": 60,
+          "offset": 1,
+          "pageSize": 91,
+          "unpaged": false,
+          "sort": {
+            "unsorted": true,
+            "sorted": true,
+            "empty": false
+          }
+        },
+        "sort": {
+          "unsorted": false,
+          "sorted": false,
+          "empty": true
+        },
+        "content": [
+          {
+            "boAttributeSysName": "Системное наименование",
+            "boAttributeId": 65,
+            "value": "Значение",
+            "boAttributeLocalName": "Наименование"
+          },
+          {
+            "boAttributeSysName": "Системное наименование",
+            "boAttributeId": 44,
+            "value": "Значение",
+            "boAttributeLocalName": "Наименование"
+          }
+        ],
+        "first": false,
+        "empty": false,
+        "totalElements": 79
+      },
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/qvrnversion/findlistattributebyparam/v1",
+      "methodType": "GET",
+      "requestBody": null,
+      "parametersPath": {},
+      "parametersQuery": {
+        "paged": true,
+        "pageNumber": 66,
+        "offset": 20,
+        "pageSize": 17,
+        "boAttributeId": 19,
+        "sort": [
+          "str-Ruh2zxINzNY0Vj",
+          "str-MIZ31Toa"
+        ],
+        "boAttributeLocalName": "str-H4ZDntbkRQ",
+        "sort.sorted": true,
+        "boAttributeSysName": "str-jSZUR5YJ0",
+        "versionId": 56,
+        "size": 94,
+        "sort.unsorted": false,
+        "unpaged": false,
+        "page": 26,
+        "fields": "str--pg5sORsSwQ"
+      },
+      "responseCode": 200,
+      "expectedObjects": {
+        "number": 4,
+        "last": false,
+        "numberOfElements": 69,
+        "size": 62,
+        "totalPages": 0,
+        "pageable": {
+          "paged": true,
+          "pageNumber": 69,
+          "offset": 83,
+          "pageSize": 28,
+          "unpaged": false,
+          "sort": {
+            "unsorted": true,
+            "sorted": true,
+            "empty": false
+          }
+        },
+        "sort": {
+          "unsorted": false,
+          "sorted": true,
+          "empty": false
+        },
+        "content": [
+          {
+            "boAttributeSysName": "Системное наименование",
+            "isLinked": false,
+            "boAttributeId": 91,
+            "value": "Значение атрибута",
+            "boAttributeLocalName": "Наименование"
+          },
+          {
+            "boAttributeSysName": "Системное наименование",
+            "isLinked": false,
+            "boAttributeId": 87,
+            "value": "Значение атрибута",
+            "boAttributeLocalName": "Наименование"
+          }
+        ],
+        "first": true,
+        "empty": false,
+        "totalElements": 50
+      },
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/qvrnversion/findlistversionbyparam/v1",
+      "methodType": "GET",
+      "requestBody": null,
+      "parametersPath": {},
+      "parametersQuery": {
+        "date": "date-time",
+        "paged": false,
+        "pageNumber": 86,
+        "offset": 25,
+        "endDate": "date-time",
+        "boId": 43,
+        "pageSize": 75,
+        "sort": [
+          "str-nCdDULYBNDQWeP",
+          "str-cmdxYJHM"
+        ],
+        "sort.sorted": true,
+        "versionKey": "str-nFs9rTZ1CmjwU",
+        "isFirst": false,
+        "isCurrent": true,
+        "versionId": 81,
+        "size": 96,
+        "sort.unsorted": true,
+        "comment": "str-d90ExJWZJsu6DT",
+        "unpaged": false,
+        "isLastVersions": true,
+        "page": 97,
+        "fields": "str-o9y3V9Q",
+        "objectId": "str-4ws05TQN",
+        "startDate": "date-time"
+      },
+      "responseCode": 200,
+      "expectedObjects": {
+        "number": 35,
+        "last": true,
+        "numberOfElements": 70,
+        "size": 44,
+        "totalPages": 24,
+        "pageable": {
+          "paged": true,
+          "pageNumber": 21,
+          "offset": 79,
+          "pageSize": 98,
+          "unpaged": false,
+          "sort": {
+            "unsorted": false,
+            "sorted": true,
+            "empty": false
+          }
+        },
+        "sort": {
+          "unsorted": false,
+          "sorted": true,
+          "empty": true
+        },
+        "content": [
+          {
+            "date": "date-time",
+            "isFirst": false,
+            "number": 23,
+            "isCurrent": false,
+            "versionId": 23,
+            "depFullName": "Наименование департамента",
+            "comment": "Комментарий",
+            "login": "Логин пользователя",
+            "userName": "Наименование пользователя",
+            "versionKey": "Ссылка на событие аудита"
+          },
+          {
+            "date": "date-time",
+            "isFirst": false,
+            "number": 2,
+            "isCurrent": false,
+            "versionId": 12,
+            "depFullName": "Наименование департамента",
+            "comment": "Комментарий",
+            "login": "Логин пользователя",
+            "userName": "Наименование пользователя",
+            "versionKey": "Ссылка на событие аудита"
+          }
+        ],
+        "first": true,
+        "empty": false,
+        "totalElements": 40
+      },
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/qvrnversion/findversionbyid/v1/{versionId}",
+      "methodType": "GET",
+      "requestBody": null,
+      "parametersPath": {
+        "versionId": 92
+      },
+      "parametersQuery": {
+        "fields": "str-x0tanWoDoNH"
+      },
+      "responseCode": 200,
+      "expectedObjects": {
+        "date": "date-time",
+        "isFirst": false,
+        "number": 43,
+        "isCurrent": false,
+        "versionId": 55,
+        "depFullName": "Наименование подразделения",
+        "boId": 51,
+        "comment": "Комментарий",
+        "login": "Логин пользователя",
+        "userName": "Наименование пользователя",
+        "objectId": "Идентификатор экземпляра бизнес-объекта",
+        "versionKey": "Связь с событием аудита"
+      },
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/VersionSetting/{versionSettingId}",
+      "methodType": "GET",
+      "requestBody": null,
+      "parametersPath": {
+        "versionSettingId": 20
+      },
+      "parametersQuery": {
+        "fields": "str-xgntOx"
+      },
+      "responseCode": 200,
+      "expectedObjects": {
+        "boDescription": "Описание БО",
+        "useVersion": false,
+        "boLocalName": "Наименование БО",
+        "boSysName": "Системное имя БО",
+        "boId": 98,
+        "versionSettingId": 48
+      },
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/VersionSettings",
+      "methodType": "GET",
+      "requestBody": null,
+      "parametersPath": {},
+      "parametersQuery": {
+        "paged": false,
+        "pageNumber": 92,
+        "useVersion": true,
+        "offset": 99,
+        "boId": 23,
+        "pageSize": 43,
+        "sort": [
+          "str-y6IOcxLXeUJ",
+          "str-ELO-zhd3RO"
+        ],
+        "serviceName": "str-mG60NXCFp1E",
+        "sort.sorted": true,
+        "url": "str-kBJL6bgt",
+        "size": 28,
+        "sort.unsorted": true,
+        "unpaged": true,
+        "page": 20,
+        "versionSettingId": 39,
+        "fields": "str-oAo63TEk"
+      },
+      "responseCode": 200,
+      "expectedObjects": {
+        "number": 9,
+        "last": true,
+        "numberOfElements": 32,
+        "size": 27,
+        "totalPages": 2,
+        "pageable": {
+          "paged": true,
+          "pageNumber": 98,
+          "offset": 39,
+          "pageSize": 70,
+          "unpaged": false,
+          "sort": {
+            "unsorted": false,
+            "sorted": false,
+            "empty": true
+          }
+        },
+        "sort": {
+          "unsorted": false,
+          "sorted": false,
+          "empty": false
+        },
+        "content": [
+          {
+            "boDescription": "Описание БО",
+            "useVersion": false,
+            "boLocalName": "Наименование БО",
+            "boSysName": "Системное имя БО",
+            "boId": 48,
+            "versionSettingId": 10
+          },
+          {
+            "boDescription": "Описание БО",
+            "useVersion": false,
+            "boLocalName": "Наименование БО",
+            "boSysName": "Системное имя БО",
+            "boId": 26,
+            "versionSettingId": 9
+          }
+        ],
+        "first": true,
+        "empty": false,
+        "totalElements": 49
+      },
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/qvrnversion/updateversionsetting/v1",
+      "methodType": "PUT",
+      "requestBody": {
+        "useVersion": false,
+        "versionSettingId": 65
+      },
+      "parametersPath": {},
+      "parametersQuery": {},
+      "responseCode": 200,
+      "expectedObjects": null,
+      "unexpectedObjects": null
+    },
+    {
+      "caseName": null,
+      "methodPath": "/qmmmsgpackage/actuator",
+      "methodType": "GET",
+      "requestBody": null,
+      "parametersPath": {},
+      "parametersQuery": {},
+      "responseCode": 200,
+      "expectedObjects": {
+        "additionalProp1": "object",
+        "additionalProp3": "object",
+        "additionalProp2": "object"
+      },
+      "unexpectedObjects": null
+    }
+  ],
+  "serverUrl": null
+}
