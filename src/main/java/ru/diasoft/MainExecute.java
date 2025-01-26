@@ -54,7 +54,7 @@ public class MainExecute {
             report.getTestCaseLogs().add(testCaseLog);
             testCaseLog.setTestCaseNum(i);
 
-            logger.info("Начали обработку тест-кейса {}", i);
+            logger.info("Начали обработку тест-кейса {}", i + 1);
             boolean result = true;
             try {
                 TestCase case0 = allCases.getCases().get(i);
@@ -122,7 +122,7 @@ public class MainExecute {
             }
 
 
-            logger.info("Закончили обработку тест-кейса {}", i);
+            logger.info("Закончили обработку тест-кейса {}", i + 1);
             testCaseLog.setResult(result);
 
         }
